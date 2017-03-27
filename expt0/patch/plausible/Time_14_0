@@ -1,0 +1,19 @@
+*** /data/people/qx5/repair_expts/Time_14/patches/f3/c7/p0/MonthDay.java	Mon Mar 13 08:26:24 2017
+--- /data/people/qx5/defects4j-bugs/times/projs/Time_14_buggy/src/main/java/org/joda/time/MonthDay.java	Thu Oct  6 20:43:11 2016
+***************
+*** 516,522 ****
+              return this;
+          }
+          int[] newValues = getValues();
+!         newValues = getField(index).addWrapPartial(this, index, newValues, amount);
+          return new MonthDay(this, newValues);
+      }
+  
+--- 516,522 ----
+              return this;
+          }
+          int[] newValues = getValues();
+!         newValues = getField(index).add(this, index, newValues, amount);
+          return new MonthDay(this, newValues);
+      }
+  

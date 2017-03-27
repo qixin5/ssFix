@@ -1,0 +1,12 @@
+*** /data/people/qx5/repair_expts/Math_8/patches/f0/c0/p0/DiscreteDistribution.java	Sun Mar 12 18:48:10 2017
+--- /data/people/qx5/defects4j-bugs/maths/projs/Math_8_buggy/src/main/java/org/apache/commons/math3/distribution/DiscreteDistribution.java	Fri Oct 23 14:06:05 2015
+***************
+*** 187,192 ****
+--- 187,193 ----
+          final T[]out = (T[]) Array.newInstance(singletons.get(0).getClass(), sampleSize);
+  
+          for (int i = 0; i < sampleSize; i++) {
++             out[i] = sample();
+          }
+  
+          return out;

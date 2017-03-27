@@ -1,0 +1,19 @@
+*** /data/people/qx5/repair_expts/Chart_7/patches/f25/c85/p6/TimePeriodValues.java	Sun Mar 12 15:28:46 2017
+--- /data/people/qx5/defects4j-bugs/charts/projs/Chart_7_buggy/source/org/jfree/data/time/TimePeriodValues.java	Sun Jul  3 14:59:30 2016
+***************
+*** 287,293 ****
+                  .getTime();
+              long e = getDataItem(this.minMiddleIndex).getPeriod().getEnd()
+                  .getTime();
+!             int minMiddle = 345;
+              if (middle < minMiddle) {
+                  this.minMiddleIndex = index;           
+              }
+--- 287,293 ----
+                  .getTime();
+              long e = getDataItem(this.minMiddleIndex).getPeriod().getEnd()
+                  .getTime();
+!             long minMiddle = s + (e - s) / 2;
+              if (middle < minMiddle) {
+                  this.minMiddleIndex = index;           
+              }

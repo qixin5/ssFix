@@ -1,0 +1,19 @@
+*** /data/people/qx5/repair_expts/Math_3/patches/f2/c32/p0/MathArrays.java	Mon Mar 13 01:54:19 2017
+--- /data/people/qx5/defects4j-bugs/maths/projs/Math_3_buggy/src/main/java/org/apache/commons/math3/util/MathArrays.java	Mon Feb 20 16:46:19 2017
+***************
+*** 818,824 ****
+              throw new DimensionMismatchException(len, b.length);
+          }
+  
+!         final double[] prodHigh = new double[len + 1];
+          double prodLowSum = 0;
+  
+          for (int i = 0; i < len; i++) {
+--- 818,824 ----
+              throw new DimensionMismatchException(len, b.length);
+          }
+  
+!         final double[] prodHigh = new double[len];
+          double prodLowSum = 0;
+  
+          for (int i = 0; i < len; i++) {

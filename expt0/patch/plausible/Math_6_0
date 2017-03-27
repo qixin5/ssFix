@@ -1,0 +1,19 @@
+*** /data/people/qx5/repair_expts/Math_6/patches/f0/c11/p0/BaseOptimizer.java	Sun Mar 12 17:04:02 2017
+--- /data/people/qx5/defects4j-bugs/maths/projs/Math_6_buggy/src/main/java/org/apache/commons/math3/optim/BaseOptimizer.java	Mon Feb 20 16:46:56 2017
+***************
+*** 90,96 ****
+       * @return the number of evaluations of the objective function.
+       */
+      public int getIterations() {
+!         return evaluations.getCount();
+      }
+  
+      /**
+--- 90,96 ----
+       * @return the number of evaluations of the objective function.
+       */
+      public int getIterations() {
+!         return iterations.getCount();
+      }
+  
+      /**

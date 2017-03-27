@@ -1,0 +1,5 @@
+#!/bin/bash
+
+ssfix_dir=/home/qx5/ssFix2
+
+java -cp :${ssfix_dir}/build:${ssfix_dir}/lib/* expt.CandidateCopier $*

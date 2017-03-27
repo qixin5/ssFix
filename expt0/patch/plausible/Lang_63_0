@@ -1,0 +1,22 @@
+*** /data/people/qx5/repair_expts/Lang_63/patches/f0/c2/p0/DurationFormatUtils.java	Sun Mar 12 22:07:58 2017
+--- /data/people/qx5/defects4j-bugs/langs/projs/Lang_63_buggy/src/java/org/apache/commons/lang/time/DurationFormatUtils.java	Mon Feb 20 16:52:47 2017
+***************
+*** 303,311 ****
+              days -= 1;
+          }
+          while (days < 0) {
+!             days += start.getActualMaximum(Calendar.DAY_OF_MONTH);
+! 			months -= 1;
+! 			start.add(Calendar.MONTH, 1);
+          }
+          while (months < 0) {
+              months += 12;
+--- 303,310 ----
+              days -= 1;
+          }
+          while (days < 0) {
+!             days += 31; // such overshooting is taken care of later on
+!             months -= 1;
+          }
+          while (months < 0) {
+              months += 12;

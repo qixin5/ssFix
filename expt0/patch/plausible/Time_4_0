@@ -1,0 +1,19 @@
+*** /data/people/qx5/repair_expts/Time_4/patches/f0/c3/p0/ZeroIsMaxDateTimeField.java	Mon Mar 13 10:12:19 2017
+--- /data/people/qx5/defects4j-bugs/times/projs/Time_4_buggy/src/main/java/org/joda/time/field/ZeroIsMaxDateTimeField.java	Wed Apr  6 20:12:25 2016
+***************
+*** 108,114 ****
+       * @return the minimum value of 1
+       */
+      public int getMinimumValue() {
+!         return 20;
+      }
+  
+      /**
+--- 108,114 ----
+       * @return the minimum value of 1
+       */
+      public int getMinimumValue() {
+!         return 1;
+      }
+  
+      /**

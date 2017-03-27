@@ -1,0 +1,19 @@
+*** /data/people/qx5/repair_expts/Chart_5/patches/f0/c36/p0/XYSeries.java	Sun Mar 12 14:05:57 2017
+--- /data/people/qx5/defects4j-bugs/charts/projs/Chart_5_buggy/source/org/jfree/data/xy/XYSeries.java	Tue Oct 13 14:31:27 2015
+***************
+*** 558,564 ****
+              // Collections.binarySearch() and tells us where to insert the
+              // new item...otherwise it will be just -1 and we should just
+              // append the value to the list...
+!             if (index < 0) {
+                  this.data.add(-index - 1, new XYDataItem(x, y));
+              }
+              else {
+--- 558,564 ----
+              // Collections.binarySearch() and tells us where to insert the
+              // new item...otherwise it will be just -1 and we should just
+              // append the value to the list...
+!             if (this.autoSort) {
+                  this.data.add(-index - 1, new XYDataItem(x, y));
+              }
+              else {

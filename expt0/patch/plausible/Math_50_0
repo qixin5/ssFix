@@ -1,0 +1,14 @@
+*** /data/people/qx5/repair_expts/Math_50/patches/f0/c0/p4/BaseSecantSolver.java	Mon Mar 13 01:28:06 2017
+--- /data/people/qx5/defects4j-bugs/maths/projs/Math_50_buggy/src/main/java/org/apache/commons/math/analysis/solvers/BaseSecantSolver.java	Tue Oct 13 15:00:21 2015
+***************
+*** 186,191 ****
+--- 186,194 ----
+                      if (x == x1) {
+                          final double delta = FastMath.max(rtol * FastMath.abs(x1),
+                                                            atol);
++                         // Update formula cannot make any progress: Update the
++                         // search interval.
++                         x0 = 0.5 * (x0 + x1 - delta);
+                          f0 = computeObjectiveValue(x0);
+                      }
+                      break;

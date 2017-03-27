@@ -1,0 +1,12 @@
+*** /data/people/qx5/repair_expts/Chart_13/patches/f0/c58/p6/Range.java	Sun Mar 12 10:34:01 2017
+--- /data/people/qx5/defects4j-bugs/charts/projs/Chart_13_buggy/source/org/jfree/data/Range.java	Tue Oct 13 14:39:12 2015
+***************
+*** 84,89 ****
+--- 84,90 ----
+          if (lower > upper) {
+              String msg = "Range(double, double): require lower (" + lower 
+                  + ") <= upper (" + upper + ").";
++             throw new IllegalArgumentException(msg);
+          }
+          this.lower = lower;
+          this.upper = upper;

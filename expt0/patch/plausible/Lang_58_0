@@ -1,0 +1,1764 @@
+*** /data/people/qx5/repair_expts/Lang_58/patches/f14/c4/p4/NumberUtils.java	Sun Mar 12 16:07:19 2017
+--- /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/NumberUtils.java	Tue Oct 13 14:28:14 2015
+***************
+*** 14,26 ****
+   * See the License for the specific language governing permissions and
+   * limitations under the License.
+   */
+! package org.apache.commons.lang.math;
+  
+  import java.math.BigDecimal;
+  import java.math.BigInteger;
+  
+- import org.apache.commons.lang.StringUtils;
+- 
+  /**
+   * <p>Provides extra functionality for Java Number classes.</p>
+   *
+--- 14,24 ----
+   * See the License for the specific language governing permissions and
+   * limitations under the License.
+   */
+! package org.apache.commons.lang;
+  
+  import java.math.BigDecimal;
+  import java.math.BigInteger;
+  
+  /**
+   * <p>Provides extra functionality for Java Number classes.</p>
+   *
+***************
+*** 29,79 ****
+   * @author <a href="mailto:steve.downey@netfolio.com">Steve Downey</a>
+   * @author Eric Pugh
+   * @author Phil Steitz
+!  * @author Matthew Hawthorne
+!  * @author <a href="mailto:ggregory@seagullsw.com">Gary Gregory</a>
+!  * @author <a href="mailto:fredrik@westermarck.com">Fredrik Westermarck</a>
+!  * @since 2.0
+   * @version $Id$
+   */
+! public class NumberUtils {
+      
+-     /** Reusable Long constant for zero. */
+-     public static final Long LONG_ZERO = new Long(0L);
+-     /** Reusable Long constant for one. */
+-     public static final Long LONG_ONE = new Long(1L);
+-     /** Reusable Long constant for minus one. */
+-     public static final Long LONG_MINUS_ONE = new Long(-1L);
+-     /** Reusable Integer constant for zero. */
+-     public static final Integer INTEGER_ZERO = new Integer(0);
+-     /** Reusable Integer constant for one. */
+-     public static final Integer INTEGER_ONE = new Integer(1);
+-     /** Reusable Integer constant for minus one. */
+-     public static final Integer INTEGER_MINUS_ONE = new Integer(-1);
+-     /** Reusable Short constant for zero. */
+-     public static final Short SHORT_ZERO = new Short((short) 0);
+-     /** Reusable Short constant for one. */
+-     public static final Short SHORT_ONE = new Short((short) 1);
+-     /** Reusable Short constant for minus one. */
+-     public static final Short SHORT_MINUS_ONE = new Short((short) -1);
+-     /** Reusable Byte constant for zero. */
+-     public static final Byte BYTE_ZERO = new Byte((byte) 0);
+-     /** Reusable Byte constant for one. */
+-     public static final Byte BYTE_ONE = new Byte((byte) 1);
+-     /** Reusable Byte constant for minus one. */
+-     public static final Byte BYTE_MINUS_ONE = new Byte((byte) -1);
+-     /** Reusable Double constant for zero. */
+-     public static final Double DOUBLE_ZERO = new Double(0.0d);
+-     /** Reusable Double constant for one. */
+-     public static final Double DOUBLE_ONE = new Double(1.0d);
+-     /** Reusable Double constant for minus one. */
+-     public static final Double DOUBLE_MINUS_ONE = new Double(-1.0d);
+-     /** Reusable Float constant for zero. */
+-     public static final Float FLOAT_ZERO = new Float(0.0f);
+-     /** Reusable Float constant for one. */
+-     public static final Float FLOAT_ONE = new Float(1.0f);
+-     /** Reusable Float constant for minus one. */
+-     public static final Float FLOAT_MINUS_ONE = new Float(-1.0f);
+- 
+      /**
+       * <p><code>NumberUtils</code> instances should NOT be constructed in standard programming.
+       * Instead, the class should be used as <code>NumberUtils.stringToInt("6");</code>.</p>
+--- 27,41 ----
+   * @author <a href="mailto:steve.downey@netfolio.com">Steve Downey</a>
+   * @author Eric Pugh
+   * @author Phil Steitz
+!  * @since 1.0
+   * @version $Id$
++  * 
++  * @deprecated Moved to org.apache.commons.lang.math.
++  *             Class will be removed in Commons Lang 3.0.
+   */
+! public final class NumberUtils {
+!     // DEPRECATED CLASS !!!
+      
+      /**
+       * <p><code>NumberUtils</code> instances should NOT be constructed in standard programming.
+       * Instead, the class should be used as <code>NumberUtils.stringToInt("6");</code>.</p>
+***************
+*** 82,177 ****
+       * to operate.</p>
+       */
+      public NumberUtils() {
+!         super();
+      }
+  
+!     //-----------------------------------------------------------------------
+      /**
+       * <p>Convert a <code>String</code> to an <code>int</code>, returning
+       * <code>zero</code> if the conversion fails.</p>
+-      *
+-      * <p>If the string is <code>null</code>, <code>zero</code> is returned.</p>
+       * 
+!      * <pre>
+!      *   NumberUtils.stringToInt(null) = 0
+!      *   NumberUtils.stringToInt("")   = 0
+!      *   NumberUtils.stringToInt("1")  = 1
+!      * </pre>
+!      *
+!      * @param str  the string to convert, may be null
+       * @return the int represented by the string, or <code>zero</code> if
+       *  conversion fails
+-      * @deprecated Use {@link #toInt(String)}
+-      *  This method will be removed in Commons Lang 3.0
+       */
+      public static int stringToInt(String str) {
+!         return toInt(str);
+!     }
+! 
+!     /**
+!      * <p>Convert a <code>String</code> to an <code>int</code>, returning
+!      * <code>zero</code> if the conversion fails.</p>
+!      *
+!      * <p>If the string is <code>null</code>, <code>zero</code> is returned.</p>
+!      *
+!      * <pre>
+!      *   NumberUtils.toInt(null) = 0
+!      *   NumberUtils.toInt("")   = 0
+!      *   NumberUtils.toInt("1")  = 1
+!      * </pre>
+!      *
+!      * @param str  the string to convert, may be null
+!      * @return the int represented by the string, or <code>zero</code> if
+!      *  conversion fails
+!      * @since 2.1
+!      */
+!     public static int toInt(String str) {
+!         return toInt(str, 0);
+      }
+  
+      /**
+       * <p>Convert a <code>String</code> to an <code>int</code>, returning a
+       * default value if the conversion fails.</p>
+-      *
+-      * <p>If the string is <code>null</code>, the default value is returned.</p>
+       * 
+!      * <pre>
+!      *   NumberUtils.stringToInt(null, 1) = 1
+!      *   NumberUtils.stringToInt("", 1)   = 1
+!      *   NumberUtils.stringToInt("1", 0)  = 1
+!      * </pre>
+!      *
+!      * @param str  the string to convert, may be null
+       * @param defaultValue  the default value
+       * @return the int represented by the string, or the default if conversion fails
+-      * @deprecated Use {@link #toInt(String, int)}
+-      *  This method will be removed in Commons Lang 3.0
+       */
+      public static int stringToInt(String str, int defaultValue) {
+-         return toInt(str, defaultValue);
+-     }
+- 
+-     /**
+-      * <p>Convert a <code>String</code> to an <code>int</code>, returning a
+-      * default value if the conversion fails.</p>
+-      *
+-      * <p>If the string is <code>null</code>, the default value is returned.</p>
+-      *
+-      * <pre>
+-      *   NumberUtils.toInt(null, 1) = 1
+-      *   NumberUtils.toInt("", 1)   = 1
+-      *   NumberUtils.toInt("1", 0)  = 1
+-      * </pre>
+-      *
+-      * @param str  the string to convert, may be null
+-      * @param defaultValue  the default value
+-      * @return the int represented by the string, or the default if conversion fails
+-      * @since 2.1
+-      */
+-     public static int toInt(String str, int defaultValue) {
+-         if(str == null) {
+-             return defaultValue;
+-         }
+          try {
+              return Integer.parseInt(str);
+          } catch (NumberFormatException nfe) {
+--- 44,75 ----
+       * to operate.</p>
+       */
+      public NumberUtils() {
+!       super();
+      }
+  
+!     //--------------------------------------------------------------------
+!     
+      /**
+       * <p>Convert a <code>String</code> to an <code>int</code>, returning
+       * <code>zero</code> if the conversion fails.</p>
+       * 
+!      * @param str  the string to convert
+       * @return the int represented by the string, or <code>zero</code> if
+       *  conversion fails
+       */
+      public static int stringToInt(String str) {
+!         return stringToInt(str, 0);
+      }
+  
+      /**
+       * <p>Convert a <code>String</code> to an <code>int</code>, returning a
+       * default value if the conversion fails.</p>
+       * 
+!      * @param str  the string to convert
+       * @param defaultValue  the default value
+       * @return the int represented by the string, or the default if conversion fails
+       */
+      public static int stringToInt(String str, int defaultValue) {
+          try {
+              return Integer.parseInt(str);
+          } catch (NumberFormatException nfe) {
+***************
+*** 179,338 ****
+          }
+      }
+  
+!     /**
+!      * <p>Convert a <code>String</code> to a <code>long</code>, returning
+!      * <code>zero</code> if the conversion fails.</p>
+!      *
+!      * <p>If the string is <code>null</code>, <code>zero</code> is returned.</p>
+!      *
+!      * <pre>
+!      *   NumberUtils.toLong(null) = 0L
+!      *   NumberUtils.toLong("")   = 0L
+!      *   NumberUtils.toLong("1")  = 1L
+!      * </pre>
+!      *
+!      * @param str  the string to convert, may be null
+!      * @return the long represented by the string, or <code>0</code> if
+!      *  conversion fails
+!      * @since 2.1
+!      */
+!     public static long toLong(String str) {
+!         return toLong(str, 0L);
+!     }
+! 
+!     /**
+!      * <p>Convert a <code>String</code> to a <code>long</code>, returning a
+!      * default value if the conversion fails.</p>
+!      *
+!      * <p>If the string is <code>null</code>, the default value is returned.</p>
+!      *
+!      * <pre>
+!      *   NumberUtils.toLong(null, 1L) = 1L
+!      *   NumberUtils.toLong("", 1L)   = 1L
+!      *   NumberUtils.toLong("1", 0L)  = 1L
+!      * </pre>
+!      *
+!      * @param str  the string to convert, may be null
+!      * @param defaultValue  the default value
+!      * @return the long represented by the string, or the default if conversion fails
+!      * @since 2.1
+!      */
+!     public static long toLong(String str, long defaultValue) {
+!         if (str == null) {
+!             return defaultValue;
+!         }
+!         try {
+!             return Long.parseLong(str);
+!         } catch (NumberFormatException nfe) {
+!             return defaultValue;
+!         }
+!     }
+! 
+!     /**
+!      * <p>Convert a <code>String</code> to a <code>float</code>, returning
+!      * <code>0.0f</code> if the conversion fails.</p>
+!      *
+!      * <p>If the string <code>str</code> is <code>null</code>,
+!      * <code>0.0f</code> is returned.</p>
+!      *
+!      * <pre>
+!      *   NumberUtils.toFloat(null)   = 0.0f
+!      *   NumberUtils.toFloat("")     = 0.0f
+!      *   NumberUtils.toFloat("1.5")  = 1.5f
+!      * </pre>
+!      *
+!      * @param str the string to convert, may be <code>null</code>
+!      * @return the float represented by the string, or <code>0.0f</code>
+!      *  if conversion fails
+!      * @since 2.1
+!      */
+!     public static float toFloat(String str) {
+!         return toFloat(str, 0.0f);
+!     }
+! 
+!     /**
+!      * <p>Convert a <code>String</code> to a <code>float</code>, returning a
+!      * default value if the conversion fails.</p>
+!      *
+!      * <p>If the string <code>str</code> is <code>null</code>, the default
+!      * value is returned.</p>
+!      *
+!      * <pre>
+!      *   NumberUtils.toFloat(null, 1.1f)   = 1.0f
+!      *   NumberUtils.toFloat("", 1.1f)     = 1.1f
+!      *   NumberUtils.toFloat("1.5", 0.0f)  = 1.5f
+!      * </pre>
+!      *
+!      * @param str the string to convert, may be <code>null</code>
+!      * @param defaultValue the default value
+!      * @return the float represented by the string, or defaultValue
+!      *  if conversion fails
+!      * @since 2.1
+!      */
+!     public static float toFloat(String str, float defaultValue) {
+!       if (str == null) {
+!           return defaultValue;
+!       }     
+!       try {
+!           return Float.parseFloat(str);
+!       } catch (NumberFormatException nfe) {
+!           return defaultValue;
+!       }
+!     }
+! 
+!     /**
+!      * <p>Convert a <code>String</code> to a <code>double</code>, returning
+!      * <code>0.0d</code> if the conversion fails.</p>
+!      *
+!      * <p>If the string <code>str</code> is <code>null</code>,
+!      * <code>0.0d</code> is returned.</p>
+!      *
+!      * <pre>
+!      *   NumberUtils.toDouble(null)   = 0.0d
+!      *   NumberUtils.toDouble("")     = 0.0d
+!      *   NumberUtils.toDouble("1.5")  = 1.5d
+!      * </pre>
+!      *
+!      * @param str the string to convert, may be <code>null</code>
+!      * @return the double represented by the string, or <code>0.0d</code>
+!      *  if conversion fails
+!      * @since 2.1
+!      */
+!     public static double toDouble(String str) {
+!         return toDouble(str, 0.0d);
+!     }
+! 
+!     /**
+!      * <p>Convert a <code>String</code> to a <code>double</code>, returning a
+!      * default value if the conversion fails.</p>
+!      *
+!      * <p>If the string <code>str</code> is <code>null</code>, the default
+!      * value is returned.</p>
+!      *
+!      * <pre>
+!      *   NumberUtils.toDouble(null, 1.1d)   = 1.1d
+!      *   NumberUtils.toDouble("", 1.1d)     = 1.1d
+!      *   NumberUtils.toDouble("1.5", 0.0d)  = 1.5d
+!      * </pre>
+!      *
+!      * @param str the string to convert, may be <code>null</code>
+!      * @param defaultValue the default value
+!      * @return the double represented by the string, or defaultValue
+!      *  if conversion fails
+!      * @since 2.1
+!      */
+!     public static double toDouble(String str, double defaultValue) {
+!       if (str == null) {
+!           return defaultValue;
+!       }
+!       try {
+!           return Double.parseDouble(str);
+!       } catch (NumberFormatException nfe) {
+!           return defaultValue;
+!       }
+!     }
+! 
+!     //-----------------------------------------------------------------------
+      // must handle Long, Float, Integer, Float, Short,
+      //                  BigDecimal, BigInteger and Byte
+      // useful methods:
+--- 77,84 ----
+          }
+      }
+  
+!     //--------------------------------------------------------------------
+!     
+      // must handle Long, Float, Integer, Float, Short,
+      //                  BigDecimal, BigInteger and Byte
+      // useful methods:
+***************
+*** 374,380 ****
+       * <p>First, the value is examined for a type qualifier on the end
+       * (<code>'f','F','d','D','l','L'</code>).  If it is found, it starts 
+       * trying to create successively larger types from the type specified
+!      * until one is found that can represent the value.</p>
+       *
+       * <p>If a type specifier is not found, it will check for a decimal point
+       * and then try successively larger types from <code>Integer</code> to
+--- 120,126 ----
+       * <p>First, the value is examined for a type qualifier on the end
+       * (<code>'f','F','d','D','l','L'</code>).  If it is found, it starts 
+       * trying to create successively larger types from the type specified
+!      * until one is found that can hold the value.</p>
+       *
+       * <p>If a type specifier is not found, it will check for a decimal point
+       * and then try successively larger types from <code>Integer</code> to
+***************
+*** 385,456 ****
+       * will be interpreted as a hexadecimal integer.  Values with leading
+       * <code>0</code>'s will not be interpreted as octal.</p>
+       *
+!      * <p>Returns <code>null</code> if the string is <code>null</code>.</p>
+!      *
+!      * <p>This method does not trim the input string, i.e., strings with leading
+!      * or trailing spaces will generate NumberFormatExceptions.</p>
+!      *
+!      * @param str  String containing a number, may be null
+       * @return Number created from the string
+       * @throws NumberFormatException if the value cannot be converted
+       */
+!     public static Number createNumber(String str) throws NumberFormatException {
+!         if (str == null) {
+              return null;
+          }
+!         if (StringUtils.isBlank(str)) {
+!             throw new NumberFormatException("A blank string is not a valid number");
+!         }  
+!         if (str.startsWith("--")) {
+              // this is protection for poorness in java.lang.BigDecimal.
+              // it accepts this as a legal value, but it does not appear 
+              // to be in specification of class. OS X Java parses it to 
+              // a wrong value.
+              return null;
+          }
+!         if (str.startsWith("0x") || str.startsWith("-0x")) {
+!             return createInteger(str);
+          }   
+!         char lastChar = str.charAt(str.length() - 1);
+          String mant;
+          String dec;
+          String exp;
+!         int decPos = str.indexOf('.');
+!         int expPos = str.indexOf('e') + str.indexOf('E') + 1;
+  
+          if (decPos > -1) {
+  
+              if (expPos > -1) {
+                  if (expPos < decPos) {
+!                     throw new NumberFormatException(str + " is not a valid number.");
+                  }
+!                 dec = str.substring(decPos + 1, expPos);
+              } else {
+!                 dec = str.substring(decPos + 1);
+              }
+!             mant = str.substring(0, decPos);
+          } else {
+              if (expPos > -1) {
+!                 mant = str.substring(0, expPos);
+              } else {
+!                 mant = str;
+              }
+              dec = null;
+          }
+          if (!Character.isDigit(lastChar)) {
+!             if (expPos > -1 && expPos < str.length() - 1) {
+!                 exp = str.substring(expPos + 1, str.length() - 1);
+              } else {
+                  exp = null;
+              }
+              //Requesting a specific type..
+!             String numeric = str.substring(0, str.length() - 1);
+              boolean allZeros = isAllZeros(mant) && isAllZeros(exp);
+              switch (lastChar) {
+                  case 'l' :
+                  case 'L' :
+!                     if (dec == null && exp == null
+!                         && (numeric.charAt(0) == '-' || Character.isDigit(numeric.charAt(0)))) {
+                          try {
+                              return createLong(numeric);
+                          } catch (NumberFormatException nfe) {
+--- 131,198 ----
+       * will be interpreted as a hexadecimal integer.  Values with leading
+       * <code>0</code>'s will not be interpreted as octal.</p>
+       *
+!      * @param val String containing a number
+       * @return Number created from the string
+       * @throws NumberFormatException if the value cannot be converted
+       */
+!     public static Number createNumber(String val) throws NumberFormatException {
+!         if (val == null) {
+              return null;
+          }
+!         if (val.length() == 0) {
+!             throw new NumberFormatException("\"\" is not a valid number.");
+!         }
+!         if (val.startsWith("--")) {
+              // this is protection for poorness in java.lang.BigDecimal.
+              // it accepts this as a legal value, but it does not appear 
+              // to be in specification of class. OS X Java parses it to 
+              // a wrong value.
+              return null;
+          }
+!         if (val.startsWith("0x") || val.startsWith("-0x")) {
+!             return createInteger(val);
+          }   
+!         char lastChar = val.charAt(val.length() - 1);
+          String mant;
+          String dec;
+          String exp;
+!         int decPos = val.indexOf('.');
+!         int expPos = val.indexOf('e') + val.indexOf('E') + 1;
+  
+          if (decPos > -1) {
+  
+              if (expPos > -1) {
+                  if (expPos < decPos) {
+!                     throw new NumberFormatException(val + " is not a valid number.");
+                  }
+!                 dec = val.substring(decPos + 1, expPos);
+              } else {
+!                 dec = val.substring(decPos + 1);
+              }
+!             mant = val.substring(0, decPos);
+          } else {
+              if (expPos > -1) {
+!                 mant = val.substring(0, expPos);
+              } else {
+!                 mant = val;
+              }
+              dec = null;
+          }
+          if (!Character.isDigit(lastChar)) {
+!             if (expPos > -1 && expPos < val.length() - 1) {
+!                 exp = val.substring(expPos + 1, val.length() - 1);
+              } else {
+                  exp = null;
+              }
+              //Requesting a specific type..
+!             String numeric = val.substring(0, val.length() - 1);
+              boolean allZeros = isAllZeros(mant) && isAllZeros(exp);
+              switch (lastChar) {
+                  case 'l' :
+                  case 'L' :
+!                     if (dec == null
+!                         && exp == null
+!                         && (numeric.charAt(0) == '-' && isDigits(numeric.substring(1)) || isDigits(numeric))) {
+                          try {
+                              return createLong(numeric);
+                          } catch (NumberFormatException nfe) {
+***************
+*** 459,465 ****
+                          return createBigInteger(numeric);
+  
+                      }
+!                     throw new NumberFormatException(str + " is not a valid number.");
+                  case 'f' :
+                  case 'F' :
+                      try {
+--- 201,207 ----
+                          return createBigInteger(numeric);
+  
+                      }
+!                     throw new NumberFormatException(val + " is not a valid number.");
+                  case 'f' :
+                  case 'F' :
+                      try {
+***************
+*** 470,476 ****
+                              return f;
+                          }
+  
+!                     } catch (NumberFormatException nfe) {
+                          // ignore the bad number
+                      }
+                      //Fall through
+--- 212,218 ----
+                              return f;
+                          }
+  
+!                     } catch (NumberFormatException e) {
+                          // ignore the bad number
+                      }
+                      //Fall through
+***************
+*** 482,544 ****
+                              return d;
+                          }
+                      } catch (NumberFormatException nfe) {
+!                         // ignore the bad number
+                      }
+                      try {
+                          return createBigDecimal(numeric);
+                      } catch (NumberFormatException e) {
+!                         // ignore the bad number
+                      }
+                      //Fall through
+                  default :
+!                     throw new NumberFormatException(str + " is not a valid number.");
+  
+              }
+          } else {
+              //User doesn't have a preference on the return type, so let's start
+              //small and go from there...
+!             if (expPos > -1 && expPos < str.length() - 1) {
+!                 exp = str.substring(expPos + 1, str.length());
+              } else {
+                  exp = null;
+              }
+              if (dec == null && exp == null) {
+                  //Must be an int,long,bigint
+                  try {
+!                     return createInteger(str);
+                  } catch (NumberFormatException nfe) {
+!                     // ignore the bad number
+                  }
+                  try {
+!                     return createLong(str);
+                  } catch (NumberFormatException nfe) {
+!                     // ignore the bad number
+                  }
+!                 return createBigInteger(str);
+  
+              } else {
+                  //Must be a float,double,BigDec
+                  boolean allZeros = isAllZeros(mant) && isAllZeros(exp);
+                  try {
+!                     Float f = createFloat(str);
+                      if (!(f.isInfinite() || (f.floatValue() == 0.0F && !allZeros))) {
+                          return f;
+                      }
+                  } catch (NumberFormatException nfe) {
+!                     // ignore the bad number
+                  }
+                  try {
+!                     Double d = createDouble(str);
+                      if (!(d.isInfinite() || (d.doubleValue() == 0.0D && !allZeros))) {
+                          return d;
+                      }
+                  } catch (NumberFormatException nfe) {
+!                     // ignore the bad number
+                  }
+  
+!                 return createBigDecimal(str);
+  
+              }
+          }
+      }
+  
+--- 224,287 ----
+                              return d;
+                          }
+                      } catch (NumberFormatException nfe) {
+!                         // empty catch
+                      }
+                      try {
+                          return createBigDecimal(numeric);
+                      } catch (NumberFormatException e) {
+!                         // empty catch
+                      }
+                      //Fall through
+                  default :
+!                     throw new NumberFormatException(val + " is not a valid number.");
+  
+              }
+          } else {
+              //User doesn't have a preference on the return type, so let's start
+              //small and go from there...
+!             if (expPos > -1 && expPos < val.length() - 1) {
+!                 exp = val.substring(expPos + 1, val.length());
+              } else {
+                  exp = null;
+              }
+              if (dec == null && exp == null) {
+                  //Must be an int,long,bigint
+                  try {
+!                     return createInteger(val);
+                  } catch (NumberFormatException nfe) {
+!                     // empty catch
+                  }
+                  try {
+!                     return createLong(val);
+                  } catch (NumberFormatException nfe) {
+!                     // empty catch
+                  }
+!                 return createBigInteger(val);
+  
+              } else {
+                  //Must be a float,double,BigDec
+                  boolean allZeros = isAllZeros(mant) && isAllZeros(exp);
+                  try {
+!                     Float f = createFloat(val);
+                      if (!(f.isInfinite() || (f.floatValue() == 0.0F && !allZeros))) {
+                          return f;
+                      }
+                  } catch (NumberFormatException nfe) {
+!                     // empty catch
+                  }
+                  try {
+!                     Double d = createDouble(val);
+                      if (!(d.isInfinite() || (d.doubleValue() == 0.0D && !allZeros))) {
+                          return d;
+                      }
+                  } catch (NumberFormatException nfe) {
+!                     // empty catch
+                  }
+  
+!                 return createBigDecimal(val);
+  
+              }
++ 
+          }
+      }
+  
+***************
+*** 547,1164 ****
+       *
+       * <p>Returns <code>true</code> if s is <code>null</code>.</p>
+       * 
+!      * @param str  the String to check
+       * @return if it is all zeros or <code>null</code>
+       */
+!     private static boolean isAllZeros(String str) {
+!         if (str == null) {
+              return true;
+          }
+!         for (int i = str.length() - 1; i >= 0; i--) {
+!             if (str.charAt(i) != '0') {
+                  return false;
+              }
+          }
+!         return str.length() > 0;
+      }
+  
+!     //-----------------------------------------------------------------------
+      /**
+       * <p>Convert a <code>String</code> to a <code>Float</code>.</p>
+-      *
+-      * <p>Returns <code>null</code> if the string is <code>null</code>.</p>
+       * 
+!      * @param str  a <code>String</code> to convert, may be null
+       * @return converted <code>Float</code>
+       * @throws NumberFormatException if the value cannot be converted
+       */
+!     public static Float createFloat(String str) {
+!         if (str == null) {
+!             return null;
+!         }
+!         return Float.valueOf(str);
+      }
+  
+      /**
+       * <p>Convert a <code>String</code> to a <code>Double</code>.</p>
+       * 
+!      * <p>Returns <code>null</code> if the string is <code>null</code>.</p>
+!      *
+!      * @param str  a <code>String</code> to convert, may be null
+       * @return converted <code>Double</code>
+       * @throws NumberFormatException if the value cannot be converted
+       */
+!     public static Double createDouble(String str) {
+!         if (str == null) {
+!             return null;
+!         }
+!         return Double.valueOf(str);
+      }
+  
+      /**
+       * <p>Convert a <code>String</code> to a <code>Integer</code>, handling
+       * hex and octal notations.</p>
+-      *
+-      * <p>Returns <code>null</code> if the string is <code>null</code>.</p>
+       * 
+!      * @param str  a <code>String</code> to convert, may be null
+       * @return converted <code>Integer</code>
+       * @throws NumberFormatException if the value cannot be converted
+       */
+!     public static Integer createInteger(String str) {
+!         if (str == null) {
+!             return null;
+!         }
+          // decode() handles 0xAABD and 0777 (hex and octal) as well.
+!         return Integer.decode(str);
+      }
+  
+      /**
+       * <p>Convert a <code>String</code> to a <code>Long</code>.</p>
+       * 
+!      * <p>Returns <code>null</code> if the string is <code>null</code>.</p>
+!      *
+!      * @param str  a <code>String</code> to convert, may be null
+       * @return converted <code>Long</code>
+       * @throws NumberFormatException if the value cannot be converted
+       */
+!     public static Long createLong(String str) {
+!         if (str == null) {
+!             return null;
+!         }
+!         return Long.valueOf(str);
+      }
+  
+      /**
+       * <p>Convert a <code>String</code> to a <code>BigInteger</code>.</p>
+-      *
+-      * <p>Returns <code>null</code> if the string is <code>null</code>.</p>
+       * 
+!      * @param str  a <code>String</code> to convert, may be null
+       * @return converted <code>BigInteger</code>
+       * @throws NumberFormatException if the value cannot be converted
+       */
+!     public static BigInteger createBigInteger(String str) {
+!         if (str == null) {
+!             return null;
+!         }
+!         return new BigInteger(str);
+      }
+  
+      /**
+       * <p>Convert a <code>String</code> to a <code>BigDecimal</code>.</p>
+       * 
+!      * <p>Returns <code>null</code> if the string is <code>null</code>.</p>
+!      *
+!      * @param str  a <code>String</code> to convert, may be null
+       * @return converted <code>BigDecimal</code>
+       * @throws NumberFormatException if the value cannot be converted
+       */
+!     public static BigDecimal createBigDecimal(String str) {
+!         if (str == null) {
+!             return null;
+!         }
+!         // handle JDK1.3.1 bug where "" throws IndexOutOfBoundsException
+!         if (StringUtils.isBlank(str)) {
+!             throw new NumberFormatException("A blank string is not a valid number");
+!         }  
+!         return new BigDecimal(str);
+!     }
+! 
+!     // Equals in array
+!     //--------------------------------------------------------------------
+!     /**
+!      * <p>Whether the contents of two byte[] arrays are equal.</p>
+!      * 
+!      * @param array1  first array to compare
+!      * @param array2  second array to compare
+!      * @return whether the two arrays are equal
+!      */
+!     public static boolean equals(byte[] array1, byte[] array2) {
+!         if (array1 == array2) {
+!             return true;
+!         }
+!         if (array1 == null || array2 == null) {
+!             return false;
+!         }
+!         if (array1.length != array2.length) {
+!             return false;
+!         }
+! 
+!         for (int i=0; i<array1.length; i++) {
+!             if (array1[i] != array2[i]) {
+!                 return false;
+!             }
+!         }
+! 
+!         return true;
+!     }
+! 
+!     /**
+!      * <p>Whether the contents of two short[] arrays are equal.</p>
+!      * 
+!      * @param array1  first array to compare
+!      * @param array2  second array to compare
+!      * @return whether the two arrays are equal
+!      */
+!     public static boolean equals(short[] array1, short[] array2) {
+!         if (array1 == array2) {
+!             return true;
+!         }
+!         if (array1 == null || array2 == null) {
+!             return false;
+!         }
+!         if (array1.length != array2.length) {
+!             return false;
+!         }
+! 
+!         for (int i=0; i<array1.length; i++) {
+!             if (array1[i] != array2[i]) {
+!                 return false;
+!             }
+!         }
+! 
+!         return true;
+!     }
+! 
+!     /**
+!      * <p>Whether the contents of two int[] arrays are equal.</p>
+!      * 
+!      * @param array1  first array to compare
+!      * @param array2  second array to compare
+!      * @return whether the two arrays are equal
+!      */
+!     public static boolean equals(int[] array1, int[] array2) {
+!         if (array1 == array2) {
+!             return true;
+!         }
+!         if (array1 == null || array2 == null) {
+!             return false;
+!         }
+!         if (array1.length != array2.length) {
+!             return false;
+!         }
+! 
+!         for (int i=0; i<array1.length; i++) {
+!             if (array1[i] != array2[i]) {
+!                 return false;
+!             }
+!         }
+! 
+!         return true;
+!     }
+! 
+!     /**
+!      * <p>Whether the contents of two long[] arrays are equal.</p>
+!      * 
+!      * @param array1  first array to compare
+!      * @param array2  second array to compare
+!      * @return whether the two arrays are equal
+!      */
+!     public static boolean equals(long[] array1, long[] array2) {
+!         if (array1 == array2) {
+!             return true;
+!         }
+!         if (array1 == null || array2 == null) {
+!             return false;
+!         }
+!         if (array1.length != array2.length) {
+!             return false;
+!         }
+! 
+!         for (int i=0; i<array1.length; i++) {
+!             if (array1[i] != array2[i]) {
+!                 return false;
+!             }
+!         }
+! 
+!         return true;
+!     }
+! 
+!     /**
+!      * <p>Whether the contents of two float[] arrays are equal.</p>
+!      * 
+!      * @param array1  first array to compare
+!      * @param array2  second array to compare
+!      * @return whether the two arrays are equal
+!      */
+!     public static boolean equals(float[] array1, float[] array2) {
+!         if (array1 == array2) {
+!             return true;
+!         }
+!         if (array1 == null || array2 == null) {
+!             return false;
+!         }
+!         if (array1.length != array2.length) {
+!             return false;
+!         }
+! 
+!         for (int i=0; i<array1.length; i++) {
+!             if (compare(array1[i], array2[i]) != 0) {
+!                 return false;
+!             }
+!         }
+! 
+!         return true;
+!     }
+! 
+!     /**
+!      * <p>Whether the contents of two double[] arrays are equal.</p>
+!      * 
+!      * @param array1  first array to compare
+!      * @param array2  second array to compare
+!      * @return whether the two arrays are equal
+!      */
+!     public static boolean equals(double[] array1, double[] array2) {
+!         if (array1 == array2) {
+!             return true;
+!         }
+!         if (array1 == null || array2 == null) {
+!             return false;
+!         }
+!         if (array1.length != array2.length) {
+!             return false;
+!         }
+! 
+!         for (int i=0; i<array1.length; i++) {
+!             if (compare(array1[i], array2[i]) != 0) {
+!                 return false;
+!             }
+!         }
+! 
+!         return true;
+!     }
+! 
+!     // Min in array
+!     //--------------------------------------------------------------------
+!     /**
+!      * <p>Returns the minimum value in an array.</p>
+!      * 
+!      * @param array  an array, must not be null or empty
+!      * @return the minimum value in the array
+!      * @throws IllegalArgumentException if <code>array</code> is <code>null</code>
+!      * @throws IllegalArgumentException if <code>array</code> is empty
+!      */
+!     public static long min(long[] array) {
+!         // Validates input
+!         if (array == null) {
+!             throw new IllegalArgumentException("The Array must not be null");
+!         } else if (array.length == 0) {
+!             throw new IllegalArgumentException("Array cannot be empty.");
+!         }
+!     
+!         // Finds and returns min
+!         long min = array[0];
+!         for (int i = 1; i < array.length; i++) {
+!             if (array[i] < min) {
+!                 min = array[i];
+!             }
+!         }
+!     
+!         return min;
+!     }
+! 
+!     /**
+!      * <p>Returns the minimum value in an array.</p>
+!      * 
+!      * @param array  an array, must not be null or empty
+!      * @return the minimum value in the array
+!      * @throws IllegalArgumentException if <code>array</code> is <code>null</code>
+!      * @throws IllegalArgumentException if <code>array</code> is empty
+!      */
+!     public static int min(int[] array) {
+!         // Validates input
+!         if (array == null) {
+!             throw new IllegalArgumentException("The Array must not be null");
+!         } else if (array.length == 0) {
+!             throw new IllegalArgumentException("Array cannot be empty.");
+!         }
+!     
+!         // Finds and returns min
+!         int min = array[0];
+!         for (int j = 1; j < array.length; j++) {
+!             if (array[j] < min) {
+!                 min = array[j];
+!             }
+!         }
+!     
+!         return min;
+      }
+  
+-     /**
+-      * <p>Returns the minimum value in an array.</p>
+-      * 
+-      * @param array  an array, must not be null or empty
+-      * @return the minimum value in the array
+-      * @throws IllegalArgumentException if <code>array</code> is <code>null</code>
+-      * @throws IllegalArgumentException if <code>array</code> is empty
+-      */
+-     public static short min(short[] array) {
+-         // Validates input
+-         if (array == null) {
+-             throw new IllegalArgumentException("The Array must not be null");
+-         } else if (array.length == 0) {
+-             throw new IllegalArgumentException("Array cannot be empty.");
+-         }
+-     
+-         // Finds and returns min
+-         short min = array[0];
+-         for (int i = 1; i < array.length; i++) {
+-             if (array[i] < min) {
+-                 min = array[i];
+-             }
+-         }
+-     
+-         return min;
+-     }
+- 
+-     /**
+-      * <p>Returns the minimum value in an array.</p>
+-      * 
+-      * @param array  an array, must not be null or empty
+-      * @return the minimum value in the array
+-      * @throws IllegalArgumentException if <code>array</code> is <code>null</code>
+-      * @throws IllegalArgumentException if <code>array</code> is empty
+-      */
+-     public static byte min(byte[] array) {
+-         // Validates input
+-         if (array == null) {
+-             throw new IllegalArgumentException("The Array must not be null");
+-         } else if (array.length == 0) {
+-             throw new IllegalArgumentException("Array cannot be empty.");
+-         }
+-     
+-         // Finds and returns min
+-         byte min = array[0];
+-         for (int i = 1; i < array.length; i++) {
+-             if (array[i] < min) {
+-                 min = array[i];
+-             }
+-         }
+-     
+-         return min;
+-     }
+- 
+-      /**
+-      * <p>Returns the minimum value in an array.</p>
+-      * 
+-      * @param array  an array, must not be null or empty
+-      * @return the minimum value in the array
+-      * @throws IllegalArgumentException if <code>array</code> is <code>null</code>
+-      * @throws IllegalArgumentException if <code>array</code> is empty
+-      */
+-     public static double min(double[] array) {
+-         // Validates input
+-         if (array == null) {
+-             throw new IllegalArgumentException("The Array must not be null");
+-         } else if (array.length == 0) {
+-             throw new IllegalArgumentException("Array cannot be empty.");
+-         }
+-     
+-         // Finds and returns min
+-         double min = array[0];
+-         for (int i = 1; i < array.length; i++) {
+-             if (array[i] < min) {
+-                 min = array[i];
+-             }
+-         }
+-     
+-         return min;
+-     }
+- 
+-     /**
+-      * <p>Returns the minimum value in an array.</p>
+-      * 
+-      * @param array  an array, must not be null or empty
+-      * @return the minimum value in the array
+-      * @throws IllegalArgumentException if <code>array</code> is <code>null</code>
+-      * @throws IllegalArgumentException if <code>array</code> is empty
+-      */
+-     public static float min(float[] array) {
+-         // Validates input
+-         if (array == null) {
+-             throw new IllegalArgumentException("The Array must not be null");
+-         } else if (array.length == 0) {
+-             throw new IllegalArgumentException("Array cannot be empty.");
+-         }
+-     
+-         // Finds and returns min
+-         float min = array[0];
+-         for (int i = 1; i < array.length; i++) {
+-             if (array[i] < min) {
+-                 min = array[i];
+-             }
+-         }
+-     
+-         return min;
+-     }
+- 
+-     // Max in array
+      //--------------------------------------------------------------------
+-     /**
+-      * <p>Returns the maximum value in an array.</p>
+-      * 
+-      * @param array  an array, must not be null or empty
+-      * @return the minimum value in the array
+-      * @throws IllegalArgumentException if <code>array</code> is <code>null</code>
+-      * @throws IllegalArgumentException if <code>array</code> is empty
+-      */
+-     public static long max(long[] array) {
+-         // Validates input
+-         if (array == null) {
+-             throw new IllegalArgumentException("The Array must not be null");
+-         } else if (array.length == 0) {
+-             throw new IllegalArgumentException("Array cannot be empty.");
+-         }
+- 
+-         // Finds and returns max
+-         long max = array[0];
+-         for (int j = 1; j < array.length; j++) {
+-             if (array[j] > max) {
+-                 max = array[j];
+-             }
+-         }
+- 
+-         return max;
+-     }
+- 
+-     /**
+-      * <p>Returns the maximum value in an array.</p>
+-      * 
+-      * @param array  an array, must not be null or empty
+-      * @return the minimum value in the array
+-      * @throws IllegalArgumentException if <code>array</code> is <code>null</code>
+-      * @throws IllegalArgumentException if <code>array</code> is empty
+-      */
+-     public static int max(int[] array) {
+-         // Validates input
+-         if (array == null) {
+-             throw new IllegalArgumentException("The Array must not be null");
+-         } else if (array.length == 0) {
+-             throw new IllegalArgumentException("Array cannot be empty.");
+-         }
+-     
+-         // Finds and returns max
+-         int max = array[0];
+-         for (int j = 1; j < array.length; j++) {
+-             if (array[j] > max) {
+-                 max = array[j];
+-             }
+-         }
+-     
+-         return max;
+-     }
+- 
+-     /**
+-      * <p>Returns the maximum value in an array.</p>
+-      * 
+-      * @param array  an array, must not be null or empty
+-      * @return the minimum value in the array
+-      * @throws IllegalArgumentException if <code>array</code> is <code>null</code>
+-      * @throws IllegalArgumentException if <code>array</code> is empty
+-      */
+-     public static short max(short[] array) {
+-         // Validates input
+-         if (array == null) {
+-             throw new IllegalArgumentException("The Array must not be null");
+-         } else if (array.length == 0) {
+-             throw new IllegalArgumentException("Array cannot be empty.");
+-         }
+-     
+-         // Finds and returns max
+-         short max = array[0];
+-         for (int i = 1; i < array.length; i++) {
+-             if (array[i] > max) {
+-                 max = array[i];
+-             }
+-         }
+-     
+-         return max;
+-     }
+- 
+-     /**
+-      * <p>Returns the maximum value in an array.</p>
+-      * 
+-      * @param array  an array, must not be null or empty
+-      * @return the minimum value in the array
+-      * @throws IllegalArgumentException if <code>array</code> is <code>null</code>
+-      * @throws IllegalArgumentException if <code>array</code> is empty
+-      */
+-     public static byte max(byte[] array) {
+-         // Validates input
+-         if (array == null) {
+-             throw new IllegalArgumentException("The Array must not be null");
+-         } else if (array.length == 0) {
+-             throw new IllegalArgumentException("Array cannot be empty.");
+-         }
+-     
+-         // Finds and returns max
+-         byte max = array[0];
+-         for (int i = 1; i < array.length; i++) {
+-             if (array[i] > max) {
+-                 max = array[i];
+-             }
+-         }
+-     
+-         return max;
+-     }
+- 
+-     /**
+-      * <p>Returns the maximum value in an array.</p>
+-      * 
+-      * @param array  an array, must not be null or empty
+-      * @return the minimum value in the array
+-      * @throws IllegalArgumentException if <code>array</code> is <code>null</code>
+-      * @throws IllegalArgumentException if <code>array</code> is empty
+-      */
+-     public static double max(double[] array) {
+-         // Validates input
+-         if (array== null) {
+-             throw new IllegalArgumentException("The Array must not be null");
+-         } else if (array.length == 0) {
+-             throw new IllegalArgumentException("Array cannot be empty.");
+-         }
+-     
+-         // Finds and returns max
+-         double max = array[0];
+-         for (int j = 1; j < array.length; j++) {
+-             if (array[j] > max) {
+-                 max = array[j];
+-             }
+-         }
+      
+-         return max;
+-     }
+- 
+-     /**
+-      * <p>Returns the maximum value in an array.</p>
+-      * 
+-      * @param array  an array, must not be null or empty
+-      * @return the minimum value in the array
+-      * @throws IllegalArgumentException if <code>array</code> is <code>null</code>
+-      * @throws IllegalArgumentException if <code>array</code> is empty
+-      */
+-     public static float max(float[] array) {
+-         // Validates input
+-         if (array == null) {
+-             throw new IllegalArgumentException("The Array must not be null");
+-         } else if (array.length == 0) {
+-             throw new IllegalArgumentException("Array cannot be empty.");
+-         }
+- 
+-         // Finds and returns max
+-         float max = array[0];
+-         for (int j = 1; j < array.length; j++) {
+-             if (array[j] > max) {
+-                 max = array[j];
+-             }
+-         }
+- 
+-         return max;
+-     }
+-      
+-     // 3 param min
+-     //-----------------------------------------------------------------------
+      /**
+       * <p>Gets the minimum of three <code>long</code> values.</p>
+       * 
+--- 290,384 ----
+       *
+       * <p>Returns <code>true</code> if s is <code>null</code>.</p>
+       * 
+!      * @param s the String to check
+       * @return if it is all zeros or <code>null</code>
+       */
+!     private static boolean isAllZeros(String s) {
+!         if (s == null) {
+              return true;
+          }
+!         for (int i = s.length() - 1; i >= 0; i--) {
+!             if (s.charAt(i) != '0') {
+                  return false;
+              }
+          }
+!         return s.length() > 0;
+      }
+  
+!     //--------------------------------------------------------------------
+!     
+      /**
+       * <p>Convert a <code>String</code> to a <code>Float</code>.</p>
+       * 
+!      * @param val  a <code>String</code> to convert
+       * @return converted <code>Float</code>
+       * @throws NumberFormatException if the value cannot be converted
+       */
+!     public static Float createFloat(String val) {
+!         return Float.valueOf(val);
+      }
+  
+      /**
+       * <p>Convert a <code>String</code> to a <code>Double</code>.</p>
+       * 
+!      * @param val  a <code>String</code> to convert
+       * @return converted <code>Double</code>
+       * @throws NumberFormatException if the value cannot be converted
+       */
+!     public static Double createDouble(String val) {
+!         return Double.valueOf(val);
+      }
+  
+      /**
+       * <p>Convert a <code>String</code> to a <code>Integer</code>, handling
+       * hex and octal notations.</p>
+       * 
+!      * @param val  a <code>String</code> to convert
+       * @return converted <code>Integer</code>
+       * @throws NumberFormatException if the value cannot be converted
+       */
+!     public static Integer createInteger(String val) {
+          // decode() handles 0xAABD and 0777 (hex and octal) as well.
+!         return Integer.decode(val);
+      }
+  
+      /**
+       * <p>Convert a <code>String</code> to a <code>Long</code>.</p>
+       * 
+!      * @param val  a <code>String</code> to convert
+       * @return converted <code>Long</code>
+       * @throws NumberFormatException if the value cannot be converted
+       */
+!     public static Long createLong(String val) {
+!         return Long.valueOf(val);
+      }
+  
+      /**
+       * <p>Convert a <code>String</code> to a <code>BigInteger</code>.</p>
+       * 
+!      * @param val  a <code>String</code> to convert
+       * @return converted <code>BigInteger</code>
+       * @throws NumberFormatException if the value cannot be converted
+       */
+!     public static BigInteger createBigInteger(String val) {
+!         BigInteger bi = new BigInteger(val);
+!         return bi;
+      }
+  
+      /**
+       * <p>Convert a <code>String</code> to a <code>BigDecimal</code>.</p>
+       * 
+!      * @param val  a <code>String</code> to convert
+       * @return converted <code>BigDecimal</code>
+       * @throws NumberFormatException if the value cannot be converted
+       */
+!     public static BigDecimal createBigDecimal(String val) {
+!         BigDecimal bd = new BigDecimal(val);
+!         return bd;
+      }
+  
+      //--------------------------------------------------------------------
+      
+      /**
+       * <p>Gets the minimum of three <code>long</code> values.</p>
+       * 
+***************
+*** 1167,1173 ****
+       * @param c  value 3
+       * @return  the smallest of the values
+       */
+!     public static long min(long a, long b, long c) {
+          if (b < a) {
+              a = b;
+          }
+--- 387,393 ----
+       * @param c  value 3
+       * @return  the smallest of the values
+       */
+!     public static long minimum(long a, long b, long c) {
+          if (b < a) {
+              a = b;
+          }
+***************
+*** 1185,1191 ****
+       * @param c  value 3
+       * @return  the smallest of the values
+       */
+!     public static int min(int a, int b, int c) {
+          if (b < a) {
+              a = b;
+          }
+--- 405,411 ----
+       * @param c  value 3
+       * @return  the smallest of the values
+       */
+!     public static int minimum(int a, int b, int c) {
+          if (b < a) {
+              a = b;
+          }
+***************
+*** 1196,1269 ****
+      }
+  
+      /**
+-      * <p>Gets the minimum of three <code>short</code> values.</p>
+-      * 
+-      * @param a  value 1
+-      * @param b  value 2
+-      * @param c  value 3
+-      * @return  the smallest of the values
+-      */
+-     public static short min(short a, short b, short c) {
+-         if (b < a) {
+-             a = b;
+-         }
+-         if (c < a) {
+-             a = c;
+-         }
+-         return a;
+-     }
+- 
+-     /**
+-      * <p>Gets the minimum of three <code>byte</code> values.</p>
+-      * 
+-      * @param a  value 1
+-      * @param b  value 2
+-      * @param c  value 3
+-      * @return  the smallest of the values
+-      */
+-     public static byte min(byte a, byte b, byte c) {
+-         if (b < a) {
+-             a = b;
+-         }
+-         if (c < a) {
+-             a = c;
+-         }
+-         return a;
+-     }
+- 
+-     /**
+-      * <p>Gets the minimum of three <code>double</code> values.</p>
+-      * 
+-      * <p>If any value is <code>NaN</code>, <code>NaN</code> is
+-      * returned. Infinity is handled.</p>
+-      * 
+-      * @param a  value 1
+-      * @param b  value 2
+-      * @param c  value 3
+-      * @return  the smallest of the values
+-      */
+-     public static double min(double a, double b, double c) {
+-         return Math.min(Math.min(a, b), c);
+-     }
+- 
+-     /**
+-      * <p>Gets the minimum of three <code>float</code> values.</p>
+-      * 
+-      * <p>If any value is <code>NaN</code>, <code>NaN</code> is
+-      * returned. Infinity is handled.</p>
+-      *
+-      * @param a  value 1
+-      * @param b  value 2
+-      * @param c  value 3
+-      * @return  the smallest of the values
+-      */
+-     public static float min(float a, float b, float c) {
+-         return Math.min(Math.min(a, b), c);
+-     }
+- 
+-     // 3 param max
+-     //-----------------------------------------------------------------------
+-     /**
+       * <p>Gets the maximum of three <code>long</code> values.</p>
+       * 
+       * @param a  value 1
+--- 416,421 ----
+***************
+*** 1271,1277 ****
+       * @param c  value 3
+       * @return  the largest of the values
+       */
+!     public static long max(long a, long b, long c) {
+          if (b > a) {
+              a = b;
+          }
+--- 423,429 ----
+       * @param c  value 3
+       * @return  the largest of the values
+       */
+!     public static long maximum(long a, long b, long c) {
+          if (b > a) {
+              a = b;
+          }
+***************
+*** 1289,1331 ****
+       * @param c  value 3
+       * @return  the largest of the values
+       */
+!     public static int max(int a, int b, int c) {
+!         if (b > a) {
+!             a = b;
+!         }
+!         if (c > a) {
+!             a = c;
+!         }
+!         return a;
+!     }
+! 
+!     /**
+!      * <p>Gets the maximum of three <code>short</code> values.</p>
+!      * 
+!      * @param a  value 1
+!      * @param b  value 2
+!      * @param c  value 3
+!      * @return  the largest of the values
+!      */
+!     public static short max(short a, short b, short c) {
+!         if (b > a) {
+!             a = b;
+!         }
+!         if (c > a) {
+!             a = c;
+!         }
+!         return a;
+!     }
+! 
+!     /**
+!      * <p>Gets the maximum of three <code>byte</code> values.</p>
+!      * 
+!      * @param a  value 1
+!      * @param b  value 2
+!      * @param c  value 3
+!      * @return  the largest of the values
+!      */
+!     public static byte max(byte a, byte b, byte c) {
+          if (b > a) {
+              a = b;
+          }
+--- 441,447 ----
+       * @param c  value 3
+       * @return  the largest of the values
+       */
+!     public static int maximum(int a, int b, int c) {
+          if (b > a) {
+              a = b;
+          }
+***************
+*** 1335,1380 ****
+          return a;
+      }
+  
+!     /**
+!      * <p>Gets the maximum of three <code>double</code> values.</p>
+!      * 
+!      * <p>If any value is <code>NaN</code>, <code>NaN</code> is
+!      * returned. Infinity is handled.</p>
+!      *
+!      * @param a  value 1
+!      * @param b  value 2
+!      * @param c  value 3
+!      * @return  the largest of the values
+!      */
+!     public static double max(double a, double b, double c) {
+!         return Math.max(Math.max(a, b), c);
+!     }
+! 
+!     /**
+!      * <p>Gets the maximum of three <code>float</code> values.</p>
+!      * 
+!      * <p>If any value is <code>NaN</code>, <code>NaN</code> is
+!      * returned. Infinity is handled.</p>
+!      *
+!      * @param a  value 1
+!      * @param b  value 2
+!      * @param c  value 3
+!      * @return  the largest of the values
+!      */
+!     public static float max(float a, float b, float c) {
+!         return Math.max(Math.max(a, b), c);
+!     }
+! 
+!     //-----------------------------------------------------------------------
+      /**
+       * <p>Compares two <code>doubles</code> for order.</p>
+       *
+       * <p>This method is more comprehensive than the standard Java greater
+       * than, less than and equals operators.</p>
+       * <ul>
+!      *  <li>It returns <code>-1</code> if the first value is less than the second.</li>
+!      *  <li>It returns <code>+1</code> if the first value is greater than the second.</li>
+!      *  <li>It returns <code>0</code> if the values are equal.</li>
+       * </ul>
+       *
+       * <p>
+--- 451,467 ----
+          return a;
+      }
+  
+!     //--------------------------------------------------------------------
+!     
+      /**
+       * <p>Compares two <code>doubles</code> for order.</p>
+       *
+       * <p>This method is more comprehensive than the standard Java greater
+       * than, less than and equals operators.</p>
+       * <ul>
+!      *  <li>It returns <code>-1</code> if the first value is less than the second.
+!      *  <li>It returns <code>+1</code> if the first value is greater than the second.
+!      *  <li>It returns <code>0</code> if the values are equal.
+       * </ul>
+       *
+       * <p>
+***************
+*** 1387,1393 ****
+       *  <li>+0.0
+       *  <li>-0.0
+       *  <li>Normal negative numbers
+!      *  <li>Minimum double (<code>-Double.MAX_VALUE</code>)
+       *  <li>Negative infinity
+       * </ul>
+       * </p>
+--- 474,480 ----
+       *  <li>+0.0
+       *  <li>-0.0
+       *  <li>Normal negative numbers
+!      *  <li>Minimum double (-Double.MAX_VALUE)
+       *  <li>Negative infinity
+       * </ul>
+       * </p>
+***************
+*** 1449,1455 ****
+       * <li>+0.0
+       * <li>-0.0
+       * <li>Normal negative numbers
+!      * <li>Minimum float (<code>-Float.MAX_VALUE</code>)
+       * <li>Negative infinity
+       * </ul>
+       *
+--- 536,542 ----
+       * <li>+0.0
+       * <li>-0.0
+       * <li>Normal negative numbers
+!      * <li>Minimum float (-Float.MAX_VALUE)
+       * <li>Negative infinity
+       * </ul>
+       *
+***************
+*** 1490,1496 ****
+          }
+      }
+      
+!     //-----------------------------------------------------------------------
+      /**
+       * <p>Checks whether the <code>String</code> contains only
+       * digit characters.</p>
+--- 577,584 ----
+          }
+      }
+      
+!     //--------------------------------------------------------------------
+!     
+      /**
+       * <p>Checks whether the <code>String</code> contains only
+       * digit characters.</p>
+***************
+*** 1502,1508 ****
+       * @return <code>true</code> if str contains only unicode numeric
+       */
+      public static boolean isDigits(String str) {
+!         if (StringUtils.isEmpty(str)) {
+              return false;
+          }
+          for (int i = 0; i < str.length(); i++) {
+--- 590,596 ----
+       * @return <code>true</code> if str contains only unicode numeric
+       */
+      public static boolean isDigits(String str) {
+!         if ((str == null) || (str.length() == 0)) {
+              return false;
+          }
+          for (int i = 0; i < str.length(); i++) {
+***************
+*** 1621,1625 ****
+          // found digit it to make sure weird stuff like '.' and '1E-' doesn't pass
+          return !allowSigns && foundDigit;
+      }
+-     
+  }
+--- 709,712 ----

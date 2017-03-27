@@ -1,0 +1,17 @@
+*** /data/people/qx5/repair_expts/Math_85/patches/f2/c12/p0/UnivariateRealSolverUtils.java	Mon Mar 13 02:14:09 2017
+--- /data/people/qx5/defects4j-bugs/maths/projs/Math_85_buggy/src/java/org/apache/commons/math/analysis/solvers/UnivariateRealSolverUtils.java	Tue Oct 13 15:09:31 2015
+***************
+*** 196,201 ****
+--- 196,207 ----
+                  ((a > lowerBound) || (b < upperBound)));
+     
+          if (fa * fb >= 0.0 ) {
++             throw new ConvergenceException(
++                       "number of iterations={0}, maximum iterations={1}, " +
++                       "initial={2}, lower bound={3}, upper bound={4}, final a value={5}, " +
++                       "final b value={6}, f(a)={7}, f(b)={8}",
++                       numIterations, maximumIterations, initial,
++                       lowerBound, upperBound, a, b, fa, fb);
+          }
+          
+          return new double[]{a, b};

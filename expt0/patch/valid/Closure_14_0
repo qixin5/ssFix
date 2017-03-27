@@ -1,0 +1,19 @@
+*** /data/people/qx5/repair_expts/Closure_14/patches/f2/c7/p0/ControlFlowAnalysis.java	Fri Mar 17 10:44:49 2017
+--- /data/people/qx5/defects4j-bugs/closures/projs/Closure_14_buggy/src/com/google/javascript/jscomp/ControlFlowAnalysis.java	Sun Mar  5 09:49:43 2017
+***************
+*** 764,770 ****
+          } else if (parent.getLastChild() == node){
+            if (cfa != null) {
+              for (Node finallyNode : cfa.finallyMap.get(parent)) {
+!               cfa.createEdge(fromNode, Branch.ON_EX, finallyNode);
+              }
+            }
+            return computeFollowNode(fromNode, parent, cfa);
+--- 764,770 ----
+          } else if (parent.getLastChild() == node){
+            if (cfa != null) {
+              for (Node finallyNode : cfa.finallyMap.get(parent)) {
+!               cfa.createEdge(fromNode, Branch.UNCOND, finallyNode);
+              }
+            }
+            return computeFollowNode(fromNode, parent, cfa);

@@ -1,0 +1,20 @@
+*** /data/people/qx5/repair_expts/Lang_43/patches/f0/c0/p0/ExtendedMessageFormat.java	Wed Mar 15 22:29:00 2017
+--- /data/people/qx5/defects4j-bugs/langs/projs/Lang_43_buggy/src/java/org/apache/commons/lang/text/ExtendedMessageFormat.java	Mon Nov 23 11:31:52 2015
+***************
+*** 419,426 ****
+          int start = pos.getIndex();
+          char[] c = pattern.toCharArray();
+          if (escapingOn && c[start] == QUOTE) {
+!             next(pos);
+! 			return appendTo == null ? null : appendTo.append(QUOTE);
+          }
+          int lastHold = start;
+          for (int i = pos.getIndex(); i < pattern.length(); i++) {
+--- 419,425 ----
+          int start = pos.getIndex();
+          char[] c = pattern.toCharArray();
+          if (escapingOn && c[start] == QUOTE) {
+!             return appendTo == null ? null : appendTo.append(QUOTE);
+          }
+          int lastHold = start;
+          for (int i = pos.getIndex(); i < pattern.length(); i++) {

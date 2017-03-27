@@ -1,0 +1,22 @@
+*** /data/people/qx5/repair_expts/Math_44/patches/f13/c0/p10/AbstractIntegrator.java	Sun Mar 12 20:18:04 2017
+--- /data/people/qx5/defects4j-bugs/maths/projs/Math_44_buggy/src/main/java/org/apache/commons/math/ode/AbstractIntegrator.java	Tue Oct 13 14:58:49 2015
+***************
+*** 341,350 ****
+                      System.arraycopy(eventY, 0, y, 0, y.length);
+                      computeDerivatives(eventT, y, yDot);
+                      resetOccurred = true;
+!                     for (final EventState remaining : occuringEvents) {
+! 						remaining.stepAccepted(eventT, eventY);
+! 					}
+! 					return eventT;
+                  }
+  
+                  // prepare handling of the remaining part of the step
+--- 341,347 ----
+                      System.arraycopy(eventY, 0, y, 0, y.length);
+                      computeDerivatives(eventT, y, yDot);
+                      resetOccurred = true;
+!                     return eventT;
+                  }
+  
+                  // prepare handling of the remaining part of the step

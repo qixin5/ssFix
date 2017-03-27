@@ -1,0 +1,19 @@
+*** /data/people/qx5/repair_expts/Chart_20/patches/f4/c9/p3/ValueMarker.java	Sun Mar 12 16:30:43 2017
+--- /data/people/qx5/defects4j-bugs/charts/projs/Chart_20_buggy/src/org/jfree/chart/plot/ValueMarker.java	Sun Jul  3 19:02:51 2016
+***************
+*** 92,98 ****
+       */
+      public ValueMarker(double value, Paint paint, Stroke stroke, 
+                         Paint outlinePaint, Stroke outlineStroke, float alpha) {
+!         super(paint, stroke, outlinePaint, outlineStroke, alpha);
+          this.value = value;
+      }
+      
+--- 92,98 ----
+       */
+      public ValueMarker(double value, Paint paint, Stroke stroke, 
+                         Paint outlinePaint, Stroke outlineStroke, float alpha) {
+!         super(paint, stroke, paint, stroke, alpha);
+          this.value = value;
+      }
+      

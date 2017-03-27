@@ -1,0 +1,19 @@
+*** /data/people/qx5/repair_expts/Closure_109/patches/f5/c0/p1/JsDocInfoParser.java	Sun Mar 12 12:35:54 2017
+--- /data/people/qx5/defects4j-bugs/closures/projs/Closure_109_buggy/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java	Mon Feb 20 17:27:55 2017
+***************
+*** 2003,2009 ****
+              skipEOLs();
+              Node contextType = wrapNode(
+                  isThis ? Token.THIS : Token.NEW,
+!                 parseTypeExpression(next()));
+              if (contextType == null) {
+                return null;
+              }
+--- 2003,2009 ----
+              skipEOLs();
+              Node contextType = wrapNode(
+                  isThis ? Token.THIS : Token.NEW,
+!                 parseTypeName(next()));
+              if (contextType == null) {
+                return null;
+              }

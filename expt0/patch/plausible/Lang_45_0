@@ -1,0 +1,14 @@
+*** /data/people/qx5/repair_expts/Lang_45/patches/f6/c82/p8/WordUtils.java	Sun Mar 12 15:38:00 2017
+--- /data/people/qx5/defects4j-bugs/langs/projs/Lang_45_buggy/src/java/org/apache/commons/lang/WordUtils.java	Wed Nov 18 16:42:09 2015
+***************
+*** 620,628 ****
+          if (upper < lower) {
+              upper = lower;
+          }
+- 		if (upper < 0 || upper > str.length()) {
+- 			upper = str.length();
+- 		}
+  
+          StringBuffer result = new StringBuffer();
+          int index = StringUtils.indexOf(str, " ", lower);
+--- 620,625 ----

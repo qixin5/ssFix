@@ -1,0 +1,19 @@
+*** /data/people/qx5/repair_expts/Lang_44/patches/f0/c58/p2/NumberUtils.java	Sun Mar 12 15:14:48 2017
+--- /data/people/qx5/defects4j-bugs/langs/projs/Lang_44_buggy/src/java/org/apache/commons/lang/NumberUtils.java	Tue Oct 13 14:24:59 2015
+***************
+*** 192,198 ****
+                  case 'L' :
+                      if (dec == null
+                          && exp == null
+!                         && (numeric.endsWith("l") || isDigits(numeric))) {
+                          try {
+                              return createLong(numeric);
+                          } catch (NumberFormatException nfe) {
+--- 192,198 ----
+                  case 'L' :
+                      if (dec == null
+                          && exp == null
+!                         && (numeric.charAt(0) == '-' && isDigits(numeric.substring(1)) || isDigits(numeric))) {
+                          try {
+                              return createLong(numeric);
+                          } catch (NumberFormatException nfe) {

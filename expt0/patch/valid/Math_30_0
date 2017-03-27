@@ -1,0 +1,19 @@
+*** /data/people/qx5/repair_expts/Math_30/patches/f14/c109/p2/MannWhitneyUTest.java	Sun Mar 12 17:52:03 2017
+--- /data/people/qx5/defects4j-bugs/maths/projs/Math_30_buggy/src/main/java/org/apache/commons/math3/stat/inference/MannWhitneyUTest.java	Sat May 21 15:55:40 2016
+***************
+*** 174,180 ****
+  
+          // http://en.wikipedia.org/wiki/Mann%E2%80%93Whitney_U#Normal_approximation
+          final double EU = (double) n1n2prod / 2.0;
+!         final double VarU = (double) ((double) n1n2prod * (n1 + n2 + 1)) / 12.0;
+  
+          final double z = (Umin - EU) / FastMath.sqrt(VarU);
+  
+--- 174,180 ----
+  
+          // http://en.wikipedia.org/wiki/Mann%E2%80%93Whitney_U#Normal_approximation
+          final double EU = (double) n1n2prod / 2.0;
+!         final double VarU = (double) (n1n2prod * (n1 + n2 + 1)) / 12.0;
+  
+          final double z = (Umin - EU) / FastMath.sqrt(VarU);
+  

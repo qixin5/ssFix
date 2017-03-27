@@ -1,0 +1,19 @@
+*** /data/people/qx5/repair_expts/Lang_51/patches/f9/c10/p6/BooleanUtils.java	Sun Mar 12 13:31:03 2017
+--- /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java	Tue Oct 13 16:52:20 2015
+***************
+*** 669,675 ****
+              }
+              case 3: {
+                  char ch = str.charAt(0);
+!                 if (ch == 'y' || ch == 't') {
+                      return 
+                          (str.charAt(1) == 'e' || str.charAt(1) == 'E') &&
+                          (str.charAt(2) == 's' || str.charAt(2) == 'S');
+--- 669,675 ----
+              }
+              case 3: {
+                  char ch = str.charAt(0);
+!                 if (ch == 'y') {
+                      return 
+                          (str.charAt(1) == 'e' || str.charAt(1) == 'E') &&
+                          (str.charAt(2) == 's' || str.charAt(2) == 'S');

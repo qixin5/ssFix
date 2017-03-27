@@ -1,0 +1,19 @@
+*** /data/people/qx5/repair_expts/Lang_59/patches/f1/c10/p0/StrBuilder.java	Wed Mar 15 22:29:57 2017
+--- /data/people/qx5/defects4j-bugs/langs/projs/Lang_59_buggy/src/java/org/apache/commons/lang/text/StrBuilder.java	Tue May  5 13:19:21 2015
+***************
+*** 881,887 ****
+              String str = (obj == null ? getNullText() : obj.toString());
+              int strLen = str.length();
+              if (strLen >= width) {
+!                 str.getChars(0, width, buffer, size);
+              } else {
+                  int padLen = width - strLen;
+                  str.getChars(0, strLen, buffer, size);
+--- 881,887 ----
+              String str = (obj == null ? getNullText() : obj.toString());
+              int strLen = str.length();
+              if (strLen >= width) {
+!                 str.getChars(0, strLen, buffer, size);
+              } else {
+                  int padLen = width - strLen;
+                  str.getChars(0, strLen, buffer, size);

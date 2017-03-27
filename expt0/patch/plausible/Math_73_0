@@ -1,0 +1,19 @@
+*** /data/people/qx5/repair_expts/Math_73/patches/f0/c33/p0/BrentSolver.java	Mon Mar 13 02:54:47 2017
+--- /data/people/qx5/defects4j-bugs/maths/projs/Math_73_buggy/src/main/java/org/apache/commons/math/analysis/solvers/BrentSolver.java	Tue Oct 13 15:04:27 2015
+***************
+*** 129,135 ****
+          }
+  
+          // full Brent algorithm starting with provided initial guess
+!         return solve(f, min, max);
+  
+      }
+  
+--- 129,135 ----
+          }
+  
+          // full Brent algorithm starting with provided initial guess
+!         return solve(f, min, yMin, max, yMax, initial, yInitial);
+  
+      }
+  

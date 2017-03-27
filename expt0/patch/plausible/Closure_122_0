@@ -1,0 +1,19 @@
+*** /data/people/qx5/repair_expts/Closure_122/patches/f2/c61/p0/IRFactory.java	Sun Mar 12 16:49:52 2017
+--- /data/people/qx5/defects4j-bugs/closures/projs/Closure_122_buggy/src/com/google/javascript/jscomp/parsing/IRFactory.java	Mon Feb 20 17:30:49 2017
+***************
+*** 250,256 ****
+     */
+    private void handleBlockComment(Comment comment) {
+      String value = comment.getValue();
+!     if (value.indexOf("{") != -1 ||
+          value.indexOf("\n * @") != -1) {
+        errorReporter.warning(
+            SUSPICIOUS_COMMENT_WARNING,
+--- 250,256 ----
+     */
+    private void handleBlockComment(Comment comment) {
+      String value = comment.getValue();
+!     if (value.indexOf("/* @") != -1 ||
+          value.indexOf("\n * @") != -1) {
+        errorReporter.warning(
+            SUSPICIOUS_COMMENT_WARNING,

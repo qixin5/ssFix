@@ -1,0 +1,12 @@
+*** /data/people/qx5/repair_expts/Closure_7/patches/f1/c0/p0/Asserts.java	Sun Mar 12 21:31:38 2017
+--- /data/people/qx5/defects4j-bugs/closures/projs/Closure_7_buggy/src/com/google/javascript/rhino/testing/Asserts.java	Wed Aug 10 19:37:29 2016
+***************
+*** 93,98 ****
+--- 93,99 ----
+    }
+  
+    public static void assertTypeEquals(JSType a, JSType b) {
++     assertTypeEquals("", a, b);
+    }
+  
+    public static void assertTypeEquals(String message, JSType a, JSType b) {

@@ -1,0 +1,12 @@
+*** /data/people/qx5/repair_expts/Closure_125/patches/f0/c0/p1/FunctionType.java	Sun Mar 12 20:53:29 2017
+--- /data/people/qx5/defects4j-bugs/closures/projs/Closure_125_buggy/src/com/google/javascript/rhino/jstype/FunctionType.java	Wed May 13 16:34:07 2015
+***************
+*** 1068,1073 ****
+--- 1068,1074 ----
+     *         (see {@link #isConstructor()}).
+     */
+    public ObjectType getInstanceType() {
++     Preconditions.checkState(hasInstanceType());
+      return typeOfThis.toObjectType();
+    }
+  
