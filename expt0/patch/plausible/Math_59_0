@@ -1,0 +1,36 @@
+*** /data/people/qx5/repair_expts/Math_59/patches/f1/c3/p0/FastMath.java	Tue Mar 28 10:10:52 2017
+--- /data/people/qx5/defects4j-bugs/maths/projs/Math_59_buggy/src/main/java/org/apache/commons/math/util/FastMath.java	Fri Aug  5 17:13:43 2016
+***************
+*** 904,910 ****
+       *  For x between 0 and 1, returns exp(x), uses extended precision
+       *  @param x argument of exponential
+       *  @param result placeholder where to place exp(x) split in two terms
+!      *  for extra precision (i.e. exp(x) = result[0] ?? result[1]
+       *  @return exp(x)
+       */
+      private static double slowexp(final double x, final double result[]) {
+--- 904,910 ----
+       *  For x between 0 and 1, returns exp(x), uses extended precision
+       *  @param x argument of exponential
+       *  @param result placeholder where to place exp(x) split in two terms
+!      *  for extra precision (i.e. exp(x) = result[0] ° result[1]
+       *  @return exp(x)
+       */
+      private static double slowexp(final double x, final double result[]) {
+***************
+*** 3479,3485 ****
+       * @return b if a is lesser or equal to b, a otherwise
+       */
+      public static float max(final float a, final float b) {
+!         return (a <= b) ? b : (Float.isNaN(a + b) ? Float.NaN : a);
+      }
+  
+      /** Compute the maximum of two values
+--- 3479,3485 ----
+       * @return b if a is lesser or equal to b, a otherwise
+       */
+      public static float max(final float a, final float b) {
+!         return (a <= b) ? b : (Float.isNaN(a + b) ? Float.NaN : b);
+      }
+  
+      /** Compute the maximum of two values
