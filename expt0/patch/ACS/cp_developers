@@ -1,0 +1,14 @@
+#!/bin/bash
+
+for i in {24,39}
+do
+    cp ~/data/defects4j-0.1.0-projects/Lang/patches/${i}.src.patch ./developer/Lang_${i}
+done
+
+for i in {61,73,81,85,97}
+do
+    cp ~/data/defects4j-0.1.0-projects/Math/patches/${i}.src.patch ./developer/Math_${i}
+done
+
+cp ~/data/defects4j-0.1.0-projects/Time/patches/15.src.patch ./developer/Time_15
+

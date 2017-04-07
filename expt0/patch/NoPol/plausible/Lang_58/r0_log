@@ -1,0 +1,734 @@
+Source files: [/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java]
+Classpath: [file:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/classes/, file:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/tests/, file:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/all0.jar, file:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar, file:/home/qx5/ssFix2/lib/myprinter.jar, file:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar]
+Statement type: CONDITIONAL
+Args: [org.apache.commons.lang.ArrayUtilsAddTest, org.apache.commons.lang.ArrayUtilsRemoveTest, org.apache.commons.lang.ArrayUtilsTest, org.apache.commons.lang.BitFieldTest, org.apache.commons.lang.BooleanUtilsTest, org.apache.commons.lang.CharEncodingTest, org.apache.commons.lang.CharRangeTest, org.apache.commons.lang.CharSetTest, org.apache.commons.lang.CharSetUtilsTest, org.apache.commons.lang.CharUtilsTest, org.apache.commons.lang.ClassUtilsTest, org.apache.commons.lang.EntitiesTest, org.apache.commons.lang.IllegalClassExceptionTest, org.apache.commons.lang.IncompleteArgumentExceptionTest, org.apache.commons.lang.IntHashMapTest, org.apache.commons.lang.NotImplementedExceptionTest, org.apache.commons.lang.NullArgumentExceptionTest, org.apache.commons.lang.NumberRangeTest, org.apache.commons.lang.NumberUtilsTest, org.apache.commons.lang.ObjectUtilsTest, org.apache.commons.lang.RandomStringUtilsTest, org.apache.commons.lang.SerializationUtilsTest, org.apache.commons.lang.StringEscapeUtilsTest, org.apache.commons.lang.StringUtilsEqualsIndexOfTest, org.apache.commons.lang.StringUtilsIsTest, org.apache.commons.lang.StringUtilsSubstringTest, org.apache.commons.lang.StringUtilsTest, org.apache.commons.lang.StringUtilsTrimEmptyTest, org.apache.commons.lang.SystemUtilsTest, org.apache.commons.lang.UnhandledExceptionTest, org.apache.commons.lang.ValidateTest, org.apache.commons.lang.WordUtilsTest, org.apache.commons.lang.builder.CompareToBuilderTest, org.apache.commons.lang.builder.DefaultToStringStyleTest, org.apache.commons.lang.builder.EqualsBuilderTest, org.apache.commons.lang.builder.HashCodeBuilderAndEqualsBuilderTest, org.apache.commons.lang.builder.HashCodeBuilderTest, org.apache.commons.lang.builder.MultiLineToStringStyleTest, org.apache.commons.lang.builder.NoFieldNamesToStringStyleTest, org.apache.commons.lang.builder.ReflectionToStringBuilderExcludeTest, org.apache.commons.lang.builder.ShortPrefixToStringStyleTest, org.apache.commons.lang.builder.SimpleToStringStyleTest, org.apache.commons.lang.builder.StandardToStringStyleTest, org.apache.commons.lang.builder.ToStringStyleTest, org.apache.commons.lang.enum.EnumTest, org.apache.commons.lang.enum.EnumUtilsTest, org.apache.commons.lang.enum.ValuedEnumTest, org.apache.commons.lang.enums.EnumEqualsTest, org.apache.commons.lang.enums.EnumTest, org.apache.commons.lang.enums.EnumUtilsTest, org.apache.commons.lang.enums.ValuedEnumTest, org.apache.commons.lang.math.DoubleRangeTest, org.apache.commons.lang.math.FloatRangeTest, org.apache.commons.lang.math.FractionTest, org.apache.commons.lang.math.IntRangeTest, org.apache.commons.lang.math.LongRangeTest, org.apache.commons.lang.math.NumberRangeTest, org.apache.commons.lang.math.NumberUtilsTest, org.apache.commons.lang.math.RangeTest, org.apache.commons.lang.mutable.MutableBooleanTest, org.apache.commons.lang.mutable.MutableByteTest, org.apache.commons.lang.mutable.MutableDoubleTest, org.apache.commons.lang.mutable.MutableFloatTest, org.apache.commons.lang.mutable.MutableIntTest, org.apache.commons.lang.mutable.MutableLongTest, org.apache.commons.lang.mutable.MutableObjectTest, org.apache.commons.lang.mutable.MutableShortTest, org.apache.commons.lang.text.CompositeFormatTest, org.apache.commons.lang.text.StrBuilderAppendInsertTest, org.apache.commons.lang.text.StrBuilderTest, org.apache.commons.lang.text.StrLookupTest, org.apache.commons.lang.text.StrMatcherTest, org.apache.commons.lang.text.StrSubstitutorTest, org.apache.commons.lang.text.StrTokenizerTest, org.apache.commons.lang.time.DateFormatUtilsTest, org.apache.commons.lang.time.DateUtilsTest, org.apache.commons.lang.time.DurationFormatUtilsTest, org.apache.commons.lang.time.FastDateFormatTest, org.apache.commons.lang.time.StopWatchTest]
+Config: Config{synthesisDepth=3, collectStaticMethods=true, collectStaticFields=false, collectLiterals=false, onlyOneSynthesisResult=true, sortExpressions=true, maxLineInvocationPerTest=150, timeoutMethodInvocation=2000, addWeight=0.19478, subWeight=0.04554, mulWeight=0.0102, divWeight=0.00613, andWeight=0.10597, orWeight=0.05708, eqWeight=0.22798, nEqWeight=0.0, lessEqWeight=0.0255, lessWeight=0.0947, methodCallWeight=0.1, fieldAccessWeight=0.08099, constantWeight=0.14232, variableWeight=0.05195, mode=REPAIR, type=CONDITIONAL, synthesis=SMT, oracle=ANGELIC, solver=Z3, solverPath='/data/people/qx5/nopol-master/nopol/lib/z3/z3_for_linux', projectSourcePath=[/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java], projectClasspath='/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/classes:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/tests:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar', projectTests=[org.apache.commons.lang.ArrayUtilsAddTest, org.apache.commons.lang.ArrayUtilsRemoveTest, org.apache.commons.lang.ArrayUtilsTest, org.apache.commons.lang.BitFieldTest, org.apache.commons.lang.BooleanUtilsTest, org.apache.commons.lang.CharEncodingTest, org.apache.commons.lang.CharRangeTest, org.apache.commons.lang.CharSetTest, org.apache.commons.lang.CharSetUtilsTest, org.apache.commons.lang.CharUtilsTest, org.apache.commons.lang.ClassUtilsTest, org.apache.commons.lang.EntitiesTest, org.apache.commons.lang.IllegalClassExceptionTest, org.apache.commons.lang.IncompleteArgumentExceptionTest, org.apache.commons.lang.IntHashMapTest, org.apache.commons.lang.NotImplementedExceptionTest, org.apache.commons.lang.NullArgumentExceptionTest, org.apache.commons.lang.NumberRangeTest, org.apache.commons.lang.NumberUtilsTest, org.apache.commons.lang.ObjectUtilsTest, org.apache.commons.lang.RandomStringUtilsTest, org.apache.commons.lang.SerializationUtilsTest, org.apache.commons.lang.StringEscapeUtilsTest, org.apache.commons.lang.StringUtilsEqualsIndexOfTest, org.apache.commons.lang.StringUtilsIsTest, org.apache.commons.lang.StringUtilsSubstringTest, org.apache.commons.lang.StringUtilsTest, org.apache.commons.lang.StringUtilsTrimEmptyTest, org.apache.commons.lang.SystemUtilsTest, org.apache.commons.lang.UnhandledExceptionTest, org.apache.commons.lang.ValidateTest, org.apache.commons.lang.WordUtilsTest, org.apache.commons.lang.builder.CompareToBuilderTest, org.apache.commons.lang.builder.DefaultToStringStyleTest, org.apache.commons.lang.builder.EqualsBuilderTest, org.apache.commons.lang.builder.HashCodeBuilderAndEqualsBuilderTest, org.apache.commons.lang.builder.HashCodeBuilderTest, org.apache.commons.lang.builder.MultiLineToStringStyleTest, org.apache.commons.lang.builder.NoFieldNamesToStringStyleTest, org.apache.commons.lang.builder.ReflectionToStringBuilderExcludeTest, org.apache.commons.lang.builder.ShortPrefixToStringStyleTest, org.apache.commons.lang.builder.SimpleToStringStyleTest, org.apache.commons.lang.builder.StandardToStringStyleTest, org.apache.commons.lang.builder.ToStringStyleTest, org.apache.commons.lang.enum.EnumTest, org.apache.commons.lang.enum.EnumUtilsTest, org.apache.commons.lang.enum.ValuedEnumTest, org.apache.commons.lang.enums.EnumEqualsTest, org.apache.commons.lang.enums.EnumTest, org.apache.commons.lang.enums.EnumUtilsTest, org.apache.commons.lang.enums.ValuedEnumTest, org.apache.commons.lang.math.DoubleRangeTest, org.apache.commons.lang.math.FloatRangeTest, org.apache.commons.lang.math.FractionTest, org.apache.commons.lang.math.IntRangeTest, org.apache.commons.lang.math.LongRangeTest, org.apache.commons.lang.math.NumberRangeTest, org.apache.commons.lang.math.NumberUtilsTest, org.apache.commons.lang.math.RangeTest, org.apache.commons.lang.mutable.MutableBooleanTest, org.apache.commons.lang.mutable.MutableByteTest, org.apache.commons.lang.mutable.MutableDoubleTest, org.apache.commons.lang.mutable.MutableFloatTest, org.apache.commons.lang.mutable.MutableIntTest, org.apache.commons.lang.mutable.MutableLongTest, org.apache.commons.lang.mutable.MutableObjectTest, org.apache.commons.lang.mutable.MutableShortTest, org.apache.commons.lang.text.CompositeFormatTest, org.apache.commons.lang.text.StrBuilderAppendInsertTest, org.apache.commons.lang.text.StrBuilderTest, org.apache.commons.lang.text.StrLookupTest, org.apache.commons.lang.text.StrMatcherTest, org.apache.commons.lang.text.StrSubstitutorTest, org.apache.commons.lang.text.StrTokenizerTest, org.apache.commons.lang.time.DateFormatUtilsTest, org.apache.commons.lang.time.DateUtilsTest, org.apache.commons.lang.time.DurationFormatUtilsTest, org.apache.commons.lang.time.FastDateFormatTest, org.apache.commons.lang.time.StopWatchTest], complianceLevel=7}
+Available processors (cores): 32
+Free memory: 971 MB
+Maximum memory: 7 GB
+Total memory available to JVM: 982 MB
+Java version: 1.7.0_121
+JAVA_HOME: null
+PATH: /tmp/765567.1.vlong.q:/usr/local/bin:/bin:/usr/bin
+02:55:17.550 [main] DEBUG f.i.l.commons.spoon.SpoonedProject - [Building Spoon model from /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java]
+2017-03-29 02:55:18,889 DEBUG spoon.support.StandardEnvironment - building sources: [/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/ArrayUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/BitField.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/BooleanUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/CharEncoding.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/CharRange.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/CharSet.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/CharSetUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/CharUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/ClassUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/Entities.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/IllegalClassException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/IncompleteArgumentException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/IntHashMap.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/LocaleUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/NotImplementedException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/NullArgumentException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/NumberRange.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/NumberUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/ObjectUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/RandomStringUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/SerializationException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/SerializationUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/StringEscapeUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/StringUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/SystemUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/UnhandledException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/Validate.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/WordUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/builder/CompareToBuilder.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/builder/EqualsBuilder.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/builder/HashCodeBuilder.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/builder/ReflectionToStringBuilder.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/builder/StandardToStringStyle.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/builder/ToStringBuilder.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/builder/ToStringStyle.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/enum/Enum.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/enum/EnumUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/enum/ValuedEnum.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/enums/Enum.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/enums/EnumUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/enums/ValuedEnum.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/exception/ExceptionUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/exception/Nestable.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/exception/NestableDelegate.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/exception/NestableError.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/exception/NestableException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/exception/NestableRuntimeException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/DoubleRange.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/FloatRange.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/Fraction.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/IntRange.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/JVMRandom.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/LongRange.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberRange.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/RandomUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/Range.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/mutable/Mutable.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/mutable/MutableBoolean.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/mutable/MutableByte.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/mutable/MutableDouble.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/mutable/MutableFloat.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/mutable/MutableInt.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/mutable/MutableLong.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/mutable/MutableObject.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/mutable/MutableShort.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/text/CompositeFormat.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/text/StrBuilder.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/text/StrLookup.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/text/StrMatcher.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/text/StrSubstitutor.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/text/StrTokenizer.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/time/DateFormatUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/time/DateUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/time/DurationFormatUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/time/FastDateFormat.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/time/StopWatch.java]
+2017-03-29 02:55:19,058 DEBUG spoon.support.StandardEnvironment - build args: [-1.7, -encoding, UTF-8, -preserveAllLocals, -enableJavadoc, -noExit, -cp, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/classes/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/tests/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar:, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/ArrayUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/BitField.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/BooleanUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/CharEncoding.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/CharRange.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/CharSet.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/CharSetUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/CharUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/ClassUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/Entities.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/IllegalClassException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/IncompleteArgumentException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/IntHashMap.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/LocaleUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/NotImplementedException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/NullArgumentException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/NumberRange.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/NumberUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/ObjectUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/RandomStringUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/SerializationException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/SerializationUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/StringEscapeUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/StringUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/SystemUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/UnhandledException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/Validate.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/WordUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/builder/CompareToBuilder.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/builder/EqualsBuilder.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/builder/HashCodeBuilder.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/builder/ReflectionToStringBuilder.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/builder/StandardToStringStyle.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/builder/ToStringBuilder.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/builder/ToStringStyle.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/enum/Enum.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/enum/EnumUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/enum/ValuedEnum.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/enums/Enum.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/enums/EnumUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/enums/ValuedEnum.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/exception/ExceptionUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/exception/Nestable.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/exception/NestableDelegate.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/exception/NestableError.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/exception/NestableException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/exception/NestableRuntimeException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/DoubleRange.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/FloatRange.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/Fraction.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/IntRange.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/JVMRandom.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/LongRange.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberRange.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/RandomUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/Range.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/mutable/Mutable.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/mutable/MutableBoolean.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/mutable/MutableByte.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/mutable/MutableDouble.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/mutable/MutableFloat.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/mutable/MutableInt.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/mutable/MutableLong.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/mutable/MutableObject.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/mutable/MutableShort.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/text/CompositeFormat.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/text/StrBuilder.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/text/StrLookup.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/text/StrMatcher.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/text/StrSubstitutor.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/text/StrTokenizer.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/time/DateFormatUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/time/DateUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/time/DurationFormatUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/time/FastDateFormat.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/time/StopWatch.java]
+spoon.compiler.ModelBuildingException: Syntax error on token "enum", Identifier expected at /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/enum/Enum.java:17
+	at spoon.support.compiler.jdt.JDTBasedSpoonCompiler.report(JDTBasedSpoonCompiler.java:535)
+	at spoon.support.compiler.jdt.JDTBasedSpoonCompiler.reportProblems(JDTBasedSpoonCompiler.java:551)
+	at spoon.support.compiler.jdt.JDTBasedSpoonCompiler.build(JDTBasedSpoonCompiler.java:507)
+	at fr.inria.lille.commons.spoon.util.SpoonModelLibrary.modelFor(SpoonModelLibrary.java:56)
+	at fr.inria.lille.commons.spoon.SpoonedFile.<init>(SpoonedFile.java:50)
+	at fr.inria.lille.commons.spoon.SpoonedProject.<init>(SpoonedProject.java:17)
+	at fr.inria.lille.repair.nopol.NoPol.<init>(NoPol.java:80)
+	at fr.inria.lille.repair.nopol.NoPol.<init>(NoPol.java:85)
+	at fr.inria.lille.repair.nopol.NoPolLauncher.launch(NoPolLauncher.java:79)
+	at fr.inria.lille.repair.Main.main(Main.java:59)
+org.apache.commons.lang.mutable.MutableObject{setValue(Ljava/lang/Object;)V[76 0.0
+org.apache.commons.lang.math.NumberUtils{isDigits(Ljava/lang/String;)Z[1508 0.7071067811865475
+02:55:57.763 [main] DEBUG fr.inria.lille.repair.nopol.NoPol - Analysing org.apache.commons.lang.math.NumberUtils{isDigits(Ljava/lang/String;)Z[1508 0.7071067811865475
+02:55:57.789 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Building Spoon model from /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:55:57,998 DEBUG spoon.support.StandardEnvironment - building sources: [/gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:55:57,999 DEBUG spoon.support.StandardEnvironment - build args: [-1.7, -encoding, UTF-8, -preserveAllLocals, -enableJavadoc, -noExit, -cp, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/classes/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/tests/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar:, /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:55:59,005 DEBUG spoon.support.StandardEnvironment - built in 1006 ms
+2017-03-29 02:55:59,005 DEBUG spoon.support.StandardEnvironment - building templates: []
+2017-03-29 02:55:59,005 DEBUG spoon.support.StandardEnvironment - built in 0 ms
+02:55:59.031 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Spoon processing of org.apache.commons.lang.math.NumberUtils]
+2017-03-29 02:55:59,031 DEBUG spoon.support.StandardEnvironment - processing 'NumberUtils' with 'fr.inria.lille.repair.common.synth.StatementTypeDetector'...
+02:55:59.157 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Scanning source code of org.apache.commons.lang.math.NumberUtils]
+02:55:59.309 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compiling 1 source files]
+02:56:02.562 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compilation finished successfully (1 classes)]
+02:56:02.563 [main] DEBUG f.i.l.r.n.synth.SynthesizerFactory - No synthesizer found for SourceLocation org.apache.commons.lang.math.NumberUtils:1508.
+02:56:02.564 [main] DEBUG fr.inria.lille.repair.nopol.NoPol - Analysing org.apache.commons.lang.math.NumberUtils{createNumber(Ljava/lang/String;)Ljava/lang/Number;[464 0.7071067811865475
+02:56:02.564 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Building Spoon model from /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:02,649 DEBUG spoon.support.StandardEnvironment - building sources: [/gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:02,650 DEBUG spoon.support.StandardEnvironment - build args: [-1.7, -encoding, UTF-8, -preserveAllLocals, -enableJavadoc, -noExit, -cp, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/classes/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/tests/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar:, /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:03,375 DEBUG spoon.support.StandardEnvironment - built in 724 ms
+2017-03-29 02:56:03,375 DEBUG spoon.support.StandardEnvironment - building templates: []
+2017-03-29 02:56:03,375 DEBUG spoon.support.StandardEnvironment - built in 0 ms
+02:56:03.377 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Spoon processing of org.apache.commons.lang.math.NumberUtils]
+2017-03-29 02:56:03,377 DEBUG spoon.support.StandardEnvironment - processing 'NumberUtils' with 'fr.inria.lille.repair.common.synth.StatementTypeDetector'...
+02:56:03.424 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Scanning source code of org.apache.commons.lang.math.NumberUtils]
+02:56:03.484 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compiling 1 source files]
+02:56:04.404 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compilation finished successfully (1 classes)]
+02:56:04.405 [main] DEBUG f.i.l.r.n.synth.SynthesizerFactory - No synthesizer found for SourceLocation org.apache.commons.lang.math.NumberUtils:464.
+02:56:04.405 [main] DEBUG fr.inria.lille.repair.nopol.NoPol - Analysing org.apache.commons.lang.math.NumberUtils{isAllZeros(Ljava/lang/String;)Z[561 0.5773502691896258
+02:56:04.406 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Building Spoon model from /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:04,493 DEBUG spoon.support.StandardEnvironment - building sources: [/gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:04,494 DEBUG spoon.support.StandardEnvironment - build args: [-1.7, -encoding, UTF-8, -preserveAllLocals, -enableJavadoc, -noExit, -cp, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/classes/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/tests/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar:, /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:05,030 DEBUG spoon.support.StandardEnvironment - built in 536 ms
+2017-03-29 02:56:05,030 DEBUG spoon.support.StandardEnvironment - building templates: []
+2017-03-29 02:56:05,030 DEBUG spoon.support.StandardEnvironment - built in 0 ms
+02:56:05.032 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Spoon processing of org.apache.commons.lang.math.NumberUtils]
+2017-03-29 02:56:05,033 DEBUG spoon.support.StandardEnvironment - processing 'NumberUtils' with 'fr.inria.lille.repair.common.synth.StatementTypeDetector'...
+02:56:05.151 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Scanning source code of org.apache.commons.lang.math.NumberUtils]
+02:56:05.234 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compiling 1 source files]
+02:56:06.280 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compilation finished successfully (1 classes)]
+02:56:06.280 [main] DEBUG f.i.l.r.n.synth.SynthesizerFactory - No synthesizer found for SourceLocation org.apache.commons.lang.math.NumberUtils:561.
+02:56:06.281 [main] DEBUG fr.inria.lille.repair.nopol.NoPol - Analysing org.apache.commons.lang.math.NumberUtils{isAllZeros(Ljava/lang/String;)Z[560 0.5773502691896258
+02:56:06.281 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Building Spoon model from /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:06,351 DEBUG spoon.support.StandardEnvironment - building sources: [/gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:06,351 DEBUG spoon.support.StandardEnvironment - build args: [-1.7, -encoding, UTF-8, -preserveAllLocals, -enableJavadoc, -noExit, -cp, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/classes/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/tests/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar:, /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:06,994 DEBUG spoon.support.StandardEnvironment - built in 643 ms
+2017-03-29 02:56:06,995 DEBUG spoon.support.StandardEnvironment - building templates: []
+2017-03-29 02:56:06,995 DEBUG spoon.support.StandardEnvironment - built in 0 ms
+02:56:06.997 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Spoon processing of org.apache.commons.lang.math.NumberUtils]
+2017-03-29 02:56:07,009 DEBUG spoon.support.StandardEnvironment - processing 'NumberUtils' with 'fr.inria.lille.repair.common.synth.StatementTypeDetector'...
+02:56:07.093 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Scanning source code of org.apache.commons.lang.math.NumberUtils]
+02:56:07.194 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compiling 1 source files]
+02:56:08.260 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compilation finished successfully (1 classes)]
+02:56:08.283 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Building Spoon model from /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:08,363 DEBUG spoon.support.StandardEnvironment - building sources: [/gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:08,363 DEBUG spoon.support.StandardEnvironment - build args: [-1.7, -encoding, UTF-8, -preserveAllLocals, -enableJavadoc, -noExit, -cp, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/classes/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/tests/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar:, /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:09,172 DEBUG spoon.support.StandardEnvironment - built in 809 ms
+2017-03-29 02:56:09,172 DEBUG spoon.support.StandardEnvironment - building templates: []
+2017-03-29 02:56:09,172 DEBUG spoon.support.StandardEnvironment - built in 0 ms
+02:56:09.178 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Spoon processing of org.apache.commons.lang.math.NumberUtils]
+2017-03-29 02:56:09,178 DEBUG spoon.support.StandardEnvironment - processing 'NumberUtils' with 'fr.inria.lille.repair.nopol.spoon.ConditionalLoggingInstrumenter'...
+02:56:09.314 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Scanning source code of org.apache.commons.lang.math.NumberUtils]
+02:56:09.454 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compiling 1 source files]
+02:56:10.394 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compilation finished successfully (1 classes)]
+02:56:10.597 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#1. org.apache.commons.lang.math.NumberUtilsTest#testMaximumDouble started...]
+02:56:10.605 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#1. SUCCESS]
+02:56:10.606 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#2. org.apache.commons.lang.math.NumberUtilsTest#testToFloatStringF started...]
+02:56:10.607 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#2. SUCCESS]
+02:56:10.608 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#3. org.apache.commons.lang.math.NumberUtilsTest#testMinimumFloat started...]
+02:56:10.609 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#3. SUCCESS]
+02:56:10.610 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#4. org.apache.commons.lang.math.NumberUtilsTest#testMinimumShort started...]
+02:56:10.611 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#4. SUCCESS]
+02:56:10.612 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#5. org.apache.commons.lang.math.NumberUtilsTest#testCreateNumber started...]
+02:56:10.641 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#5. SUCCESS]
+02:56:10.642 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#6. org.apache.commons.lang.math.NumberUtilsTest#testToLongString started...]
+02:56:10.643 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#6. SUCCESS]
+02:56:10.644 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#7. org.apache.commons.lang.math.NumberUtilsTest#testEqualsFloat started...]
+02:56:10.644 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#7. SUCCESS]
+02:56:10.645 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#8. org.apache.commons.lang.math.NumberUtilsTest#testEqualsShort started...]
+02:56:10.646 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#8. SUCCESS]
+02:56:10.647 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#9. org.apache.commons.lang.math.NumberUtilsTest#testToIntStringI started...]
+02:56:10.647 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#9. SUCCESS]
+02:56:10.648 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#10. org.apache.commons.lang.math.NumberUtilsTest#testToIntString started...]
+02:56:10.649 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#10. SUCCESS]
+02:56:10.649 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#11. org.apache.commons.lang.math.NumberUtilsTest#testCreateFloat started...]
+02:56:10.662 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#11. SUCCESS]
+02:56:10.663 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#12. org.apache.commons.lang.math.NumberUtilsTest#testMinimumInt started...]
+02:56:10.664 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#12. SUCCESS]
+02:56:10.664 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#13. org.apache.commons.lang.math.NumberUtilsTest#testToFloatString started...]
+02:56:10.665 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#13. SUCCESS]
+02:56:10.666 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#14. org.apache.commons.lang.math.NumberUtilsTest#testMinFloat started...]
+02:56:10.667 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#14. SUCCESS]
+02:56:10.667 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#15. org.apache.commons.lang.math.NumberUtilsTest#testMinShort started...]
+02:56:10.668 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#15. SUCCESS]
+02:56:10.669 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#16. org.apache.commons.lang.math.NumberUtilsTest#testEqualsDouble started...]
+02:56:10.676 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#16. SUCCESS]
+02:56:10.677 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#17. org.apache.commons.lang.math.NumberUtilsTest#testLang300 started...]
+02:56:10.680 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#17. FAILED]
+02:56:10.681 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#18. org.apache.commons.lang.math.NumberUtilsTest#testMaxDouble started...]
+02:56:10.682 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#18. SUCCESS]
+02:56:10.682 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#19. org.apache.commons.lang.math.NumberUtilsTest#testEqualsByte started...]
+02:56:10.683 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#19. SUCCESS]
+02:56:10.684 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#20. org.apache.commons.lang.math.NumberUtilsTest#testEqualsLong started...]
+02:56:10.684 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#20. SUCCESS]
+02:56:10.685 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#21. org.apache.commons.lang.math.NumberUtilsTest#testMinimumDouble started...]
+02:56:10.686 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#21. SUCCESS]
+02:56:10.686 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#22. org.apache.commons.lang.math.NumberUtilsTest#testIsDigits started...]
+02:56:10.687 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#22. SUCCESS]
+02:56:10.688 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#23. org.apache.commons.lang.math.NumberUtilsTest#testCreateBigDecimal started...]
+02:56:10.688 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#23. SUCCESS]
+02:56:10.689 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#24. org.apache.commons.lang.math.NumberUtilsTest#testConstants started...]
+02:56:10.690 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#24. SUCCESS]
+02:56:10.691 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#25. org.apache.commons.lang.math.NumberUtilsTest#testCompareDouble started...]
+02:56:10.691 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#25. SUCCESS]
+02:56:10.692 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#26. org.apache.commons.lang.math.NumberUtilsTest#testMinimumByte started...]
+02:56:10.696 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#26. SUCCESS]
+02:56:10.697 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#27. org.apache.commons.lang.math.NumberUtilsTest#testMinimumLong started...]
+02:56:10.697 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#27. SUCCESS]
+02:56:10.698 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#28. org.apache.commons.lang.math.NumberUtilsTest#testIsNumber started...]
+02:56:10.700 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#28. SUCCESS]
+02:56:10.702 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#29. org.apache.commons.lang.math.NumberUtilsTest#testMinDouble started...]
+02:56:10.702 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#29. SUCCESS]
+02:56:10.703 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#30. org.apache.commons.lang.math.NumberUtilsTest#testMaxByte started...]
+02:56:10.704 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#30. SUCCESS]
+02:56:10.704 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#31. org.apache.commons.lang.math.NumberUtilsTest#testMaxLong started...]
+02:56:10.705 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#31. SUCCESS]
+02:56:10.706 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#32. org.apache.commons.lang.math.NumberUtilsTest#testCreateBigInteger started...]
+02:56:10.706 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#32. SUCCESS]
+02:56:10.707 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#33. org.apache.commons.lang.math.NumberUtilsTest#testCreateLong started...]
+02:56:10.708 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#33. SUCCESS]
+02:56:10.709 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#34. org.apache.commons.lang.math.NumberUtilsTest#testMinByte started...]
+02:56:10.709 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#34. SUCCESS]
+02:56:10.710 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#35. org.apache.commons.lang.math.NumberUtilsTest#testMinLong started...]
+02:56:10.711 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#35. SUCCESS]
+02:56:10.711 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#36. org.apache.commons.lang.math.NumberUtilsTest#testMaximumInt started...]
+02:56:10.712 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#36. SUCCESS]
+02:56:10.713 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#37. org.apache.commons.lang.math.NumberUtilsTest#testMaximumByte started...]
+02:56:10.713 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#37. SUCCESS]
+02:56:10.714 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#38. org.apache.commons.lang.math.NumberUtilsTest#testMaximumLong started...]
+02:56:10.715 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#38. SUCCESS]
+02:56:10.716 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#39. org.apache.commons.lang.math.NumberUtilsTest#testStringToIntStringI started...]
+02:56:10.716 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#39. SUCCESS]
+02:56:10.717 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#40. org.apache.commons.lang.math.NumberUtilsTest#testMaxFloat started...]
+02:56:10.718 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#40. SUCCESS]
+02:56:10.718 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#41. org.apache.commons.lang.math.NumberUtilsTest#testMaxShort started...]
+02:56:10.719 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#41. SUCCESS]
+02:56:10.720 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#42. org.apache.commons.lang.math.NumberUtilsTest#testCompareFloat started...]
+02:56:10.721 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#42. SUCCESS]
+02:56:10.729 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#43. org.apache.commons.lang.math.NumberUtilsTest#testEqualsInt started...]
+02:56:10.730 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#43. SUCCESS]
+02:56:10.734 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#44. org.apache.commons.lang.math.NumberUtilsTest#testMaxInt started...]
+02:56:10.735 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#44. SUCCESS]
+02:56:10.735 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#45. org.apache.commons.lang.math.NumberUtilsTest#testMinInt started...]
+02:56:10.736 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#45. SUCCESS]
+02:56:10.736 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#46. org.apache.commons.lang.math.NumberUtilsTest#testStringToIntString started...]
+02:56:10.737 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#46. SUCCESS]
+02:56:10.737 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#47. org.apache.commons.lang.math.NumberUtilsTest#testStringToDoubleString started...]
+02:56:10.738 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#47. SUCCESS]
+02:56:10.739 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#48. org.apache.commons.lang.math.NumberUtilsTest#testMaximumFloat started...]
+02:56:10.739 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#48. SUCCESS]
+02:56:10.740 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#49. org.apache.commons.lang.math.NumberUtilsTest#testMaximumShort started...]
+02:56:10.740 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#49. SUCCESS]
+02:56:10.741 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#50. org.apache.commons.lang.math.NumberUtilsTest#testCreateInteger started...]
+02:56:10.741 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#50. SUCCESS]
+02:56:10.742 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#51. org.apache.commons.lang.math.NumberUtilsTest#testToLongStringL started...]
+02:56:10.742 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#51. SUCCESS]
+02:56:10.743 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#52. org.apache.commons.lang.math.NumberUtilsTest#testStringToDoubleStringD started...]
+02:56:10.743 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#52. SUCCESS]
+02:56:10.744 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#53. org.apache.commons.lang.math.NumberUtilsTest#testConstructor started...]
+02:56:10.745 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#53. SUCCESS]
+02:56:10.745 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#54. org.apache.commons.lang.math.NumberUtilsTest#testCreateDouble started...]
+02:56:10.746 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#54. SUCCESS]
+02:56:10.747 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - Tests run finished (174 ms)
+<> Total tests run: 54
+<> Ignored tests: 0
+<> Failed tests: 1
+~ testLang300(org.apache.commons.lang.math.NumberUtilsTest)
+[1l is not a valid number.]
+java.lang.NumberFormatException: 1l is not a valid number.
+    at org.apache.commons.lang.math.NumberUtils.createNumber(NumberUtils.java:464)
+    at org.apache.commons.lang.math.NumberUtilsTest.testLang300(NumberUtilsTest.java:1371)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke(Method.java:606)
+02:56:10.801 [Thread-2] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#1. org.apache.commons.lang.math.NumberUtilsTest#testLang300 started...]
+02:56:10.846 [Thread-2] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#1. FAILED]
+02:56:10.847 [Thread-2] DEBUG f.i.l.c.t.SpecificationTestCasesListener - Tests run finished (46 ms)
+<> Total tests run: 1
+<> Ignored tests: 0
+<> Failed tests: 1
+~ testLang300(org.apache.commons.lang.math.NumberUtilsTest)
+[1l is not a valid number.]
+java.lang.NumberFormatException: 1l is not a valid number.
+    at org.apache.commons.lang.math.NumberUtils.createNumber(NumberUtils.java:166)
+    at org.apache.commons.lang.math.NumberUtilsTest.testLang300(NumberUtilsTest.java:1371)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke(Method.java:606)
+02:56:10.870 [Thread-3] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#2. org.apache.commons.lang.math.NumberUtilsTest#testLang300 started...]
+02:56:10.875 [Thread-3] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#2. FAILED]
+02:56:10.876 [Thread-3] DEBUG f.i.l.c.t.SpecificationTestCasesListener - Tests run finished (5 ms)
+<> Total tests run: 1
+<> Ignored tests: 0
+<> Failed tests: 1
+~ testLang300(org.apache.commons.lang.math.NumberUtilsTest)
+[1l is not a valid number.]
+java.lang.NumberFormatException: 1l is not a valid number.
+    at org.apache.commons.lang.math.NumberUtils.createNumber(NumberUtils.java:166)
+    at org.apache.commons.lang.math.NumberUtilsTest.testLang300(NumberUtilsTest.java:1371)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke(Method.java:606)
+02:56:10.877 [main] DEBUG f.i.l.r.n.s.ConstraintModelBuilder - Failing test(s): SourceLocation org.apache.commons.lang.math.NumberUtils:560
+[testLang300(org.apache.commons.lang.math.NumberUtilsTest)]
+02:56:10.877 [main] DEBUG tests.output - First set: 
+[testLang300(org.apache.commons.lang.math.NumberUtilsTest): 1l is not a valid number.]
+02:56:10.877 [main] DEBUG tests.output - Second set: 
+[testLang300(org.apache.commons.lang.math.NumberUtilsTest): 1l is not a valid number.]
+02:56:10.878 [main] INFO  f.i.l.r.n.synth.DefaultSynthesizer - 0 input values set(s). There are not enough tests for SourceLocation org.apache.commons.lang.math.NumberUtils:560 otherwise the patch would be "true" or "false"
+02:56:10.879 [main] DEBUG fr.inria.lille.repair.nopol.NoPol - Could not find a patch in org.apache.commons.lang.math.NumberUtils{isAllZeros(Ljava/lang/String;)Z[560 0.5773502691896258
+02:56:10.880 [main] DEBUG fr.inria.lille.repair.nopol.NoPol - Analysing org.apache.commons.lang.math.NumberUtils{isAllZeros(Ljava/lang/String;)Z[559 0.5773502691896258
+02:56:10.880 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Building Spoon model from /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:10,989 DEBUG spoon.support.StandardEnvironment - building sources: [/gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:11,011 DEBUG spoon.support.StandardEnvironment - build args: [-1.7, -encoding, UTF-8, -preserveAllLocals, -enableJavadoc, -noExit, -cp, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/classes/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/tests/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar:, /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:11,904 DEBUG spoon.support.StandardEnvironment - built in 915 ms
+2017-03-29 02:56:11,905 DEBUG spoon.support.StandardEnvironment - building templates: []
+2017-03-29 02:56:11,905 DEBUG spoon.support.StandardEnvironment - built in 0 ms
+02:56:11.931 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Spoon processing of org.apache.commons.lang.math.NumberUtils]
+2017-03-29 02:56:11,931 DEBUG spoon.support.StandardEnvironment - processing 'NumberUtils' with 'fr.inria.lille.repair.common.synth.StatementTypeDetector'...
+02:56:11.976 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Scanning source code of org.apache.commons.lang.math.NumberUtils]
+02:56:12.121 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compiling 1 source files]
+02:56:12.807 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compilation finished successfully (1 classes)]
+02:56:12.808 [main] DEBUG f.i.l.r.n.synth.SynthesizerFactory - No synthesizer found for SourceLocation org.apache.commons.lang.math.NumberUtils:559.
+02:56:12.808 [main] DEBUG fr.inria.lille.repair.nopol.NoPol - Analysing org.apache.commons.lang.math.NumberUtils{isAllZeros(Ljava/lang/String;)Z[556 0.5773502691896258
+02:56:12.808 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Building Spoon model from /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:12,847 DEBUG spoon.support.StandardEnvironment - building sources: [/gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:12,848 DEBUG spoon.support.StandardEnvironment - build args: [-1.7, -encoding, UTF-8, -preserveAllLocals, -enableJavadoc, -noExit, -cp, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/classes/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/tests/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar:, /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:13,301 DEBUG spoon.support.StandardEnvironment - built in 453 ms
+2017-03-29 02:56:13,305 DEBUG spoon.support.StandardEnvironment - building templates: []
+2017-03-29 02:56:13,306 DEBUG spoon.support.StandardEnvironment - built in 0 ms
+02:56:13.307 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Spoon processing of org.apache.commons.lang.math.NumberUtils]
+2017-03-29 02:56:13,308 DEBUG spoon.support.StandardEnvironment - processing 'NumberUtils' with 'fr.inria.lille.repair.common.synth.StatementTypeDetector'...
+02:56:13.344 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Scanning source code of org.apache.commons.lang.math.NumberUtils]
+02:56:13.404 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compiling 1 source files]
+02:56:14.005 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compilation finished successfully (1 classes)]
+02:56:14.005 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Building Spoon model from /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:14,040 DEBUG spoon.support.StandardEnvironment - building sources: [/gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:14,041 DEBUG spoon.support.StandardEnvironment - build args: [-1.7, -encoding, UTF-8, -preserveAllLocals, -enableJavadoc, -noExit, -cp, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/classes/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/tests/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar:, /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:14,549 DEBUG spoon.support.StandardEnvironment - built in 508 ms
+2017-03-29 02:56:14,549 DEBUG spoon.support.StandardEnvironment - building templates: []
+2017-03-29 02:56:14,549 DEBUG spoon.support.StandardEnvironment - built in 0 ms
+02:56:14.575 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Spoon processing of org.apache.commons.lang.math.NumberUtils]
+2017-03-29 02:56:14,576 DEBUG spoon.support.StandardEnvironment - processing 'NumberUtils' with 'fr.inria.lille.repair.nopol.spoon.ConditionalLoggingInstrumenter'...
+02:56:14.624 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Scanning source code of org.apache.commons.lang.math.NumberUtils]
+02:56:14.685 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compiling 1 source files]
+02:56:15.359 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compilation finished successfully (1 classes)]
+02:56:15.383 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#1. org.apache.commons.lang.math.NumberUtilsTest#testMaximumDouble started...]
+02:56:15.387 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#1. SUCCESS]
+02:56:15.387 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#2. org.apache.commons.lang.math.NumberUtilsTest#testToFloatStringF started...]
+02:56:15.387 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#2. SUCCESS]
+02:56:15.388 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#3. org.apache.commons.lang.math.NumberUtilsTest#testMinimumFloat started...]
+02:56:15.388 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#3. SUCCESS]
+02:56:15.389 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#4. org.apache.commons.lang.math.NumberUtilsTest#testMinimumShort started...]
+02:56:15.389 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#4. SUCCESS]
+02:56:15.389 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#5. org.apache.commons.lang.math.NumberUtilsTest#testCreateNumber started...]
+02:56:15.397 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#5. SUCCESS]
+02:56:15.397 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#6. org.apache.commons.lang.math.NumberUtilsTest#testToLongString started...]
+02:56:15.398 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#6. SUCCESS]
+02:56:15.398 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#7. org.apache.commons.lang.math.NumberUtilsTest#testEqualsFloat started...]
+02:56:15.399 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#7. SUCCESS]
+02:56:15.399 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#8. org.apache.commons.lang.math.NumberUtilsTest#testEqualsShort started...]
+02:56:15.399 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#8. SUCCESS]
+02:56:15.400 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#9. org.apache.commons.lang.math.NumberUtilsTest#testToIntStringI started...]
+02:56:15.400 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#9. SUCCESS]
+02:56:15.400 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#10. org.apache.commons.lang.math.NumberUtilsTest#testToIntString started...]
+02:56:15.401 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#10. SUCCESS]
+02:56:15.401 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#11. org.apache.commons.lang.math.NumberUtilsTest#testCreateFloat started...]
+02:56:15.401 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#11. SUCCESS]
+02:56:15.402 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#12. org.apache.commons.lang.math.NumberUtilsTest#testMinimumInt started...]
+02:56:15.402 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#12. SUCCESS]
+02:56:15.402 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#13. org.apache.commons.lang.math.NumberUtilsTest#testToFloatString started...]
+02:56:15.403 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#13. SUCCESS]
+02:56:15.403 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#14. org.apache.commons.lang.math.NumberUtilsTest#testMinFloat started...]
+02:56:15.404 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#14. SUCCESS]
+02:56:15.404 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#15. org.apache.commons.lang.math.NumberUtilsTest#testMinShort started...]
+02:56:15.404 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#15. SUCCESS]
+02:56:15.405 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#16. org.apache.commons.lang.math.NumberUtilsTest#testEqualsDouble started...]
+02:56:15.405 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#16. SUCCESS]
+02:56:15.405 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#17. org.apache.commons.lang.math.NumberUtilsTest#testLang300 started...]
+02:56:15.406 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#17. FAILED]
+02:56:15.406 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#18. org.apache.commons.lang.math.NumberUtilsTest#testMaxDouble started...]
+02:56:15.407 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#18. SUCCESS]
+02:56:15.407 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#19. org.apache.commons.lang.math.NumberUtilsTest#testEqualsByte started...]
+02:56:15.407 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#19. SUCCESS]
+02:56:15.408 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#20. org.apache.commons.lang.math.NumberUtilsTest#testEqualsLong started...]
+02:56:15.408 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#20. SUCCESS]
+02:56:15.408 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#21. org.apache.commons.lang.math.NumberUtilsTest#testMinimumDouble started...]
+02:56:15.409 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#21. SUCCESS]
+02:56:15.409 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#22. org.apache.commons.lang.math.NumberUtilsTest#testIsDigits started...]
+02:56:15.410 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#22. SUCCESS]
+02:56:15.410 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#23. org.apache.commons.lang.math.NumberUtilsTest#testCreateBigDecimal started...]
+02:56:15.410 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#23. SUCCESS]
+02:56:15.411 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#24. org.apache.commons.lang.math.NumberUtilsTest#testConstants started...]
+02:56:15.411 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#24. SUCCESS]
+02:56:15.412 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#25. org.apache.commons.lang.math.NumberUtilsTest#testCompareDouble started...]
+02:56:15.412 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#25. SUCCESS]
+02:56:15.412 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#26. org.apache.commons.lang.math.NumberUtilsTest#testMinimumByte started...]
+02:56:15.413 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#26. SUCCESS]
+02:56:15.413 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#27. org.apache.commons.lang.math.NumberUtilsTest#testMinimumLong started...]
+02:56:15.414 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#27. SUCCESS]
+02:56:15.414 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#28. org.apache.commons.lang.math.NumberUtilsTest#testIsNumber started...]
+02:56:15.415 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#28. SUCCESS]
+02:56:15.416 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#29. org.apache.commons.lang.math.NumberUtilsTest#testMinDouble started...]
+02:56:15.416 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#29. SUCCESS]
+02:56:15.416 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#30. org.apache.commons.lang.math.NumberUtilsTest#testMaxByte started...]
+02:56:15.417 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#30. SUCCESS]
+02:56:15.417 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#31. org.apache.commons.lang.math.NumberUtilsTest#testMaxLong started...]
+02:56:15.418 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#31. SUCCESS]
+02:56:15.418 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#32. org.apache.commons.lang.math.NumberUtilsTest#testCreateBigInteger started...]
+02:56:15.418 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#32. SUCCESS]
+02:56:15.419 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#33. org.apache.commons.lang.math.NumberUtilsTest#testCreateLong started...]
+02:56:15.419 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#33. SUCCESS]
+02:56:15.419 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#34. org.apache.commons.lang.math.NumberUtilsTest#testMinByte started...]
+02:56:15.420 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#34. SUCCESS]
+02:56:15.420 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#35. org.apache.commons.lang.math.NumberUtilsTest#testMinLong started...]
+02:56:15.420 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#35. SUCCESS]
+02:56:15.421 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#36. org.apache.commons.lang.math.NumberUtilsTest#testMaximumInt started...]
+02:56:15.421 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#36. SUCCESS]
+02:56:15.422 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#37. org.apache.commons.lang.math.NumberUtilsTest#testMaximumByte started...]
+02:56:15.422 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#37. SUCCESS]
+02:56:15.422 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#38. org.apache.commons.lang.math.NumberUtilsTest#testMaximumLong started...]
+02:56:15.423 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#38. SUCCESS]
+02:56:15.423 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#39. org.apache.commons.lang.math.NumberUtilsTest#testStringToIntStringI started...]
+02:56:15.423 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#39. SUCCESS]
+02:56:15.424 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#40. org.apache.commons.lang.math.NumberUtilsTest#testMaxFloat started...]
+02:56:15.424 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#40. SUCCESS]
+02:56:15.425 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#41. org.apache.commons.lang.math.NumberUtilsTest#testMaxShort started...]
+02:56:15.425 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#41. SUCCESS]
+02:56:15.425 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#42. org.apache.commons.lang.math.NumberUtilsTest#testCompareFloat started...]
+02:56:15.426 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#42. SUCCESS]
+02:56:15.426 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#43. org.apache.commons.lang.math.NumberUtilsTest#testEqualsInt started...]
+02:56:15.427 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#43. SUCCESS]
+02:56:15.427 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#44. org.apache.commons.lang.math.NumberUtilsTest#testMaxInt started...]
+02:56:15.427 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#44. SUCCESS]
+02:56:15.428 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#45. org.apache.commons.lang.math.NumberUtilsTest#testMinInt started...]
+02:56:15.428 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#45. SUCCESS]
+02:56:15.429 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#46. org.apache.commons.lang.math.NumberUtilsTest#testStringToIntString started...]
+02:56:15.429 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#46. SUCCESS]
+02:56:15.429 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#47. org.apache.commons.lang.math.NumberUtilsTest#testStringToDoubleString started...]
+02:56:15.430 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#47. SUCCESS]
+02:56:15.431 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#48. org.apache.commons.lang.math.NumberUtilsTest#testMaximumFloat started...]
+02:56:15.431 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#48. SUCCESS]
+02:56:15.431 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#49. org.apache.commons.lang.math.NumberUtilsTest#testMaximumShort started...]
+02:56:15.432 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#49. SUCCESS]
+02:56:15.432 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#50. org.apache.commons.lang.math.NumberUtilsTest#testCreateInteger started...]
+02:56:15.433 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#50. SUCCESS]
+02:56:15.433 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#51. org.apache.commons.lang.math.NumberUtilsTest#testToLongStringL started...]
+02:56:15.433 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#51. SUCCESS]
+02:56:15.434 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#52. org.apache.commons.lang.math.NumberUtilsTest#testStringToDoubleStringD started...]
+02:56:15.442 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#52. SUCCESS]
+02:56:15.443 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#53. org.apache.commons.lang.math.NumberUtilsTest#testConstructor started...]
+02:56:15.444 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#53. SUCCESS]
+02:56:15.444 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#54. org.apache.commons.lang.math.NumberUtilsTest#testCreateDouble started...]
+02:56:15.444 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#54. SUCCESS]
+02:56:15.445 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - Tests run finished (68 ms)
+<> Total tests run: 54
+<> Ignored tests: 0
+<> Failed tests: 1
+~ testLang300(org.apache.commons.lang.math.NumberUtilsTest)
+[1l is not a valid number.]
+java.lang.NumberFormatException: 1l is not a valid number.
+    at org.apache.commons.lang.math.NumberUtils.createNumber(NumberUtils.java:464)
+    at org.apache.commons.lang.math.NumberUtilsTest.testLang300(NumberUtilsTest.java:1371)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke(Method.java:606)
+02:56:15.480 [Thread-5] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#1. org.apache.commons.lang.math.NumberUtilsTest#testLang300 started...]
+02:56:15.496 [Thread-5] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#1. FAILED]
+02:56:15.497 [Thread-5] DEBUG f.i.l.c.t.SpecificationTestCasesListener - Tests run finished (17 ms)
+<> Total tests run: 1
+<> Ignored tests: 0
+<> Failed tests: 1
+~ testLang300(org.apache.commons.lang.math.NumberUtilsTest)
+[1l is not a valid number.]
+java.lang.NumberFormatException: 1l is not a valid number.
+    at org.apache.commons.lang.math.NumberUtils.createNumber(NumberUtils.java:166)
+    at org.apache.commons.lang.math.NumberUtilsTest.testLang300(NumberUtilsTest.java:1371)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke(Method.java:606)
+02:56:15.514 [Thread-6] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#2. org.apache.commons.lang.math.NumberUtilsTest#testLang300 started...]
+02:56:15.519 [Thread-6] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#2. FAILED]
+02:56:15.519 [Thread-6] DEBUG f.i.l.c.t.SpecificationTestCasesListener - Tests run finished (10 ms)
+<> Total tests run: 1
+<> Ignored tests: 0
+<> Failed tests: 1
+~ testLang300(org.apache.commons.lang.math.NumberUtilsTest)
+[1l is not a valid number.]
+java.lang.NumberFormatException: 1l is not a valid number.
+    at org.apache.commons.lang.math.NumberUtils.createNumber(NumberUtils.java:166)
+    at org.apache.commons.lang.math.NumberUtilsTest.testLang300(NumberUtilsTest.java:1371)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke(Method.java:606)
+02:56:15.524 [main] DEBUG f.i.l.r.n.s.ConstraintModelBuilder - Failing test(s): SourceLocation org.apache.commons.lang.math.NumberUtils:556
+[testLang300(org.apache.commons.lang.math.NumberUtilsTest)]
+02:56:15.524 [main] DEBUG tests.output - First set: 
+[testLang300(org.apache.commons.lang.math.NumberUtilsTest): 1l is not a valid number.]
+02:56:15.524 [main] DEBUG tests.output - Second set: 
+[testLang300(org.apache.commons.lang.math.NumberUtilsTest): 1l is not a valid number.]
+02:56:15.525 [main] INFO  f.i.l.r.n.synth.DefaultSynthesizer - 0 input values set(s). There are not enough tests for SourceLocation org.apache.commons.lang.math.NumberUtils:556 otherwise the patch would be "true" or "false"
+02:56:15.525 [main] DEBUG fr.inria.lille.repair.nopol.NoPol - Could not find a patch in org.apache.commons.lang.math.NumberUtils{isAllZeros(Ljava/lang/String;)Z[556 0.5773502691896258
+02:56:15.525 [main] DEBUG fr.inria.lille.repair.nopol.NoPol - Analysing org.apache.commons.lang.math.NumberUtils{createNumber(Ljava/lang/String;)Ljava/lang/Number;[457 0.5773502691896258
+02:56:15.525 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Building Spoon model from /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:15,559 DEBUG spoon.support.StandardEnvironment - building sources: [/gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:15,559 DEBUG spoon.support.StandardEnvironment - build args: [-1.7, -encoding, UTF-8, -preserveAllLocals, -enableJavadoc, -noExit, -cp, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/classes/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/tests/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar:, /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:16,073 DEBUG spoon.support.StandardEnvironment - built in 514 ms
+2017-03-29 02:56:16,073 DEBUG spoon.support.StandardEnvironment - building templates: []
+2017-03-29 02:56:16,073 DEBUG spoon.support.StandardEnvironment - built in 0 ms
+02:56:16.093 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Spoon processing of org.apache.commons.lang.math.NumberUtils]
+2017-03-29 02:56:16,094 DEBUG spoon.support.StandardEnvironment - processing 'NumberUtils' with 'fr.inria.lille.repair.common.synth.StatementTypeDetector'...
+02:56:16.115 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Scanning source code of org.apache.commons.lang.math.NumberUtils]
+02:56:16.198 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compiling 1 source files]
+02:56:16.660 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compilation finished successfully (1 classes)]
+02:56:16.660 [main] DEBUG f.i.l.r.n.synth.SynthesizerFactory - No synthesizer found for SourceLocation org.apache.commons.lang.math.NumberUtils:457.
+02:56:16.660 [main] DEBUG fr.inria.lille.repair.nopol.NoPol - Analysing org.apache.commons.lang.math.NumberUtils{createNumber(Ljava/lang/String;)Ljava/lang/Number;[452 0.5773502691896258
+02:56:16.661 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Building Spoon model from /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:16,705 DEBUG spoon.support.StandardEnvironment - building sources: [/gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:16,706 DEBUG spoon.support.StandardEnvironment - build args: [-1.7, -encoding, UTF-8, -preserveAllLocals, -enableJavadoc, -noExit, -cp, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/classes/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/tests/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar:, /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:17,209 DEBUG spoon.support.StandardEnvironment - built in 503 ms
+2017-03-29 02:56:17,212 DEBUG spoon.support.StandardEnvironment - building templates: []
+2017-03-29 02:56:17,212 DEBUG spoon.support.StandardEnvironment - built in 0 ms
+02:56:17.213 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Spoon processing of org.apache.commons.lang.math.NumberUtils]
+2017-03-29 02:56:17,216 DEBUG spoon.support.StandardEnvironment - processing 'NumberUtils' with 'fr.inria.lille.repair.common.synth.StatementTypeDetector'...
+02:56:17.273 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Scanning source code of org.apache.commons.lang.math.NumberUtils]
+02:56:17.362 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compiling 1 source files]
+02:56:18.065 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compilation finished successfully (1 classes)]
+02:56:18.080 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Building Spoon model from /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:18,221 DEBUG spoon.support.StandardEnvironment - building sources: [/gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:18,224 DEBUG spoon.support.StandardEnvironment - build args: [-1.7, -encoding, UTF-8, -preserveAllLocals, -enableJavadoc, -noExit, -cp, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/classes/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/tests/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar:, /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:18,842 DEBUG spoon.support.StandardEnvironment - built in 618 ms
+2017-03-29 02:56:18,843 DEBUG spoon.support.StandardEnvironment - building templates: []
+2017-03-29 02:56:18,843 DEBUG spoon.support.StandardEnvironment - built in 0 ms
+02:56:18.845 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Spoon processing of org.apache.commons.lang.math.NumberUtils]
+2017-03-29 02:56:18,845 DEBUG spoon.support.StandardEnvironment - processing 'NumberUtils' with 'fr.inria.lille.repair.nopol.spoon.ConditionalLoggingInstrumenter'...
+02:56:19.033 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Scanning source code of org.apache.commons.lang.math.NumberUtils]
+02:56:19.091 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compiling 1 source files]
+02:56:19.792 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compilation finished successfully (1 classes)]
+02:56:19.874 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#1. org.apache.commons.lang.math.NumberUtilsTest#testMaximumDouble started...]
+02:56:19.883 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#1. SUCCESS]
+02:56:19.884 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#2. org.apache.commons.lang.math.NumberUtilsTest#testToFloatStringF started...]
+02:56:19.884 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#2. SUCCESS]
+02:56:19.885 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#3. org.apache.commons.lang.math.NumberUtilsTest#testMinimumFloat started...]
+02:56:19.885 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#3. SUCCESS]
+02:56:19.886 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#4. org.apache.commons.lang.math.NumberUtilsTest#testMinimumShort started...]
+02:56:19.886 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#4. SUCCESS]
+02:56:19.886 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#5. org.apache.commons.lang.math.NumberUtilsTest#testCreateNumber started...]
+02:56:19.920 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#5. SUCCESS]
+02:56:19.921 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#6. org.apache.commons.lang.math.NumberUtilsTest#testToLongString started...]
+02:56:19.921 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#6. SUCCESS]
+02:56:19.922 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#7. org.apache.commons.lang.math.NumberUtilsTest#testEqualsFloat started...]
+02:56:19.922 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#7. SUCCESS]
+02:56:19.923 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#8. org.apache.commons.lang.math.NumberUtilsTest#testEqualsShort started...]
+02:56:19.923 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#8. SUCCESS]
+02:56:19.923 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#9. org.apache.commons.lang.math.NumberUtilsTest#testToIntStringI started...]
+02:56:19.924 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#9. SUCCESS]
+02:56:19.924 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#10. org.apache.commons.lang.math.NumberUtilsTest#testToIntString started...]
+02:56:19.925 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#10. SUCCESS]
+02:56:19.925 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#11. org.apache.commons.lang.math.NumberUtilsTest#testCreateFloat started...]
+02:56:19.925 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#11. SUCCESS]
+02:56:19.939 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#12. org.apache.commons.lang.math.NumberUtilsTest#testMinimumInt started...]
+02:56:19.940 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#12. SUCCESS]
+02:56:19.940 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#13. org.apache.commons.lang.math.NumberUtilsTest#testToFloatString started...]
+02:56:19.941 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#13. SUCCESS]
+02:56:19.941 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#14. org.apache.commons.lang.math.NumberUtilsTest#testMinFloat started...]
+02:56:19.941 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#14. SUCCESS]
+02:56:19.942 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#15. org.apache.commons.lang.math.NumberUtilsTest#testMinShort started...]
+02:56:19.942 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#15. SUCCESS]
+02:56:19.942 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#16. org.apache.commons.lang.math.NumberUtilsTest#testEqualsDouble started...]
+02:56:19.943 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#16. SUCCESS]
+02:56:19.943 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#17. org.apache.commons.lang.math.NumberUtilsTest#testLang300 started...]
+02:56:19.944 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#17. FAILED]
+02:56:19.944 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#18. org.apache.commons.lang.math.NumberUtilsTest#testMaxDouble started...]
+02:56:19.944 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#18. SUCCESS]
+02:56:19.945 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#19. org.apache.commons.lang.math.NumberUtilsTest#testEqualsByte started...]
+02:56:19.945 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#19. SUCCESS]
+02:56:19.945 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#20. org.apache.commons.lang.math.NumberUtilsTest#testEqualsLong started...]
+02:56:19.946 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#20. SUCCESS]
+02:56:19.946 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#21. org.apache.commons.lang.math.NumberUtilsTest#testMinimumDouble started...]
+02:56:19.946 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#21. SUCCESS]
+02:56:19.947 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#22. org.apache.commons.lang.math.NumberUtilsTest#testIsDigits started...]
+02:56:19.947 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#22. SUCCESS]
+02:56:19.948 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#23. org.apache.commons.lang.math.NumberUtilsTest#testCreateBigDecimal started...]
+02:56:19.948 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#23. SUCCESS]
+02:56:19.948 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#24. org.apache.commons.lang.math.NumberUtilsTest#testConstants started...]
+02:56:19.949 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#24. SUCCESS]
+02:56:19.949 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#25. org.apache.commons.lang.math.NumberUtilsTest#testCompareDouble started...]
+02:56:19.957 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#25. SUCCESS]
+02:56:19.957 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#26. org.apache.commons.lang.math.NumberUtilsTest#testMinimumByte started...]
+02:56:19.958 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#26. SUCCESS]
+02:56:19.958 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#27. org.apache.commons.lang.math.NumberUtilsTest#testMinimumLong started...]
+02:56:19.958 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#27. SUCCESS]
+02:56:19.959 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#28. org.apache.commons.lang.math.NumberUtilsTest#testIsNumber started...]
+02:56:19.960 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#28. SUCCESS]
+02:56:19.961 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#29. org.apache.commons.lang.math.NumberUtilsTest#testMinDouble started...]
+02:56:19.961 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#29. SUCCESS]
+02:56:19.961 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#30. org.apache.commons.lang.math.NumberUtilsTest#testMaxByte started...]
+02:56:19.967 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#30. SUCCESS]
+02:56:19.967 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#31. org.apache.commons.lang.math.NumberUtilsTest#testMaxLong started...]
+02:56:19.968 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#31. SUCCESS]
+02:56:19.968 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#32. org.apache.commons.lang.math.NumberUtilsTest#testCreateBigInteger started...]
+02:56:19.969 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#32. SUCCESS]
+02:56:19.969 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#33. org.apache.commons.lang.math.NumberUtilsTest#testCreateLong started...]
+02:56:19.969 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#33. SUCCESS]
+02:56:19.970 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#34. org.apache.commons.lang.math.NumberUtilsTest#testMinByte started...]
+02:56:19.970 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#34. SUCCESS]
+02:56:19.970 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#35. org.apache.commons.lang.math.NumberUtilsTest#testMinLong started...]
+02:56:19.971 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#35. SUCCESS]
+02:56:19.971 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#36. org.apache.commons.lang.math.NumberUtilsTest#testMaximumInt started...]
+02:56:19.971 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#36. SUCCESS]
+02:56:19.972 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#37. org.apache.commons.lang.math.NumberUtilsTest#testMaximumByte started...]
+02:56:19.972 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#37. SUCCESS]
+02:56:19.973 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#38. org.apache.commons.lang.math.NumberUtilsTest#testMaximumLong started...]
+02:56:19.973 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#38. SUCCESS]
+02:56:19.973 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#39. org.apache.commons.lang.math.NumberUtilsTest#testStringToIntStringI started...]
+02:56:20.029 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#39. SUCCESS]
+02:56:20.029 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#40. org.apache.commons.lang.math.NumberUtilsTest#testMaxFloat started...]
+02:56:20.030 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#40. SUCCESS]
+02:56:20.030 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#41. org.apache.commons.lang.math.NumberUtilsTest#testMaxShort started...]
+02:56:20.030 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#41. SUCCESS]
+02:56:20.031 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#42. org.apache.commons.lang.math.NumberUtilsTest#testCompareFloat started...]
+02:56:20.031 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#42. SUCCESS]
+02:56:20.032 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#43. org.apache.commons.lang.math.NumberUtilsTest#testEqualsInt started...]
+02:56:20.032 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#43. SUCCESS]
+02:56:20.032 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#44. org.apache.commons.lang.math.NumberUtilsTest#testMaxInt started...]
+02:56:20.033 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#44. SUCCESS]
+02:56:20.033 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#45. org.apache.commons.lang.math.NumberUtilsTest#testMinInt started...]
+02:56:20.039 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#45. SUCCESS]
+02:56:20.039 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#46. org.apache.commons.lang.math.NumberUtilsTest#testStringToIntString started...]
+02:56:20.040 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#46. SUCCESS]
+02:56:20.040 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#47. org.apache.commons.lang.math.NumberUtilsTest#testStringToDoubleString started...]
+02:56:20.041 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#47. SUCCESS]
+02:56:20.041 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#48. org.apache.commons.lang.math.NumberUtilsTest#testMaximumFloat started...]
+02:56:20.041 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#48. SUCCESS]
+02:56:20.042 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#49. org.apache.commons.lang.math.NumberUtilsTest#testMaximumShort started...]
+02:56:20.042 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#49. SUCCESS]
+02:56:20.043 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#50. org.apache.commons.lang.math.NumberUtilsTest#testCreateInteger started...]
+02:56:20.043 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#50. SUCCESS]
+02:56:20.043 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#51. org.apache.commons.lang.math.NumberUtilsTest#testToLongStringL started...]
+02:56:20.044 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#51. SUCCESS]
+02:56:20.044 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#52. org.apache.commons.lang.math.NumberUtilsTest#testStringToDoubleStringD started...]
+02:56:20.044 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#52. SUCCESS]
+02:56:20.045 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#53. org.apache.commons.lang.math.NumberUtilsTest#testConstructor started...]
+02:56:20.045 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#53. SUCCESS]
+02:56:20.053 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#54. org.apache.commons.lang.math.NumberUtilsTest#testCreateDouble started...]
+02:56:20.053 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#54. SUCCESS]
+02:56:20.054 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - Tests run finished (202 ms)
+<> Total tests run: 54
+<> Ignored tests: 0
+<> Failed tests: 1
+~ testLang300(org.apache.commons.lang.math.NumberUtilsTest)
+[1l is not a valid number.]
+java.lang.NumberFormatException: 1l is not a valid number.
+    at org.apache.commons.lang.math.NumberUtils.createNumber(NumberUtils.java:464)
+    at org.apache.commons.lang.math.NumberUtilsTest.testLang300(NumberUtilsTest.java:1371)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke(Method.java:606)
+02:56:20.105 [Thread-8] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#1. org.apache.commons.lang.math.NumberUtilsTest#testLang300 started...]
+02:56:20.127 [Thread-8] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#1. SUCCESS]
+02:56:20.127 [Thread-8] DEBUG f.i.l.c.t.SpecificationTestCasesListener - Collecting specifications from org.apache.commons.lang.math.NumberUtilsTest#testLang300
+02:56:20.128 [Thread-8] DEBUG f.i.l.c.t.SpecificationTestCasesListener - Tests run finished (23 ms)
+<> Total tests run: 1
+<> Ignored tests: 0
+<> Failed tests: 0
+02:56:20.159 [Thread-9] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#2. org.apache.commons.lang.math.NumberUtilsTest#testLang300 started...]
+02:56:20.165 [Thread-9] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#2. FAILED]
+02:56:20.167 [Thread-9] DEBUG f.i.l.c.t.SpecificationTestCasesListener - Tests run finished (8 ms)
+<> Total tests run: 1
+<> Ignored tests: 0
+<> Failed tests: 1
+~ testLang300(org.apache.commons.lang.math.NumberUtilsTest)
+[-1l is not a valid number.]
+java.lang.NumberFormatException: -1l is not a valid number.
+    at org.apache.commons.lang.math.NumberUtils.createNumber(NumberUtils.java:205)
+    at org.apache.commons.lang.math.NumberUtilsTest.testLang300(NumberUtilsTest.java:1369)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke(Method.java:606)
+02:56:20.196 [Thread-10] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#3. org.apache.commons.lang.math.NumberUtilsTest#testCreateNumber started...]
+02:56:20.211 [Thread-10] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#3. SUCCESS]
+02:56:20.212 [Thread-10] DEBUG f.i.l.c.t.SpecificationTestCasesListener - Collecting specifications from org.apache.commons.lang.math.NumberUtilsTest#testCreateNumber
+02:56:20.213 [Thread-10] DEBUG f.i.l.c.t.SpecificationTestCasesListener - Tests run finished (17 ms)
+<> Total tests run: 1
+<> Ignored tests: 0
+<> Failed tests: 0
+02:56:20.255 [Thread-11] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#4. org.apache.commons.lang.math.NumberUtilsTest#testLang300 started...]
+02:56:20.270 [Thread-11] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#4. FAILED]
+02:56:20.270 [Thread-11] DEBUG f.i.l.c.t.SpecificationTestCasesListener - Tests run finished (15 ms)
+<> Total tests run: 1
+<> Ignored tests: 0
+<> Failed tests: 1
+~ testLang300(org.apache.commons.lang.math.NumberUtilsTest)
+[1l is not a valid number.]
+java.lang.NumberFormatException: 1l is not a valid number.
+    at org.apache.commons.lang.math.NumberUtils.createNumber(NumberUtils.java:205)
+    at org.apache.commons.lang.math.NumberUtilsTest.testLang300(NumberUtilsTest.java:1371)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke(Method.java:606)
+02:56:20.301 [Thread-12] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#5. org.apache.commons.lang.math.NumberUtilsTest#testIsNumber started...]
+02:56:20.308 [Thread-12] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#5. SUCCESS]
+02:56:20.308 [Thread-12] DEBUG f.i.l.c.t.SpecificationTestCasesListener - Collecting specifications from org.apache.commons.lang.math.NumberUtilsTest#testIsNumber
+02:56:20.309 [Thread-12] DEBUG f.i.l.c.t.SpecificationTestCasesListener - Tests run finished (9 ms)
+<> Total tests run: 1
+<> Ignored tests: 0
+<> Failed tests: 0
+02:56:20.315 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Building Spoon model from /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:20,351 DEBUG spoon.support.StandardEnvironment - building sources: [/gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:20,352 DEBUG spoon.support.StandardEnvironment - build args: [-1.7, -encoding, UTF-8, -preserveAllLocals, -enableJavadoc, -noExit, -cp, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/classes/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/tests/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar:, /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:20,897 DEBUG spoon.support.StandardEnvironment - built in 545 ms
+2017-03-29 02:56:20,898 DEBUG spoon.support.StandardEnvironment - building templates: []
+2017-03-29 02:56:20,898 DEBUG spoon.support.StandardEnvironment - built in 0 ms
+02:56:20.899 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Spoon processing of org.apache.commons.lang.math.NumberUtils]
+2017-03-29 02:56:20,900 DEBUG spoon.support.StandardEnvironment - processing 'NumberUtils' with 'fr.inria.lille.spirals.repair.synthesizer.collect.spoon.ConstantCollector'...
+02:56:20.935 [main] DEBUG f.i.l.s.r.s.c.s.ConstantCollector - [data] 0.0
+02:56:20.959 [main] DEBUG f.i.l.s.r.s.c.s.ConstantCollector - [data] 0
+02:56:20.960 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Scanning source code of org.apache.commons.lang.math.NumberUtils]
+02:56:21.020 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compiling 1 source files]
+02:56:21.249 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compilation finished successfully (1 classes)]
+{1=1, 0=0, -1=-1}
+02:56:22.547 [main] DEBUG f.i.l.c.s.ConstraintBasedSynthesis - Specifications:
+input: {org.apache.commons.lang.math.NumberUtils.DOUBLE_MINUS_ONE=-1.0, org.apache.commons.lang.math.NumberUtils.SHORT_ZERO=0, ((dec == null) && (exp == null))=true, org.apache.commons.lang.math.NumberUtils.FLOAT_MINUS_ONE=-1.0, decPos=-1, org.apache.commons.lang.math.NumberUtils.INTEGER_MINUS_ONE=-1, org.apache.commons.lang.math.NumberUtils.INTEGER_ONE=1, org.apache.commons.lang.math.NumberUtils.INTEGER_ZERO=0, org.apache.commons.lang.math.NumberUtils.DOUBLE_ZERO=0.0, str.length()==0=false, org.apache.commons.lang.math.NumberUtils.LONG_MINUS_ONE=-1, org.apache.commons.lang.math.NumberUtils.SHORT_ONE=1, null!=null=false, str!=null=true, lastChar=L, org.apache.commons.lang.math.NumberUtils.FLOAT_ZERO=0.0, org.apache.commons.lang.math.NumberUtils.DOUBLE_ONE=1.0, numeric.length()=20, org.apache.commons.lang.math.NumberUtils.LONG_ONE=1, org.apache.commons.lang.math.NumberUtils.SHORT_MINUS_ONE=-1, numeric.length()==0=false, (exp == null)=true, str.length()=21, org.apache.commons.lang.math.NumberUtils.BYTE_ZERO=0, allZeros=false, 1=1, 0=0, org.apache.commons.lang.math.NumberUtils.BYTE_MINUS_ONE=-1, numeric!=null=true, expPos=-1, org.apache.commons.lang.math.NumberUtils.FLOAT_ONE=1.0, '-'=-, org.apache.commons.lang.math.NumberUtils.BYTE_ONE=1, (dec == null)=true, org.apache.commons.lang.math.NumberUtils.LONG_ZERO=0}. output: true
+input: {org.apache.commons.lang.math.NumberUtils.DOUBLE_MINUS_ONE=-1.0, org.apache.commons.lang.math.NumberUtils.SHORT_ZERO=0, ((dec == null) && (exp == null))=false, org.apache.commons.lang.math.NumberUtils.FLOAT_MINUS_ONE=-1.0, decPos=-1, org.apache.commons.lang.math.NumberUtils.INTEGER_MINUS_ONE=-1, org.apache.commons.lang.math.NumberUtils.INTEGER_ONE=1, org.apache.commons.lang.math.NumberUtils.INTEGER_ZERO=0, org.apache.commons.lang.math.NumberUtils.DOUBLE_ZERO=0.0, str.length()==0=false, org.apache.commons.lang.math.NumberUtils.LONG_MINUS_ONE=-1, org.apache.commons.lang.math.NumberUtils.SHORT_ONE=1, null!=null=false, str!=null=true, lastChar=l, org.apache.commons.lang.math.NumberUtils.FLOAT_ZERO=0.0, org.apache.commons.lang.math.NumberUtils.DOUBLE_ONE=1.0, numeric.length()=6, org.apache.commons.lang.math.NumberUtils.LONG_ONE=1, org.apache.commons.lang.math.NumberUtils.SHORT_MINUS_ONE=-1, numeric.length()==0=false, (exp == null)=false, str.length()=7, org.apache.commons.lang.math.NumberUtils.BYTE_ZERO=0, allZeros=false, 1=1, 0=0, org.apache.commons.lang.math.NumberUtils.BYTE_MINUS_ONE=-1, numeric!=null=true, expPos=4, org.apache.commons.lang.math.NumberUtils.FLOAT_ONE=1.0, '-'=-, org.apache.commons.lang.math.NumberUtils.BYTE_ONE=1, (dec == null)=true, org.apache.commons.lang.math.NumberUtils.LONG_ZERO=0}. output: false
+input: {org.apache.commons.lang.math.NumberUtils.DOUBLE_MINUS_ONE=-1.0, org.apache.commons.lang.math.NumberUtils.SHORT_ZERO=0, ((dec == null) && (exp == null))=true, org.apache.commons.lang.math.NumberUtils.FLOAT_MINUS_ONE=-1.0, decPos=-1, org.apache.commons.lang.math.NumberUtils.INTEGER_MINUS_ONE=-1, org.apache.commons.lang.math.NumberUtils.INTEGER_ONE=1, org.apache.commons.lang.math.NumberUtils.INTEGER_ZERO=0, org.apache.commons.lang.math.NumberUtils.DOUBLE_ZERO=0.0, str.length()==0=false, org.apache.commons.lang.math.NumberUtils.LONG_MINUS_ONE=-1, org.apache.commons.lang.math.NumberUtils.SHORT_ONE=1, null!=null=false, str!=null=true, lastChar=l, org.apache.commons.lang.math.NumberUtils.FLOAT_ZERO=0.0, org.apache.commons.lang.math.NumberUtils.DOUBLE_ONE=1.0, numeric.length()=5, org.apache.commons.lang.math.NumberUtils.LONG_ONE=1, org.apache.commons.lang.math.NumberUtils.SHORT_MINUS_ONE=-1, numeric.length()==0=false, (exp == null)=true, str.length()=6, org.apache.commons.lang.math.NumberUtils.BYTE_ZERO=0, allZeros=false, 1=1, 0=0, org.apache.commons.lang.math.NumberUtils.BYTE_MINUS_ONE=-1, numeric!=null=true, expPos=-1, org.apache.commons.lang.math.NumberUtils.FLOAT_ONE=1.0, '-'=-, org.apache.commons.lang.math.NumberUtils.BYTE_ONE=1, (dec == null)=true, org.apache.commons.lang.math.NumberUtils.LONG_ZERO=0}. output: true
+input: {org.apache.commons.lang.math.NumberUtils.DOUBLE_MINUS_ONE=-1.0, org.apache.commons.lang.math.NumberUtils.SHORT_ZERO=0, ((dec == null) && (exp == null))=true, org.apache.commons.lang.math.NumberUtils.FLOAT_MINUS_ONE=-1.0, decPos=-1, org.apache.commons.lang.math.NumberUtils.INTEGER_MINUS_ONE=-1, org.apache.commons.lang.math.NumberUtils.INTEGER_ONE=1, org.apache.commons.lang.math.NumberUtils.INTEGER_ZERO=0, org.apache.commons.lang.math.NumberUtils.DOUBLE_ZERO=0.0, str.length()==0=false, org.apache.commons.lang.math.NumberUtils.LONG_MINUS_ONE=-1, org.apache.commons.lang.math.NumberUtils.SHORT_ONE=1, null!=null=false, str!=null=true, lastChar=l, org.apache.commons.lang.math.NumberUtils.FLOAT_ZERO=0.0, org.apache.commons.lang.math.NumberUtils.DOUBLE_ONE=1.0, numeric.length()=1, org.apache.commons.lang.math.NumberUtils.LONG_ONE=1, org.apache.commons.lang.math.NumberUtils.SHORT_MINUS_ONE=-1, numeric.length()==0=false, (exp == null)=true, str.length()=2, org.apache.commons.lang.math.NumberUtils.BYTE_ZERO=0, allZeros=false, 1=1, 0=0, org.apache.commons.lang.math.NumberUtils.BYTE_MINUS_ONE=-1, numeric!=null=true, expPos=-1, org.apache.commons.lang.math.NumberUtils.FLOAT_ONE=1.0, '-'=-, org.apache.commons.lang.math.NumberUtils.BYTE_ONE=1, (dec == null)=true, org.apache.commons.lang.math.NumberUtils.LONG_ZERO=0}. output: true
+input: {org.apache.commons.lang.math.NumberUtils.DOUBLE_MINUS_ONE=-1.0, org.apache.commons.lang.math.NumberUtils.SHORT_ZERO=0, ((dec == null) && (exp == null))=true, org.apache.commons.lang.math.NumberUtils.FLOAT_MINUS_ONE=-1.0, decPos=-1, org.apache.commons.lang.math.NumberUtils.INTEGER_MINUS_ONE=-1, org.apache.commons.lang.math.NumberUtils.INTEGER_ONE=1, org.apache.commons.lang.math.NumberUtils.INTEGER_ZERO=0, org.apache.commons.lang.math.NumberUtils.DOUBLE_ZERO=0.0, str.length()==0=false, org.apache.commons.lang.math.NumberUtils.LONG_MINUS_ONE=-1, org.apache.commons.lang.math.NumberUtils.SHORT_ONE=1, null!=null=false, str!=null=true, lastChar=L, org.apache.commons.lang.math.NumberUtils.FLOAT_ZERO=0.0, org.apache.commons.lang.math.NumberUtils.DOUBLE_ONE=1.0, numeric.length()=5, org.apache.commons.lang.math.NumberUtils.LONG_ONE=1, org.apache.commons.lang.math.NumberUtils.SHORT_MINUS_ONE=-1, numeric.length()==0=false, (exp == null)=true, str.length()=6, org.apache.commons.lang.math.NumberUtils.BYTE_ZERO=0, allZeros=false, 1=1, 0=0, org.apache.commons.lang.math.NumberUtils.BYTE_MINUS_ONE=-1, numeric!=null=true, expPos=-1, org.apache.commons.lang.math.NumberUtils.FLOAT_ONE=1.0, '-'=-, org.apache.commons.lang.math.NumberUtils.BYTE_ONE=1, (dec == null)=true, org.apache.commons.lang.math.NumberUtils.LONG_ZERO=0}. output: true
+input: {org.apache.commons.lang.math.NumberUtils.DOUBLE_MINUS_ONE=-1.0, org.apache.commons.lang.math.NumberUtils.SHORT_ZERO=0, ((dec == null) && (exp == null))=true, org.apache.commons.lang.math.NumberUtils.FLOAT_MINUS_ONE=-1.0, decPos=-1, org.apache.commons.lang.math.NumberUtils.INTEGER_MINUS_ONE=-1, org.apache.commons.lang.math.NumberUtils.INTEGER_ONE=1, org.apache.commons.lang.math.NumberUtils.INTEGER_ZERO=0, org.apache.commons.lang.math.NumberUtils.DOUBLE_ZERO=0.0, str.length()==0=false, org.apache.commons.lang.math.NumberUtils.LONG_MINUS_ONE=-1, org.apache.commons.lang.math.NumberUtils.SHORT_ONE=1, null!=null=false, str!=null=true, lastChar=L, org.apache.commons.lang.math.NumberUtils.FLOAT_ZERO=0.0, org.apache.commons.lang.math.NumberUtils.DOUBLE_ONE=1.0, numeric.length()=12, org.apache.commons.lang.math.NumberUtils.LONG_ONE=1, org.apache.commons.lang.math.NumberUtils.SHORT_MINUS_ONE=-1, numeric.length()==0=false, (exp == null)=true, str.length()=13, org.apache.commons.lang.math.NumberUtils.BYTE_ZERO=0, allZeros=false, 1=1, 0=0, org.apache.commons.lang.math.NumberUtils.BYTE_MINUS_ONE=-1, numeric!=null=true, expPos=-1, org.apache.commons.lang.math.NumberUtils.FLOAT_ONE=1.0, '-'=-, org.apache.commons.lang.math.NumberUtils.BYTE_ONE=1, (dec == null)=true, org.apache.commons.lang.math.NumberUtils.LONG_ZERO=0}. output: true
+input: {org.apache.commons.lang.math.NumberUtils.DOUBLE_MINUS_ONE=-1.0, org.apache.commons.lang.math.NumberUtils.SHORT_ZERO=0, ((dec == null) && (exp == null))=true, org.apache.commons.lang.math.NumberUtils.FLOAT_MINUS_ONE=-1.0, decPos=-1, org.apache.commons.lang.math.NumberUtils.INTEGER_MINUS_ONE=-1, org.apache.commons.lang.math.NumberUtils.INTEGER_ONE=1, org.apache.commons.lang.math.NumberUtils.INTEGER_ZERO=0, org.apache.commons.lang.math.NumberUtils.DOUBLE_ZERO=0.0, str.length()==0=false, org.apache.commons.lang.math.NumberUtils.LONG_MINUS_ONE=-1, org.apache.commons.lang.math.NumberUtils.SHORT_ONE=1, null!=null=false, str!=null=true, lastChar=l, org.apache.commons.lang.math.NumberUtils.FLOAT_ZERO=0.0, org.apache.commons.lang.math.NumberUtils.DOUBLE_ONE=1.0, numeric.length()=2, org.apache.commons.lang.math.NumberUtils.LONG_ONE=1, org.apache.commons.lang.math.NumberUtils.SHORT_MINUS_ONE=-1, numeric.length()==0=false, (exp == null)=true, str.length()=3, org.apache.commons.lang.math.NumberUtils.BYTE_ZERO=0, allZeros=false, 1=1, 0=0, org.apache.commons.lang.math.NumberUtils.BYTE_MINUS_ONE=-1, numeric!=null=true, expPos=-1, org.apache.commons.lang.math.NumberUtils.FLOAT_ONE=1.0, '-'=-, org.apache.commons.lang.math.NumberUtils.BYTE_ONE=1, (dec == null)=true, org.apache.commons.lang.math.NumberUtils.LONG_ZERO=0}. output: true
+02:56:22.557 [main] DEBUG f.i.l.c.s.ConstraintBasedSynthesis - Operators:
+02:56:22.777 [main] DEBUG f.i.l.c.s.ConstraintBasedSynthesis - SMTLib Script:
+(set-option :produce-models true)
+(set-logic AUFNIRA)
+(declare-fun L@out () Int)
+(define-fun Acyclicity () Bool true)
+(define-fun Consistency () Bool true)
+(define-fun LineBound ((L@out Int)) Bool (or (= 2 L@out) (= 9 L@out) (= 12 L@out) (= 13 L@out) (= 20 L@out) (= 21 L@out) (= 24 L@out) (= 28 L@out) (= 34 L@out)))
+(define-fun WellFormedProgram ((L@out Int)) Bool (and Acyclicity Consistency (LineBound L@out)))
+(define-fun Connectivity ((L@out Int)(in<0> Real)(in<1> Real)(in<2> Bool)(in<3> Real)(in<4> Real)(in<5> Real)(in<6> Real)(in<7> Real)(in<8> Real)(in<9> Bool)(in<10> Real)(in<11> Real)(in<12> Bool)(in<13> Bool)(in<14> Real)(in<15> Real)(in<16> Real)(in<17> Real)(in<18> Real)(in<19> Real)(in<20> Bool)(in<21> Bool)(in<22> Real)(in<23> Real)(in<24> Bool)(in<25> Real)(in<26> Real)(in<27> Real)(in<28> Bool)(in<29> Real)(in<30> Real)(in<31> Real)(in<32> Real)(in<33> Real)(in<34> Bool)(in<35> Real)(out Bool)) Bool (and (=> (= L@out 2) (= out in<2>)) (=> (= L@out 9) (= out in<9>)) (=> (= L@out 12) (= out in<12>)) (=> (= L@out 13) (= out in<13>)) (=> (= L@out 20) (= out in<20>)) (=> (= L@out 21) (= out in<21>)) (=> (= L@out 24) (= out in<24>)) (=> (= L@out 28) (= out in<28>)) (=> (= L@out 34) (= out in<34>))))
+(define-fun Library () Bool true)
+(define-fun Verification ((L@out Int)(in<0> Real)(in<1> Real)(in<2> Bool)(in<3> Real)(in<4> Real)(in<5> Real)(in<6> Real)(in<7> Real)(in<8> Real)(in<9> Bool)(in<10> Real)(in<11> Real)(in<12> Bool)(in<13> Bool)(in<14> Real)(in<15> Real)(in<16> Real)(in<17> Real)(in<18> Real)(in<19> Real)(in<20> Bool)(in<21> Bool)(in<22> Real)(in<23> Real)(in<24> Bool)(in<25> Real)(in<26> Real)(in<27> Real)(in<28> Bool)(in<29> Real)(in<30> Real)(in<31> Real)(in<32> Real)(in<33> Real)(in<34> Bool)(in<35> Real)(out Bool)) Bool (and (Connectivity L@out in<0> in<1> in<2> in<3> in<4> in<5> in<6> in<7> in<8> in<9> in<10> in<11> in<12> in<13> in<14> in<15> in<16> in<17> in<18> in<19> in<20> in<21> in<22> in<23> in<24> in<25> in<26> in<27> in<28> in<29> in<30> in<31> in<32> in<33> in<34> in<35> out) Library))
+(assert (Verification L@out (- 1.0) 0.0 true (- 1.0) (- 1.0) (- 1.0) 1.0 0.0 0.0 false (- 1.0) 1.0 false true 76.0 0.0 1.0 20.0 1.0 (- 1.0) false true 21.0 0.0 false 1.0 0.0 (- 1.0) true (- 1.0) (- 1.0) 1.0 45.0 1.0 true 0.0 true))
+(assert (Verification L@out (- 1.0) 0.0 false (- 1.0) (- 1.0) (- 1.0) 1.0 0.0 0.0 false (- 1.0) 1.0 false true 108.0 0.0 1.0 6.0 1.0 (- 1.0) false false 7.0 0.0 false 1.0 0.0 (- 1.0) true (- 1.0) 4.0 1.0 45.0 1.0 true 0.0 false))
+(assert (Verification L@out (- 1.0) 0.0 true (- 1.0) (- 1.0) (- 1.0) 1.0 0.0 0.0 false (- 1.0) 1.0 false true 108.0 0.0 1.0 5.0 1.0 (- 1.0) false true 6.0 0.0 false 1.0 0.0 (- 1.0) true (- 1.0) (- 1.0) 1.0 45.0 1.0 true 0.0 true))
+(assert (Verification L@out (- 1.0) 0.0 true (- 1.0) (- 1.0) (- 1.0) 1.0 0.0 0.0 false (- 1.0) 1.0 false true 108.0 0.0 1.0 1.0 1.0 (- 1.0) false true 2.0 0.0 false 1.0 0.0 (- 1.0) true (- 1.0) (- 1.0) 1.0 45.0 1.0 true 0.0 true))
+(assert (Verification L@out (- 1.0) 0.0 true (- 1.0) (- 1.0) (- 1.0) 1.0 0.0 0.0 false (- 1.0) 1.0 false true 76.0 0.0 1.0 5.0 1.0 (- 1.0) false true 6.0 0.0 false 1.0 0.0 (- 1.0) true (- 1.0) (- 1.0) 1.0 45.0 1.0 true 0.0 true))
+(assert (Verification L@out (- 1.0) 0.0 true (- 1.0) (- 1.0) (- 1.0) 1.0 0.0 0.0 false (- 1.0) 1.0 false true 76.0 0.0 1.0 12.0 1.0 (- 1.0) false true 13.0 0.0 false 1.0 0.0 (- 1.0) true (- 1.0) (- 1.0) 1.0 45.0 1.0 true 0.0 true))
+(assert (Verification L@out (- 1.0) 0.0 true (- 1.0) (- 1.0) (- 1.0) 1.0 0.0 0.0 false (- 1.0) 1.0 false true 108.0 0.0 1.0 2.0 1.0 (- 1.0) false true 3.0 0.0 false 1.0 0.0 (- 1.0) true (- 1.0) (- 1.0) 1.0 45.0 1.0 true 0.0 true))
+(assert (WellFormedProgram L@out))
+02:56:23.074 [main] DEBUG f.i.l.c.s.ConstraintBasedSynthesis - Successful code synthesis: ((dec == null) && (exp == null))
+02:56:23.075 [main] INFO  f.i.l.repair.nopol.patch.TestPatch - Applying patch: org.apache.commons.lang.math.NumberUtils:452: CONDITIONAL ((dec == null) && (exp == null))
+02:56:23.076 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Building Spoon model from /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:23,141 DEBUG spoon.support.StandardEnvironment - building sources: [/gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:23,143 DEBUG spoon.support.StandardEnvironment - build args: [-1.7, -encoding, UTF-8, -preserveAllLocals, -enableJavadoc, -noExit, -cp, /data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/classes/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/target/tests/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar:, /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java]
+2017-03-29 02:56:23,708 DEBUG spoon.support.StandardEnvironment - built in 565 ms
+2017-03-29 02:56:23,708 DEBUG spoon.support.StandardEnvironment - building templates: []
+2017-03-29 02:56:23,708 DEBUG spoon.support.StandardEnvironment - built in 0 ms
+02:56:23.710 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Spoon processing of org.apache.commons.lang.math.NumberUtils]
+2017-03-29 02:56:23,710 DEBUG spoon.support.StandardEnvironment - processing 'NumberUtils' with 'fr.inria.lille.repair.nopol.spoon.smt.ConditionalReplacer'...
+02:56:23.720 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Scanning source code of org.apache.commons.lang.math.NumberUtils]
+02:56:23.740 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compiling 1 source files]
+02:56:24.190 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compilation finished successfully (1 classes)]
+02:56:24.190 [main] INFO  f.i.l.repair.nopol.patch.TestPatch - Running test suite to check the patch "((dec == null) && (exp == null))" is working
+
+Can't test IS_JAVA value
+02:56:50.601 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Spoon processing of org.apache.commons.lang.math.NumberUtils]
+2017-03-29 02:56:50,601 DEBUG spoon.support.StandardEnvironment - processing 'NumberUtils' with 'spoon.support.JavaOutputProcessor'...
+2017-03-29 02:56:50,632 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.lang.math.NumberUtils to /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_58_buggy/src/spooned
+02:56:50.786 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Scanning source code of org.apache.commons.lang.math.NumberUtils]
+02:56:50.813 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compiling 1 source files]
+02:56:51.267 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compilation finished successfully (1 classes)]
+----INFORMATION----
+Nb classes : 77
+Nb methods : 1700
+Nb statements: 7643
+Nb statement executed by the passing tests of the patched line: 0
+Nb statement executed by the failing tests of the patched line: 0
+Nb unit tests : 1493
+Nb Statements Analyzed : 8
+Nb Statements with Angelic Value Found : 1
+Nb inputs in SMT : 7
+Nb SMT level: 1
+Nb SMT components: [0] []
+Nb variables in SMT : 37
+Nb run failing test  : [2, 2, 1]
+Nb run passing test : [1, 1, 7]
+NoPol Execution time : 95285ms
+----PATCH FOUND----
+org.apache.commons.lang.math.NumberUtils:452: CONDITIONAL ((dec == null) && (exp == null))

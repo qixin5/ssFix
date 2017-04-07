@@ -1,0 +1,22 @@
+#!/bin/bash
+
+for i in {3,5,6,13,26}
+do
+    cp -r ~/data/nopol_repair_expts/log/Chart_${i} ./plausible
+done
+
+for i in {44,51,58}
+do
+    cp -r ~/data/nopol_repair_expts/log/Lang_${i} ./plausible
+done
+
+for i in {33,40,49,50,57,58,71,73,81,85,87,99,104}
+do
+    cp -r ~/data/nopol_repair_expts/log/Math_${i} ./plausible
+done
+
+for i in {2,3,12,33,40,45,55,62,63,113,115,133}
+do
+    cp -r ~/data/nopol_repair_expts/log/Closure_${i} ./plausible
+done
+

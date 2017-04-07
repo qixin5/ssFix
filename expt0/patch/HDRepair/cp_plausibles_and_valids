@@ -1,0 +1,22 @@
+#!/bin/bash
+
+cp -r ~/data/hdrepair_repair_expts/log/Chart_5 ./plausible
+
+for i in {17,21,25,35,43,44,45,51,59}
+do
+    cp -r ~/data/hdrepair_repair_expts/log/Lang_${i} ./plausible
+done
+
+for i in {63,70,75,79,94,103}
+do
+    cp -r ~/data/hdrepair_repair_expts/log/Math_${i} ./plausible
+done
+
+cp -r ~/data/hdrepair_repair_expts/log/Lang_51 ./valid
+
+for i in {70,75,79,94}
+do
+    cp -r ~/data/hdrepair_repair_expts/log/Math_${i} ./valid
+done
+
+

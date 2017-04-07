@@ -1,0 +1,653 @@
+Source files: [/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java]
+Classpath: [file:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/classes/, file:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/tests/, file:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/all0.jar, file:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar, file:/home/qx5/ssFix2/lib/myprinter.jar, file:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar]
+Statement type: CONDITIONAL
+Args: [org.apache.commons.lang.ArrayUtilsAddTest, org.apache.commons.lang.ArrayUtilsRemoveTest, org.apache.commons.lang.ArrayUtilsTest, org.apache.commons.lang.BitFieldTest, org.apache.commons.lang.BooleanUtilsTest, org.apache.commons.lang.CharEncodingTest, org.apache.commons.lang.CharRangeTest, org.apache.commons.lang.CharSetTest, org.apache.commons.lang.CharSetUtilsTest, org.apache.commons.lang.CharUtilsTest, org.apache.commons.lang.ClassUtilsTest, org.apache.commons.lang.EntitiesTest, org.apache.commons.lang.IllegalClassExceptionTest, org.apache.commons.lang.IncompleteArgumentExceptionTest, org.apache.commons.lang.IntHashMapTest, org.apache.commons.lang.LocaleUtilsTest, org.apache.commons.lang.NotImplementedExceptionTest, org.apache.commons.lang.NullArgumentExceptionTest, org.apache.commons.lang.NumberRangeTest, org.apache.commons.lang.NumberUtilsTest, org.apache.commons.lang.ObjectUtilsTest, org.apache.commons.lang.RandomStringUtilsTest, org.apache.commons.lang.SerializationUtilsTest, org.apache.commons.lang.StringEscapeUtilsTest, org.apache.commons.lang.StringUtilsEqualsIndexOfTest, org.apache.commons.lang.StringUtilsIsTest, org.apache.commons.lang.StringUtilsStartsEndsWithTest, org.apache.commons.lang.StringUtilsSubstringTest, org.apache.commons.lang.StringUtilsTest, org.apache.commons.lang.StringUtilsTrimEmptyTest, org.apache.commons.lang.SystemUtilsTest, org.apache.commons.lang.UnhandledExceptionTest, org.apache.commons.lang.ValidateTest, org.apache.commons.lang.WordUtilsTest, org.apache.commons.lang.builder.CompareToBuilderTest, org.apache.commons.lang.builder.DefaultToStringStyleTest, org.apache.commons.lang.builder.EqualsBuilderTest, org.apache.commons.lang.builder.HashCodeBuilderAndEqualsBuilderTest, org.apache.commons.lang.builder.HashCodeBuilderTest, org.apache.commons.lang.builder.MultiLineToStringStyleTest, org.apache.commons.lang.builder.NoFieldNamesToStringStyleTest, org.apache.commons.lang.builder.ReflectionToStringBuilderExcludeTest, org.apache.commons.lang.builder.ShortPrefixToStringStyleTest, org.apache.commons.lang.builder.SimpleToStringStyleTest, org.apache.commons.lang.builder.StandardToStringStyleTest, org.apache.commons.lang.builder.ToStringStyleTest, org.apache.commons.lang.enum.EnumTest, org.apache.commons.lang.enum.EnumUtilsTest, org.apache.commons.lang.enum.ValuedEnumTest, org.apache.commons.lang.enums.EnumEqualsTest, org.apache.commons.lang.enums.EnumTest, org.apache.commons.lang.enums.EnumUtilsTest, org.apache.commons.lang.enums.ValuedEnumTest, org.apache.commons.lang.math.DoubleRangeTest, org.apache.commons.lang.math.FloatRangeTest, org.apache.commons.lang.math.FractionTest, org.apache.commons.lang.math.IntRangeTest, org.apache.commons.lang.math.LongRangeTest, org.apache.commons.lang.math.NumberRangeTest, org.apache.commons.lang.math.NumberUtilsTest, org.apache.commons.lang.math.RangeTest, org.apache.commons.lang.mutable.MutableBooleanTest, org.apache.commons.lang.mutable.MutableByteTest, org.apache.commons.lang.mutable.MutableDoubleTest, org.apache.commons.lang.mutable.MutableFloatTest, org.apache.commons.lang.mutable.MutableIntTest, org.apache.commons.lang.mutable.MutableLongTest, org.apache.commons.lang.mutable.MutableObjectTest, org.apache.commons.lang.mutable.MutableShortTest, org.apache.commons.lang.text.CompositeFormatTest, org.apache.commons.lang.text.StrBuilderAppendInsertTest, org.apache.commons.lang.text.StrBuilderTest, org.apache.commons.lang.text.StrLookupTest, org.apache.commons.lang.text.StrMatcherTest, org.apache.commons.lang.text.StrSubstitutorTest, org.apache.commons.lang.text.StrTokenizerTest, org.apache.commons.lang.time.DateFormatUtilsTest, org.apache.commons.lang.time.DateUtilsTest, org.apache.commons.lang.time.DurationFormatUtilsTest, org.apache.commons.lang.time.FastDateFormatTest, org.apache.commons.lang.time.StopWatchTest]
+Config: Config{synthesisDepth=3, collectStaticMethods=true, collectStaticFields=false, collectLiterals=false, onlyOneSynthesisResult=true, sortExpressions=true, maxLineInvocationPerTest=150, timeoutMethodInvocation=2000, addWeight=0.19478, subWeight=0.04554, mulWeight=0.0102, divWeight=0.00613, andWeight=0.10597, orWeight=0.05708, eqWeight=0.22798, nEqWeight=0.0, lessEqWeight=0.0255, lessWeight=0.0947, methodCallWeight=0.1, fieldAccessWeight=0.08099, constantWeight=0.14232, variableWeight=0.05195, mode=REPAIR, type=CONDITIONAL, synthesis=SMT, oracle=ANGELIC, solver=Z3, solverPath='/data/people/qx5/nopol-master/nopol/lib/z3/z3_for_linux', projectSourcePath=[/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java], projectClasspath='/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/classes:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/tests:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar', projectTests=[org.apache.commons.lang.ArrayUtilsAddTest, org.apache.commons.lang.ArrayUtilsRemoveTest, org.apache.commons.lang.ArrayUtilsTest, org.apache.commons.lang.BitFieldTest, org.apache.commons.lang.BooleanUtilsTest, org.apache.commons.lang.CharEncodingTest, org.apache.commons.lang.CharRangeTest, org.apache.commons.lang.CharSetTest, org.apache.commons.lang.CharSetUtilsTest, org.apache.commons.lang.CharUtilsTest, org.apache.commons.lang.ClassUtilsTest, org.apache.commons.lang.EntitiesTest, org.apache.commons.lang.IllegalClassExceptionTest, org.apache.commons.lang.IncompleteArgumentExceptionTest, org.apache.commons.lang.IntHashMapTest, org.apache.commons.lang.LocaleUtilsTest, org.apache.commons.lang.NotImplementedExceptionTest, org.apache.commons.lang.NullArgumentExceptionTest, org.apache.commons.lang.NumberRangeTest, org.apache.commons.lang.NumberUtilsTest, org.apache.commons.lang.ObjectUtilsTest, org.apache.commons.lang.RandomStringUtilsTest, org.apache.commons.lang.SerializationUtilsTest, org.apache.commons.lang.StringEscapeUtilsTest, org.apache.commons.lang.StringUtilsEqualsIndexOfTest, org.apache.commons.lang.StringUtilsIsTest, org.apache.commons.lang.StringUtilsStartsEndsWithTest, org.apache.commons.lang.StringUtilsSubstringTest, org.apache.commons.lang.StringUtilsTest, org.apache.commons.lang.StringUtilsTrimEmptyTest, org.apache.commons.lang.SystemUtilsTest, org.apache.commons.lang.UnhandledExceptionTest, org.apache.commons.lang.ValidateTest, org.apache.commons.lang.WordUtilsTest, org.apache.commons.lang.builder.CompareToBuilderTest, org.apache.commons.lang.builder.DefaultToStringStyleTest, org.apache.commons.lang.builder.EqualsBuilderTest, org.apache.commons.lang.builder.HashCodeBuilderAndEqualsBuilderTest, org.apache.commons.lang.builder.HashCodeBuilderTest, org.apache.commons.lang.builder.MultiLineToStringStyleTest, org.apache.commons.lang.builder.NoFieldNamesToStringStyleTest, org.apache.commons.lang.builder.ReflectionToStringBuilderExcludeTest, org.apache.commons.lang.builder.ShortPrefixToStringStyleTest, org.apache.commons.lang.builder.SimpleToStringStyleTest, org.apache.commons.lang.builder.StandardToStringStyleTest, org.apache.commons.lang.builder.ToStringStyleTest, org.apache.commons.lang.enum.EnumTest, org.apache.commons.lang.enum.EnumUtilsTest, org.apache.commons.lang.enum.ValuedEnumTest, org.apache.commons.lang.enums.EnumEqualsTest, org.apache.commons.lang.enums.EnumTest, org.apache.commons.lang.enums.EnumUtilsTest, org.apache.commons.lang.enums.ValuedEnumTest, org.apache.commons.lang.math.DoubleRangeTest, org.apache.commons.lang.math.FloatRangeTest, org.apache.commons.lang.math.FractionTest, org.apache.commons.lang.math.IntRangeTest, org.apache.commons.lang.math.LongRangeTest, org.apache.commons.lang.math.NumberRangeTest, org.apache.commons.lang.math.NumberUtilsTest, org.apache.commons.lang.math.RangeTest, org.apache.commons.lang.mutable.MutableBooleanTest, org.apache.commons.lang.mutable.MutableByteTest, org.apache.commons.lang.mutable.MutableDoubleTest, org.apache.commons.lang.mutable.MutableFloatTest, org.apache.commons.lang.mutable.MutableIntTest, org.apache.commons.lang.mutable.MutableLongTest, org.apache.commons.lang.mutable.MutableObjectTest, org.apache.commons.lang.mutable.MutableShortTest, org.apache.commons.lang.text.CompositeFormatTest, org.apache.commons.lang.text.StrBuilderAppendInsertTest, org.apache.commons.lang.text.StrBuilderTest, org.apache.commons.lang.text.StrLookupTest, org.apache.commons.lang.text.StrMatcherTest, org.apache.commons.lang.text.StrSubstitutorTest, org.apache.commons.lang.text.StrTokenizerTest, org.apache.commons.lang.time.DateFormatUtilsTest, org.apache.commons.lang.time.DateUtilsTest, org.apache.commons.lang.time.DurationFormatUtilsTest, org.apache.commons.lang.time.FastDateFormatTest, org.apache.commons.lang.time.StopWatchTest], complianceLevel=7}
+Available processors (cores): 32
+Free memory: 976 MB
+Maximum memory: 7 GB
+Total memory available to JVM: 982 MB
+Java version: 1.7.0_121
+JAVA_HOME: null
+PATH: /tmp/765566.1.vlong.q:/usr/local/bin:/bin:/usr/bin
+12:55:26.167 [main] DEBUG f.i.l.commons.spoon.SpoonedProject - [Building Spoon model from /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java]
+2017-03-29 12:55:34,310 DEBUG spoon.support.StandardEnvironment - building sources: [/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/ArrayUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BitField.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/CharEncoding.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/CharRange.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/CharSet.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/CharSetUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/CharUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/ClassUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/Entities.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/IllegalClassException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/IncompleteArgumentException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/IntHashMap.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/LocaleUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/NotImplementedException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/NullArgumentException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/NumberRange.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/NumberUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/ObjectUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/RandomStringUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/SerializationException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/SerializationUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/StringEscapeUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/StringUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/SystemUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/UnhandledException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/Validate.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/WordUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/builder/CompareToBuilder.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/builder/EqualsBuilder.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/builder/HashCodeBuilder.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/builder/ReflectionToStringBuilder.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/builder/StandardToStringStyle.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/builder/ToStringBuilder.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/builder/ToStringStyle.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/enum/Enum.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/enum/EnumUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/enum/ValuedEnum.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/enums/Enum.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/enums/EnumUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/enums/ValuedEnum.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/exception/ExceptionUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/exception/Nestable.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/exception/NestableDelegate.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/exception/NestableError.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/exception/NestableException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/exception/NestableRuntimeException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/math/DoubleRange.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/math/FloatRange.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/math/Fraction.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/math/IntRange.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/math/JVMRandom.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/math/LongRange.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/math/NumberRange.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/math/RandomUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/math/Range.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/mutable/Mutable.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/mutable/MutableBoolean.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/mutable/MutableByte.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/mutable/MutableDouble.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/mutable/MutableFloat.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/mutable/MutableInt.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/mutable/MutableLong.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/mutable/MutableObject.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/mutable/MutableShort.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/text/CompositeFormat.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/text/StrBuilder.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/text/StrLookup.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/text/StrMatcher.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/text/StrSubstitutor.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/text/StrTokenizer.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/time/DateFormatUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/time/DateUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/time/DurationFormatUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/time/FastDateFormat.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/time/StopWatch.java]
+2017-03-29 12:55:37,065 DEBUG spoon.support.StandardEnvironment - build args: [-1.7, -encoding, UTF-8, -preserveAllLocals, -enableJavadoc, -noExit, -cp, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/classes/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/tests/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar:, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/ArrayUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BitField.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/CharEncoding.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/CharRange.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/CharSet.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/CharSetUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/CharUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/ClassUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/Entities.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/IllegalClassException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/IncompleteArgumentException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/IntHashMap.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/LocaleUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/NotImplementedException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/NullArgumentException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/NumberRange.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/NumberUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/ObjectUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/RandomStringUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/SerializationException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/SerializationUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/StringEscapeUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/StringUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/SystemUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/UnhandledException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/Validate.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/WordUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/builder/CompareToBuilder.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/builder/EqualsBuilder.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/builder/HashCodeBuilder.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/builder/ReflectionToStringBuilder.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/builder/StandardToStringStyle.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/builder/ToStringBuilder.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/builder/ToStringStyle.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/enum/Enum.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/enum/EnumUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/enum/ValuedEnum.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/enums/Enum.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/enums/EnumUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/enums/ValuedEnum.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/exception/ExceptionUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/exception/Nestable.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/exception/NestableDelegate.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/exception/NestableError.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/exception/NestableException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/exception/NestableRuntimeException.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/math/DoubleRange.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/math/FloatRange.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/math/Fraction.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/math/IntRange.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/math/JVMRandom.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/math/LongRange.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/math/NumberRange.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/math/NumberUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/math/RandomUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/math/Range.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/mutable/Mutable.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/mutable/MutableBoolean.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/mutable/MutableByte.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/mutable/MutableDouble.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/mutable/MutableFloat.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/mutable/MutableInt.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/mutable/MutableLong.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/mutable/MutableObject.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/mutable/MutableShort.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/text/CompositeFormat.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/text/StrBuilder.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/text/StrLookup.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/text/StrMatcher.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/text/StrSubstitutor.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/text/StrTokenizer.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/time/DateFormatUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/time/DateUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/time/DurationFormatUtils.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/time/FastDateFormat.java, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/time/StopWatch.java]
+spoon.compiler.ModelBuildingException: Syntax error on token "enum", Identifier expected at /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/enum/Enum.java:17
+	at spoon.support.compiler.jdt.JDTBasedSpoonCompiler.report(JDTBasedSpoonCompiler.java:535)
+	at spoon.support.compiler.jdt.JDTBasedSpoonCompiler.reportProblems(JDTBasedSpoonCompiler.java:551)
+	at spoon.support.compiler.jdt.JDTBasedSpoonCompiler.build(JDTBasedSpoonCompiler.java:507)
+	at fr.inria.lille.commons.spoon.util.SpoonModelLibrary.modelFor(SpoonModelLibrary.java:56)
+	at fr.inria.lille.commons.spoon.SpoonedFile.<init>(SpoonedFile.java:50)
+	at fr.inria.lille.commons.spoon.SpoonedProject.<init>(SpoonedProject.java:17)
+	at fr.inria.lille.repair.nopol.NoPol.<init>(NoPol.java:80)
+	at fr.inria.lille.repair.nopol.NoPol.<init>(NoPol.java:85)
+	at fr.inria.lille.repair.nopol.NoPolLauncher.launch(NoPolLauncher.java:79)
+	at fr.inria.lille.repair.Main.main(Main.java:59)
+org.apache.commons.lang.mutable.MutableObject{setValue(Ljava/lang/Object;)V[76 0.0
+org.apache.commons.lang.BooleanUtils{toBoolean(Ljava/lang/String;)Z[699 1.0
+13:02:06.288 [main] DEBUG fr.inria.lille.repair.nopol.NoPol - Analysing org.apache.commons.lang.BooleanUtils{toBoolean(Ljava/lang/String;)Z[699 1.0
+13:02:06.564 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Building Spoon model from /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:02:07,939 DEBUG spoon.support.StandardEnvironment - building sources: [/gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:02:07,940 DEBUG spoon.support.StandardEnvironment - build args: [-1.7, -encoding, UTF-8, -preserveAllLocals, -enableJavadoc, -noExit, -cp, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/classes/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/tests/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar:, /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:02:12,180 DEBUG spoon.support.StandardEnvironment - built in 4241 ms
+2017-03-29 13:02:12,181 DEBUG spoon.support.StandardEnvironment - building templates: []
+2017-03-29 13:02:12,181 DEBUG spoon.support.StandardEnvironment - built in 0 ms
+13:02:12.185 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Spoon processing of org.apache.commons.lang.BooleanUtils]
+2017-03-29 13:02:12,185 DEBUG spoon.support.StandardEnvironment - processing 'BooleanUtils' with 'fr.inria.lille.repair.common.synth.StatementTypeDetector'...
+13:02:12.677 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Scanning source code of org.apache.commons.lang.BooleanUtils]
+13:02:13.612 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compiling 1 source files]
+13:02:40.733 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compilation finished successfully (1 classes)]
+13:02:40.788 [main] DEBUG f.i.l.r.n.synth.SynthesizerFactory - No synthesizer found for SourceLocation org.apache.commons.lang.BooleanUtils:699.
+13:02:40.789 [main] DEBUG fr.inria.lille.repair.nopol.NoPol - Analysing org.apache.commons.lang.BooleanUtils{toBoolean(Ljava/lang/String;)Z[692 1.0
+13:02:40.789 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Building Spoon model from /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:02:41,323 DEBUG spoon.support.StandardEnvironment - building sources: [/gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:02:41,323 DEBUG spoon.support.StandardEnvironment - build args: [-1.7, -encoding, UTF-8, -preserveAllLocals, -enableJavadoc, -noExit, -cp, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/classes/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/tests/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar:, /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:02:44,646 DEBUG spoon.support.StandardEnvironment - built in 3323 ms
+2017-03-29 13:02:44,685 DEBUG spoon.support.StandardEnvironment - building templates: []
+2017-03-29 13:02:44,686 DEBUG spoon.support.StandardEnvironment - built in 0 ms
+13:02:44.688 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Spoon processing of org.apache.commons.lang.BooleanUtils]
+2017-03-29 13:02:44,689 DEBUG spoon.support.StandardEnvironment - processing 'BooleanUtils' with 'fr.inria.lille.repair.common.synth.StatementTypeDetector'...
+13:02:45.276 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Scanning source code of org.apache.commons.lang.BooleanUtils]
+13:02:46.012 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compiling 1 source files]
+13:02:52.654 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compilation finished successfully (1 classes)]
+13:02:52.731 [main] DEBUG f.i.l.r.n.synth.SynthesizerFactory - No synthesizer found for SourceLocation org.apache.commons.lang.BooleanUtils:692.
+13:02:52.732 [main] DEBUG fr.inria.lille.repair.nopol.NoPol - Analysing org.apache.commons.lang.BooleanUtils{toBoolean(Ljava/lang/String;)Z[691 1.0
+13:02:52.732 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Building Spoon model from /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:02:53,325 DEBUG spoon.support.StandardEnvironment - building sources: [/gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:02:53,325 DEBUG spoon.support.StandardEnvironment - build args: [-1.7, -encoding, UTF-8, -preserveAllLocals, -enableJavadoc, -noExit, -cp, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/classes/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/tests/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar:, /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:02:54,925 DEBUG spoon.support.StandardEnvironment - built in 1600 ms
+2017-03-29 13:02:54,925 DEBUG spoon.support.StandardEnvironment - building templates: []
+2017-03-29 13:02:54,926 DEBUG spoon.support.StandardEnvironment - built in 0 ms
+13:02:55.142 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Spoon processing of org.apache.commons.lang.BooleanUtils]
+2017-03-29 13:02:55,142 DEBUG spoon.support.StandardEnvironment - processing 'BooleanUtils' with 'fr.inria.lille.repair.common.synth.StatementTypeDetector'...
+13:02:55.759 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Scanning source code of org.apache.commons.lang.BooleanUtils]
+13:02:56.368 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compiling 1 source files]
+13:03:00.166 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compilation finished successfully (1 classes)]
+13:03:00.333 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Building Spoon model from /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:03:00,994 DEBUG spoon.support.StandardEnvironment - building sources: [/gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:03:00,995 DEBUG spoon.support.StandardEnvironment - build args: [-1.7, -encoding, UTF-8, -preserveAllLocals, -enableJavadoc, -noExit, -cp, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/classes/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/tests/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar:, /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:03:04,889 DEBUG spoon.support.StandardEnvironment - built in 3894 ms
+2017-03-29 13:03:04,889 DEBUG spoon.support.StandardEnvironment - building templates: []
+2017-03-29 13:03:04,889 DEBUG spoon.support.StandardEnvironment - built in 0 ms
+13:03:04.932 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Spoon processing of org.apache.commons.lang.BooleanUtils]
+2017-03-29 13:03:04,933 DEBUG spoon.support.StandardEnvironment - processing 'BooleanUtils' with 'fr.inria.lille.repair.nopol.spoon.ConditionalLoggingInstrumenter'...
+13:03:05.726 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Scanning source code of org.apache.commons.lang.BooleanUtils]
+13:03:06.195 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compiling 1 source files]
+13:03:13.049 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compilation finished successfully (1 classes)]
+13:03:14.302 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#1. org.apache.commons.lang.BooleanUtilsTest#testXor_primitive_nullInput started...]
+13:03:14.350 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#1. SUCCESS]
+13:03:14.351 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#2. org.apache.commons.lang.BooleanUtilsTest#test_toStringTrueFalse_boolean started...]
+13:03:14.352 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#2. SUCCESS]
+13:03:14.353 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#3. org.apache.commons.lang.BooleanUtilsTest#test_toBooleanObject_int started...]
+13:03:14.353 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#3. SUCCESS]
+13:03:14.533 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#4. org.apache.commons.lang.BooleanUtilsTest#testXor_primitive_emptyInput started...]
+13:03:14.534 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#4. SUCCESS]
+13:03:14.535 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#5. org.apache.commons.lang.BooleanUtilsTest#test_toBooleanDefaultIfNull_Boolean_boolean started...]
+13:03:14.536 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#5. SUCCESS]
+13:03:14.537 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#6. org.apache.commons.lang.BooleanUtilsTest#test_toBooleanObject_Integer started...]
+13:03:14.538 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#6. SUCCESS]
+13:03:14.617 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#7. org.apache.commons.lang.BooleanUtilsTest#test_toInteger_boolean_int_int started...]
+13:03:14.617 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#7. SUCCESS]
+13:03:14.619 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#8. org.apache.commons.lang.BooleanUtilsTest#test_isNotFalse_Boolean started...]
+13:03:14.620 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#8. SUCCESS]
+13:03:14.620 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#9. org.apache.commons.lang.BooleanUtilsTest#test_toBooleanObject_String started...]
+13:03:14.621 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#9. SUCCESS]
+13:03:14.622 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#10. org.apache.commons.lang.BooleanUtilsTest#test_toStringYesNo_boolean started...]
+13:03:14.714 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#10. SUCCESS]
+13:03:14.715 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#11. org.apache.commons.lang.BooleanUtilsTest#test_toBooleanObject_Integer_Integer_Integer_Integer started...]
+13:03:14.716 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#11. SUCCESS]
+13:03:14.717 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#12. org.apache.commons.lang.BooleanUtilsTest#test_toBoolean_Integer_Integer_Integer started...]
+13:03:14.718 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#12. SUCCESS]
+13:03:14.772 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#13. org.apache.commons.lang.BooleanUtilsTest#test_toIntegerObject_Boolean_Integer_Integer_Integer started...]
+13:03:14.773 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#13. SUCCESS]
+13:03:14.773 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#14. org.apache.commons.lang.BooleanUtilsTest#test_toBooleanObject_String_String_String_String started...]
+13:03:14.775 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#14. SUCCESS]
+13:03:14.776 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#15. org.apache.commons.lang.BooleanUtilsTest#test_toBooleanObject_boolean started...]
+13:03:14.777 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#15. SUCCESS]
+13:03:14.778 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#16. org.apache.commons.lang.BooleanUtilsTest#test_toStringOnOff_Boolean started...]
+13:03:14.836 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#16. SUCCESS]
+13:03:14.836 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#17. org.apache.commons.lang.BooleanUtilsTest#testXor_object_validInput_2items started...]
+13:03:14.900 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#17. SUCCESS]
+13:03:14.901 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#18. org.apache.commons.lang.BooleanUtilsTest#testXor_object_validInput_3items started...]
+13:03:14.902 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#18. SUCCESS]
+13:03:14.903 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#19. org.apache.commons.lang.BooleanUtilsTest#test_toIntegerObject_Boolean started...]
+13:03:14.907 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#19. SUCCESS]
+13:03:14.908 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#20. org.apache.commons.lang.BooleanUtilsTest#test_isNotTrue_Boolean started...]
+13:03:14.908 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#20. SUCCESS]
+13:03:14.909 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#21. org.apache.commons.lang.BooleanUtilsTest#test_toBoolean_String started...]
+13:03:14.912 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#21. FAILED]
+13:03:14.913 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#22. org.apache.commons.lang.BooleanUtilsTest#test_toBoolean_int_int_int started...]
+13:03:14.914 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#22. SUCCESS]
+13:03:14.914 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#23. org.apache.commons.lang.BooleanUtilsTest#testXor_object_nullElementInput started...]
+13:03:14.915 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#23. SUCCESS]
+13:03:14.916 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#24. org.apache.commons.lang.BooleanUtilsTest#test_toStringTrueFalse_Boolean started...]
+13:03:14.916 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#24. SUCCESS]
+13:03:14.917 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#25. org.apache.commons.lang.BooleanUtilsTest#testXor_object_nullInput started...]
+13:03:14.918 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#25. SUCCESS]
+13:03:14.919 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#26. org.apache.commons.lang.BooleanUtilsTest#test_toStringYesNo_Boolean started...]
+13:03:14.919 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#26. SUCCESS]
+13:03:14.920 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#27. org.apache.commons.lang.BooleanUtilsTest#test_isFalse_Boolean started...]
+13:03:14.921 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#27. SUCCESS]
+13:03:14.921 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#28. org.apache.commons.lang.BooleanUtilsTest#test_toBoolean_int started...]
+13:03:14.922 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#28. SUCCESS]
+13:03:14.923 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#29. org.apache.commons.lang.BooleanUtilsTest#test_toInteger_boolean started...]
+13:03:14.924 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#29. SUCCESS]
+13:03:14.924 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#30. org.apache.commons.lang.BooleanUtilsTest#test_toBoolean_Boolean started...]
+13:03:14.925 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#30. SUCCESS]
+13:03:14.926 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#31. org.apache.commons.lang.BooleanUtilsTest#test_toIntegerObject_boolean_Integer_Integer started...]
+13:03:14.927 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#31. SUCCESS]
+13:03:14.927 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#32. org.apache.commons.lang.BooleanUtilsTest#test_isTrue_Boolean started...]
+13:03:14.928 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#32. SUCCESS]
+13:03:14.929 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#33. org.apache.commons.lang.BooleanUtilsTest#testXor_primitive_validInput_2items started...]
+13:03:14.930 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#33. SUCCESS]
+13:03:14.930 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#34. org.apache.commons.lang.BooleanUtilsTest#testXor_primitive_validInput_3items started...]
+13:03:14.931 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#34. SUCCESS]
+13:03:14.932 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#35. org.apache.commons.lang.BooleanUtilsTest#testXor_object_emptyInput started...]
+13:03:14.932 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#35. SUCCESS]
+13:03:14.933 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#36. org.apache.commons.lang.BooleanUtilsTest#test_toBoolean_String_String_String started...]
+13:03:14.934 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#36. SUCCESS]
+13:03:14.935 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#37. org.apache.commons.lang.BooleanUtilsTest#test_toInteger_Boolean_int_int_int started...]
+13:03:14.935 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#37. SUCCESS]
+13:03:14.936 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#38. org.apache.commons.lang.BooleanUtilsTest#test_negate_Boolean started...]
+13:03:14.937 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#38. SUCCESS]
+13:03:14.938 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#39. org.apache.commons.lang.BooleanUtilsTest#test_toString_Boolean_String_String_String started...]
+13:03:14.938 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#39. SUCCESS]
+13:03:14.939 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#40. org.apache.commons.lang.BooleanUtilsTest#test_toStringOnOff_boolean started...]
+13:03:14.940 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#40. SUCCESS]
+13:03:14.940 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#41. org.apache.commons.lang.BooleanUtilsTest#test_toBooleanObject_int_int_int started...]
+13:03:14.941 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#41. SUCCESS]
+13:03:14.942 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#42. org.apache.commons.lang.BooleanUtilsTest#test_toIntegerObject_boolean started...]
+13:03:14.943 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#42. SUCCESS]
+13:03:14.944 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#43. org.apache.commons.lang.BooleanUtilsTest#test_toString_boolean_String_String_String started...]
+13:03:14.945 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#43. SUCCESS]
+13:03:14.945 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#44. org.apache.commons.lang.BooleanUtilsTest#testConstructor started...]
+13:03:14.946 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - [#44. SUCCESS]
+13:03:14.948 [Thread-1] DEBUG xxl.java.junit.TestCasesListener - Tests run finished (755 ms)
+<> Total tests run: 44
+<> Ignored tests: 0
+<> Failed tests: 1
+~ test_toBoolean_String(org.apache.commons.lang.BooleanUtilsTest)
+[String index out of range: 3]
+java.lang.StringIndexOutOfBoundsException: String index out of range: 3
+    at java.lang.String.charAt(String.java:658)
+    at org.apache.commons.lang.BooleanUtils.toBoolean(BooleanUtils.java:686)
+    at org.apache.commons.lang.BooleanUtilsTest.test_toBoolean_String(BooleanUtilsTest.java:334)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+13:03:15.014 [Thread-2] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#1. org.apache.commons.lang.BooleanUtilsTest#test_toBoolean_String started...]
+13:03:15.036 [Thread-2] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#1. FAILED]
+13:03:15.037 [Thread-2] DEBUG f.i.l.c.t.SpecificationTestCasesListener - Tests run finished (27 ms)
+<> Total tests run: 1
+<> Ignored tests: 0
+<> Failed tests: 1
+~ test_toBoolean_String(org.apache.commons.lang.BooleanUtilsTest)
+[String index out of range: 3]
+java.lang.StringIndexOutOfBoundsException: String index out of range: 3
+    at java.lang.String.charAt(String.java:658)
+    at org.apache.commons.lang.BooleanUtils.toBoolean(BooleanUtils.java:224)
+    at org.apache.commons.lang.BooleanUtilsTest.test_toBoolean_String(BooleanUtilsTest.java:334)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+13:03:15.064 [Thread-3] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#2. org.apache.commons.lang.BooleanUtilsTest#test_toBoolean_String started...]
+13:03:15.073 [Thread-3] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#2. FAILED]
+13:03:15.074 [Thread-3] DEBUG f.i.l.c.t.SpecificationTestCasesListener - Tests run finished (10 ms)
+<> Total tests run: 1
+<> Ignored tests: 0
+<> Failed tests: 1
+~ test_toBoolean_String(org.apache.commons.lang.BooleanUtilsTest)
+[expected:<true> but was:<false>]
+junit.framework.AssertionFailedError: expected:<true> but was:<false>
+    at junit.framework.Assert.fail(Assert.java:57)
+    at junit.framework.Assert.failNotEquals(Assert.java:329)
+    at junit.framework.Assert.assertEquals(Assert.java:78)
+    at junit.framework.Assert.assertEquals(Assert.java:174)
+    at junit.framework.Assert.assertEquals(Assert.java:181)
+    at org.apache.commons.lang.BooleanUtilsTest.test_toBoolean_String(BooleanUtilsTest.java:313)
+13:03:15.075 [main] DEBUG f.i.l.r.n.s.ConstraintModelBuilder - Failing test(s): SourceLocation org.apache.commons.lang.BooleanUtils:691
+[test_toBoolean_String(org.apache.commons.lang.BooleanUtilsTest)]
+13:03:15.076 [main] DEBUG tests.output - First set: 
+[test_toBoolean_String(org.apache.commons.lang.BooleanUtilsTest): String index out of range: 3]
+13:03:15.076 [main] DEBUG tests.output - Second set: 
+[test_toBoolean_String(org.apache.commons.lang.BooleanUtilsTest): expected:<true> but was:<false>]
+13:03:15.076 [main] INFO  f.i.l.r.n.synth.DefaultSynthesizer - 0 input values set(s). There are not enough tests for SourceLocation org.apache.commons.lang.BooleanUtils:691 otherwise the patch would be "true" or "false"
+13:03:15.078 [main] DEBUG fr.inria.lille.repair.nopol.NoPol - Could not find a patch in org.apache.commons.lang.BooleanUtils{toBoolean(Ljava/lang/String;)Z[691 1.0
+13:03:15.078 [main] DEBUG fr.inria.lille.repair.nopol.NoPol - Analysing org.apache.commons.lang.BooleanUtils{toBoolean(Ljava/lang/String;)Z[686 1.0
+13:03:15.078 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Building Spoon model from /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:03:15,747 DEBUG spoon.support.StandardEnvironment - building sources: [/gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:03:15,747 DEBUG spoon.support.StandardEnvironment - build args: [-1.7, -encoding, UTF-8, -preserveAllLocals, -enableJavadoc, -noExit, -cp, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/classes/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/tests/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar:, /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:03:19,780 DEBUG spoon.support.StandardEnvironment - built in 4033 ms
+2017-03-29 13:03:19,781 DEBUG spoon.support.StandardEnvironment - building templates: []
+2017-03-29 13:03:19,781 DEBUG spoon.support.StandardEnvironment - built in 0 ms
+13:03:19.842 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Spoon processing of org.apache.commons.lang.BooleanUtils]
+2017-03-29 13:03:19,842 DEBUG spoon.support.StandardEnvironment - processing 'BooleanUtils' with 'fr.inria.lille.repair.common.synth.StatementTypeDetector'...
+13:03:20.261 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Scanning source code of org.apache.commons.lang.BooleanUtils]
+13:03:20.877 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compiling 1 source files]
+13:03:25.690 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compilation finished successfully (1 classes)]
+13:03:25.690 [main] DEBUG f.i.l.r.n.synth.SynthesizerFactory - No synthesizer found for SourceLocation org.apache.commons.lang.BooleanUtils:686.
+13:03:25.690 [main] DEBUG fr.inria.lille.repair.nopol.NoPol - Analysing org.apache.commons.lang.BooleanUtils{toBoolean(Ljava/lang/String;)Z[685 1.0
+13:03:25.691 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Building Spoon model from /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:03:25,805 DEBUG spoon.support.StandardEnvironment - building sources: [/gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:03:25,806 DEBUG spoon.support.StandardEnvironment - build args: [-1.7, -encoding, UTF-8, -preserveAllLocals, -enableJavadoc, -noExit, -cp, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/classes/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/tests/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar:, /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:03:28,925 DEBUG spoon.support.StandardEnvironment - built in 3120 ms
+2017-03-29 13:03:28,925 DEBUG spoon.support.StandardEnvironment - building templates: []
+2017-03-29 13:03:28,926 DEBUG spoon.support.StandardEnvironment - built in 0 ms
+13:03:29.005 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Spoon processing of org.apache.commons.lang.BooleanUtils]
+2017-03-29 13:03:29,006 DEBUG spoon.support.StandardEnvironment - processing 'BooleanUtils' with 'fr.inria.lille.repair.common.synth.StatementTypeDetector'...
+13:03:29.407 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Scanning source code of org.apache.commons.lang.BooleanUtils]
+13:03:29.555 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compiling 1 source files]
+13:03:33.571 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compilation finished successfully (1 classes)]
+13:03:33.572 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Building Spoon model from /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:03:34,216 DEBUG spoon.support.StandardEnvironment - building sources: [/gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:03:34,216 DEBUG spoon.support.StandardEnvironment - build args: [-1.7, -encoding, UTF-8, -preserveAllLocals, -enableJavadoc, -noExit, -cp, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/classes/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/tests/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar:, /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:03:37,931 DEBUG spoon.support.StandardEnvironment - built in 3715 ms
+2017-03-29 13:03:37,931 DEBUG spoon.support.StandardEnvironment - building templates: []
+2017-03-29 13:03:37,931 DEBUG spoon.support.StandardEnvironment - built in 0 ms
+13:03:37.965 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Spoon processing of org.apache.commons.lang.BooleanUtils]
+2017-03-29 13:03:37,965 DEBUG spoon.support.StandardEnvironment - processing 'BooleanUtils' with 'fr.inria.lille.repair.nopol.spoon.ConditionalLoggingInstrumenter'...
+13:03:38.152 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Scanning source code of org.apache.commons.lang.BooleanUtils]
+13:03:38.501 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compiling 1 source files]
+13:03:42.299 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compilation finished successfully (1 classes)]
+13:03:42.538 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#1. org.apache.commons.lang.BooleanUtilsTest#testXor_primitive_nullInput started...]
+13:03:42.672 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#1. SUCCESS]
+13:03:42.673 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#2. org.apache.commons.lang.BooleanUtilsTest#test_toStringTrueFalse_boolean started...]
+13:03:42.674 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#2. SUCCESS]
+13:03:42.695 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#3. org.apache.commons.lang.BooleanUtilsTest#test_toBooleanObject_int started...]
+13:03:42.696 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#3. SUCCESS]
+13:03:42.696 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#4. org.apache.commons.lang.BooleanUtilsTest#testXor_primitive_emptyInput started...]
+13:03:42.697 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#4. SUCCESS]
+13:03:42.697 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#5. org.apache.commons.lang.BooleanUtilsTest#test_toBooleanDefaultIfNull_Boolean_boolean started...]
+13:03:42.698 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#5. SUCCESS]
+13:03:42.698 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#6. org.apache.commons.lang.BooleanUtilsTest#test_toBooleanObject_Integer started...]
+13:03:42.699 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#6. SUCCESS]
+13:03:42.700 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#7. org.apache.commons.lang.BooleanUtilsTest#test_toInteger_boolean_int_int started...]
+13:03:42.700 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#7. SUCCESS]
+13:03:42.701 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#8. org.apache.commons.lang.BooleanUtilsTest#test_isNotFalse_Boolean started...]
+13:03:42.701 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#8. SUCCESS]
+13:03:42.701 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#9. org.apache.commons.lang.BooleanUtilsTest#test_toBooleanObject_String started...]
+13:03:42.702 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#9. SUCCESS]
+13:03:42.796 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#10. org.apache.commons.lang.BooleanUtilsTest#test_toStringYesNo_boolean started...]
+13:03:42.797 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#10. SUCCESS]
+13:03:42.797 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#11. org.apache.commons.lang.BooleanUtilsTest#test_toBooleanObject_Integer_Integer_Integer_Integer started...]
+13:03:42.798 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#11. SUCCESS]
+13:03:42.799 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#12. org.apache.commons.lang.BooleanUtilsTest#test_toBoolean_Integer_Integer_Integer started...]
+13:03:42.799 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#12. SUCCESS]
+13:03:42.799 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#13. org.apache.commons.lang.BooleanUtilsTest#test_toIntegerObject_Boolean_Integer_Integer_Integer started...]
+13:03:42.800 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#13. SUCCESS]
+13:03:42.800 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#14. org.apache.commons.lang.BooleanUtilsTest#test_toBooleanObject_String_String_String_String started...]
+13:03:42.801 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#14. SUCCESS]
+13:03:42.801 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#15. org.apache.commons.lang.BooleanUtilsTest#test_toBooleanObject_boolean started...]
+13:03:42.802 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#15. SUCCESS]
+13:03:42.903 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#16. org.apache.commons.lang.BooleanUtilsTest#test_toStringOnOff_Boolean started...]
+13:03:42.903 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#16. SUCCESS]
+13:03:42.904 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#17. org.apache.commons.lang.BooleanUtilsTest#testXor_object_validInput_2items started...]
+13:03:42.936 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#17. SUCCESS]
+13:03:43.059 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#18. org.apache.commons.lang.BooleanUtilsTest#testXor_object_validInput_3items started...]
+13:03:43.060 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#18. SUCCESS]
+13:03:43.061 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#19. org.apache.commons.lang.BooleanUtilsTest#test_toIntegerObject_Boolean started...]
+13:03:43.133 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#19. SUCCESS]
+13:03:43.134 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#20. org.apache.commons.lang.BooleanUtilsTest#test_isNotTrue_Boolean started...]
+13:03:43.134 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#20. SUCCESS]
+13:03:43.135 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#21. org.apache.commons.lang.BooleanUtilsTest#test_toBoolean_String started...]
+13:03:43.136 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#21. FAILED]
+13:03:43.136 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#22. org.apache.commons.lang.BooleanUtilsTest#test_toBoolean_int_int_int started...]
+13:03:43.137 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#22. SUCCESS]
+13:03:43.137 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#23. org.apache.commons.lang.BooleanUtilsTest#testXor_object_nullElementInput started...]
+13:03:43.137 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#23. SUCCESS]
+13:03:43.138 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#24. org.apache.commons.lang.BooleanUtilsTest#test_toStringTrueFalse_Boolean started...]
+13:03:43.181 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#24. SUCCESS]
+13:03:43.182 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#25. org.apache.commons.lang.BooleanUtilsTest#testXor_object_nullInput started...]
+13:03:43.182 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#25. SUCCESS]
+13:03:43.183 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#26. org.apache.commons.lang.BooleanUtilsTest#test_toStringYesNo_Boolean started...]
+13:03:43.183 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#26. SUCCESS]
+13:03:43.183 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#27. org.apache.commons.lang.BooleanUtilsTest#test_isFalse_Boolean started...]
+13:03:43.184 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#27. SUCCESS]
+13:03:43.184 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#28. org.apache.commons.lang.BooleanUtilsTest#test_toBoolean_int started...]
+13:03:43.185 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#28. SUCCESS]
+13:03:43.185 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#29. org.apache.commons.lang.BooleanUtilsTest#test_toInteger_boolean started...]
+13:03:43.186 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#29. SUCCESS]
+13:03:43.243 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#30. org.apache.commons.lang.BooleanUtilsTest#test_toBoolean_Boolean started...]
+13:03:43.243 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#30. SUCCESS]
+13:03:43.244 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#31. org.apache.commons.lang.BooleanUtilsTest#test_toIntegerObject_boolean_Integer_Integer started...]
+13:03:43.245 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#31. SUCCESS]
+13:03:43.245 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#32. org.apache.commons.lang.BooleanUtilsTest#test_isTrue_Boolean started...]
+13:03:43.245 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#32. SUCCESS]
+13:03:43.246 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#33. org.apache.commons.lang.BooleanUtilsTest#testXor_primitive_validInput_2items started...]
+13:03:43.440 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#33. SUCCESS]
+13:03:43.441 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#34. org.apache.commons.lang.BooleanUtilsTest#testXor_primitive_validInput_3items started...]
+13:03:43.441 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#34. SUCCESS]
+13:03:43.442 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#35. org.apache.commons.lang.BooleanUtilsTest#testXor_object_emptyInput started...]
+13:03:43.442 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#35. SUCCESS]
+13:03:43.443 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#36. org.apache.commons.lang.BooleanUtilsTest#test_toBoolean_String_String_String started...]
+13:03:43.443 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#36. SUCCESS]
+13:03:43.444 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#37. org.apache.commons.lang.BooleanUtilsTest#test_toInteger_Boolean_int_int_int started...]
+13:03:43.444 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#37. SUCCESS]
+13:03:43.444 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#38. org.apache.commons.lang.BooleanUtilsTest#test_negate_Boolean started...]
+13:03:43.445 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#38. SUCCESS]
+13:03:43.445 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#39. org.apache.commons.lang.BooleanUtilsTest#test_toString_Boolean_String_String_String started...]
+13:03:43.446 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#39. SUCCESS]
+13:03:43.560 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#40. org.apache.commons.lang.BooleanUtilsTest#test_toStringOnOff_boolean started...]
+13:03:43.560 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#40. SUCCESS]
+13:03:43.561 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#41. org.apache.commons.lang.BooleanUtilsTest#test_toBooleanObject_int_int_int started...]
+13:03:43.561 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#41. SUCCESS]
+13:03:43.562 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#42. org.apache.commons.lang.BooleanUtilsTest#test_toIntegerObject_boolean started...]
+13:03:43.562 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#42. SUCCESS]
+13:03:43.563 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#43. org.apache.commons.lang.BooleanUtilsTest#test_toString_boolean_String_String_String started...]
+13:03:43.563 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#43. SUCCESS]
+13:03:43.563 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#44. org.apache.commons.lang.BooleanUtilsTest#testConstructor started...]
+13:03:43.564 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - [#44. SUCCESS]
+13:03:43.565 [Thread-4] DEBUG xxl.java.junit.TestCasesListener - Tests run finished (1032 ms)
+<> Total tests run: 44
+<> Ignored tests: 0
+<> Failed tests: 1
+~ test_toBoolean_String(org.apache.commons.lang.BooleanUtilsTest)
+[String index out of range: 3]
+java.lang.StringIndexOutOfBoundsException: String index out of range: 3
+    at java.lang.String.charAt(String.java:658)
+    at org.apache.commons.lang.BooleanUtils.toBoolean(BooleanUtils.java:686)
+    at org.apache.commons.lang.BooleanUtilsTest.test_toBoolean_String(BooleanUtilsTest.java:334)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+13:03:44.148 [Thread-5] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#1. org.apache.commons.lang.BooleanUtilsTest#test_toBoolean_String started...]
+13:03:44.172 [Thread-5] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#1. FAILED]
+13:03:44.172 [Thread-5] DEBUG f.i.l.c.t.SpecificationTestCasesListener - Tests run finished (24 ms)
+<> Total tests run: 1
+<> Ignored tests: 0
+<> Failed tests: 1
+~ test_toBoolean_String(org.apache.commons.lang.BooleanUtilsTest)
+[expected:<true> but was:<false>]
+junit.framework.AssertionFailedError: expected:<true> but was:<false>
+    at junit.framework.Assert.fail(Assert.java:57)
+    at junit.framework.Assert.failNotEquals(Assert.java:329)
+    at junit.framework.Assert.assertEquals(Assert.java:78)
+    at junit.framework.Assert.assertEquals(Assert.java:174)
+    at junit.framework.Assert.assertEquals(Assert.java:181)
+    at org.apache.commons.lang.BooleanUtilsTest.test_toBoolean_String(BooleanUtilsTest.java:305)
+13:03:44.424 [Thread-6] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#2. org.apache.commons.lang.BooleanUtilsTest#test_toBoolean_String started...]
+13:03:44.588 [Thread-6] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#2. FAILED]
+13:03:44.589 [Thread-6] DEBUG f.i.l.c.t.SpecificationTestCasesListener - Tests run finished (164 ms)
+<> Total tests run: 1
+<> Ignored tests: 0
+<> Failed tests: 1
+~ test_toBoolean_String(org.apache.commons.lang.BooleanUtilsTest)
+[String index out of range: 3]
+java.lang.StringIndexOutOfBoundsException: String index out of range: 3
+    at java.lang.String.charAt(String.java:658)
+    at org.apache.commons.lang.BooleanUtils.toBoolean(BooleanUtils.java:236)
+    at org.apache.commons.lang.BooleanUtilsTest.test_toBoolean_String(BooleanUtilsTest.java:334)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+13:03:44.589 [main] DEBUG f.i.l.r.n.s.ConstraintModelBuilder - Failing test(s): SourceLocation org.apache.commons.lang.BooleanUtils:685
+[test_toBoolean_String(org.apache.commons.lang.BooleanUtilsTest)]
+13:03:44.590 [main] DEBUG tests.output - First set: 
+[test_toBoolean_String(org.apache.commons.lang.BooleanUtilsTest): expected:<true> but was:<false>]
+13:03:44.590 [main] DEBUG tests.output - Second set: 
+[test_toBoolean_String(org.apache.commons.lang.BooleanUtilsTest): String index out of range: 3]
+13:03:44.590 [main] INFO  f.i.l.r.n.synth.DefaultSynthesizer - 0 input values set(s). There are not enough tests for SourceLocation org.apache.commons.lang.BooleanUtils:685 otherwise the patch would be "true" or "false"
+13:03:44.590 [main] DEBUG fr.inria.lille.repair.nopol.NoPol - Could not find a patch in org.apache.commons.lang.BooleanUtils{toBoolean(Ljava/lang/String;)Z[685 1.0
+13:03:44.590 [main] DEBUG fr.inria.lille.repair.nopol.NoPol - Analysing org.apache.commons.lang.BooleanUtils{toBoolean(Ljava/lang/String;)Z[684 1.0
+13:03:44.591 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Building Spoon model from /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:03:44,870 DEBUG spoon.support.StandardEnvironment - building sources: [/gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:03:44,870 DEBUG spoon.support.StandardEnvironment - build args: [-1.7, -encoding, UTF-8, -preserveAllLocals, -enableJavadoc, -noExit, -cp, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/classes/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/tests/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar:, /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:03:48,940 DEBUG spoon.support.StandardEnvironment - built in 4070 ms
+2017-03-29 13:03:48,940 DEBUG spoon.support.StandardEnvironment - building templates: []
+2017-03-29 13:03:48,940 DEBUG spoon.support.StandardEnvironment - built in 0 ms
+13:03:49.085 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Spoon processing of org.apache.commons.lang.BooleanUtils]
+2017-03-29 13:03:49,086 DEBUG spoon.support.StandardEnvironment - processing 'BooleanUtils' with 'fr.inria.lille.repair.common.synth.StatementTypeDetector'...
+13:03:49.253 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Scanning source code of org.apache.commons.lang.BooleanUtils]
+13:03:49.526 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compiling 1 source files]
+13:03:53.160 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compilation finished successfully (1 classes)]
+13:03:53.160 [main] DEBUG f.i.l.r.n.synth.SynthesizerFactory - No synthesizer found for SourceLocation org.apache.commons.lang.BooleanUtils:684.
+13:03:53.161 [main] DEBUG fr.inria.lille.repair.nopol.NoPol - Analysing org.apache.commons.lang.BooleanUtils{toBoolean(Ljava/lang/String;)Z[678 1.0
+13:03:53.161 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Building Spoon model from /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:03:53,735 DEBUG spoon.support.StandardEnvironment - building sources: [/gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:03:53,735 DEBUG spoon.support.StandardEnvironment - build args: [-1.7, -encoding, UTF-8, -preserveAllLocals, -enableJavadoc, -noExit, -cp, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/classes/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/tests/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar:, /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:03:57,178 DEBUG spoon.support.StandardEnvironment - built in 3443 ms
+2017-03-29 13:03:57,178 DEBUG spoon.support.StandardEnvironment - building templates: []
+2017-03-29 13:03:57,179 DEBUG spoon.support.StandardEnvironment - built in 0 ms
+13:03:57.180 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Spoon processing of org.apache.commons.lang.BooleanUtils]
+2017-03-29 13:03:57,181 DEBUG spoon.support.StandardEnvironment - processing 'BooleanUtils' with 'fr.inria.lille.repair.common.synth.StatementTypeDetector'...
+13:03:57.354 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Scanning source code of org.apache.commons.lang.BooleanUtils]
+13:03:57.688 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compiling 1 source files]
+13:04:01.605 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compilation finished successfully (1 classes)]
+13:04:01.605 [main] DEBUG f.i.l.r.n.synth.SynthesizerFactory - No synthesizer found for SourceLocation org.apache.commons.lang.BooleanUtils:678.
+13:04:01.605 [main] DEBUG fr.inria.lille.repair.nopol.NoPol - Analysing org.apache.commons.lang.BooleanUtils{toBoolean(Ljava/lang/String;)Z[677 1.0
+13:04:01.606 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Building Spoon model from /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:04:02,594 DEBUG spoon.support.StandardEnvironment - building sources: [/gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:04:02,594 DEBUG spoon.support.StandardEnvironment - build args: [-1.7, -encoding, UTF-8, -preserveAllLocals, -enableJavadoc, -noExit, -cp, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/classes/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/tests/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar:, /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:04:07,345 DEBUG spoon.support.StandardEnvironment - built in 4751 ms
+2017-03-29 13:04:07,346 DEBUG spoon.support.StandardEnvironment - building templates: []
+2017-03-29 13:04:07,346 DEBUG spoon.support.StandardEnvironment - built in 0 ms
+13:04:07.415 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Spoon processing of org.apache.commons.lang.BooleanUtils]
+2017-03-29 13:04:07,415 DEBUG spoon.support.StandardEnvironment - processing 'BooleanUtils' with 'fr.inria.lille.repair.common.synth.StatementTypeDetector'...
+13:04:07.527 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Scanning source code of org.apache.commons.lang.BooleanUtils]
+13:04:07.775 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compiling 1 source files]
+13:04:11.814 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compilation finished successfully (1 classes)]
+13:04:11.971 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Building Spoon model from /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:04:13,035 DEBUG spoon.support.StandardEnvironment - building sources: [/gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:04:13,035 DEBUG spoon.support.StandardEnvironment - build args: [-1.7, -encoding, UTF-8, -preserveAllLocals, -enableJavadoc, -noExit, -cp, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/classes/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/tests/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar:, /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:04:17,678 DEBUG spoon.support.StandardEnvironment - built in 4643 ms
+2017-03-29 13:04:17,678 DEBUG spoon.support.StandardEnvironment - building templates: []
+2017-03-29 13:04:17,679 DEBUG spoon.support.StandardEnvironment - built in 0 ms
+13:04:17.680 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Spoon processing of org.apache.commons.lang.BooleanUtils]
+2017-03-29 13:04:17,680 DEBUG spoon.support.StandardEnvironment - processing 'BooleanUtils' with 'fr.inria.lille.repair.nopol.spoon.ConditionalLoggingInstrumenter'...
+13:04:17.907 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Scanning source code of org.apache.commons.lang.BooleanUtils]
+13:04:18.112 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compiling 1 source files]
+13:04:22.446 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compilation finished successfully (1 classes)]
+13:04:22.753 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#1. org.apache.commons.lang.BooleanUtilsTest#testXor_primitive_nullInput started...]
+13:04:22.958 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#1. SUCCESS]
+13:04:22.959 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#2. org.apache.commons.lang.BooleanUtilsTest#test_toStringTrueFalse_boolean started...]
+13:04:22.959 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#2. SUCCESS]
+13:04:22.960 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#3. org.apache.commons.lang.BooleanUtilsTest#test_toBooleanObject_int started...]
+13:04:22.960 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#3. SUCCESS]
+13:04:22.961 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#4. org.apache.commons.lang.BooleanUtilsTest#testXor_primitive_emptyInput started...]
+13:04:22.961 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#4. SUCCESS]
+13:04:22.961 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#5. org.apache.commons.lang.BooleanUtilsTest#test_toBooleanDefaultIfNull_Boolean_boolean started...]
+13:04:22.962 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#5. SUCCESS]
+13:04:23.006 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#6. org.apache.commons.lang.BooleanUtilsTest#test_toBooleanObject_Integer started...]
+13:04:23.007 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#6. SUCCESS]
+13:04:23.008 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#7. org.apache.commons.lang.BooleanUtilsTest#test_toInteger_boolean_int_int started...]
+13:04:23.008 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#7. SUCCESS]
+13:04:23.009 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#8. org.apache.commons.lang.BooleanUtilsTest#test_isNotFalse_Boolean started...]
+13:04:23.009 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#8. SUCCESS]
+13:04:23.009 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#9. org.apache.commons.lang.BooleanUtilsTest#test_toBooleanObject_String started...]
+13:04:23.010 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#9. SUCCESS]
+13:04:23.105 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#10. org.apache.commons.lang.BooleanUtilsTest#test_toStringYesNo_boolean started...]
+13:04:23.105 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#10. SUCCESS]
+13:04:23.106 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#11. org.apache.commons.lang.BooleanUtilsTest#test_toBooleanObject_Integer_Integer_Integer_Integer started...]
+13:04:23.106 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#11. SUCCESS]
+13:04:23.107 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#12. org.apache.commons.lang.BooleanUtilsTest#test_toBoolean_Integer_Integer_Integer started...]
+13:04:23.107 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#12. SUCCESS]
+13:04:23.108 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#13. org.apache.commons.lang.BooleanUtilsTest#test_toIntegerObject_Boolean_Integer_Integer_Integer started...]
+13:04:23.108 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#13. SUCCESS]
+13:04:23.108 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#14. org.apache.commons.lang.BooleanUtilsTest#test_toBooleanObject_String_String_String_String started...]
+13:04:23.109 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#14. SUCCESS]
+13:04:23.109 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#15. org.apache.commons.lang.BooleanUtilsTest#test_toBooleanObject_boolean started...]
+13:04:23.110 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#15. SUCCESS]
+13:04:23.195 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#16. org.apache.commons.lang.BooleanUtilsTest#test_toStringOnOff_Boolean started...]
+13:04:23.195 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#16. SUCCESS]
+13:04:23.196 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#17. org.apache.commons.lang.BooleanUtilsTest#testXor_object_validInput_2items started...]
+13:04:23.264 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#17. SUCCESS]
+13:04:23.265 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#18. org.apache.commons.lang.BooleanUtilsTest#testXor_object_validInput_3items started...]
+13:04:23.265 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#18. SUCCESS]
+13:04:23.265 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#19. org.apache.commons.lang.BooleanUtilsTest#test_toIntegerObject_Boolean started...]
+13:04:23.332 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#19. SUCCESS]
+13:04:23.333 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#20. org.apache.commons.lang.BooleanUtilsTest#test_isNotTrue_Boolean started...]
+13:04:23.334 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#20. SUCCESS]
+13:04:23.402 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#21. org.apache.commons.lang.BooleanUtilsTest#test_toBoolean_String started...]
+13:04:23.403 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#21. FAILED]
+13:04:23.404 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#22. org.apache.commons.lang.BooleanUtilsTest#test_toBoolean_int_int_int started...]
+13:04:23.404 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#22. SUCCESS]
+13:04:23.405 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#23. org.apache.commons.lang.BooleanUtilsTest#testXor_object_nullElementInput started...]
+13:04:23.405 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#23. SUCCESS]
+13:04:23.406 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#24. org.apache.commons.lang.BooleanUtilsTest#test_toStringTrueFalse_Boolean started...]
+13:04:23.469 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#24. SUCCESS]
+13:04:23.469 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#25. org.apache.commons.lang.BooleanUtilsTest#testXor_object_nullInput started...]
+13:04:23.470 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#25. SUCCESS]
+13:04:23.470 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#26. org.apache.commons.lang.BooleanUtilsTest#test_toStringYesNo_Boolean started...]
+13:04:23.471 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#26. SUCCESS]
+13:04:23.471 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#27. org.apache.commons.lang.BooleanUtilsTest#test_isFalse_Boolean started...]
+13:04:23.471 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#27. SUCCESS]
+13:04:23.472 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#28. org.apache.commons.lang.BooleanUtilsTest#test_toBoolean_int started...]
+13:04:23.472 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#28. SUCCESS]
+13:04:23.473 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#29. org.apache.commons.lang.BooleanUtilsTest#test_toInteger_boolean started...]
+13:04:23.473 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#29. SUCCESS]
+13:04:23.473 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#30. org.apache.commons.lang.BooleanUtilsTest#test_toBoolean_Boolean started...]
+13:04:23.474 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#30. SUCCESS]
+13:04:23.562 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#31. org.apache.commons.lang.BooleanUtilsTest#test_toIntegerObject_boolean_Integer_Integer started...]
+13:04:23.563 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#31. SUCCESS]
+13:04:23.564 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#32. org.apache.commons.lang.BooleanUtilsTest#test_isTrue_Boolean started...]
+13:04:23.564 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#32. SUCCESS]
+13:04:23.565 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#33. org.apache.commons.lang.BooleanUtilsTest#testXor_primitive_validInput_2items started...]
+13:04:23.565 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#33. SUCCESS]
+13:04:23.566 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#34. org.apache.commons.lang.BooleanUtilsTest#testXor_primitive_validInput_3items started...]
+13:04:23.617 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#34. SUCCESS]
+13:04:23.617 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#35. org.apache.commons.lang.BooleanUtilsTest#testXor_object_emptyInput started...]
+13:04:23.618 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#35. SUCCESS]
+13:04:23.618 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#36. org.apache.commons.lang.BooleanUtilsTest#test_toBoolean_String_String_String started...]
+13:04:23.619 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#36. SUCCESS]
+13:04:23.619 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#37. org.apache.commons.lang.BooleanUtilsTest#test_toInteger_Boolean_int_int_int started...]
+13:04:23.620 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#37. SUCCESS]
+13:04:23.620 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#38. org.apache.commons.lang.BooleanUtilsTest#test_negate_Boolean started...]
+13:04:23.620 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#38. SUCCESS]
+13:04:23.621 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#39. org.apache.commons.lang.BooleanUtilsTest#test_toString_Boolean_String_String_String started...]
+13:04:23.621 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#39. SUCCESS]
+13:04:23.622 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#40. org.apache.commons.lang.BooleanUtilsTest#test_toStringOnOff_boolean started...]
+13:04:23.622 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#40. SUCCESS]
+13:04:23.690 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#41. org.apache.commons.lang.BooleanUtilsTest#test_toBooleanObject_int_int_int started...]
+13:04:23.691 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#41. SUCCESS]
+13:04:23.691 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#42. org.apache.commons.lang.BooleanUtilsTest#test_toIntegerObject_boolean started...]
+13:04:23.692 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#42. SUCCESS]
+13:04:23.692 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#43. org.apache.commons.lang.BooleanUtilsTest#test_toString_boolean_String_String_String started...]
+13:04:23.692 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#43. SUCCESS]
+13:04:23.693 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#44. org.apache.commons.lang.BooleanUtilsTest#testConstructor started...]
+13:04:23.693 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - [#44. SUCCESS]
+13:04:23.694 [Thread-7] DEBUG xxl.java.junit.TestCasesListener - Tests run finished (945 ms)
+<> Total tests run: 44
+<> Ignored tests: 0
+<> Failed tests: 1
+~ test_toBoolean_String(org.apache.commons.lang.BooleanUtilsTest)
+[String index out of range: 3]
+java.lang.StringIndexOutOfBoundsException: String index out of range: 3
+    at java.lang.String.charAt(String.java:658)
+    at org.apache.commons.lang.BooleanUtils.toBoolean(BooleanUtils.java:686)
+    at org.apache.commons.lang.BooleanUtilsTest.test_toBoolean_String(BooleanUtilsTest.java:334)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+13:04:23.955 [Thread-8] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#1. org.apache.commons.lang.BooleanUtilsTest#test_toBoolean_String started...]
+13:04:23.958 [Thread-8] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#1. SUCCESS]
+13:04:24.020 [Thread-8] DEBUG f.i.l.c.t.SpecificationTestCasesListener - Collecting specifications from org.apache.commons.lang.BooleanUtilsTest#test_toBoolean_String
+13:04:24.020 [Thread-8] DEBUG f.i.l.c.t.SpecificationTestCasesListener - Tests run finished (65 ms)
+<> Total tests run: 1
+<> Ignored tests: 0
+<> Failed tests: 0
+13:04:24.058 [Thread-9] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#2. org.apache.commons.lang.BooleanUtilsTest#test_toBoolean_String started...]
+13:04:24.060 [Thread-9] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#2. FAILED]
+13:04:24.060 [Thread-9] DEBUG f.i.l.c.t.SpecificationTestCasesListener - Tests run finished (2 ms)
+<> Total tests run: 1
+<> Ignored tests: 0
+<> Failed tests: 1
+~ test_toBoolean_String(org.apache.commons.lang.BooleanUtilsTest)
+[expected:<true> but was:<false>]
+junit.framework.AssertionFailedError: expected:<true> but was:<false>
+    at junit.framework.Assert.fail(Assert.java:57)
+    at junit.framework.Assert.failNotEquals(Assert.java:329)
+    at junit.framework.Assert.assertEquals(Assert.java:78)
+    at junit.framework.Assert.assertEquals(Assert.java:174)
+    at junit.framework.Assert.assertEquals(Assert.java:181)
+    at org.apache.commons.lang.BooleanUtilsTest.test_toBoolean_String(BooleanUtilsTest.java:329)
+13:04:24.078 [Thread-10] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#3. org.apache.commons.lang.BooleanUtilsTest#test_toBoolean_String started...]
+13:04:24.079 [Thread-10] DEBUG f.i.l.c.t.SpecificationTestCasesListener - [#3. FAILED]
+13:04:24.086 [Thread-10] DEBUG f.i.l.c.t.SpecificationTestCasesListener - Tests run finished (3 ms)
+<> Total tests run: 1
+<> Ignored tests: 0
+<> Failed tests: 1
+~ test_toBoolean_String(org.apache.commons.lang.BooleanUtilsTest)
+[String index out of range: 3]
+java.lang.StringIndexOutOfBoundsException: String index out of range: 3
+    at java.lang.String.charAt(String.java:658)
+    at org.apache.commons.lang.BooleanUtils.toBoolean(BooleanUtils.java:236)
+    at org.apache.commons.lang.BooleanUtilsTest.test_toBoolean_String(BooleanUtilsTest.java:334)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+13:04:24.094 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Building Spoon model from /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:04:24,326 DEBUG spoon.support.StandardEnvironment - building sources: [/gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:04:24,327 DEBUG spoon.support.StandardEnvironment - build args: [-1.7, -encoding, UTF-8, -preserveAllLocals, -enableJavadoc, -noExit, -cp, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/classes/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/tests/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar:, /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:04:27,791 DEBUG spoon.support.StandardEnvironment - built in 3465 ms
+2017-03-29 13:04:27,792 DEBUG spoon.support.StandardEnvironment - building templates: []
+2017-03-29 13:04:27,792 DEBUG spoon.support.StandardEnvironment - built in 0 ms
+13:04:27.793 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Spoon processing of org.apache.commons.lang.BooleanUtils]
+2017-03-29 13:04:27,794 DEBUG spoon.support.StandardEnvironment - processing 'BooleanUtils' with 'fr.inria.lille.spirals.repair.synthesizer.collect.spoon.ConstantCollector'...
+13:04:27.932 [main] DEBUG f.i.l.s.r.s.c.s.ConstantCollector - [data] 2
+13:04:28.003 [main] DEBUG f.i.l.s.r.s.c.s.ConstantCollector - [data] 3
+13:04:28.005 [main] DEBUG f.i.l.s.r.s.c.s.ConstantCollector - [data] 4
+13:04:28.226 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Scanning source code of org.apache.commons.lang.BooleanUtils]
+13:04:28.490 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compiling 1 source files]
+13:04:31.207 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compilation finished successfully (1 classes)]
+{1=1, 0=0, -1=-1}
+13:04:34.173 [main] DEBUG f.i.l.c.s.ConstraintBasedSynthesis - Specifications:
+input: {'Y'=Y, ch=o, str!=null=true, str.length()=3, ch == 'Y'=false, str.length()==0=false}. output: true
+input: {'Y'=Y, ch=t, str!=null=true, str.length()=3, ch == 'Y'=false, str.length()==0=false}. output: true
+input: {'Y'=Y, ch=Y, str!=null=true, str.length()=3, ch == 'Y'=true, str.length()==0=false}. output: true
+13:04:34.174 [main] DEBUG f.i.l.c.s.ConstraintBasedSynthesis - Operators:
+13:04:35.227 [main] DEBUG f.i.l.c.s.ConstraintBasedSynthesis - SMTLib Script:
+(set-option :produce-models true)
+(set-logic AUFNIRA)
+(declare-fun L@out () Int)
+(define-fun Acyclicity () Bool true)
+(define-fun Consistency () Bool true)
+(define-fun LineBound ((L@out Int)) Bool (or (= 4 L@out) (= 7 L@out) (= 8 L@out)))
+(define-fun WellFormedProgram ((L@out Int)) Bool (and Acyclicity Consistency (LineBound L@out)))
+(define-fun Connectivity ((L@out Int)(in<0> Real)(in<1> Real)(in<2> Real)(in<3> Real)(in<4> Bool)(in<5> Real)(in<6> Real)(in<7> Bool)(in<8> Bool)(out Bool)) Bool (and (=> (= L@out 4) (= out in<4>)) (=> (= L@out 7) (= out in<7>)) (=> (= L@out 8) (= out in<8>))))
+(define-fun Library () Bool true)
+(define-fun Verification ((L@out Int)(in<0> Real)(in<1> Real)(in<2> Real)(in<3> Real)(in<4> Bool)(in<5> Real)(in<6> Real)(in<7> Bool)(in<8> Bool)(out Bool)) Bool (and (Connectivity L@out in<0> in<1> in<2> in<3> in<4> in<5> in<6> in<7> in<8> out) Library))
+(assert (Verification L@out 1.0 89.0 0.0 (- 1.0) false 111.0 3.0 true false true))
+(assert (Verification L@out 1.0 89.0 0.0 (- 1.0) false 116.0 3.0 true false true))
+(assert (Verification L@out 1.0 89.0 0.0 (- 1.0) false 89.0 3.0 true true true))
+(assert (WellFormedProgram L@out))
+13:04:36.437 [main] DEBUG f.i.l.c.s.ConstraintBasedSynthesis - Successful code synthesis: str!=null
+13:04:36.439 [main] INFO  f.i.l.repair.nopol.patch.TestPatch - Applying patch: org.apache.commons.lang.BooleanUtils:677: CONDITIONAL str!=null
+13:04:36.439 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Building Spoon model from /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:04:37,113 DEBUG spoon.support.StandardEnvironment - building sources: [/gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:04:37,114 DEBUG spoon.support.StandardEnvironment - build args: [-1.7, -encoding, UTF-8, -preserveAllLocals, -enableJavadoc, -noExit, -cp, /data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/classes/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/target/tests/:/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar:, /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java]
+2017-03-29 13:04:39,849 DEBUG spoon.support.StandardEnvironment - built in 2736 ms
+2017-03-29 13:04:39,850 DEBUG spoon.support.StandardEnvironment - building templates: []
+2017-03-29 13:04:39,850 DEBUG spoon.support.StandardEnvironment - built in 0 ms
+13:04:40.132 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Spoon processing of org.apache.commons.lang.BooleanUtils]
+2017-03-29 13:04:40,132 DEBUG spoon.support.StandardEnvironment - processing 'BooleanUtils' with 'fr.inria.lille.repair.nopol.spoon.smt.ConditionalReplacer'...
+13:04:40.330 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Scanning source code of org.apache.commons.lang.BooleanUtils]
+13:04:40.599 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compiling 1 source files]
+13:04:42.502 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compilation finished successfully (1 classes)]
+13:04:42.503 [main] INFO  f.i.l.repair.nopol.patch.TestPatch - Running test suite to check the patch "str!=null" is working
+
+Can't test IS_JAVA value
+13:07:52.281 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Spoon processing of org.apache.commons.lang.BooleanUtils]
+2017-03-29 13:07:52,282 DEBUG spoon.support.StandardEnvironment - processing 'BooleanUtils' with 'spoon.support.JavaOutputProcessor'...
+2017-03-29 13:07:52,324 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.lang.BooleanUtils to /gpfs/data/people/qx5/defects4j-bugs/langs/projs/Lang_51_buggy/src/spooned
+13:07:52.560 [main] DEBUG f.i.lille.commons.spoon.SpoonedClass - [Scanning source code of org.apache.commons.lang.BooleanUtils]
+13:07:52.751 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compiling 1 source files]
+13:07:56.103 [main] DEBUG x.java.compiler.DynamicClassCompiler - [Compilation finished successfully (1 classes)]
+----INFORMATION----
+Nb classes : 77
+Nb methods : 1734
+Nb statements: 7723
+Nb statement executed by the passing tests of the patched line: 0
+Nb statement executed by the failing tests of the patched line: 0
+Nb unit tests : 1539
+Nb Statements Analyzed : 8
+Nb Statements with Angelic Value Found : 1
+Nb inputs in SMT : 3
+Nb SMT level: 1
+Nb SMT components: [0] []
+Nb variables in SMT : 10
+Nb run failing test  : [2, 2, 2]
+Nb run passing test : [1, 1, 4]
+NoPol Execution time : 756922ms
+----PATCH FOUND----
+org.apache.commons.lang.BooleanUtils:677: CONDITIONAL str!=null
