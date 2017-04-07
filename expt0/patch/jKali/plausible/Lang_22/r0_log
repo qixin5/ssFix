@@ -1,0 +1,173 @@
+2017-03-29 10:33:59,424 INFO main - command line arguments: [-jvm4testexecution  /home/qx5/jdk1.8.0_111/bin  -dependencies  /data/people/qx5/defects4j-bugs/langs/projs/Lang_22_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar  -id  Lang_22  -failing  org.apache.commons.lang3.math.FractionTest  -mode  statement-remove  -location  /data/people/qx5/defects4j-bugs/langs/projs/Lang_22_buggy  -package  org.apache.commons.lang3  -maxtime  120  -stopfirst  true  -srcjavafolder  //src/main/java/  -srctestfolder  //src/test/java/  -binjavafolder  //target/classes/  -bintestfolder  //target/test-classes/  -out  /data/people/qx5/jkali_repair_expts/repair/Lang_22/r0]
+2017-03-29 10:34:26,226 INFO main - -Executing Gzoltar classpath: /data/people/qx5/jkali_repair_expts/repair/Lang_22/r0/AstorMain-Lang_22//bin//default from 95 classes with test cases
+2017-03-29 10:34:26,228 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar fault localization: min susp value parameter: 0.1
+2017-03-29 10:34:27,355 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - -gz-Adding classpath: [/data/people/qx5/defects4j-bugs/langs/projs/Lang_22_buggy/all0.jar, /home/qx5/ssFix2/lib/myprinter.jar, /home/qx5/ssFix2/lib/evosuite-1.0.2.jar, /data/people/qx5/jkali_repair_expts/repair/Lang_22/r0/AstorMain-Lang_22//bin//default, /home/qx5/ssFix2/lib/commons-lang3-3.5.jar]
+2017-03-29 10:34:56,611 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.apache.commons.lang3.math.FractionTest#testReducedFactory_int_int
+2017-03-29 10:34:56,612 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.apache.commons.lang3.math.FractionTest#testReduce
+2017-03-29 10:34:56,615 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar Test Result Total:1825, fails: 2, GZoltar suspicious 8726
+2017-03-29 10:34:56,629 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar found: 51 with susp > 0.1, we consider: 51
+2017-03-29 10:34:56,638 INFO main - building model: /data/people/qx5/jkali_repair_expts/repair/Lang_22/r0/AstorMain-Lang_22//src//default, compliance level: 8
+2017-03-29 10:35:08,151 INFO main - 
+---- Initial suspicious size: 51
+2017-03-29 10:35:08,425 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.lang3.math.Fraction, methodName=org.apache.commons.lang3.math.Fraction{greatestCommonDivisor(II)I 0.0, lineNumber=596, susp=0.47140452079103173]
+2017-03-29 10:35:08,433 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.lang3.math.Fraction, methodName=org.apache.commons.lang3.math.Fraction{greatestCommonDivisor(II)I 0.0, lineNumber=600, susp=0.47140452079103173]
+2017-03-29 10:35:08,440 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.lang3.math.Fraction, methodName=org.apache.commons.lang3.math.Fraction{greatestCommonDivisor(II)I 0.0, lineNumber=611, susp=0.47140452079103173]
+2017-03-29 10:35:08,447 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.lang3.math.Fraction, methodName=org.apache.commons.lang3.math.Fraction{greatestCommonDivisor(II)I 0.0, lineNumber=616, susp=0.47140452079103173]
+2017-03-29 10:35:08,456 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.lang3.math.Fraction, methodName=org.apache.commons.lang3.math.Fraction{greatestCommonDivisor(II)I 0.0, lineNumber=624, susp=0.47140452079103173]
+2017-03-29 10:35:08,458 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.lang3.math.Fraction, methodName=org.apache.commons.lang3.math.Fraction{greatestCommonDivisor(II)I 0.0, lineNumber=625, susp=0.47140452079103173]
+2017-03-29 10:35:08,462 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.lang3.math.Fraction, methodName=org.apache.commons.lang3.math.Fraction{greatestCommonDivisor(II)I 0.0, lineNumber=585, susp=0.4472135954999579]
+2017-03-29 10:35:08,464 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.lang3.math.Fraction, methodName=org.apache.commons.lang3.math.Fraction{greatestCommonDivisor(II)I 0.0, lineNumber=587, susp=0.4472135954999579]
+2017-03-29 10:35:08,474 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.lang3.math.Fraction, methodName=org.apache.commons.lang3.math.Fraction{equals(Ljava/lang/Object;)Z 0.0, lineNumber=852, susp=0.4082482904638631]
+2017-03-29 10:35:08,476 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.lang3.math.Fraction, methodName=org.apache.commons.lang3.math.Fraction{equals(Ljava/lang/Object;)Z 0.0, lineNumber=853, susp=0.4082482904638631]
+2017-03-29 10:35:08,533 INFO main - Total suspicious from FL: 51,  41
+2017-03-29 10:35:08,533 INFO main - Total ModPoint created: 41
+2017-03-29 10:35:08,533 INFO main - Creating program variant #1, [Variant id: 1, #gens: 41, #ops: 0, parent:-]
+2017-03-29 10:35:11,485 INFO fr.inria.astor.core.setup.ConfigurationProperties - ----------------------------
+2017-03-29 10:35:11,485 INFO fr.inria.astor.core.setup.ConfigurationProperties - ---Configuration properties:---Execution values
+2017-03-29 10:35:11,486 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:packageToInstrument= org.apache.commons.lang3
+2017-03-29 10:35:11,486 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:flthreshold= 0.1
+2017-03-29 10:35:11,486 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:numberExecutions= 1
+2017-03-29 10:35:11,486 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuiteresultfolder= evosuite
+2017-03-29 10:35:11,486 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:ignoredTestCases= org.apache.commons.math.ode.nonstiff:org.apache.commons.math.ode2.nonstiff:org.apache.commons.lang.LocaleUtilsTest
+2017-03-29 10:35:11,487 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:skipfaultlocalization= false
+2017-03-29 10:35:11,487 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxGeneration= 200
+2017-03-29 10:35:11,487 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxsuspcandidates= 1000
+2017-03-29 10:35:11,487 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:tmax2= 960000
+2017-03-29 10:35:11,487 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:tmax1= 120000
+2017-03-29 10:35:11,487 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:workingDirectory= /data/people/qx5/jkali_repair_expts/repair/Lang_22/r0
+2017-03-29 10:35:11,487 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:mode= statement-remove
+2017-03-29 10:35:11,487 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:ignoreflakyinfl= true
+2017-03-29 10:35:11,488 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:uniqueoptogen= false
+2017-03-29 10:35:11,488 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:testcasesregression= org.apache.commons.lang3.ObjectUtilsTest:org.apache.commons.lang3.math.NumberUtilsTest:org.apache.commons.lang3.RandomStringUtilsTest:org.apache.commons.lang3.builder.HashCodeBuilderTest:org.apache.commons.lang3.text.WordUtilsTest:org.apache.commons.lang3.ClassUtilsTest:org.apache.commons.lang3.StringUtilsSubstringTest:org.apache.commons.lang3.StringUtilsTrimEmptyTest:org.apache.commons.lang3.SystemUtilsTest:org.apache.commons.lang3.time.DurationFormatUtilsTest:org.apache.commons.lang3.builder.ToStringBuilderTest:org.apache.commons.lang3.StringUtilsTest:org.apache.commons.lang3.builder.ShortPrefixToStringStyleTest:org.apache.commons.lang3.reflect.MethodUtilsTest:org.apache.commons.lang3.mutable.MutableLongTest:org.apache.commons.lang3.concurrent.AtomicSafeInitializerTest:org.apache.commons.lang3.text.translate.LookupTranslatorTest:org.apache.commons.lang3.text.StrTokenizerTest:org.apache.commons.lang3.BitFieldTest:org.apache.commons.lang3.text.CompositeFormatTest:org.apache.commons.lang3.time.DateUtilsRoundingTest:org.apache.commons.lang3.mutable.MutableBooleanTest:org.apache.commons.lang3.text.StrBuilderAppendInsertTest:org.apache.commons.lang3.exception.DefaultExceptionContextTest:org.apache.commons.lang3.exception.ExceptionUtilsTest:org.apache.commons.lang3.ArrayUtilsRemoveTest:org.apache.commons.lang3.builder.DefaultToStringStyleTest:org.apache.commons.lang3.ArrayUtilsTest:org.apache.commons.lang3.time.StopWatchTest:org.apache.commons.lang3.text.translate.EntityArraysTest:org.apache.commons.lang3.CharUtilsTest:org.apache.commons.lang3.concurrent.LazyInitializerTest:org.apache.commons.lang3.AnnotationUtilsTest:org.apache.commons.lang3.builder.CompareToBuilderTest:org.apache.commons.lang3.text.StrBuilderTest:org.apache.commons.lang3.StringUtilsEqualsIndexOfTest:org.apache.commons.lang3.builder.ReflectionToStringBuilderExcludeTest:org.apache.commons.lang3.CharSetTest:org.apache.commons.lang3.time.FastDateFormatTest:org.apache.commons.lang3.text.translate.NumericEntityUnescaperTest:org.apache.commons.lang3.concurrent.MultiBackgroundInitializerTest:org.apache.commons.lang3.exception.ContextedExceptionTest:org.apache.commons.lang3.reflect.TypeUtilsTest:org.apache.commons.lang3.time.DateUtilsFragmentTest:org.apache.commons.lang3.builder.StandardToStringStyleTest:org.apache.commons.lang3.math.IEEE754rUtilsTest:org.apache.commons.lang3.SerializationUtilsTest:org.apache.commons.lang3.CharSequenceUtilsTest:org.apache.commons.lang3.reflect.ConstructorUtilsTest:org.apache.commons.lang3.builder.EqualsBuilderTest:org.apache.commons.lang3.ValidateTest:org.apache.commons.lang3.CharRangeTest:org.apache.commons.lang3.concurrent.ConstantInitializerTest:org.apache.commons.lang3.event.EventUtilsTest:org.apache.commons.lang3.reflect.FieldUtilsTest:org.apache.commons.lang3.text.ExtendedMessageFormatTest:org.apache.commons.lang3.text.StrLookupTest:org.apache.commons.lang3.builder.MultiLineToStringStyleTest:org.apache.commons.lang3.time.DateFormatUtilsTest:org.apache.commons.lang3.text.translate.UnicodeEscaperTest:org.apache.commons.lang3.mutable.MutableIntTest:org.apache.commons.lang3.LocaleUtilsTest:org.apache.commons.lang3.text.translate.UnicodeUnescaperTest:org.apache.commons.lang3.text.StrMatcherTest:org.apache.commons.lang3.mutable.MutableShortTest:org.apache.commons.lang3.ArrayUtilsAddTest:org.apache.commons.lang3.builder.HashCodeBuilderAndEqualsBuilderTest:org.apache.commons.lang3.concurrent.ConcurrentUtilsTest:org.apache.commons.lang3.builder.SimpleToStringStyleTest:org.apache.commons.lang3.BooleanUtilsTest:org.apache.commons.lang3.text.StrSubstitutorTest:org.apache.commons.lang3.CharEncodingTest:org.apache.commons.lang3.concurrent.BackgroundInitializerTest:org.apache.commons.lang3.mutable.MutableDoubleTest:org.apache.commons.lang3.CharSetUtilsTest:org.apache.commons.lang3.StringUtilsStartsEndsWithTest:org.apache.commons.lang3.exception.ContextedRuntimeExceptionTest:org.apache.commons.lang3.math.FractionTest:org.apache.commons.lang3.concurrent.AtomicInitializerTest:org.apache.commons.lang3.time.DateUtilsTest:org.apache.commons.lang3.StringEscapeUtilsTest:org.apache.commons.lang3.concurrent.CallableBackgroundInitializerTest:org.apache.commons.lang3.PairTest:org.apache.commons.lang3.concurrent.BasicThreadFactoryTest:org.apache.commons.lang3.concurrent.TimedSemaphoreTest:org.apache.commons.lang3.text.translate.NumericEntityEscaperTest:org.apache.commons.lang3.StringUtilsIsTest:org.apache.commons.lang3.RangeTest:org.apache.commons.lang3.mutable.MutableObjectTest:org.apache.commons.lang3.builder.ToStringStyleTest:org.apache.commons.lang3.builder.NoFieldNamesToStringStyleTest:org.apache.commons.lang3.mutable.MutableFloatTest:org.apache.commons.lang3.EnumUtilsTest:org.apache.commons.lang3.event.EventListenerSupportTest:org.apache.commons.lang3.mutable.MutableByteTest:
+2017-03-29 10:35:11,488 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:pathToMVNRepository= 
+2017-03-29 10:35:11,488 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:executeRegression= true
+2017-03-29 10:35:11,488 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:modificationpointnavigation= weight
+2017-03-29 10:35:11,488 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxtime= 120
+2017-03-29 10:35:11,489 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:probagenmutation= false
+2017-03-29 10:35:11,489 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:alternativecompliancelevel= 4
+2017-03-29 10:35:11,489 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:version-location= ./math-version/
+2017-03-29 10:35:11,489 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:location= /data/people/qx5/defects4j-bugs/langs/projs/Lang_22_buggy
+2017-03-29 10:35:11,489 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:stopfirst= true
+2017-03-29 10:35:11,489 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:jvm4testexecution= /home/qx5/jdk1.8.0_111/bin
+2017-03-29 10:35:11,489 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:bugId= 280
+2017-03-29 10:35:11,489 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:mutationrate= 1 
+2017-03-29 10:35:11,489 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:projectIdentifier= Lang_22
+2017-03-29 10:35:11,490 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evo_buggy_class= true
+2017-03-29 10:35:11,490 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evoRunOnBuggyClass= true
+2017-03-29 10:35:11,490 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:jvm4evosuitetestexecution= /home/qx5/jdk1.8.0_111/bin
+2017-03-29 10:35:11,490 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:resetoperations= false
+2017-03-29 10:35:11,490 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:seed= 0
+2017-03-29 10:35:11,490 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:testbystep= false
+2017-03-29 10:35:11,490 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:srctestfolder= //src/test/java/
+2017-03-29 10:35:11,490 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:javacompliancelevel= 8
+2017-03-29 10:35:11,490 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:bintestfolder= //target/test-classes/
+2017-03-29 10:35:11,490 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:commandTrunk= 50000
+2017-03-29 10:35:11,491 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:dependenciespath= /data/people/qx5/defects4j-bugs/langs/projs/Lang_22_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar
+2017-03-29 10:35:11,491 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:multipointmodification= false
+2017-03-29 10:35:11,491 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:validation= process
+2017-03-29 10:35:11,491 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:scope= package
+2017-03-29 10:35:11,491 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuitetimeout= 120
+2017-03-29 10:35:11,491 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evoDSE= false
+2017-03-29 10:35:11,491 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:elementsToMutate= 10
+2017-03-29 10:35:11,491 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:lastJUnitVersion= ./examples/libs/junit-4.11.jar
+2017-03-29 10:35:11,491 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:failing= org.apache.commons.lang3.math.FractionTest
+2017-03-29 10:35:11,491 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:allpoints= false
+2017-03-29 10:35:11,491 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:resourcesfolder= /src/main/resources:/src/test/resources:
+2017-03-29 10:35:11,491 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:regressionforfaultlocalization= true
+2017-03-29 10:35:11,492 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:population= 1
+2017-03-29 10:35:11,492 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:saveall= false
+2017-03-29 10:35:11,492 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:pvariantfoldername= variant-
+2017-03-29 10:35:11,492 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:savesolution= true
+2017-03-29 10:35:11,492 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:srcjavafolder= //src/main/java/
+2017-03-29 10:35:11,492 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evo_affected_by_op= true
+2017-03-29 10:35:11,492 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:binjavafolder= //target/classes/
+2017-03-29 10:35:11,493 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:reintroduce= original-parents
+2017-03-29 10:35:11,493 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuitejar= ./lib/evosuite-master-1.0.4-SNAPSHOT.jar
+2017-03-29 10:35:11,493 INFO fr.inria.astor.core.setup.ConfigurationProperties - ----------------------------
+2017-03-29 10:35:11,494 INFO main - mod_point ModificPoint=Fraction line: 216, el: CtThrowImpl
+2017-03-29 10:35:11,495 INFO main - -->op: RemoveOp: `throw new java.lang.Arith[...] ` ---> `-` at pos 0 of parent `{ 	throw new java.lang.Ar[...]`
+2017-03-29 10:35:12,895 INFO main - mod_point ModificPoint=Fraction line: 223, el: CtOperatorAssignmentImpl
+2017-03-29 10:35:12,896 INFO main - -->op: RemoveOp: `denominator /= 2 ` ---> `-` at pos 1 of parent `{ 	numerator /= 2; 	denom[...]`
+2017-03-29 10:35:13,741 INFO main - mod_point ModificPoint=Fraction line: 223, el: CtOperatorAssignmentImpl
+2017-03-29 10:35:13,741 INFO main - -->op: RemoveOp: `numerator /= 2 ` ---> `-` at pos 0 of parent `{ 	numerator /= 2; 	denom[...]`
+2017-03-29 10:35:14,574 INFO main - mod_point ModificPoint=Fraction line: 226, el: CtIfImpl
+2017-03-29 10:35:14,574 INFO main - -->op: ReplaceIfBooleanOp: `if ((numerator == (java.l[...] ` ---> `if (true) { 	throw new ja[...]` at pos 0 of parent `{ 	if ((numerator == (jav[...]`
+2017-03-29 10:35:15,216 INFO main - mod_point ModificPoint=Fraction line: 226, el: CtIfImpl
+2017-03-29 10:35:15,217 INFO main - -->op: ReplaceIfBooleanOp: `if ((numerator == (java.l[...] ` ---> `if (false) { 	throw new j[...]` at pos 0 of parent `{ 	if ((numerator == (jav[...]`
+2017-03-29 10:35:15,821 INFO main - mod_point ModificPoint=Fraction line: 226, el: CtIfImpl
+2017-03-29 10:35:15,822 INFO main - -->op: RemoveOp: `if ((numerator == (java.l[...] ` ---> `-` at pos 0 of parent `{ 	if ((numerator == (jav[...]`
+2017-03-29 10:35:16,916 INFO main - mod_point ModificPoint=Fraction line: 228, el: CtThrowImpl
+2017-03-29 10:35:16,916 INFO main - -->op: RemoveOp: `throw new java.lang.Arith[...] ` ---> `-` at pos 0 of parent `{ 	throw new java.lang.Ar[...]`
+2017-03-29 10:35:17,551 INFO main - mod_point ModificPoint=Fraction line: 230, el: CtAssignmentImpl
+2017-03-29 10:35:17,552 INFO main - -->op: RemoveOp: `numerator = -numerator ` ---> `-` at pos 1 of parent `{ 	if ((numerator == (jav[...]`
+2017-03-29 10:35:18,129 INFO main - mod_point ModificPoint=Fraction line: 231, el: CtAssignmentImpl
+2017-03-29 10:35:18,129 INFO main - -->op: RemoveOp: `denominator = -denominato[...] ` ---> `-` at pos 2 of parent `{ 	if ((numerator == (jav[...]`
+2017-03-29 10:35:18,935 INFO main - mod_point ModificPoint=Fraction line: 475, el: CtIfImpl
+2017-03-29 10:35:18,936 INFO main - -->op: ReplaceIfBooleanOp: `if ((numerator) == 0) { 	[...] ` ---> `if (true) { 	return equal[...]` at pos 0 of parent `{ 	if ((numerator) == 0) [...]`
+2017-03-29 10:35:19,588 INFO main - mod_point ModificPoint=Fraction line: 475, el: CtIfImpl
+2017-03-29 10:35:19,588 INFO main - -->op: ReplaceIfBooleanOp: `if ((numerator) == 0) { 	[...] ` ---> `if (false) { 	return equa[...]` at pos 0 of parent `{ 	if ((numerator) == 0) [...]`
+2017-03-29 10:35:20,300 INFO main - mod_point ModificPoint=Fraction line: 475, el: CtIfImpl
+2017-03-29 10:35:20,300 INFO main - -->op: RemoveOp: `if ((numerator) == 0) { 	[...] ` ---> `-` at pos 0 of parent `{ 	if ((numerator) == 0) [...]`
+2017-03-29 10:35:20,910 INFO main - mod_point ModificPoint=Fraction line: 476, el: CtReturnImpl
+2017-03-29 10:35:20,910 INFO main - -->op: RemoveOp: `return equals(org.apache.[...] ` ---> `-` at pos 0 of parent `{ 	return equals(org.apac[...]`
+2017-03-29 10:35:21,797 INFO main - mod_point ModificPoint=Fraction line: 478, el: CtLocalVariableImpl
+2017-03-29 10:35:21,798 INFO main - -->op: RemoveOp: `int gcd = org.apache.comm[...] ` ---> `-` at pos 1 of parent `{ 	if ((numerator) == 0) [...]`
+2017-03-29 10:35:21,947 INFO main - mod_point ModificPoint=Fraction line: 479, el: CtIfImpl
+2017-03-29 10:35:21,948 INFO main - -->op: ReplaceIfBooleanOp: `if (gcd == 1) { 	return o[...] ` ---> `if (true) { 	return org.a[...]` at pos 2 of parent `{ 	if ((numerator) == 0) [...]`
+2017-03-29 10:35:22,567 INFO main - mod_point ModificPoint=Fraction line: 479, el: CtIfImpl
+2017-03-29 10:35:22,568 INFO main - -->op: ReplaceIfBooleanOp: `if (gcd == 1) { 	return o[...] ` ---> `if (false) { 	return org.[...]` at pos 2 of parent `{ 	if ((numerator) == 0) [...]`
+2017-03-29 10:35:23,134 INFO main - mod_point ModificPoint=Fraction line: 479, el: CtIfImpl
+2017-03-29 10:35:23,135 INFO main - -->op: RemoveOp: `if (gcd == 1) { 	return o[...] ` ---> `-` at pos 2 of parent `{ 	if ((numerator) == 0) [...]`
+2017-03-29 10:35:23,780 INFO main - mod_point ModificPoint=Fraction line: 480, el: CtReturnImpl
+2017-03-29 10:35:23,780 INFO main - -->op: RemoveOp: `return org.apache.commons[...] ` ---> `-` at pos 0 of parent `{ 	return org.apache.comm[...]`
+2017-03-29 10:35:24,345 INFO main - mod_point ModificPoint=Fraction line: 482, el: CtReturnImpl
+2017-03-29 10:35:24,345 INFO main - -->op: RemoveOp: `return org.apache.commons[...] ` ---> `-` at pos 3 of parent `{ 	if ((numerator) == 0) [...]`
+2017-03-29 10:35:24,478 INFO main - mod_point ModificPoint=Fraction line: 593, el: CtLocalVariableImpl
+2017-03-29 10:35:24,478 INFO main - -->op: RemoveOp: `int k = 0 ` ---> `-` at pos 3 of parent `{ 	if (((java.lang.Math.a[...]`
+2017-03-29 10:35:24,618 INFO main - mod_point ModificPoint=Fraction line: 594, el: CtWhileImpl
+2017-03-29 10:35:24,618 INFO main - -->op: RemoveOp: `while ((((u & 1) == 0) &&[...] ` ---> `-` at pos 4 of parent `{ 	if (((java.lang.Math.a[...]`
+2017-03-29 10:35:25,135 INFO main - mod_point ModificPoint=Fraction line: 597, el: CtIfImpl
+2017-03-29 10:35:25,136 INFO main - -->op: ReplaceIfBooleanOp: `if (k == 31) { 	throw new[...] ` ---> `if (true) { 	throw new ja[...]` at pos 5 of parent `{ 	if (((java.lang.Math.a[...]`
+2017-03-29 10:35:25,675 INFO main - mod_point ModificPoint=Fraction line: 597, el: CtIfImpl
+2017-03-29 10:35:25,676 INFO main - -->op: ReplaceIfBooleanOp: `if (k == 31) { 	throw new[...] ` ---> `if (false) { 	throw new j[...]` at pos 5 of parent `{ 	if (((java.lang.Math.a[...]`
+2017-03-29 10:35:26,298 INFO main - mod_point ModificPoint=Fraction line: 597, el: CtIfImpl
+2017-03-29 10:35:26,299 INFO main - -->op: RemoveOp: `if (k == 31) { 	throw new[...] ` ---> `-` at pos 5 of parent `{ 	if (((java.lang.Math.a[...]`
+2017-03-29 10:35:26,902 INFO main - mod_point ModificPoint=Fraction line: 605, el: CtDoImpl
+2017-03-29 10:35:26,903 INFO main - -->op: RemoveOp: `do { 	while ((t & 1) == 0[...] ` ---> `-` at pos 7 of parent `{ 	if (((java.lang.Math.a[...]`
+2017-03-29 10:35:27,628 INFO main - mod_point ModificPoint=Fraction line: 615, el: CtAssignmentImpl
+2017-03-29 10:35:27,628 INFO main - -->op: RemoveOp: `v = t ` ---> `-` at pos 0 of parent `{ 	v = t; }`
+2017-03-29 10:37:27,883 INFO main - The Process that runs JUnit test cases had problems: process hasn't exited
+2017-03-29 10:37:27,883 INFO main - mod_point ModificPoint=Fraction line: 618, el: CtAssignmentImpl
+2017-03-29 10:37:27,883 INFO main - -->op: RemoveOp: `t = (v - u) / 2 ` ---> `-` at pos 2 of parent `{ 	while ((t & 1) == 0) {[...]`
+2017-03-29 10:39:28,810 INFO main - The Process that runs JUnit test cases had problems: process hasn't exited
+2017-03-29 10:39:28,811 INFO main - mod_point ModificPoint=Fraction line: 583, el: CtIfImpl
+2017-03-29 10:39:28,811 INFO main - -->op: ReplaceIfBooleanOp: `if (((java.lang.Math.abs([...] ` ---> `if (true) { 	return 1; } ` at pos 0 of parent `{ 	if (((java.lang.Math.a[...]`
+2017-03-29 10:39:30,208 INFO main - mod_point ModificPoint=Fraction line: 583, el: CtIfImpl
+2017-03-29 10:39:30,208 INFO main - -->op: ReplaceIfBooleanOp: `if (((java.lang.Math.abs([...] ` ---> `if (false) { 	return 1; }[...]` at pos 0 of parent `{ 	if (((java.lang.Math.a[...]`
+2017-03-29 10:39:41,547 INFO main - -Found Solution, child variant #30
+2017-03-29 10:39:41,548 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.lang3.math.Fraction to /data/people/qx5/jkali_repair_expts/repair/Lang_22/r0/AstorMain-Lang_22/src/variant-30
+2017-03-29 10:39:42,572 INFO main - 
+----SUMMARY_EXECUTION---
+2017-03-29 10:39:42,573 INFO main - 
+Solution details
+2017-03-29 10:39:42,573 INFO main - 
+ --SOLUTIONS DESCRIPTION--
+
+ ----
+ProgramVariant 30
+ 
+time(sec)= 258
+operation: ReplaceIfBooleanOp
+location= org.apache.commons.lang3.math.Fraction
+line= 583
+lineSuspiciousness= 0.447
+original statement= if (((java.lang.Math.abs(u)) <= 1) || ((java.lang.Math.abs(v)) <= 1)) {
+	return 1;
+} 
+fixed statement= if (false) {
+	return 1;
+} 
+generation= 1
+ingredientScope= -
+validation=|true|0|1825|[]|
+2017-03-29 10:39:42,573 INFO fr.inria.main.evolution.AstorMain - Time Total(s): 343.135

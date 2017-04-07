@@ -1,0 +1,188 @@
+2017-03-29 11:09:49,549 INFO main - command line arguments: [-jvm4testexecution  /home/qx5/jdk1.8.0_111/bin  -dependencies  /data/people/qx5/defects4j-bugs/langs/projs/Lang_39_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar  -id  Lang_39  -failing  org.apache.commons.lang3.StringUtilsTest  -mode  statement-remove  -location  /data/people/qx5/defects4j-bugs/langs/projs/Lang_39_buggy  -package  org.apache.commons.lang3  -maxtime  120  -stopfirst  true  -srcjavafolder  //src/java/  -srctestfolder  //src/test/  -binjavafolder  //target/classes/  -bintestfolder  //target/test-classes/  -out  /data/people/qx5/jkali_repair_expts/repair/Lang_39/r0]
+2017-03-29 11:10:15,502 INFO main - -Executing Gzoltar classpath: /data/people/qx5/jkali_repair_expts/repair/Lang_39/r0/AstorMain-Lang_39//bin//default from 84 classes with test cases
+2017-03-29 11:10:15,505 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar fault localization: min susp value parameter: 0.1
+2017-03-29 11:10:21,167 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - -gz-Adding classpath: [/data/people/qx5/jkali_repair_expts/repair/Lang_39/r0/AstorMain-Lang_39//bin//default, /home/qx5/ssFix2/lib/myprinter.jar, /home/qx5/ssFix2/lib/evosuite-1.0.2.jar, /data/people/qx5/defects4j-bugs/langs/projs/Lang_39_buggy/all0.jar, /home/qx5/ssFix2/lib/commons-lang3-3.5.jar]
+2017-03-29 11:11:24,812 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.apache.commons.lang3.StringUtilsTest#testReplace_StringStringArrayStringArray
+2017-03-29 11:11:24,853 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar Test Result Total:1618, fails: 1, GZoltar suspicious 7885
+2017-03-29 11:11:24,922 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar found: 51 with susp > 0.1, we consider: 51
+2017-03-29 11:11:24,946 INFO main - building model: /data/people/qx5/jkali_repair_expts/repair/Lang_39/r0/AstorMain-Lang_39//src//default, compliance level: 8
+2017-03-29 11:12:08,179 INFO main - 
+---- Initial suspicious size: 51
+2017-03-29 11:12:12,082 INFO main - Total suspicious from FL: 51,  51
+2017-03-29 11:12:12,082 INFO main - Total ModPoint created: 51
+2017-03-29 11:12:12,083 INFO main - Creating program variant #1, [Variant id: 1, #gens: 51, #ops: 0, parent:-]
+2017-03-29 11:12:13,889 INFO fr.inria.astor.core.setup.ConfigurationProperties - ----------------------------
+2017-03-29 11:12:13,889 INFO fr.inria.astor.core.setup.ConfigurationProperties - ---Configuration properties:---Execution values
+2017-03-29 11:12:13,890 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:packageToInstrument= org.apache.commons.lang3
+2017-03-29 11:12:13,890 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:flthreshold= 0.1
+2017-03-29 11:12:13,890 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:numberExecutions= 1
+2017-03-29 11:12:13,890 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuiteresultfolder= evosuite
+2017-03-29 11:12:13,891 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:ignoredTestCases= org.apache.commons.math.ode.nonstiff:org.apache.commons.math.ode2.nonstiff:org.apache.commons.lang.LocaleUtilsTest
+2017-03-29 11:12:13,891 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:skipfaultlocalization= false
+2017-03-29 11:12:13,891 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxGeneration= 200
+2017-03-29 11:12:13,891 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxsuspcandidates= 1000
+2017-03-29 11:12:13,891 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:tmax2= 960000
+2017-03-29 11:12:13,891 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:tmax1= 120000
+2017-03-29 11:12:13,891 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:workingDirectory= /data/people/qx5/jkali_repair_expts/repair/Lang_39/r0
+2017-03-29 11:12:13,892 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:mode= statement-remove
+2017-03-29 11:12:13,892 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:ignoreflakyinfl= true
+2017-03-29 11:12:13,892 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:uniqueoptogen= false
+2017-03-29 11:12:13,892 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:testcasesregression= org.apache.commons.lang3.ObjectUtilsTest:org.apache.commons.lang3.math.NumberUtilsTest:org.apache.commons.lang3.RandomStringUtilsTest:org.apache.commons.lang3.builder.HashCodeBuilderTest:org.apache.commons.lang3.ClassUtilsTest:org.apache.commons.lang3.StringUtilsSubstringTest:org.apache.commons.lang3.StringUtilsTrimEmptyTest:org.apache.commons.lang3.SystemUtilsTest:org.apache.commons.lang3.time.DurationFormatUtilsTest:org.apache.commons.lang3.builder.ToStringBuilderTest:org.apache.commons.lang3.StringUtilsTest:org.apache.commons.lang3.builder.ShortPrefixToStringStyleTest:org.apache.commons.lang3.reflect.MethodUtilsTest:org.apache.commons.lang3.mutable.MutableLongTest:org.apache.commons.lang3.text.translate.LookupTranslatorTest:org.apache.commons.lang3.text.StrTokenizerTest:org.apache.commons.lang3.BitFieldTest:org.apache.commons.lang3.text.CompositeFormatTest:org.apache.commons.lang3.time.DateUtilsRoundingTest:org.apache.commons.lang3.mutable.MutableBooleanTest:org.apache.commons.lang3.text.StrBuilderAppendInsertTest:org.apache.commons.lang3.exception.DefaultExceptionContextTest:org.apache.commons.lang3.exception.ExceptionUtilsTest:org.apache.commons.lang3.ArrayUtilsRemoveTest:org.apache.commons.lang3.builder.DefaultToStringStyleTest:org.apache.commons.lang3.ArrayUtilsTest:org.apache.commons.lang3.time.StopWatchTest:org.apache.commons.lang3.text.translate.EntityArraysTest:org.apache.commons.lang3.CharUtilsTest:org.apache.commons.lang3.concurrent.LazyInitializerTest:org.apache.commons.lang3.builder.CompareToBuilderTest:org.apache.commons.lang3.text.StrBuilderTest:org.apache.commons.lang3.StringUtilsEqualsIndexOfTest:org.apache.commons.lang3.builder.ReflectionToStringBuilderExcludeTest:org.apache.commons.lang3.CharSetTest:org.apache.commons.lang3.time.FastDateFormatTest:org.apache.commons.lang3.concurrent.MultiBackgroundInitializerTest:org.apache.commons.lang3.exception.ContextedExceptionTest:org.apache.commons.lang3.reflect.TypeUtilsTest:org.apache.commons.lang3.WordUtilsTest:org.apache.commons.lang3.time.DateUtilsFragmentTest:org.apache.commons.lang3.builder.StandardToStringStyleTest:org.apache.commons.lang3.math.IEEE754rUtilsTest:org.apache.commons.lang3.SerializationUtilsTest:org.apache.commons.lang3.reflect.ConstructorUtilsTest:org.apache.commons.lang3.builder.EqualsBuilderTest:org.apache.commons.lang3.ValidateTest:org.apache.commons.lang3.CharRangeTest:org.apache.commons.lang3.reflect.FieldUtilsTest:org.apache.commons.lang3.text.ExtendedMessageFormatTest:org.apache.commons.lang3.text.StrLookupTest:org.apache.commons.lang3.builder.MultiLineToStringStyleTest:org.apache.commons.lang3.time.DateFormatUtilsTest:org.apache.commons.lang3.text.translate.UnicodeEscaperTest:org.apache.commons.lang3.mutable.MutableIntTest:org.apache.commons.lang3.LocaleUtilsTest:org.apache.commons.lang3.text.translate.UnicodeUnescaperTest:org.apache.commons.lang3.text.StrMatcherTest:org.apache.commons.lang3.mutable.MutableShortTest:org.apache.commons.lang3.ArrayUtilsAddTest:org.apache.commons.lang3.builder.HashCodeBuilderAndEqualsBuilderTest:org.apache.commons.lang3.concurrent.ConcurrentUtilsTest:org.apache.commons.lang3.builder.SimpleToStringStyleTest:org.apache.commons.lang3.BooleanUtilsTest:org.apache.commons.lang3.text.StrSubstitutorTest:org.apache.commons.lang3.CharEncodingTest:org.apache.commons.lang3.concurrent.BackgroundInitializerTest:org.apache.commons.lang3.mutable.MutableDoubleTest:org.apache.commons.lang3.CharSetUtilsTest:org.apache.commons.lang3.StringUtilsStartsEndsWithTest:org.apache.commons.lang3.exception.ContextedRuntimeExceptionTest:org.apache.commons.lang3.math.FractionTest:org.apache.commons.lang3.time.DateUtilsTest:org.apache.commons.lang3.StringEscapeUtilsTest:org.apache.commons.lang3.concurrent.CallableBackgroundInitializerTest:org.apache.commons.lang3.text.translate.NumericEntityEscaperTest:org.apache.commons.lang3.StringUtilsIsTest:org.apache.commons.lang3.RangeTest:org.apache.commons.lang3.mutable.MutableObjectTest:org.apache.commons.lang3.builder.ToStringStyleTest:org.apache.commons.lang3.builder.NoFieldNamesToStringStyleTest:org.apache.commons.lang3.mutable.MutableFloatTest:org.apache.commons.lang3.EnumUtilsTest:org.apache.commons.lang3.mutable.MutableByteTest:
+2017-03-29 11:12:13,892 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:pathToMVNRepository= 
+2017-03-29 11:12:13,893 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:executeRegression= true
+2017-03-29 11:12:13,893 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:modificationpointnavigation= weight
+2017-03-29 11:12:13,893 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxtime= 120
+2017-03-29 11:12:13,893 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:probagenmutation= false
+2017-03-29 11:12:13,893 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:alternativecompliancelevel= 4
+2017-03-29 11:12:13,893 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:version-location= ./math-version/
+2017-03-29 11:12:13,893 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:location= /data/people/qx5/defects4j-bugs/langs/projs/Lang_39_buggy
+2017-03-29 11:12:13,905 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:stopfirst= true
+2017-03-29 11:12:13,906 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:jvm4testexecution= /home/qx5/jdk1.8.0_111/bin
+2017-03-29 11:12:13,906 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:bugId= 280
+2017-03-29 11:12:13,906 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:mutationrate= 1 
+2017-03-29 11:12:13,906 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:projectIdentifier= Lang_39
+2017-03-29 11:12:13,907 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evo_buggy_class= true
+2017-03-29 11:12:13,907 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evoRunOnBuggyClass= true
+2017-03-29 11:12:13,907 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:jvm4evosuitetestexecution= /home/qx5/jdk1.8.0_111/bin
+2017-03-29 11:12:13,907 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:resetoperations= false
+2017-03-29 11:12:13,907 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:seed= 0
+2017-03-29 11:12:13,907 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:testbystep= false
+2017-03-29 11:12:13,907 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:srctestfolder= //src/test/
+2017-03-29 11:12:13,907 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:javacompliancelevel= 8
+2017-03-29 11:12:13,908 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:bintestfolder= //target/test-classes/
+2017-03-29 11:12:13,908 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:commandTrunk= 50000
+2017-03-29 11:12:13,908 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:dependenciespath= /data/people/qx5/defects4j-bugs/langs/projs/Lang_39_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar
+2017-03-29 11:12:13,908 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:multipointmodification= false
+2017-03-29 11:12:13,908 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:validation= process
+2017-03-29 11:12:13,908 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:scope= package
+2017-03-29 11:12:13,908 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuitetimeout= 120
+2017-03-29 11:12:13,908 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evoDSE= false
+2017-03-29 11:12:13,909 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:elementsToMutate= 10
+2017-03-29 11:12:13,909 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:lastJUnitVersion= ./examples/libs/junit-4.11.jar
+2017-03-29 11:12:13,909 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:failing= org.apache.commons.lang3.StringUtilsTest
+2017-03-29 11:12:13,909 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:allpoints= false
+2017-03-29 11:12:13,909 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:resourcesfolder= /src/main/resources:/src/test/resources:
+2017-03-29 11:12:13,909 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:regressionforfaultlocalization= true
+2017-03-29 11:12:13,909 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:population= 1
+2017-03-29 11:12:13,910 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:saveall= false
+2017-03-29 11:12:13,910 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:pvariantfoldername= variant-
+2017-03-29 11:12:13,910 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:savesolution= true
+2017-03-29 11:12:13,910 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:srcjavafolder= //src/java/
+2017-03-29 11:12:13,910 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evo_affected_by_op= true
+2017-03-29 11:12:13,910 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:binjavafolder= //target/classes/
+2017-03-29 11:12:13,910 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:reintroduce= original-parents
+2017-03-29 11:12:13,910 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuitejar= ./lib/evosuite-master-1.0.4-SNAPSHOT.jar
+2017-03-29 11:12:13,910 INFO fr.inria.astor.core.setup.ConfigurationProperties - ----------------------------
+2017-03-29 11:12:13,912 INFO main - mod_point ModificPoint=StringUtils line: 3502, el: CtReturnImpl
+2017-03-29 11:12:13,913 INFO main - -->op: RemoveOp: `return org.apache.commons[...] ` ---> `-` at pos 0 of parent `{ 	return org.apache.comm[...]`
+2017-03-29 11:12:19,990 INFO main - mod_point ModificPoint=StringUtils line: 3648, el: CtContinueImpl
+2017-03-29 11:12:19,991 INFO main - -->op: RemoveOp: `continue ` ---> `-` at pos 0 of parent `{ 	continue; }`
+2017-03-29 11:12:26,142 INFO main - mod_point ModificPoint=StringUtils line: 3727, el: CtReturnImpl
+2017-03-29 11:12:26,142 INFO main - -->op: RemoveOp: `return result ` ---> `-` at pos 0 of parent `{ 	return result; }`
+2017-03-29 11:12:30,993 INFO main - mod_point ModificPoint=StringUtils line: 3612, el: CtIfImpl
+2017-03-29 11:12:30,994 INFO main - -->op: ReplaceIfBooleanOp: `if ((((((text == null) ||[...] ` ---> `if (true) { 	return text;[...]` at pos 0 of parent `{ 	if ((((((text == null)[...]`
+2017-03-29 11:12:35,343 INFO main - mod_point ModificPoint=StringUtils line: 3612, el: CtIfImpl
+2017-03-29 11:12:35,344 INFO main - -->op: ReplaceIfBooleanOp: `if ((((((text == null) ||[...] ` ---> `if (false) { 	return text[...]` at pos 0 of parent `{ 	if ((((((text == null)[...]`
+2017-03-29 11:12:40,225 INFO main - mod_point ModificPoint=StringUtils line: 3612, el: CtIfImpl
+2017-03-29 11:12:40,226 INFO main - -->op: RemoveOp: `if ((((((text == null) ||[...] ` ---> `-` at pos 0 of parent `{ 	if ((((((text == null)[...]`
+2017-03-29 11:12:44,588 INFO main - mod_point ModificPoint=StringUtils line: 3615, el: CtReturnImpl
+2017-03-29 11:12:44,588 INFO main - -->op: RemoveOp: `return text ` ---> `-` at pos 0 of parent `{ 	return text; }`
+2017-03-29 11:12:50,561 INFO main - mod_point ModificPoint=StringUtils line: 3619, el: CtIfImpl
+2017-03-29 11:12:50,562 INFO main - -->op: ReplaceIfBooleanOp: `if (timeToLive < 0) { 	th[...] ` ---> `if (true) { 	throw new ja[...]` at pos 1 of parent `{ 	if ((((((text == null)[...]`
+2017-03-29 11:12:55,465 INFO main - mod_point ModificPoint=StringUtils line: 3619, el: CtIfImpl
+2017-03-29 11:12:55,466 INFO main - -->op: ReplaceIfBooleanOp: `if (timeToLive < 0) { 	th[...] ` ---> `if (false) { 	throw new j[...]` at pos 1 of parent `{ 	if ((((((text == null)[...]`
+2017-03-29 11:13:01,888 INFO main - mod_point ModificPoint=StringUtils line: 3619, el: CtIfImpl
+2017-03-29 11:13:01,889 INFO main - -->op: RemoveOp: `if (timeToLive < 0) { 	th[...] ` ---> `-` at pos 1 of parent `{ 	if ((((((text == null)[...]`
+2017-03-29 11:13:05,933 INFO main - mod_point ModificPoint=StringUtils line: 3623, el: CtLocalVariableImpl
+2017-03-29 11:13:05,934 INFO main - -->op: RemoveOp: `int searchLength = search[...] ` ---> `-` at pos 2 of parent `{ 	if ((((((text == null)[...]`
+2017-03-29 11:13:08,255 INFO main - mod_point ModificPoint=StringUtils line: 3624, el: CtLocalVariableImpl
+2017-03-29 11:13:08,256 INFO main - -->op: RemoveOp: `int replacementLength = r[...] ` ---> `-` at pos 3 of parent `{ 	if ((((((text == null)[...]`
+2017-03-29 11:13:10,571 INFO main - mod_point ModificPoint=StringUtils line: 3627, el: CtIfImpl
+2017-03-29 11:13:10,572 INFO main - -->op: ReplaceIfBooleanOp: `if (searchLength != repla[...] ` ---> `if (true) { 	throw new ja[...]` at pos 4 of parent `{ 	if ((((((text == null)[...]`
+2017-03-29 11:13:13,626 INFO main - mod_point ModificPoint=StringUtils line: 3627, el: CtIfImpl
+2017-03-29 11:13:13,627 INFO main - -->op: ReplaceIfBooleanOp: `if (searchLength != repla[...] ` ---> `if (false) { 	throw new j[...]` at pos 4 of parent `{ 	if ((((((text == null)[...]`
+2017-03-29 11:13:16,580 INFO main - mod_point ModificPoint=StringUtils line: 3627, el: CtIfImpl
+2017-03-29 11:13:16,581 INFO main - -->op: RemoveOp: `if (searchLength != repla[...] ` ---> `-` at pos 4 of parent `{ 	if ((((((text == null)[...]`
+2017-03-29 11:13:19,900 INFO main - mod_point ModificPoint=StringUtils line: 3635, el: CtLocalVariableImpl
+2017-03-29 11:13:19,901 INFO main - -->op: RemoveOp: `boolean[] noMoreMatchesFo[...] ` ---> `-` at pos 5 of parent `{ 	if ((((((text == null)[...]`
+2017-03-29 11:13:22,096 INFO main - mod_point ModificPoint=StringUtils line: 3638, el: CtLocalVariableImpl
+2017-03-29 11:13:22,097 INFO main - -->op: RemoveOp: `int textIndex = -1 ` ---> `-` at pos 6 of parent `{ 	if ((((((text == null)[...]`
+2017-03-29 11:13:23,641 INFO main - mod_point ModificPoint=StringUtils line: 3639, el: CtLocalVariableImpl
+2017-03-29 11:13:23,641 INFO main - -->op: RemoveOp: `int replaceIndex = -1 ` ---> `-` at pos 7 of parent `{ 	if ((((((text == null)[...]`
+2017-03-29 11:13:25,070 INFO main - mod_point ModificPoint=StringUtils line: 3640, el: CtLocalVariableImpl
+2017-03-29 11:13:25,073 INFO main - -->op: RemoveOp: `int tempIndex = -1 ` ---> `-` at pos 8 of parent `{ 	if ((((((text == null)[...]`
+2017-03-29 11:13:27,020 INFO main - mod_point ModificPoint=StringUtils line: 3644, el: CtForImpl
+2017-03-29 11:13:27,020 INFO main - -->op: RemoveOp: `for (int i = 0 ; i < sear[...] ` ---> `-` at pos 9 of parent `{ 	if ((((((text == null)[...]`
+2017-03-29 11:13:31,666 INFO main - mod_point ModificPoint=StringUtils line: 3645, el: CtIfImpl
+2017-03-29 11:13:31,666 INFO main - -->op: ReplaceIfBooleanOp: `if ((((noMoreMatchesForRe[...] ` ---> `if (true) { 	continue; } ` at pos 0 of parent `{ 	if ((((noMoreMatchesFo[...]`
+2017-03-29 11:13:35,523 INFO main - mod_point ModificPoint=StringUtils line: 3645, el: CtIfImpl
+2017-03-29 11:13:35,523 INFO main - -->op: ReplaceIfBooleanOp: `if ((((noMoreMatchesForRe[...] ` ---> `if (false) { 	continue; }[...]` at pos 0 of parent `{ 	if ((((noMoreMatchesFo[...]`
+2017-03-29 11:13:40,533 INFO main - mod_point ModificPoint=StringUtils line: 3645, el: CtIfImpl
+2017-03-29 11:13:40,534 INFO main - -->op: RemoveOp: `if ((((noMoreMatchesForRe[...] ` ---> `-` at pos 0 of parent `{ 	if ((((noMoreMatchesFo[...]`
+2017-03-29 11:13:45,753 INFO main - mod_point ModificPoint=StringUtils line: 3650, el: CtAssignmentImpl
+2017-03-29 11:13:45,754 INFO main - -->op: RemoveOp: `tempIndex = text.indexOf([...] ` ---> `-` at pos 1 of parent `{ 	if ((((noMoreMatchesFo[...]`
+2017-03-29 11:13:50,468 INFO main - mod_point ModificPoint=StringUtils line: 3653, el: CtIfImpl
+2017-03-29 11:13:50,469 INFO main - -->op: ReplaceIfBooleanOp: `if (tempIndex == (-1)) { [...] ` ---> `if (true) { 	noMoreMatche[...]` at pos 2 of parent `{ 	if ((((noMoreMatchesFo[...]`
+2017-03-29 11:13:55,693 INFO main - mod_point ModificPoint=StringUtils line: 3653, el: CtIfImpl
+2017-03-29 11:13:55,693 INFO main - -->op: ReplaceIfBooleanOp: `if (tempIndex == (-1)) { [...] ` ---> `if (false) { 	noMoreMatch[...]` at pos 2 of parent `{ 	if ((((noMoreMatchesFo[...]`
+2017-03-29 11:14:00,431 INFO main - mod_point ModificPoint=StringUtils line: 3653, el: CtIfImpl
+2017-03-29 11:14:00,431 INFO main - -->op: RemoveOp: `if (tempIndex == (-1)) { [...] ` ---> `-` at pos 2 of parent `{ 	if ((((noMoreMatchesFo[...]`
+2017-03-29 11:14:04,100 INFO main - mod_point ModificPoint=StringUtils line: 3654, el: CtAssignmentImpl
+2017-03-29 11:14:04,100 INFO main - -->op: RemoveOp: `noMoreMatchesForReplIndex[...] ` ---> `-` at pos 0 of parent `{ 	noMoreMatchesForReplIn[...]`
+2017-03-29 11:14:08,298 INFO main - mod_point ModificPoint=StringUtils line: 3656, el: CtIfImpl
+2017-03-29 11:14:08,299 INFO main - -->op: ReplaceIfBooleanOp: `if ((textIndex == (-1)) |[...] ` ---> `if (true) { 	textIndex = [...]` at pos 0 of parent `{ 	if ((textIndex == (-1)[...]`
+2017-03-29 11:14:12,366 INFO main - mod_point ModificPoint=StringUtils line: 3656, el: CtIfImpl
+2017-03-29 11:14:12,366 INFO main - -->op: ReplaceIfBooleanOp: `if ((textIndex == (-1)) |[...] ` ---> `if (false) { 	textIndex =[...]` at pos 0 of parent `{ 	if ((textIndex == (-1)[...]`
+2017-03-29 11:14:16,197 INFO main - mod_point ModificPoint=StringUtils line: 3656, el: CtIfImpl
+2017-03-29 11:14:16,197 INFO main - -->op: RemoveOp: `if ((textIndex == (-1)) |[...] ` ---> `-` at pos 0 of parent `{ 	if ((textIndex == (-1)[...]`
+2017-03-29 11:14:20,746 INFO main - mod_point ModificPoint=StringUtils line: 3657, el: CtAssignmentImpl
+2017-03-29 11:14:20,747 INFO main - -->op: RemoveOp: `textIndex = tempIndex ` ---> `-` at pos 0 of parent `{ 	textIndex = tempIndex;[...]`
+2017-03-29 11:14:24,846 INFO main - mod_point ModificPoint=StringUtils line: 3658, el: CtAssignmentImpl
+2017-03-29 11:14:24,846 INFO main - -->op: RemoveOp: `replaceIndex = i ` ---> `-` at pos 1 of parent `{ 	textIndex = tempIndex;[...]`
+2017-03-29 11:14:28,687 INFO main - mod_point ModificPoint=StringUtils line: 3665, el: CtIfImpl
+2017-03-29 11:14:28,687 INFO main - -->op: ReplaceIfBooleanOp: `if (textIndex == (-1)) { [...] ` ---> `if (true) { 	return text;[...]` at pos 10 of parent `{ 	if ((((((text == null)[...]`
+2017-03-29 11:14:33,566 INFO main - mod_point ModificPoint=StringUtils line: 3665, el: CtIfImpl
+2017-03-29 11:14:33,567 INFO main - -->op: ReplaceIfBooleanOp: `if (textIndex == (-1)) { [...] ` ---> `if (false) { 	return text[...]` at pos 10 of parent `{ 	if ((((((text == null)[...]`
+2017-03-29 11:14:36,444 INFO main - mod_point ModificPoint=StringUtils line: 3665, el: CtIfImpl
+2017-03-29 11:14:36,445 INFO main - -->op: RemoveOp: `if (textIndex == (-1)) { [...] ` ---> `-` at pos 10 of parent `{ 	if ((((((text == null)[...]`
+2017-03-29 11:14:41,265 INFO main - mod_point ModificPoint=StringUtils line: 3666, el: CtReturnImpl
+2017-03-29 11:14:41,265 INFO main - -->op: RemoveOp: `return text ` ---> `-` at pos 0 of parent `{ 	return text; }`
+2017-03-29 11:14:45,443 INFO main - mod_point ModificPoint=StringUtils line: 3669, el: CtLocalVariableImpl
+2017-03-29 11:14:45,444 INFO main - -->op: RemoveOp: `int start = 0 ` ---> `-` at pos 11 of parent `{ 	if ((((((text == null)[...]`
+2017-03-29 11:14:47,463 INFO main - mod_point ModificPoint=StringUtils line: 3672, el: CtLocalVariableImpl
+2017-03-29 11:14:47,464 INFO main - -->op: RemoveOp: `int increase = 0 ` ---> `-` at pos 12 of parent `{ 	if ((((((text == null)[...]`
+2017-03-29 11:14:49,226 INFO main - mod_point ModificPoint=StringUtils line: 3675, el: CtForImpl
+2017-03-29 11:14:49,227 INFO main - -->op: RemoveOp: `for (int i = 0 ; i < (sea[...] ` ---> `-` at pos 13 of parent `{ 	if ((((((text == null)[...]`
+2017-03-29 11:15:15,086 INFO main - -Found Solution, child variant #41
+2017-03-29 11:15:15,087 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.lang3.StringUtils to /data/people/qx5/jkali_repair_expts/repair/Lang_39/r0/AstorMain-Lang_39/src/variant-41
+2017-03-29 11:15:16,389 INFO main - 
+----SUMMARY_EXECUTION---
+2017-03-29 11:15:16,390 INFO main - 
+Solution details
+2017-03-29 11:15:16,390 INFO main - 
+ --SOLUTIONS DESCRIPTION--
+
+ ----
+ProgramVariant 41
+ 
+time(sec)= 155
+operation: RemoveOp
+location= org.apache.commons.lang3.StringUtils
+line= 3675
+lineSuspiciousness= 0.707
+original statement= for (int i = 0 ; i < (searchList.length) ; i++) {
+	int greater = (replacementList[i].length()) - (searchList[i].length());
+	if (greater > 0) {
+		increase += 3 * greater;
+	} 
+}
+fixed statement= for (int i = 0 ; i < (searchList.length) ; i++) {
+	int greater = (replacementList[i].length()) - (searchList[i].length());
+	if (greater > 0) {
+		increase += 3 * greater;
+	} 
+}
+generation= 1
+ingredientScope= -
+validation=|true|0|1618|[]|
+2017-03-29 11:15:16,391 INFO fr.inria.main.evolution.AstorMain - Time Total(s): 326.705

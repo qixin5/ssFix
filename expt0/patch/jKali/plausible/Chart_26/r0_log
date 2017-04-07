@@ -1,0 +1,513 @@
+2017-03-29 10:34:00,063 INFO main - command line arguments: [-jvm4testexecution  /home/qx5/jdk1.8.0_111/bin  -dependencies  /data/people/qx5/defects4j-bugs/charts/projs/Chart_26_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar  -id  Chart_26  -failing  org.jfree.chart.junit.AreaChartTests:org.jfree.chart.junit.BarChart3DTests:org.jfree.chart.junit.BarChartTests:org.jfree.chart.junit.GanttChartTests:org.jfree.chart.junit.LineChart3DTests:org.jfree.chart.junit.LineChartTests:org.jfree.chart.junit.StackedAreaChartTests:org.jfree.chart.junit.StackedBarChart3DTests:org.jfree.chart.junit.StackedBarChartTests:org.jfree.chart.junit.WaterfallChartTests:org.jfree.chart.plot.junit.CategoryPlotTests:org.jfree.chart.renderer.category.junit.BoxAndWhiskerRendererTests:org.jfree.chart.renderer.category.junit.GroupedStackedBarRendererTests:org.jfree.chart.renderer.category.junit.IntervalBarRendererTests:org.jfree.chart.renderer.category.junit.LayeredBarRendererTests:org.jfree.chart.renderer.category.junit.LevelRendererTests:org.jfree.chart.renderer.category.junit.MinMaxCategoryRendererTests:org.jfree.chart.renderer.category.junit.StatisticalBarRendererTests:org.jfree.chart.renderer.category.junit.StatisticalLineAndShapeRendererTests  -mode  statement-remove  -location  /data/people/qx5/defects4j-bugs/charts/projs/Chart_26_buggy  -package  org.jfree  -maxtime  120  -stopfirst  true  -srcjavafolder  //source/  -srctestfolder  //tests/  -binjavafolder  //build/  -bintestfolder  //build-tests/  -out  /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0]
+2017-03-29 10:35:13,242 INFO main - -Executing Gzoltar classpath: /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26//bin//default from 325 classes with test cases
+2017-03-29 10:35:13,244 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar fault localization: min susp value parameter: 0.1
+2017-03-29 10:35:14,824 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - -gz-Adding classpath: [/data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26//bin//default, /home/qx5/ssFix2/lib/myprinter.jar, /home/qx5/ssFix2/lib/evosuite-1.0.2.jar, /data/people/qx5/defects4j-bugs/charts/projs/Chart_26_buggy/all0.jar, /home/qx5/ssFix2/lib/commons-lang3-3.5.jar]
+2017-03-29 10:36:09,258 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.junit.LineChart3DTests#testDrawWithNullInfo
+2017-03-29 10:36:09,263 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.junit.AreaChartTests#testDrawWithNullInfo
+2017-03-29 10:36:09,263 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.junit.BarChartTests#testDrawWithNullInfo
+2017-03-29 10:36:09,264 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.junit.BarChart3DTests#testDrawWithNullInfo
+2017-03-29 10:36:09,264 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.junit.GanttChartTests#testDrawWithNullInfo
+2017-03-29 10:36:09,264 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.junit.GanttChartTests#testDrawWithNullInfo2
+2017-03-29 10:36:09,265 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.junit.LineChartTests#testDrawWithNullInfo
+2017-03-29 10:36:09,265 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.junit.LineChart3DTests#testDrawWithNullInfo
+2017-03-29 10:36:09,266 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.junit.StackedAreaChartTests#testDrawWithNullInfo
+2017-03-29 10:36:09,266 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.junit.StackedBarChartTests#testDrawWithNullInfo
+2017-03-29 10:36:09,266 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.junit.StackedBarChart3DTests#testDrawWithNullInfo
+2017-03-29 10:36:09,266 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.junit.WaterfallChartTests#testDrawWithNullInfo
+2017-03-29 10:36:09,267 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.plot.junit.CategoryPlotTests#test1654215
+2017-03-29 10:36:09,267 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.plot.junit.CategoryPlotTests#testSerialization3
+2017-03-29 10:36:09,278 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.plot.junit.CategoryPlotTests#testSerialization4
+2017-03-29 10:36:09,280 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.renderer.category.junit.LevelRendererTests#testDrawWithNullInfo
+2017-03-29 10:36:09,282 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.renderer.category.junit.StatisticalLineAndShapeRendererTests#testDrawWithNullInfo
+2017-03-29 10:36:09,284 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.renderer.category.junit.BoxAndWhiskerRendererTests#testDrawWithNullInfo
+2017-03-29 10:36:09,284 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.renderer.category.junit.GroupedStackedBarRendererTests#testDrawWithNullInfo
+2017-03-29 10:36:09,284 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.renderer.category.junit.IntervalBarRendererTests#testDrawWithNullInfo
+2017-03-29 10:36:09,285 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.renderer.category.junit.LayeredBarRendererTests#testDrawWithNullInfo
+2017-03-29 10:36:09,285 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.renderer.category.junit.LevelRendererTests#testDrawWithNullInfo
+2017-03-29 10:36:09,285 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.renderer.category.junit.MinMaxCategoryRendererTests#testDrawWithNullInfo
+2017-03-29 10:36:09,286 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.renderer.category.junit.StatisticalBarRendererTests#testDrawWithNullInfo
+2017-03-29 10:36:09,286 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.renderer.category.junit.StatisticalLineAndShapeRendererTests#testDrawWithNullInfo
+2017-03-29 10:36:09,286 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.renderer.category.junit.GroupedStackedBarRendererTests#testDrawWithNullInfo
+2017-03-29 10:36:09,290 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.renderer.category.junit.BoxAndWhiskerRendererTests#testDrawWithNullInfo
+2017-03-29 10:36:09,291 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.junit.BarChart3DTests#testDrawWithNullInfo
+2017-03-29 10:36:09,293 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.junit.StackedAreaChartTests#testDrawWithNullInfo
+2017-03-29 10:36:09,294 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.junit.WaterfallChartTests#testDrawWithNullInfo
+2017-03-29 10:36:09,294 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.junit.GanttChartTests#testDrawWithNullInfo
+2017-03-29 10:36:09,294 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.junit.GanttChartTests#testDrawWithNullInfo2
+2017-03-29 10:36:09,295 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.junit.StackedBarChartTests#testDrawWithNullInfo
+2017-03-29 10:36:09,295 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.junit.LineChartTests#testDrawWithNullInfo
+2017-03-29 10:36:09,296 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.junit.AreaChartTests#testDrawWithNullInfo
+2017-03-29 10:36:09,296 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.junit.StackedBarChart3DTests#testDrawWithNullInfo
+2017-03-29 10:36:09,296 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.junit.BarChartTests#testDrawWithNullInfo
+2017-03-29 10:36:09,298 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.renderer.category.junit.IntervalBarRendererTests#testDrawWithNullInfo
+2017-03-29 10:36:09,298 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.renderer.category.junit.LayeredBarRendererTests#testDrawWithNullInfo
+2017-03-29 10:36:09,299 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.renderer.category.junit.MinMaxCategoryRendererTests#testDrawWithNullInfo
+2017-03-29 10:36:09,299 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.renderer.category.junit.StatisticalBarRendererTests#testDrawWithNullInfo
+2017-03-29 10:36:09,299 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.plot.junit.CategoryPlotTests#test1654215
+2017-03-29 10:36:09,299 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.plot.junit.CategoryPlotTests#testSerialization3
+2017-03-29 10:36:09,299 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.jfree.chart.plot.junit.CategoryPlotTests#testSerialization4
+2017-03-29 10:36:09,304 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar Test Result Total:3191, fails: 44, GZoltar suspicious 18786
+2017-03-29 10:36:09,422 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar found: 3109 with susp > 0.1, we consider: 1000
+2017-03-29 10:36:09,434 INFO main - building model: /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26//src//default, compliance level: 8
+2017-03-29 10:36:40,415 INFO main - 
+---- Initial suspicious size: 1000
+2017-03-29 10:36:41,094 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.axis.AxisState, methodName=org.jfree.chart.axis.AxisState{setMax(D)V 0.0, lineNumber=194, susp=0.9574271077563381]
+2017-03-29 10:36:42,730 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.plot.CategoryPlot, methodName=org.jfree.chart.plot.CategoryPlot{getCategoriesForAxis(Lorg/jfree/chart/axis/CategoryAxis;)Ljava/util/List; 0.0, lineNumber=3266, susp=0.9335638713962128]
+2017-03-29 10:36:42,738 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.plot.PlotRenderingInfo, methodName=org.jfree.chart.plot.PlotRenderingInfo{setPlotArea(Ljava/awt/geom/Rectangle2D;)V 0.0, lineNumber=127, susp=0.90267093384844]
+2017-03-29 10:36:42,740 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.plot.PlotRenderingInfo, methodName=org.jfree.chart.plot.PlotRenderingInfo{setDataArea(Ljava/awt/geom/Rectangle2D;)V 0.0, lineNumber=150, susp=0.8864052604279183]
+2017-03-29 10:36:42,769 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.plot.CategoryPlot, methodName=org.jfree.chart.plot.CategoryPlot{drawBackground(Ljava/awt/Graphics2D;Ljava/awt/geom/Rectangle2D;)V 0.0, lineNumber=2666, susp=0.8839599998785473]
+2017-03-29 10:36:42,828 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.renderer.category.AbstractCategoryItemRenderer, methodName=org.jfree.chart.renderer.category.AbstractCategoryItemRenderer{drawBackground(Ljava/awt/Graphics2D;Lorg/jfree/chart/plot/CategoryPlot;Ljava/awt/geom/Rectangle2D;)V 0.0, lineNumber=691, susp=0.8839599998785473]
+2017-03-29 10:36:42,889 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.axis.CategoryAxis, methodName=org.jfree.chart.axis.CategoryAxis{refreshTicks(Ljava/awt/Graphics2D;Lorg/jfree/chart/axis/AxisState;Ljava/awt/geom/Rectangle2D;Lorg/jfree/chart/util/RectangleEdge;)Ljava/util/List; 0.0, lineNumber=1024, susp=0.8581163303210331]
+2017-03-29 10:36:43,129 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.axis.AxisCollection, methodName=org.jfree.chart.axis.AxisCollection{add(Lorg/jfree/chart/axis/Axis;Lorg/jfree/chart/util/RectangleEdge;)V 0.0, lineNumber=144, susp=0.7071067811865476]
+2017-03-29 10:36:43,211 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.axis.AxisState, methodName=org.jfree.chart.axis.AxisState{setTicks(Ljava/util/List;)V 0.0, lineNumber=176, susp=0.699205898780101]
+2017-03-29 10:36:43,443 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.axis.AxisSpace, methodName=org.jfree.chart.axis.AxisSpace{add(DLorg/jfree/chart/util/RectangleEdge;)V 0.0, lineNumber=185, susp=0.699205898780101]
+2017-03-29 10:36:43,457 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.text.TextUtilities, methodName=org.jfree.chart.text.TextUtilities{drawRotatedString(Ljava/lang/String;Ljava/awt/Graphics2D;FFLorg/jfree/chart/text/TextAnchor;DLorg/jfree/chart/text/TextAnchor;)V 0.0, lineNumber=554, susp=0.699205898780101]
+2017-03-29 10:36:43,751 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.axis.AxisState, methodName=org.jfree.chart.axis.AxisState{cursorUp(D)V 0.0, lineNumber=131, susp=0.67700320038633]
+2017-03-29 10:36:43,794 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.text.TextFragment, methodName=org.jfree.chart.text.TextFragment{draw(Ljava/awt/Graphics2D;FFLorg/jfree/chart/text/TextAnchor;FFD)V 0.0, lineNumber=213, susp=0.67700320038633]
+2017-03-29 10:36:43,855 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.text.TextBlock, methodName=org.jfree.chart.text.TextBlock{calculateDimensions(Ljava/awt/Graphics2D;)Lorg/jfree/chart/util/Size2D; 0.0, lineNumber=172, susp=0.67700320038633]
+2017-03-29 10:36:43,858 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.text.TextBlock, methodName=org.jfree.chart.text.TextBlock{draw(Ljava/awt/Graphics2D;FFLorg/jfree/chart/text/TextBlockAnchor;)V 0.0, lineNumber=213, susp=0.67700320038633]
+2017-03-29 10:36:43,876 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.text.TextBlock, methodName=org.jfree.chart.text.TextBlock{draw(Ljava/awt/Graphics2D;FFLorg/jfree/chart/text/TextBlockAnchor;FFD)V 0.0, lineNumber=251, susp=0.67700320038633]
+2017-03-29 10:36:43,877 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.text.TextBlock, methodName=org.jfree.chart.text.TextBlock{draw(Ljava/awt/Graphics2D;FFLorg/jfree/chart/text/TextBlockAnchor;FFD)V 0.0, lineNumber=253, susp=0.67700320038633]
+2017-03-29 10:36:43,951 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.axis.Axis, methodName=org.jfree.chart.axis.Axis{drawLabel(Ljava/lang/String;Ljava/awt/Graphics2D;Ljava/awt/geom/Rectangle2D;Ljava/awt/geom/Rectangle2D;Lorg/jfree/chart/util/RectangleEdge;Lorg/jfree/chart/axis/AxisState;Lorg/jfree/chart/plot/PlotRenderingInfo;)Lorg/jfree/chart/axis/AxisState; 0.0, lineNumber=1130, susp=0.67700320038633]
+2017-03-29 10:36:43,969 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.block.FlowArrangement, methodName=org.jfree.chart.block.FlowArrangement{clear()V 0.0, lineNumber=418, susp=0.67700320038633]
+2017-03-29 10:36:43,988 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.text.TextLine, methodName=org.jfree.chart.text.TextLine{draw(Ljava/awt/Graphics2D;FFLorg/jfree/chart/text/TextAnchor;FFD)V 0.0, lineNumber=167, susp=0.67700320038633]
+2017-03-29 10:36:43,988 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.text.TextLine, methodName=org.jfree.chart.text.TextLine{draw(Ljava/awt/Graphics2D;FFLorg/jfree/chart/text/TextAnchor;FFD)V 0.0, lineNumber=169, susp=0.67700320038633]
+2017-03-29 10:36:43,997 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.text.TextLine, methodName=org.jfree.chart.text.TextLine{calculateDimensions(Ljava/awt/Graphics2D;)Lorg/jfree/chart/util/Size2D; 0.0, lineNumber=187, susp=0.67700320038633]
+2017-03-29 10:36:44,003 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.text.TextLine, methodName=org.jfree.chart.text.TextLine{calculateBaselineOffset(Ljava/awt/Graphics2D;Lorg/jfree/chart/text/TextAnchor;)F 0.0, lineNumber=235, susp=0.67700320038633]
+2017-03-29 10:36:44,014 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.text.TextUtilities, methodName=org.jfree.chart.text.TextUtilities{drawRotatedString(Ljava/lang/String;Ljava/awt/Graphics2D;FFLorg/jfree/chart/text/TextAnchor;DFF)V 0.0, lineNumber=526, susp=0.67700320038633]
+2017-03-29 10:36:44,152 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.JFreeChart, methodName=org.jfree.chart.JFreeChart{draw(Ljava/awt/Graphics2D;Ljava/awt/geom/Rectangle2D;Ljava/awt/geom/Point2D;Lorg/jfree/chart/ChartRenderingInfo;)V 0.0, lineNumber=1204, susp=0.67700320038633]
+2017-03-29 10:36:44,214 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.JFreeChart, methodName=org.jfree.chart.JFreeChart{drawTitle(Lorg/jfree/chart/title/Title;Ljava/awt/Graphics2D;Ljava/awt/geom/Rectangle2D;Z)Lorg/jfree/chart/entity/EntityCollection; 0.0, lineNumber=1314, susp=0.67700320038633]
+2017-03-29 10:36:44,240 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.title.LegendTitle, methodName=org.jfree.chart.title.LegendTitle{fetchLegendItems()V 0.0, lineNumber=408, susp=0.67700320038633]
+2017-03-29 10:36:44,407 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.axis.CategoryAxis, methodName=org.jfree.chart.axis.CategoryAxis{drawCategoryLabels(Ljava/awt/Graphics2D;Ljava/awt/geom/Rectangle2D;Ljava/awt/geom/Rectangle2D;Lorg/jfree/chart/util/RectangleEdge;Lorg/jfree/chart/axis/AxisState;Lorg/jfree/chart/plot/PlotRenderingInfo;)Lorg/jfree/chart/axis/AxisState; 0.0, lineNumber=945, susp=0.67700320038633]
+2017-03-29 10:36:44,532 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.block.BlockBorder, methodName=org.jfree.chart.block.BlockBorder{draw(Ljava/awt/Graphics2D;Ljava/awt/geom/Rectangle2D;)V 0.0, lineNumber=194, susp=0.6700593942604899]
+2017-03-29 10:36:44,546 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.util.RectangleInsets, methodName=org.jfree.chart.util.RectangleInsets{trim(Ljava/awt/geom/Rectangle2D;)V 0.0, lineNumber=529, susp=0.6700593942604899]
+2017-03-29 10:36:44,549 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.block.BlockParams, methodName=org.jfree.chart.block.BlockParams{setGenerateEntities(Z)V 0.0, lineNumber=97, susp=0.6700593942604899]
+2017-03-29 10:36:44,559 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.text.TextUtilities, methodName=org.jfree.chart.text.TextUtilities{getTextBounds(Ljava/lang/String;Ljava/awt/Graphics2D;Ljava/awt/FontMetrics;)Ljava/awt/geom/Rectangle2D; 0.0, lineNumber=299, susp=0.6700593942604899]
+2017-03-29 10:36:44,575 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.text.TextUtilities, methodName=org.jfree.chart.text.TextUtilities{drawRotatedString(Ljava/lang/String;Ljava/awt/Graphics2D;FFDFF)V 0.0, lineNumber=501, susp=0.6700593942604899]
+2017-03-29 10:36:44,672 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.block.AbstractBlock, methodName=org.jfree.chart.block.AbstractBlock{drawBorder(Ljava/awt/Graphics2D;Ljava/awt/geom/Rectangle2D;)V 0.0, lineNumber=548, susp=0.6700593942604899]
+2017-03-29 10:36:44,675 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.block.BlockContainer, methodName=org.jfree.chart.block.BlockContainer{setArrangement(Lorg/jfree/chart/block/Arrangement;)V 0.0, lineNumber=124, susp=0.6700593942604899]
+2017-03-29 10:36:44,856 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.JFreeChart, methodName=org.jfree.chart.JFreeChart{notifyListeners(Lorg/jfree/chart/event/ChartProgressEvent;)V 0.0, lineNumber=1540, susp=0.6700593942604899]
+2017-03-29 10:36:44,913 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.block.BlockContainer, methodName=org.jfree.chart.block.BlockContainer{clear()V 0.0, lineNumber=172, susp=0.6633249580710799]
+2017-03-29 10:36:44,918 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.text.TextBlock, methodName=org.jfree.chart.text.TextBlock{addLine(Ljava/lang/String;Ljava/awt/Font;Ljava/awt/Paint;)V 0.0, lineNumber=122, susp=0.6567895774291854]
+2017-03-29 10:36:45,203 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.axis.Axis, methodName=org.jfree.chart.axis.Axis{drawAxisLine(Ljava/awt/Graphics2D;DLjava/awt/geom/Rectangle2D;Lorg/jfree/chart/util/RectangleEdge;)V 0.0, lineNumber=1234, susp=0.6504436355879909]
+2017-03-29 10:36:45,529 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.axis.NumberAxis, methodName=org.jfree.chart.axis.NumberAxis{selectAutoTickUnit(Ljava/awt/Graphics2D;Ljava/awt/geom/Rectangle2D;Lorg/jfree/chart/util/RectangleEdge;)V 0.0, lineNumber=1056, susp=0.6502560887623551]
+2017-03-29 10:36:45,594 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.text.TextBlock, methodName=org.jfree.chart.text.TextBlock{addLine(Lorg/jfree/chart/text/TextLine;)V 0.0, lineNumber=131, susp=0.644278153923165]
+2017-03-29 10:36:45,635 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.axis.NumberAxis, methodName=org.jfree.chart.axis.NumberAxis{setTickUnit(Lorg/jfree/chart/axis/NumberTickUnit;ZZ)V 0.0, lineNumber=354, susp=0.6428243465332251]
+2017-03-29 10:36:45,657 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.block.LineBorder, methodName=org.jfree.chart.block.LineBorder{draw(Ljava/awt/Graphics2D;Ljava/awt/geom/Rectangle2D;)V 0.0, lineNumber=179, susp=0.6308996735095035]
+2017-03-29 10:36:45,661 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.title.LegendItemBlockContainer, methodName=org.jfree.chart.title.LegendItemBlockContainer{setToolTipText(Ljava/lang/String;)V 0.0, lineNumber=147, susp=0.6308996735095035]
+2017-03-29 10:36:45,662 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.title.LegendItemBlockContainer, methodName=org.jfree.chart.title.LegendItemBlockContainer{setURLText(Ljava/lang/String;)V 0.0, lineNumber=169, susp=0.6308996735095035]
+2017-03-29 10:36:45,744 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.block.CenterArrangement, methodName=org.jfree.chart.block.CenterArrangement{add(Lorg/jfree/chart/block/Block;Ljava/lang/Object;)V 0.0, lineNumber=80, susp=0.6308996735095035]
+2017-03-29 10:36:45,861 INFO main - -any mod point created for suspicious Candidate [className=org.jfree.chart.title.LegendGraphic, methodName=org.jfree.chart.title.LegendGraphic{draw(Ljava/awt/Graphics2D;Ljava/awt/geom/Rectangle2D;)V 0.0, lineNumber=570, susp=0.6308996735095035]
+2017-03-29 10:36:45,878 INFO main - Total suspicious from FL: 1000,  952
+2017-03-29 10:36:45,878 INFO main - Total ModPoint created: 952
+2017-03-29 10:36:45,878 INFO main - Creating program variant #1, [Variant id: 1, #gens: 952, #ops: 0, parent:-]
+2017-03-29 10:36:47,953 INFO fr.inria.astor.core.setup.ConfigurationProperties - ----------------------------
+2017-03-29 10:36:47,954 INFO fr.inria.astor.core.setup.ConfigurationProperties - ---Configuration properties:---Execution values
+2017-03-29 10:36:47,954 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:packageToInstrument= org.jfree
+2017-03-29 10:36:47,954 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:flthreshold= 0.1
+2017-03-29 10:36:47,954 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:numberExecutions= 1
+2017-03-29 10:36:47,954 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuiteresultfolder= evosuite
+2017-03-29 10:36:47,954 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:ignoredTestCases= org.apache.commons.math.ode.nonstiff:org.apache.commons.math.ode2.nonstiff:org.apache.commons.lang.LocaleUtilsTest
+2017-03-29 10:36:47,954 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:skipfaultlocalization= false
+2017-03-29 10:36:47,954 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxGeneration= 200
+2017-03-29 10:36:47,954 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxsuspcandidates= 1000
+2017-03-29 10:36:47,954 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:tmax2= 960000
+2017-03-29 10:36:47,954 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:tmax1= 120000
+2017-03-29 10:36:47,954 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:workingDirectory= /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0
+2017-03-29 10:36:47,955 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:mode= statement-remove
+2017-03-29 10:36:47,955 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:ignoreflakyinfl= true
+2017-03-29 10:36:47,955 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:uniqueoptogen= false
+2017-03-29 10:36:47,955 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:testcasesregression= org.jfree.data.junit.KeyedObjects2DTests:org.jfree.data.time.junit.TimePeriodValueTests:org.jfree.data.xy.junit.VectorSeriesTests:org.jfree.chart.axis.junit.LogarithmicAxisTests:org.jfree.chart.entity.junit.CategoryItemEntityTests:org.jfree.chart.axis.junit.CategoryAxisTests:org.jfree.chart.plot.junit.ValueMarkerTests:org.jfree.chart.block.junit.ColumnArrangementTests:org.jfree.data.gantt.junit.TaskTests:org.jfree.chart.renderer.xy.junit.StackedXYBarRendererTests:org.jfree.data.junit.DefaultKeyedValuesTests:org.jfree.chart.plot.junit.CompassPlotTests:org.jfree.chart.junit.LineChart3DTests:org.jfree.data.general.junit.DefaultKeyedValuesDatasetTests:org.jfree.data.xy.junit.DefaultXYZDatasetTests:org.jfree.data.xy.junit.MatrixSeriesTests:org.jfree.data.category.junit.DefaultCategoryDatasetTests:org.jfree.chart.labels.junit.StandardXYSeriesLabelGeneratorTests:org.jfree.chart.renderer.xy.junit.AbstractXYItemRendererTests:org.jfree.chart.renderer.xy.junit.CandlestickRendererTests:org.jfree.chart.renderer.xy.junit.ClusteredXYBarRendererTests:org.jfree.chart.renderer.xy.junit.DeviationRendererTests:org.jfree.chart.renderer.xy.junit.HighLowRendererTests:org.jfree.chart.renderer.xy.junit.StackedXYAreaRendererTests:org.jfree.chart.renderer.xy.junit.StackedXYAreaRenderer2Tests:org.jfree.chart.renderer.xy.junit.StandardXYItemRendererTests:org.jfree.chart.renderer.xy.junit.VectorRendererTests:org.jfree.chart.renderer.xy.junit.WindItemRendererTests:org.jfree.chart.renderer.xy.junit.XYAreaRendererTests:org.jfree.chart.renderer.xy.junit.XYAreaRenderer2Tests:org.jfree.chart.renderer.xy.junit.XYBarRendererTests:org.jfree.chart.renderer.xy.junit.XYBlockRendererTests:org.jfree.chart.renderer.xy.junit.XYBoxAndWhiskerRendererTests:org.jfree.chart.renderer.xy.junit.XYBubbleRendererTests:org.jfree.chart.renderer.xy.junit.XYDifferenceRendererTests:org.jfree.chart.renderer.xy.junit.XYDotRendererTests:org.jfree.chart.renderer.xy.junit.XYErrorRendererTests:org.jfree.chart.renderer.xy.junit.XYLineAndShapeRendererTests:org.jfree.chart.renderer.xy.junit.XYLine3DRendererTests:org.jfree.chart.renderer.xy.junit.XYStepRendererTests:org.jfree.chart.renderer.xy.junit.XYStepAreaRendererTests:org.jfree.chart.renderer.xy.junit.YIntervalRendererTests:org.jfree.chart.title.junit.LegendTitleTests:org.jfree.data.xy.junit.YIntervalSeriesCollectionTests:org.jfree.chart.annotations.junit.CategoryLineAnnotationTests:org.jfree.chart.annotations.junit.CategoryPointerAnnotationTests:org.jfree.chart.annotations.junit.CategoryTextAnnotationTests:org.jfree.chart.annotations.junit.TextAnnotationTests:org.jfree.chart.annotations.junit.XYBoxAnnotationTests:org.jfree.chart.annotations.junit.XYDrawableAnnotationTests:org.jfree.chart.annotations.junit.XYImageAnnotationTests:org.jfree.chart.annotations.junit.XYLineAnnotationTests:org.jfree.chart.annotations.junit.XYPointerAnnotationTests:org.jfree.chart.annotations.junit.XYPolygonAnnotationTests:org.jfree.chart.annotations.junit.XYShapeAnnotationTests:org.jfree.chart.annotations.junit.XYTextAnnotationTests:org.jfree.chart.labels.junit.StandardXYToolTipGeneratorTests:org.jfree.data.time.junit.MinuteTests:org.jfree.data.xy.junit.DefaultOHLCDatasetTests:org.jfree.chart.needle.junit.LongNeedleTests:org.jfree.data.xy.junit.OHLCDataItemTests:org.jfree.chart.junit.XYBarChartTests:org.jfree.data.time.ohlc.junit.OHLCItemTests:org.jfree.data.time.ohlc.junit.OHLCSeriesCollectionTests:org.jfree.data.time.ohlc.junit.OHLCSeriesTests:org.jfree.data.time.ohlc.junit.OHLCTests:org.jfree.chart.axis.junit.NumberAxis3DTests:org.jfree.data.xy.junit.XIntervalDataItemTests:org.jfree.data.xy.junit.DefaultTableXYDatasetTests:org.jfree.data.xy.junit.XYIntervalSeriesTests:org.jfree.data.time.junit.TimePeriodAnchorTests:org.jfree.chart.needle.junit.LineNeedleTests:org.jfree.chart.labels.junit.HighLowItemLabelGeneratorTests:org.jfree.chart.title.junit.CompositeTitleTests:org.jfree.data.xy.junit.XYCoordinateTests:org.jfree.chart.plot.junit.DefaultDrawingSupplierTests:org.jfree.chart.plot.junit.XYPlotTests:org.jfree.chart.plot.junit.CombinedRangeCategoryPlotTests:org.jfree.chart.title.junit.ImageTitleTests:org.jfree.chart.junit.AreaChartTests:org.jfree.chart.junit.BarChartTests:org.jfree.chart.junit.BarChart3DTests:org.jfree.chart.junit.ChartPanelTests:org.jfree.chart.junit.ChartRenderingInfoTests:org.jfree.chart.junit.GanttChartTests:org.jfree.chart.junit.HashUtilitiesTests:org.jfree.chart.junit.JFreeChartTests:org.jfree.chart.junit.LegendItemTests:org.jfree.chart.junit.LegendItemCollectionTests:org.jfree.chart.junit.LineChartTests:org.jfree.chart.junit.MeterChartTests:org.jfree.chart.junit.PaintMapTests:org.jfree.chart.junit.PieChartTests:org.jfree.chart.junit.PieChart3DTests:org.jfree.chart.junit.ScatterPlotTests:org.jfree.chart.junit.StackedAreaChartTests:org.jfree.chart.junit.StackedBarChartTests:org.jfree.chart.junit.StackedBarChart3DTests:org.jfree.chart.junit.StrokeMapTests:org.jfree.chart.junit.TimeSeriesChartTests:org.jfree.chart.junit.WaterfallChartTests:org.jfree.chart.junit.XYAreaChartTests:org.jfree.chart.junit.XYLineChartTests:org.jfree.chart.junit.XYStepAreaChartTests:org.jfree.chart.junit.XYStepChartTests:org.jfree.chart.plot.junit.MultiplePiePlotTests:org.jfree.chart.labels.junit.MultipleXYSeriesLabelGeneratorTests:org.jfree.data.time.junit.TimeSeriesDataItemTests:org.jfree.chart.plot.junit.CategoryPlotTests:org.jfree.chart.axis.junit.CategoryTickTests:org.jfree.data.statistics.junit.SimpleHistogramBinTests:org.jfree.chart.renderer.junit.LookupPaintScaleTests:org.jfree.chart.labels.junit.SymbolicXYItemLabelGeneratorTests:org.jfree.chart.needle.junit.PlumNeedleTests:org.jfree.chart.renderer.category.junit.DefaultCategoryItemRendererTests:org.jfree.data.time.junit.DateRangeTests:org.jfree.data.time.junit.DayTests:org.jfree.data.time.junit.FixedMillisecondTests:org.jfree.data.time.junit.HourTests:org.jfree.data.time.junit.MillisecondTests:org.jfree.data.time.junit.MonthTests:org.jfree.data.time.junit.MovingAverageTests:org.jfree.data.time.junit.QuarterTests:org.jfree.data.time.junit.SecondTests:org.jfree.data.time.junit.SimpleTimePeriodTests:org.jfree.data.time.junit.TimePeriodValuesTests:org.jfree.data.time.junit.TimePeriodValuesCollectionTests:org.jfree.data.time.junit.TimeSeriesCollectionTests:org.jfree.data.time.junit.TimeSeriesTests:org.jfree.data.time.junit.TimeTableXYDatasetTests:org.jfree.data.time.junit.WeekTests:org.jfree.data.time.junit.YearTests:org.jfree.chart.labels.junit.BoxAndWhiskerXYToolTipGeneratorTests:org.jfree.chart.renderer.category.junit.WaterfallBarRendererTests:org.jfree.chart.axis.junit.CategoryAxis3DTests:org.jfree.chart.axis.junit.DateTickMarkPositionTests:org.jfree.chart.block.junit.GridArrangementTests:org.jfree.chart.axis.junit.SegmentedTimelineTests:org.jfree.data.category.junit.DefaultIntervalCategoryDatasetTests:org.jfree.chart.renderer.category.junit.LevelRendererTests:org.jfree.data.junit.DefaultKeyedValueTests:org.jfree.chart.axis.junit.SegmentedTimelineTests2:org.jfree.data.junit.RangeTests:org.jfree.chart.renderer.category.junit.GanttRendererTests:org.jfree.data.xy.junit.VectorSeriesCollectionTests:org.jfree.chart.entity.junit.StandardEntityCollectionTests:org.jfree.chart.entity.junit.TickLabelEntityTests:org.jfree.data.xy.junit.XYSeriesTests:org.jfree.chart.labels.junit.StandardXYItemLabelGeneratorTests:org.jfree.data.general.junit.DatasetGroupTests:org.jfree.chart.axis.junit.NumberTickUnitTests:org.jfree.chart.renderer.junit.GrayPaintScaleTests:org.jfree.chart.block.junit.EmptyBlockTests:org.jfree.chart.plot.junit.PlotOrientationTests:org.jfree.chart.plot.junit.CategoryMarkerTests:org.jfree.data.category.junit.CategoryToPieDatasetTests:org.jfree.chart.labels.junit.StandardPieSectionLabelGeneratorTests:org.jfree.chart.labels.junit.StandardCategoryItemLabelGeneratorTests:org.jfree.chart.renderer.junit.RendererUtilitiesTests:org.jfree.data.junit.KeyToGroupMapTests:org.jfree.data.xy.junit.XYIntervalTests:org.jfree.chart.axis.junit.ValueAxisTests:org.jfree.chart.needle.junit.PointerNeedleTests:org.jfree.chart.urls.junit.TimeSeriesURLGeneratorTests:org.jfree.chart.plot.junit.RingPlotTests:org.jfree.data.junit.ComparableObjectItemTests:org.jfree.chart.renderer.category.junit.StatisticalLineAndShapeRendererTests:org.jfree.chart.renderer.category.junit.LineRenderer3DTests:org.jfree.data.junit.KeyedObjectsTests:org.jfree.chart.plot.junit.CombinedDomainCategoryPlotTests:org.jfree.chart.axis.junit.NumberAxisTests:org.jfree.chart.axis.junit.AxisTests:org.jfree.chart.plot.junit.MeterIntervalTests:org.jfree.chart.renderer.category.junit.BarRendererTests:org.jfree.chart.urls.junit.CustomXYURLGeneratorTests:org.jfree.data.general.junit.DatasetUtilitiesTests:org.jfree.data.general.junit.DefaultKeyedValueDatasetTests:org.jfree.data.general.junit.DefaultKeyedValues2DDatasetTests:org.jfree.data.general.junit.DefaultPieDatasetTests:org.jfree.chart.axis.junit.CyclicNumberAxisTests:org.jfree.chart.renderer.category.junit.AbstractCategoryItemRendererTests:org.jfree.chart.renderer.category.junit.AreaRendererTests:org.jfree.chart.renderer.category.junit.BarRenderer3DTests:org.jfree.chart.renderer.category.junit.BoxAndWhiskerRendererTests:org.jfree.chart.renderer.category.junit.CategoryStepRendererTests:org.jfree.chart.renderer.category.junit.GroupedStackedBarRendererTests:org.jfree.chart.renderer.category.junit.IntervalBarRendererTests:org.jfree.chart.renderer.category.junit.LayeredBarRendererTests:org.jfree.chart.renderer.category.junit.LineAndShapeRendererTests:org.jfree.chart.renderer.category.junit.MinMaxCategoryRendererTests:org.jfree.chart.renderer.category.junit.StackedAreaRendererTests:org.jfree.chart.renderer.category.junit.StackedBarRendererTests:org.jfree.chart.renderer.category.junit.StackedBarRenderer3DTests:org.jfree.chart.renderer.category.junit.StatisticalBarRendererTests:org.jfree.data.xy.junit.YIntervalDataItemTests:org.jfree.data.statistics.junit.BoxAndWhiskerCalculatorTests:org.jfree.chart.block.junit.ColorBlockTests:org.jfree.chart.axis.junit.DateAxisTests:org.jfree.data.xy.junit.VectorTests:org.jfree.chart.renderer.junit.DefaultPolarItemRendererTests:org.jfree.chart.util.junit.RelativeDateFormatTests:org.jfree.chart.axis.junit.DateTickUnitTests:org.jfree.data.statistics.junit.HistogramBinTests:org.jfree.chart.plot.junit.IntervalMarkerTests:org.jfree.chart.urls.junit.StandardXYURLGeneratorTests:org.jfree.chart.title.junit.DateTitleTests:org.jfree.chart.axis.junit.PeriodAxisTests:org.jfree.chart.block.junit.AbstractBlockTests:org.jfree.data.xy.junit.YIntervalSeriesTests:org.jfree.chart.block.junit.LabelBlockTests:org.jfree.data.statistics.junit.SimpleHistogramDatasetTests:org.jfree.data.gantt.junit.TaskSeriesTests:org.jfree.data.xy.junit.CategoryTableXYDatasetTests:org.jfree.data.xy.junit.DefaultHighLowDatasetTests:org.jfree.data.xy.junit.DefaultIntervalXYDatasetTests:org.jfree.data.xy.junit.DefaultWindDatasetTests:org.jfree.data.xy.junit.DefaultXYDatasetTests:org.jfree.data.xy.junit.IntervalXYDelegateTests:org.jfree.data.xy.junit.MatrixSeriesCollectionTests:org.jfree.data.xy.junit.TableXYDatasetTests:org.jfree.data.xy.junit.VectorDataItemTests:org.jfree.data.xy.junit.XIntervalSeriesCollectionTests:org.jfree.data.xy.junit.XIntervalSeriesTests:org.jfree.data.xy.junit.XYBarDatasetTests:org.jfree.data.xy.junit.XYDataItemTests:org.jfree.data.xy.junit.XYIntervalDataItemTests:org.jfree.data.xy.junit.XYIntervalSeriesCollectionTests:org.jfree.data.xy.junit.XYSeriesCollectionTests:org.jfree.data.xy.junit.YIntervalTests:org.jfree.data.xy.junit.YWithXIntervalTests:org.jfree.chart.needle.junit.ArrowNeedleTests:org.jfree.chart.needle.junit.MeterNeedleTests:org.jfree.chart.needle.junit.MiddlePinNeedleTests:org.jfree.chart.needle.junit.PinNeedleTests:org.jfree.chart.needle.junit.ShipNeedleTests:org.jfree.chart.needle.junit.WindNeedleTests:org.jfree.data.statistics.junit.HistogramDatasetTests:org.jfree.chart.block.junit.LineBorderTests:org.jfree.chart.title.junit.LegendGraphicTests:org.jfree.chart.axis.junit.AxisLocationTests:org.jfree.chart.block.junit.RectangleConstraintTests:org.jfree.chart.plot.junit.PolarPlotTests:org.jfree.chart.axis.junit.CategoryLabelWidthTypeTests:org.jfree.chart.axis.junit.AxisSpaceTests:org.jfree.chart.axis.junit.CategoryAnchorTests:org.jfree.chart.axis.junit.CategoryLabelPositionTests:org.jfree.chart.axis.junit.CategoryLabelPositionsTests:org.jfree.chart.axis.junit.DateTickTests:org.jfree.chart.axis.junit.ExtendedCategoryAxisTests:org.jfree.chart.axis.junit.MarkerAxisBandTests:org.jfree.chart.axis.junit.MonthDateFormatTests:org.jfree.chart.axis.junit.PeriodAxisLabelInfoTests:org.jfree.chart.axis.junit.QuarterDateFormatTests:org.jfree.chart.axis.junit.SubCategoryAxisTests:org.jfree.chart.axis.junit.SymbolAxisTests:org.jfree.chart.plot.junit.MarkerTests:org.jfree.data.junit.ComparableObjectSeriesTests:org.jfree.chart.labels.junit.StandardCategoryToolTipGeneratorTests:org.jfree.data.gantt.junit.TaskSeriesCollectionTests:org.jfree.chart.plot.junit.CombinedRangeXYPlotTests:org.jfree.data.statistics.junit.BoxAndWhiskerItemTests:org.jfree.chart.labels.junit.BubbleXYItemLabelGeneratorTests:org.jfree.chart.entity.junit.PieSectionEntityTests:org.jfree.chart.plot.junit.FastScatterPlotTests:org.jfree.chart.plot.junit.SpiderWebPlotTests:org.jfree.chart.urls.junit.StandardPieURLGeneratorTests:org.jfree.chart.renderer.junit.AbstractRendererTests:org.jfree.chart.renderer.junit.AreaRendererEndTypeTests:org.jfree.chart.labels.junit.StandardPieToolTipGeneratorTests:org.jfree.chart.plot.junit.MeterPlotTests:org.jfree.data.junit.DataUtilitiesTests:org.jfree.chart.block.junit.BlockContainerTests:org.jfree.data.junit.RangeTypeTests:org.jfree.data.statistics.junit.DefaultBoxAndWhiskerCategoryDatasetTests:org.jfree.chart.labels.junit.BoxAndWhiskerToolTipGeneratorTests:org.jfree.chart.entity.junit.LegendItemEntityTests:org.jfree.chart.entity.junit.XYItemEntityTests:org.jfree.chart.title.junit.TitleTests:org.jfree.chart.urls.junit.StandardCategoryURLGeneratorTests:org.jfree.chart.title.junit.PaintScaleLegendTests:org.jfree.data.junit.KeyedObjectTests:org.jfree.chart.labels.junit.ItemLabelAnchorTests:org.jfree.chart.block.junit.FlowArrangementTests:org.jfree.chart.plot.junit.PiePlot3DTests:org.jfree.chart.title.junit.TextTitleTests:org.jfree.data.junit.DomainOrderTests:org.jfree.chart.block.junit.BorderArrangementTests:org.jfree.chart.block.junit.BlockBorderTests:org.jfree.data.junit.DefaultKeyedValues2DTests:org.jfree.chart.labels.junit.CustomXYItemLabelGeneratorTests:org.jfree.chart.labels.junit.IntervalCategoryLabelGeneratorTests:org.jfree.chart.labels.junit.ItemLabelPositionTests:org.jfree.chart.labels.junit.StandardCategorySeriesLabelGeneratorTests:org.jfree.chart.labels.junit.StandardXYZToolTipGeneratorTests:org.jfree.chart.plot.junit.PlotRenderingInfoTests:org.jfree.data.statistics.junit.MeanAndStandardDeviationTests:org.jfree.data.statistics.junit.RegressionTests:org.jfree.chart.plot.junit.PlotTests:org.jfree.data.statistics.junit.DefaultStatisticalCategoryDatasetTests:org.jfree.data.statistics.junit.StatisticsTests:org.jfree.chart.plot.junit.ThermometerPlotTests:org.jfree.chart.plot.junit.CombinedDomainXYPlotTests:org.jfree.chart.plot.junit.PiePlotTests:
+2017-03-29 10:36:47,955 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:pathToMVNRepository= 
+2017-03-29 10:36:47,955 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:executeRegression= true
+2017-03-29 10:36:47,955 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:modificationpointnavigation= weight
+2017-03-29 10:36:47,955 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxtime= 120
+2017-03-29 10:36:47,955 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:probagenmutation= false
+2017-03-29 10:36:47,955 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:alternativecompliancelevel= 4
+2017-03-29 10:36:47,955 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:version-location= ./math-version/
+2017-03-29 10:36:47,955 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:location= /data/people/qx5/defects4j-bugs/charts/projs/Chart_26_buggy
+2017-03-29 10:36:47,956 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:stopfirst= true
+2017-03-29 10:36:47,957 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:jvm4testexecution= /home/qx5/jdk1.8.0_111/bin
+2017-03-29 10:36:47,957 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:bugId= 280
+2017-03-29 10:36:47,957 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:mutationrate= 1 
+2017-03-29 10:36:47,957 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:projectIdentifier= Chart_26
+2017-03-29 10:36:47,957 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evo_buggy_class= true
+2017-03-29 10:36:47,957 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evoRunOnBuggyClass= true
+2017-03-29 10:36:47,957 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:jvm4evosuitetestexecution= /home/qx5/jdk1.8.0_111/bin
+2017-03-29 10:36:47,957 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:resetoperations= false
+2017-03-29 10:36:47,957 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:seed= 0
+2017-03-29 10:36:47,957 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:testbystep= false
+2017-03-29 10:36:47,957 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:srctestfolder= //tests/
+2017-03-29 10:36:47,957 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:javacompliancelevel= 8
+2017-03-29 10:36:47,957 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:bintestfolder= //build-tests/
+2017-03-29 10:36:47,957 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:commandTrunk= 50000
+2017-03-29 10:36:47,957 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:dependenciespath= /data/people/qx5/defects4j-bugs/charts/projs/Chart_26_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar
+2017-03-29 10:36:47,958 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:multipointmodification= false
+2017-03-29 10:36:47,958 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:validation= process
+2017-03-29 10:36:47,958 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:scope= package
+2017-03-29 10:36:47,958 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuitetimeout= 120
+2017-03-29 10:36:47,958 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evoDSE= false
+2017-03-29 10:36:47,958 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:elementsToMutate= 10
+2017-03-29 10:36:47,958 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:lastJUnitVersion= ./examples/libs/junit-4.11.jar
+2017-03-29 10:36:47,958 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:failing= org.jfree.chart.junit.AreaChartTests:org.jfree.chart.junit.BarChart3DTests:org.jfree.chart.junit.BarChartTests:org.jfree.chart.junit.GanttChartTests:org.jfree.chart.junit.LineChart3DTests:org.jfree.chart.junit.LineChartTests:org.jfree.chart.junit.StackedAreaChartTests:org.jfree.chart.junit.StackedBarChart3DTests:org.jfree.chart.junit.StackedBarChartTests:org.jfree.chart.junit.WaterfallChartTests:org.jfree.chart.plot.junit.CategoryPlotTests:org.jfree.chart.renderer.category.junit.BoxAndWhiskerRendererTests:org.jfree.chart.renderer.category.junit.GroupedStackedBarRendererTests:org.jfree.chart.renderer.category.junit.IntervalBarRendererTests:org.jfree.chart.renderer.category.junit.LayeredBarRendererTests:org.jfree.chart.renderer.category.junit.LevelRendererTests:org.jfree.chart.renderer.category.junit.MinMaxCategoryRendererTests:org.jfree.chart.renderer.category.junit.StatisticalBarRendererTests:org.jfree.chart.renderer.category.junit.StatisticalLineAndShapeRendererTests
+2017-03-29 10:36:47,958 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:allpoints= false
+2017-03-29 10:36:47,958 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:resourcesfolder= /src/main/resources:/src/test/resources:
+2017-03-29 10:36:47,958 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:regressionforfaultlocalization= true
+2017-03-29 10:36:47,958 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:population= 1
+2017-03-29 10:36:47,958 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:saveall= false
+2017-03-29 10:36:47,958 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:pvariantfoldername= variant-
+2017-03-29 10:36:47,958 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:savesolution= true
+2017-03-29 10:36:47,958 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:srcjavafolder= //source/
+2017-03-29 10:36:47,958 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evo_affected_by_op= true
+2017-03-29 10:36:47,958 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:binjavafolder= //build/
+2017-03-29 10:36:47,958 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:reintroduce= original-parents
+2017-03-29 10:36:47,958 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuitejar= ./lib/evosuite-master-1.0.4-SNAPSHOT.jar
+2017-03-29 10:36:47,959 INFO fr.inria.astor.core.setup.ConfigurationProperties - ----------------------------
+2017-03-29 10:36:47,960 INFO main - mod_point ModificPoint=CategoryPlot line: 2547, el: CtAssignmentImpl
+2017-03-29 10:36:47,960 INFO main - -->op: RemoveOp: `state = new org.jfree.cha[...] ` ---> `-` at pos 0 of parent `{ 	state = new org.jfree.[...]`
+2017-03-29 10:36:57,225 INFO main - mod_point ModificPoint=AxisState line: 184, el: CtReturnImpl
+2017-03-29 10:36:57,225 INFO main - -->op: RemoveOp: `return org.jfree.chart.ax[...] ` ---> `-` at pos 0 of parent `{ 	return org.jfree.chart[...]`
+2017-03-29 10:36:59,513 INFO main - mod_point ModificPoint=AxisState line: 193, el: CtAssignmentImpl
+2017-03-29 10:36:59,514 INFO main - -->op: RemoveOp: `org.jfree.chart.axis.Axis[...] ` ---> `-` at pos 0 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:37:04,257 INFO main - mod_point ModificPoint=CategoryAxis line: 736, el: CtIfImpl
+2017-03-29 10:37:04,258 INFO main - -->op: ReplaceIfBooleanOp: `if (space == null) { 	spa[...] ` ---> `if (true) { 	space = new [...]` at pos 0 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:37:08,924 INFO main - mod_point ModificPoint=CategoryAxis line: 736, el: CtIfImpl
+2017-03-29 10:37:08,925 INFO main - -->op: ReplaceIfBooleanOp: `if (space == null) { 	spa[...] ` ---> `if (false) { 	space = new[...]` at pos 0 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:37:13,381 INFO main - mod_point ModificPoint=CategoryAxis line: 736, el: CtIfImpl
+2017-03-29 10:37:13,382 INFO main - -->op: RemoveOp: `if (space == null) { 	spa[...] ` ---> `-` at pos 0 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:37:18,854 INFO main - mod_point ModificPoint=CategoryAxis line: 741, el: CtIfImpl
+2017-03-29 10:37:18,855 INFO main - -->op: ReplaceIfBooleanOp: `if (!(isVisible())) { 	re[...] ` ---> `if (true) { 	return space[...]` at pos 1 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:37:23,964 INFO main - mod_point ModificPoint=CategoryAxis line: 741, el: CtIfImpl
+2017-03-29 10:37:23,965 INFO main - -->op: ReplaceIfBooleanOp: `if (!(isVisible())) { 	re[...] ` ---> `if (false) { 	return spac[...]` at pos 1 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:37:29,329 INFO main - mod_point ModificPoint=CategoryAxis line: 741, el: CtIfImpl
+2017-03-29 10:37:29,330 INFO main - -->op: RemoveOp: `if (!(isVisible())) { 	re[...] ` ---> `-` at pos 1 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:37:34,832 INFO main - mod_point ModificPoint=CategoryAxis line: 746, el: CtLocalVariableImpl
+2017-03-29 10:37:34,833 INFO main - -->op: RemoveOp: `double tickLabelHeight = [...] ` ---> `-` at pos 2 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:37:37,119 INFO main - mod_point ModificPoint=CategoryAxis line: 747, el: CtLocalVariableImpl
+2017-03-29 10:37:37,119 INFO main - -->op: RemoveOp: `double tickLabelWidth = 0[...] ` ---> `-` at pos 3 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:37:39,296 INFO main - mod_point ModificPoint=CategoryAxis line: 748, el: CtIfImpl
+2017-03-29 10:37:39,297 INFO main - -->op: ReplaceIfBooleanOp: `if (isTickLabelsVisible()[...] ` ---> `if (true) { 	g2.setFont(g[...]` at pos 4 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:37:44,347 INFO main - mod_point ModificPoint=CategoryAxis line: 748, el: CtIfImpl
+2017-03-29 10:37:44,348 INFO main - -->op: ReplaceIfBooleanOp: `if (isTickLabelsVisible()[...] ` ---> `if (false) { 	g2.setFont([...]` at pos 4 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:37:49,877 INFO main - mod_point ModificPoint=CategoryAxis line: 748, el: CtIfImpl
+2017-03-29 10:37:49,878 INFO main - -->op: RemoveOp: `if (isTickLabelsVisible()[...] ` ---> `-` at pos 4 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:37:55,192 INFO main - mod_point ModificPoint=CategoryAxis line: 749, el: CtInvocationImpl
+2017-03-29 10:37:55,192 INFO main - -->op: RemoveOp: `g2.setFont(getTickLabelFo[...] ` ---> `-` at pos 0 of parent `{ 	g2.setFont(getTickLabe[...]`
+2017-03-29 10:38:01,993 INFO main - mod_point ModificPoint=CategoryAxis line: 750, el: CtLocalVariableImpl
+2017-03-29 10:38:01,994 INFO main - -->op: RemoveOp: `org.jfree.chart.axis.Axis[...] ` ---> `-` at pos 1 of parent `{ 	g2.setFont(getTickLabe[...]`
+2017-03-29 10:38:04,346 INFO main - mod_point ModificPoint=CategoryAxis line: 752, el: CtInvocationImpl
+2017-03-29 10:38:04,346 INFO main - -->op: RemoveOp: `refreshTicks(g2, state, p[...] ` ---> `-` at pos 2 of parent `{ 	g2.setFont(getTickLabe[...]`
+2017-03-29 10:38:08,900 INFO main - mod_point ModificPoint=CategoryAxis line: 753, el: CtIfImpl
+2017-03-29 10:38:08,901 INFO main - -->op: ReplaceIfBooleanOp: `if (edge == (org.jfree.ch[...] ` ---> `if (true) { 	tickLabelHei[...]` at pos 3 of parent `{ 	g2.setFont(getTickLabe[...]`
+2017-03-29 10:38:14,854 INFO main - mod_point ModificPoint=CategoryAxis line: 753, el: CtIfImpl
+2017-03-29 10:38:14,854 INFO main - -->op: ReplaceIfBooleanOp: `if (edge == (org.jfree.ch[...] ` ---> `if (false) { 	tickLabelHe[...]` at pos 3 of parent `{ 	g2.setFont(getTickLabe[...]`
+2017-03-29 10:38:20,057 INFO main - mod_point ModificPoint=CategoryAxis line: 753, el: CtIfImpl
+2017-03-29 10:38:20,058 INFO main - -->op: RemoveOp: `if (edge == (org.jfree.ch[...] ` ---> `-` at pos 3 of parent `{ 	g2.setFont(getTickLabe[...]`
+2017-03-29 10:38:24,616 INFO main - mod_point ModificPoint=CategoryAxis line: 756, el: CtIfImpl
+2017-03-29 10:38:24,616 INFO main - -->op: ReplaceIfBooleanOp: `if (edge == (org.jfree.ch[...] ` ---> `if (true) { 	tickLabelHei[...]` at pos 0 of parent `{ 	if (edge == (org.jfree[...]`
+2017-03-29 10:38:31,785 INFO main - mod_point ModificPoint=CategoryAxis line: 756, el: CtIfImpl
+2017-03-29 10:38:31,786 INFO main - -->op: ReplaceIfBooleanOp: `if (edge == (org.jfree.ch[...] ` ---> `if (false) { 	tickLabelHe[...]` at pos 0 of parent `{ 	if (edge == (org.jfree[...]`
+2017-03-29 10:38:36,891 INFO main - mod_point ModificPoint=CategoryAxis line: 756, el: CtIfImpl
+2017-03-29 10:38:36,892 INFO main - -->op: RemoveOp: `if (edge == (org.jfree.ch[...] ` ---> `-` at pos 0 of parent `{ 	if (edge == (org.jfree[...]`
+2017-03-29 10:38:43,510 INFO main - mod_point ModificPoint=CategoryAxis line: 768, el: CtLocalVariableImpl
+2017-03-29 10:38:43,510 INFO main - -->op: RemoveOp: `java.awt.geom.Rectangle2D[...] ` ---> `-` at pos 5 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:38:46,464 INFO main - mod_point ModificPoint=CategoryAxis line: 769, el: CtLocalVariableImpl
+2017-03-29 10:38:46,464 INFO main - -->op: RemoveOp: `double labelHeight = 0.0 ` ---> `-` at pos 6 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:38:49,263 INFO main - mod_point ModificPoint=CategoryAxis line: 770, el: CtLocalVariableImpl
+2017-03-29 10:38:49,263 INFO main - -->op: RemoveOp: `double labelWidth = 0.0 ` ---> `-` at pos 7 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:38:51,658 INFO main - mod_point ModificPoint=CategoryAxis line: 771, el: CtIfImpl
+2017-03-29 10:38:51,659 INFO main - -->op: ReplaceIfBooleanOp: `if (org.jfree.chart.util.[...] ` ---> `if (true) { 	labelHeight [...]` at pos 8 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:38:57,896 INFO main - mod_point ModificPoint=CategoryAxis line: 771, el: CtIfImpl
+2017-03-29 10:38:57,897 INFO main - -->op: ReplaceIfBooleanOp: `if (org.jfree.chart.util.[...] ` ---> `if (false) { 	labelHeight[...]` at pos 8 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:39:03,087 INFO main - mod_point ModificPoint=CategoryAxis line: 771, el: CtIfImpl
+2017-03-29 10:39:03,088 INFO main - -->op: RemoveOp: `if (org.jfree.chart.util.[...] ` ---> `-` at pos 8 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:39:08,348 INFO main - mod_point ModificPoint=CategoryAxis line: 781, el: CtReturnImpl
+2017-03-29 10:39:08,349 INFO main - -->op: RemoveOp: `return space ` ---> `-` at pos 9 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:39:10,896 INFO main - mod_point ModificPoint=CategoryAxis line: 973, el: CtLocalVariableImpl
+2017-03-29 10:39:10,896 INFO main - -->op: RemoveOp: `java.util.List ticks = ne[...] ` ---> `-` at pos 0 of parent `{ 	java.util.List ticks =[...]`
+2017-03-29 10:39:13,699 INFO main - mod_point ModificPoint=CategoryAxis line: 976, el: CtIfImpl
+2017-03-29 10:39:13,700 INFO main - -->op: ReplaceIfBooleanOp: `if (((dataArea.getHeight([...] ` ---> `if (true) { 	return ticks[...]` at pos 1 of parent `{ 	java.util.List ticks =[...]`
+2017-03-29 10:39:18,737 INFO main - mod_point ModificPoint=CategoryAxis line: 976, el: CtIfImpl
+2017-03-29 10:39:18,738 INFO main - -->op: ReplaceIfBooleanOp: `if (((dataArea.getHeight([...] ` ---> `if (false) { 	return tick[...]` at pos 1 of parent `{ 	java.util.List ticks =[...]`
+2017-03-29 10:39:24,806 INFO main - mod_point ModificPoint=CategoryAxis line: 976, el: CtIfImpl
+2017-03-29 10:39:24,807 INFO main - -->op: RemoveOp: `if (((dataArea.getHeight([...] ` ---> `-` at pos 1 of parent `{ 	java.util.List ticks =[...]`
+2017-03-29 10:39:31,060 INFO main - mod_point ModificPoint=CategoryAxis line: 980, el: CtLocalVariableImpl
+2017-03-29 10:39:31,061 INFO main - -->op: RemoveOp: `org.jfree.chart.plot.Cate[...] ` ---> `-` at pos 2 of parent `{ 	java.util.List ticks =[...]`
+2017-03-29 10:39:33,146 INFO main - mod_point ModificPoint=CategoryAxis line: 981, el: CtLocalVariableImpl
+2017-03-29 10:39:33,146 INFO main - -->op: RemoveOp: `java.util.List categories[...] ` ---> `-` at pos 3 of parent `{ 	java.util.List ticks =[...]`
+2017-03-29 10:39:35,146 INFO main - mod_point ModificPoint=CategoryAxis line: 982, el: CtLocalVariableImpl
+2017-03-29 10:39:35,146 INFO main - -->op: RemoveOp: `double max = 0.0 ` ---> `-` at pos 4 of parent `{ 	java.util.List ticks =[...]`
+2017-03-29 10:39:37,683 INFO main - mod_point ModificPoint=CategoryAxis line: 984, el: CtIfImpl
+2017-03-29 10:39:37,684 INFO main - -->op: ReplaceIfBooleanOp: `if (categories != null) {[...] ` ---> `if (true) { 	org.jfree.ch[...]` at pos 5 of parent `{ 	java.util.List ticks =[...]`
+2017-03-29 10:39:42,519 INFO main - mod_point ModificPoint=CategoryAxis line: 984, el: CtIfImpl
+2017-03-29 10:39:42,519 INFO main - -->op: ReplaceIfBooleanOp: `if (categories != null) {[...] ` ---> `if (false) { 	org.jfree.c[...]` at pos 5 of parent `{ 	java.util.List ticks =[...]`
+2017-03-29 10:39:47,250 INFO main - mod_point ModificPoint=CategoryAxis line: 984, el: CtIfImpl
+2017-03-29 10:39:47,251 INFO main - -->op: RemoveOp: `if (categories != null) {[...] ` ---> `-` at pos 5 of parent `{ 	java.util.List ticks =[...]`
+2017-03-29 10:39:52,847 INFO main - mod_point ModificPoint=CategoryAxis line: 985, el: CtLocalVariableImpl
+2017-03-29 10:39:52,848 INFO main - -->op: RemoveOp: `org.jfree.chart.axis.Cate[...] ` ---> `-` at pos 0 of parent `{ 	org.jfree.chart.axis.C[...]`
+2017-03-29 10:39:55,426 INFO main - mod_point ModificPoint=CategoryAxis line: 987, el: CtLocalVariableImpl
+2017-03-29 10:39:55,426 INFO main - -->op: RemoveOp: `float r = org.jfree.chart[...] ` ---> `-` at pos 1 of parent `{ 	org.jfree.chart.axis.C[...]`
+2017-03-29 10:39:57,734 INFO main - mod_point ModificPoint=CategoryAxis line: 988, el: CtIfImpl
+2017-03-29 10:39:57,734 INFO main - -->op: ReplaceIfBooleanOp: `if (r <= 0.0) { 	r = posi[...] ` ---> `if (true) { 	r = position[...]` at pos 2 of parent `{ 	org.jfree.chart.axis.C[...]`
+2017-03-29 10:40:04,155 INFO main - mod_point ModificPoint=CategoryAxis line: 988, el: CtIfImpl
+2017-03-29 10:40:04,155 INFO main - -->op: ReplaceIfBooleanOp: `if (r <= 0.0) { 	r = posi[...] ` ---> `if (false) { 	r = positio[...]` at pos 2 of parent `{ 	org.jfree.chart.axis.C[...]`
+2017-03-29 10:40:08,714 INFO main - mod_point ModificPoint=CategoryAxis line: 988, el: CtIfImpl
+2017-03-29 10:40:08,715 INFO main - -->op: RemoveOp: `if (r <= 0.0) { 	r = posi[...] ` ---> `-` at pos 2 of parent `{ 	org.jfree.chart.axis.C[...]`
+2017-03-29 10:40:16,946 INFO main - mod_point ModificPoint=CategoryAxis line: 989, el: CtAssignmentImpl
+2017-03-29 10:40:16,946 INFO main - -->op: RemoveOp: `r = position.getWidthRati[...] ` ---> `-` at pos 0 of parent `{ 	r = position.getWidthR[...]`
+2017-03-29 10:40:22,048 INFO main - mod_point ModificPoint=CategoryAxis line: 992, el: CtLocalVariableImpl
+2017-03-29 10:40:22,049 INFO main - -->op: RemoveOp: `float l = 0.0F ` ---> `-` at pos 3 of parent `{ 	org.jfree.chart.axis.C[...]`
+2017-03-29 10:40:24,034 INFO main - mod_point ModificPoint=CategoryAxis line: 993, el: CtIfImpl
+2017-03-29 10:40:24,034 INFO main - -->op: ReplaceIfBooleanOp: `if ((position.getWidthTyp[...] ` ---> `if (true) { 	l = ((float)[...]` at pos 4 of parent `{ 	org.jfree.chart.axis.C[...]`
+2017-03-29 10:40:29,048 INFO main - mod_point ModificPoint=CategoryAxis line: 993, el: CtIfImpl
+2017-03-29 10:40:29,048 INFO main - -->op: ReplaceIfBooleanOp: `if ((position.getWidthTyp[...] ` ---> `if (false) { 	l = ((float[...]` at pos 4 of parent `{ 	org.jfree.chart.axis.C[...]`
+2017-03-29 10:40:34,396 INFO main - mod_point ModificPoint=CategoryAxis line: 993, el: CtIfImpl
+2017-03-29 10:40:34,396 INFO main - -->op: RemoveOp: `if ((position.getWidthTyp[...] ` ---> `-` at pos 4 of parent `{ 	org.jfree.chart.axis.C[...]`
+2017-03-29 10:40:39,142 INFO main - mod_point ModificPoint=CategoryAxis line: 1005, el: CtLocalVariableImpl
+2017-03-29 10:40:39,142 INFO main - -->op: RemoveOp: `int categoryIndex = 0 ` ---> `-` at pos 5 of parent `{ 	org.jfree.chart.axis.C[...]`
+2017-03-29 10:40:41,182 INFO main - mod_point ModificPoint=CategoryAxis line: 1006, el: CtLocalVariableImpl
+2017-03-29 10:40:41,182 INFO main - -->op: RemoveOp: `java.util.Iterator iterat[...] ` ---> `-` at pos 6 of parent `{ 	org.jfree.chart.axis.C[...]`
+2017-03-29 10:40:43,211 INFO main - mod_point ModificPoint=CategoryAxis line: 1007, el: CtWhileImpl
+2017-03-29 10:40:43,212 INFO main - -->op: RemoveOp: `while (iterator.hasNext()[...] ` ---> `-` at pos 7 of parent `{ 	org.jfree.chart.axis.C[...]`
+2017-03-29 10:40:48,371 INFO main - mod_point ModificPoint=CategoryAxis line: 1026, el: CtInvocationImpl
+2017-03-29 10:40:48,372 INFO main - -->op: RemoveOp: `state.setMax(max) ` ---> `-` at pos 6 of parent `{ 	java.util.List ticks =[...]`
+2017-03-29 10:40:53,569 INFO main - mod_point ModificPoint=CategoryAxis line: 1027, el: CtReturnImpl
+2017-03-29 10:40:53,569 INFO main - -->op: RemoveOp: `return ticks ` ---> `-` at pos 7 of parent `{ 	java.util.List ticks =[...]`
+2017-03-29 10:40:55,645 INFO main - mod_point ModificPoint=CategoryPlot line: 708, el: CtReturnImpl
+2017-03-29 10:40:55,645 INFO main - -->op: RemoveOp: `return getDomainAxisLocat[...] ` ---> `-` at pos 0 of parent `{ 	return getDomainAxisLo[...]`
+2017-03-29 10:40:57,550 INFO main - mod_point ModificPoint=CategoryPlot line: 721, el: CtLocalVariableImpl
+2017-03-29 10:40:57,550 INFO main - -->op: RemoveOp: `org.jfree.chart.axis.Axis[...] ` ---> `-` at pos 0 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:40:59,479 INFO main - mod_point ModificPoint=CategoryPlot line: 722, el: CtIfImpl
+2017-03-29 10:40:59,480 INFO main - -->op: ReplaceIfBooleanOp: `if (index < (org.jfree.ch[...] ` ---> `if (true) { 	result = ((o[...]` at pos 1 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:41:04,638 INFO main - mod_point ModificPoint=CategoryPlot line: 722, el: CtIfImpl
+2017-03-29 10:41:04,639 INFO main - -->op: ReplaceIfBooleanOp: `if (index < (org.jfree.ch[...] ` ---> `if (false) { 	result = (([...]` at pos 1 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:41:09,487 INFO main - mod_point ModificPoint=CategoryPlot line: 722, el: CtIfImpl
+2017-03-29 10:41:09,488 INFO main - -->op: RemoveOp: `if (index < (org.jfree.ch[...] ` ---> `-` at pos 1 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:41:14,570 INFO main - mod_point ModificPoint=CategoryPlot line: 723, el: CtAssignmentImpl
+2017-03-29 10:41:14,570 INFO main - -->op: RemoveOp: `result = ((org.jfree.char[...] ` ---> `-` at pos 0 of parent `{ 	result = ((org.jfree.c[...]`
+2017-03-29 10:41:18,955 INFO main - mod_point ModificPoint=CategoryPlot line: 725, el: CtIfImpl
+2017-03-29 10:41:18,955 INFO main - -->op: ReplaceIfBooleanOp: `if (result == null) { 	re[...] ` ---> `if (true) { 	result = org[...]` at pos 2 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:41:24,008 INFO main - mod_point ModificPoint=CategoryPlot line: 725, el: CtIfImpl
+2017-03-29 10:41:24,008 INFO main - -->op: ReplaceIfBooleanOp: `if (result == null) { 	re[...] ` ---> `if (false) { 	result = or[...]` at pos 2 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:41:28,475 INFO main - mod_point ModificPoint=CategoryPlot line: 725, el: CtIfImpl
+2017-03-29 10:41:28,475 INFO main - -->op: RemoveOp: `if (result == null) { 	re[...] ` ---> `-` at pos 2 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:41:34,212 INFO main - mod_point ModificPoint=CategoryPlot line: 728, el: CtReturnImpl
+2017-03-29 10:41:34,212 INFO main - -->op: RemoveOp: `return result ` ---> `-` at pos 3 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:41:36,198 INFO main - mod_point ModificPoint=CategoryPlot line: 815, el: CtLocalVariableImpl
+2017-03-29 10:41:36,198 INFO main - -->op: RemoveOp: `org.jfree.chart.util.Rect[...] ` ---> `-` at pos 0 of parent `{ 	org.jfree.chart.util.R[...]`
+2017-03-29 10:41:38,150 INFO main - mod_point ModificPoint=CategoryPlot line: 816, el: CtLocalVariableImpl
+2017-03-29 10:41:38,150 INFO main - -->op: RemoveOp: `org.jfree.chart.axis.Axis[...] ` ---> `-` at pos 1 of parent `{ 	org.jfree.chart.util.R[...]`
+2017-03-29 10:41:40,105 INFO main - mod_point ModificPoint=CategoryPlot line: 817, el: CtIfImpl
+2017-03-29 10:41:40,106 INFO main - -->op: ReplaceIfBooleanOp: `if (location != null) { 	[...] ` ---> `if (true) { 	result = org[...]` at pos 2 of parent `{ 	org.jfree.chart.util.R[...]`
+2017-03-29 10:41:44,179 INFO main - mod_point ModificPoint=CategoryPlot line: 817, el: CtIfImpl
+2017-03-29 10:41:44,180 INFO main - -->op: ReplaceIfBooleanOp: `if (location != null) { 	[...] ` ---> `if (false) { 	result = or[...]` at pos 2 of parent `{ 	org.jfree.chart.util.R[...]`
+2017-03-29 10:41:48,993 INFO main - mod_point ModificPoint=CategoryPlot line: 817, el: CtIfImpl
+2017-03-29 10:41:48,993 INFO main - -->op: RemoveOp: `if (location != null) { 	[...] ` ---> `-` at pos 2 of parent `{ 	org.jfree.chart.util.R[...]`
+2017-03-29 10:41:53,463 INFO main - mod_point ModificPoint=CategoryPlot line: 818, el: CtAssignmentImpl
+2017-03-29 10:41:53,463 INFO main - -->op: RemoveOp: `result = org.jfree.chart.[...] ` ---> `-` at pos 0 of parent `{ 	result = org.jfree.cha[...]`
+2017-03-29 10:41:59,089 INFO main - mod_point ModificPoint=CategoryPlot line: 823, el: CtReturnImpl
+2017-03-29 10:41:59,090 INFO main - -->op: RemoveOp: `return result ` ---> `-` at pos 3 of parent `{ 	org.jfree.chart.util.R[...]`
+2017-03-29 10:42:01,374 INFO main - mod_point ModificPoint=CategoryPlot line: 976, el: CtLocalVariableImpl
+2017-03-29 10:42:01,374 INFO main - -->op: RemoveOp: `org.jfree.chart.axis.Axis[...] ` ---> `-` at pos 0 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:42:03,627 INFO main - mod_point ModificPoint=CategoryPlot line: 977, el: CtIfImpl
+2017-03-29 10:42:03,628 INFO main - -->op: ReplaceIfBooleanOp: `if (index < (org.jfree.ch[...] ` ---> `if (true) { 	result = ((o[...]` at pos 1 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:42:08,334 INFO main - mod_point ModificPoint=CategoryPlot line: 977, el: CtIfImpl
+2017-03-29 10:42:08,334 INFO main - -->op: ReplaceIfBooleanOp: `if (index < (org.jfree.ch[...] ` ---> `if (false) { 	result = (([...]` at pos 1 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:42:18,139 INFO main - mod_point ModificPoint=CategoryPlot line: 977, el: CtIfImpl
+2017-03-29 10:42:18,140 INFO main - -->op: RemoveOp: `if (index < (org.jfree.ch[...] ` ---> `-` at pos 1 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:42:23,963 INFO main - mod_point ModificPoint=CategoryPlot line: 978, el: CtAssignmentImpl
+2017-03-29 10:42:23,963 INFO main - -->op: RemoveOp: `result = ((org.jfree.char[...] ` ---> `-` at pos 0 of parent `{ 	result = ((org.jfree.c[...]`
+2017-03-29 10:42:29,452 INFO main - mod_point ModificPoint=CategoryPlot line: 980, el: CtIfImpl
+2017-03-29 10:42:29,452 INFO main - -->op: ReplaceIfBooleanOp: `if (result == null) { 	re[...] ` ---> `if (true) { 	result = org[...]` at pos 2 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:42:34,944 INFO main - mod_point ModificPoint=CategoryPlot line: 980, el: CtIfImpl
+2017-03-29 10:42:34,945 INFO main - -->op: ReplaceIfBooleanOp: `if (result == null) { 	re[...] ` ---> `if (false) { 	result = or[...]` at pos 2 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:42:39,786 INFO main - mod_point ModificPoint=CategoryPlot line: 980, el: CtIfImpl
+2017-03-29 10:42:39,786 INFO main - -->op: RemoveOp: `if (result == null) { 	re[...] ` ---> `-` at pos 2 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:42:45,197 INFO main - mod_point ModificPoint=CategoryPlot line: 983, el: CtReturnImpl
+2017-03-29 10:42:45,197 INFO main - -->op: RemoveOp: `return result ` ---> `-` at pos 3 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:42:47,704 INFO main - mod_point ModificPoint=CategoryPlot line: 1067, el: CtLocalVariableImpl
+2017-03-29 10:42:47,704 INFO main - -->op: RemoveOp: `org.jfree.chart.axis.Axis[...] ` ---> `-` at pos 0 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:42:50,416 INFO main - mod_point ModificPoint=CategoryPlot line: 1068, el: CtLocalVariableImpl
+2017-03-29 10:42:50,416 INFO main - -->op: RemoveOp: `org.jfree.chart.util.Rect[...] ` ---> `-` at pos 1 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:42:52,686 INFO main - mod_point ModificPoint=CategoryPlot line: 1070, el: CtIfImpl
+2017-03-29 10:42:52,686 INFO main - -->op: ReplaceIfBooleanOp: `if (result == null) { 	re[...] ` ---> `if (true) { 	result = org[...]` at pos 2 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:42:58,015 INFO main - mod_point ModificPoint=CategoryPlot line: 1070, el: CtIfImpl
+2017-03-29 10:42:58,015 INFO main - -->op: ReplaceIfBooleanOp: `if (result == null) { 	re[...] ` ---> `if (false) { 	result = or[...]` at pos 2 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:43:02,462 INFO main - mod_point ModificPoint=CategoryPlot line: 1070, el: CtIfImpl
+2017-03-29 10:43:02,462 INFO main - -->op: RemoveOp: `if (result == null) { 	re[...] ` ---> `-` at pos 2 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:43:07,795 INFO main - mod_point ModificPoint=CategoryPlot line: 1073, el: CtReturnImpl
+2017-03-29 10:43:07,795 INFO main - -->op: RemoveOp: `return result ` ---> `-` at pos 3 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:43:09,683 INFO main - mod_point ModificPoint=CategoryPlot line: 1727, el: CtLocalVariableImpl
+2017-03-29 10:43:09,683 INFO main - -->op: RemoveOp: `org.jfree.chart.LegendIte[...] ` ---> `-` at pos 0 of parent `{ 	org.jfree.chart.Legend[...]`
+2017-03-29 10:43:11,952 INFO main - mod_point ModificPoint=CategoryPlot line: 1728, el: CtIfImpl
+2017-03-29 10:43:11,953 INFO main - -->op: ReplaceIfBooleanOp: `if (result == null) { 	re[...] ` ---> `if (true) { 	result = new[...]` at pos 1 of parent `{ 	org.jfree.chart.Legend[...]`
+2017-03-29 10:43:17,926 INFO main - mod_point ModificPoint=CategoryPlot line: 1728, el: CtIfImpl
+2017-03-29 10:43:17,927 INFO main - -->op: ReplaceIfBooleanOp: `if (result == null) { 	re[...] ` ---> `if (false) { 	result = ne[...]` at pos 1 of parent `{ 	org.jfree.chart.Legend[...]`
+2017-03-29 10:43:22,619 INFO main - mod_point ModificPoint=CategoryPlot line: 1728, el: CtIfImpl
+2017-03-29 10:43:22,619 INFO main - -->op: RemoveOp: `if (result == null) { 	re[...] ` ---> `-` at pos 1 of parent `{ 	org.jfree.chart.Legend[...]`
+2017-03-29 10:43:28,350 INFO main - mod_point ModificPoint=CategoryPlot line: 1729, el: CtAssignmentImpl
+2017-03-29 10:43:28,351 INFO main - -->op: RemoveOp: `result = new org.jfree.ch[...] ` ---> `-` at pos 0 of parent `{ 	result = new org.jfree[...]`
+2017-03-29 10:43:34,606 INFO main - mod_point ModificPoint=CategoryPlot line: 1731, el: CtLocalVariableImpl
+2017-03-29 10:43:34,606 INFO main - -->op: RemoveOp: `int count = org.jfree.cha[...] ` ---> `-` at pos 1 of parent `{ 	result = new org.jfree[...]`
+2017-03-29 10:43:36,733 INFO main - mod_point ModificPoint=CategoryPlot line: 1732, el: CtForImpl
+2017-03-29 10:43:36,734 INFO main - -->op: RemoveOp: `for (int datasetIndex = 0[...] ` ---> `-` at pos 2 of parent `{ 	result = new org.jfree[...]`
+2017-03-29 10:43:41,124 INFO main - mod_point ModificPoint=CategoryPlot line: 1733, el: CtLocalVariableImpl
+2017-03-29 10:43:41,124 INFO main - -->op: RemoveOp: `org.jfree.data.category.C[...] ` ---> `-` at pos 0 of parent `{ 	org.jfree.data.categor[...]`
+2017-03-29 10:43:43,506 INFO main - mod_point ModificPoint=CategoryPlot line: 1734, el: CtIfImpl
+2017-03-29 10:43:43,506 INFO main - -->op: ReplaceIfBooleanOp: `if (dataset != null) { 	o[...] ` ---> `if (true) { 	org.jfree.ch[...]` at pos 1 of parent `{ 	org.jfree.data.categor[...]`
+2017-03-29 10:43:47,789 INFO main - mod_point ModificPoint=CategoryPlot line: 1734, el: CtIfImpl
+2017-03-29 10:43:47,789 INFO main - -->op: ReplaceIfBooleanOp: `if (dataset != null) { 	o[...] ` ---> `if (false) { 	org.jfree.c[...]` at pos 1 of parent `{ 	org.jfree.data.categor[...]`
+2017-03-29 10:43:53,154 INFO main - mod_point ModificPoint=CategoryPlot line: 1734, el: CtIfImpl
+2017-03-29 10:43:53,154 INFO main - -->op: RemoveOp: `if (dataset != null) { 	o[...] ` ---> `-` at pos 1 of parent `{ 	org.jfree.data.categor[...]`
+2017-03-29 10:43:58,496 INFO main - mod_point ModificPoint=CategoryPlot line: 1749, el: CtReturnImpl
+2017-03-29 10:43:58,496 INFO main - -->op: RemoveOp: `return result ` ---> `-` at pos 2 of parent `{ 	org.jfree.chart.Legend[...]`
+2017-03-29 10:44:00,431 INFO main - mod_point ModificPoint=CategoryPlot line: 2410, el: CtIfImpl
+2017-03-29 10:44:00,432 INFO main - -->op: ReplaceIfBooleanOp: `if (space == null) { 	spa[...] ` ---> `if (true) { 	space = new [...]` at pos 0 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:44:04,744 INFO main - mod_point ModificPoint=CategoryPlot line: 2410, el: CtIfImpl
+2017-03-29 10:44:04,744 INFO main - -->op: ReplaceIfBooleanOp: `if (space == null) { 	spa[...] ` ---> `if (false) { 	space = new[...]` at pos 0 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:44:10,459 INFO main - mod_point ModificPoint=CategoryPlot line: 2410, el: CtIfImpl
+2017-03-29 10:44:10,460 INFO main - -->op: RemoveOp: `if (space == null) { 	spa[...] ` ---> `-` at pos 0 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:44:17,711 INFO main - mod_point ModificPoint=CategoryPlot line: 2415, el: CtIfImpl
+2017-03-29 10:44:17,712 INFO main - -->op: ReplaceIfBooleanOp: `if ((org.jfree.chart.plot[...] ` ---> `if (true) { 	if ((org.jfr[...]` at pos 1 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:44:23,096 INFO main - mod_point ModificPoint=CategoryPlot line: 2415, el: CtIfImpl
+2017-03-29 10:44:23,097 INFO main - -->op: ReplaceIfBooleanOp: `if ((org.jfree.chart.plot[...] ` ---> `if (false) { 	if ((org.jf[...]` at pos 1 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:44:28,256 INFO main - mod_point ModificPoint=CategoryPlot line: 2415, el: CtIfImpl
+2017-03-29 10:44:28,257 INFO main - -->op: RemoveOp: `if ((org.jfree.chart.plot[...] ` ---> `-` at pos 1 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:44:37,675 INFO main - mod_point ModificPoint=CategoryPlot line: 2431, el: CtLocalVariableImpl
+2017-03-29 10:44:37,676 INFO main - -->op: RemoveOp: `org.jfree.chart.util.Rect[...] ` ---> `-` at pos 0 of parent `{ 	org.jfree.chart.util.R[...]`
+2017-03-29 10:44:44,091 INFO main - mod_point ModificPoint=CategoryPlot line: 2433, el: CtIfImpl
+2017-03-29 10:44:44,092 INFO main - -->op: ReplaceIfBooleanOp: `if (org.jfree.chart.plot.[...] ` ---> `if (true) { 	space = getD[...]` at pos 1 of parent `{ 	org.jfree.chart.util.R[...]`
+2017-03-29 10:44:52,153 INFO main - mod_point ModificPoint=CategoryPlot line: 2433, el: CtIfImpl
+2017-03-29 10:44:52,153 INFO main - -->op: ReplaceIfBooleanOp: `if (org.jfree.chart.plot.[...] ` ---> `if (false) { 	space = get[...]` at pos 1 of parent `{ 	org.jfree.chart.util.R[...]`
+2017-03-29 10:45:02,726 INFO main - mod_point ModificPoint=CategoryPlot line: 2433, el: CtIfImpl
+2017-03-29 10:45:02,727 INFO main - -->op: RemoveOp: `if (org.jfree.chart.plot.[...] ` ---> `-` at pos 1 of parent `{ 	org.jfree.chart.util.R[...]`
+2017-03-29 10:45:15,137 INFO main - mod_point ModificPoint=CategoryPlot line: 2439, el: CtForImpl
+2017-03-29 10:45:15,137 INFO main - -->op: RemoveOp: `for (int i = 0 ; i < (org[...] ` ---> `-` at pos 2 of parent `{ 	org.jfree.chart.util.R[...]`
+2017-03-29 10:45:28,293 INFO main - mod_point ModificPoint=CategoryPlot line: 2440, el: CtLocalVariableImpl
+2017-03-29 10:45:28,293 INFO main - -->op: RemoveOp: `org.jfree.chart.axis.Axis[...] ` ---> `-` at pos 0 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:45:35,216 INFO main - mod_point ModificPoint=CategoryPlot line: 2441, el: CtIfImpl
+2017-03-29 10:45:35,217 INFO main - -->op: ReplaceIfBooleanOp: `if (xAxis != null) { 	org[...] ` ---> `if (true) { 	org.jfree.ch[...]` at pos 1 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:45:47,377 INFO main - mod_point ModificPoint=CategoryPlot line: 2441, el: CtIfImpl
+2017-03-29 10:45:47,378 INFO main - -->op: ReplaceIfBooleanOp: `if (xAxis != null) { 	org[...] ` ---> `if (false) { 	org.jfree.c[...]` at pos 1 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:46:01,867 INFO main - mod_point ModificPoint=CategoryPlot line: 2441, el: CtIfImpl
+2017-03-29 10:46:01,867 INFO main - -->op: RemoveOp: `if (xAxis != null) { 	org[...] ` ---> `-` at pos 1 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:46:18,574 INFO main - mod_point ModificPoint=CategoryPlot line: 2442, el: CtLocalVariableImpl
+2017-03-29 10:46:18,574 INFO main - -->op: RemoveOp: `org.jfree.chart.util.Rect[...] ` ---> `-` at pos 0 of parent `{ 	org.jfree.chart.util.R[...]`
+2017-03-29 10:46:23,564 INFO main - mod_point ModificPoint=CategoryPlot line: 2443, el: CtAssignmentImpl
+2017-03-29 10:46:23,564 INFO main - -->op: RemoveOp: `space = xAxis.reserveSpac[...] ` ---> `-` at pos 1 of parent `{ 	org.jfree.chart.util.R[...]`
+2017-03-29 10:46:38,795 INFO main - mod_point ModificPoint=CategoryPlot line: 2448, el: CtReturnImpl
+2017-03-29 10:46:38,795 INFO main - -->op: RemoveOp: `return space ` ---> `-` at pos 2 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:46:47,559 INFO main - mod_point ModificPoint=CategoryPlot line: 2465, el: CtIfImpl
+2017-03-29 10:46:47,561 INFO main - -->op: ReplaceIfBooleanOp: `if (space == null) { 	spa[...] ` ---> `if (true) { 	space = new [...]` at pos 0 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:47:06,326 INFO main - mod_point ModificPoint=CategoryPlot line: 2465, el: CtIfImpl
+2017-03-29 10:47:06,326 INFO main - -->op: ReplaceIfBooleanOp: `if (space == null) { 	spa[...] ` ---> `if (false) { 	space = new[...]` at pos 0 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:47:22,845 INFO main - mod_point ModificPoint=CategoryPlot line: 2465, el: CtIfImpl
+2017-03-29 10:47:22,849 INFO main - -->op: RemoveOp: `if (space == null) { 	spa[...] ` ---> `-` at pos 0 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:47:42,628 INFO main - mod_point ModificPoint=CategoryPlot line: 2470, el: CtIfImpl
+2017-03-29 10:47:42,629 INFO main - -->op: ReplaceIfBooleanOp: `if ((org.jfree.chart.plot[...] ` ---> `if (true) { 	if ((org.jfr[...]` at pos 1 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:47:59,920 INFO main - mod_point ModificPoint=CategoryPlot line: 2470, el: CtIfImpl
+2017-03-29 10:47:59,921 INFO main - -->op: ReplaceIfBooleanOp: `if ((org.jfree.chart.plot[...] ` ---> `if (false) { 	if ((org.jf[...]` at pos 1 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:48:20,892 INFO main - mod_point ModificPoint=CategoryPlot line: 2470, el: CtIfImpl
+2017-03-29 10:48:20,893 INFO main - -->op: RemoveOp: `if ((org.jfree.chart.plot[...] ` ---> `-` at pos 1 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:48:39,590 INFO main - mod_point ModificPoint=CategoryPlot line: 2486, el: CtForImpl
+2017-03-29 10:48:39,591 INFO main - -->op: RemoveOp: `for (int i = 0 ; i < (org[...] ` ---> `-` at pos 0 of parent `{ 	for (int i = 0 ; i < ([...]`
+2017-03-29 10:49:01,344 INFO main - mod_point ModificPoint=CategoryPlot line: 2487, el: CtLocalVariableImpl
+2017-03-29 10:49:01,344 INFO main - -->op: RemoveOp: `org.jfree.chart.axis.Axis[...] ` ---> `-` at pos 0 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:49:12,190 INFO main - mod_point ModificPoint=CategoryPlot line: 2488, el: CtIfImpl
+2017-03-29 10:49:12,190 INFO main - -->op: ReplaceIfBooleanOp: `if (yAxis != null) { 	org[...] ` ---> `if (true) { 	org.jfree.ch[...]` at pos 1 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:49:26,108 INFO main - mod_point ModificPoint=CategoryPlot line: 2488, el: CtIfImpl
+2017-03-29 10:49:26,108 INFO main - -->op: ReplaceIfBooleanOp: `if (yAxis != null) { 	org[...] ` ---> `if (false) { 	org.jfree.c[...]` at pos 1 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:49:46,622 INFO main - mod_point ModificPoint=CategoryPlot line: 2488, el: CtIfImpl
+2017-03-29 10:49:46,622 INFO main - -->op: RemoveOp: `if (yAxis != null) { 	org[...] ` ---> `-` at pos 1 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:50:10,310 INFO main - mod_point ModificPoint=CategoryPlot line: 2489, el: CtLocalVariableImpl
+2017-03-29 10:50:10,310 INFO main - -->op: RemoveOp: `org.jfree.chart.util.Rect[...] ` ---> `-` at pos 0 of parent `{ 	org.jfree.chart.util.R[...]`
+2017-03-29 10:50:20,361 INFO main - mod_point ModificPoint=CategoryPlot line: 2490, el: CtAssignmentImpl
+2017-03-29 10:50:20,361 INFO main - -->op: RemoveOp: `space = yAxis.reserveSpac[...] ` ---> `-` at pos 1 of parent `{ 	org.jfree.chart.util.R[...]`
+2017-03-29 10:50:39,215 INFO main - mod_point ModificPoint=CategoryPlot line: 2494, el: CtReturnImpl
+2017-03-29 10:50:39,215 INFO main - -->op: RemoveOp: `return space ` ---> `-` at pos 2 of parent `{ 	if (space == null) { 	[...]`
+2017-03-29 10:50:47,795 INFO main - mod_point ModificPoint=CategoryPlot line: 2508, el: CtLocalVariableImpl
+2017-03-29 10:50:47,795 INFO main - -->op: RemoveOp: `org.jfree.chart.axis.Axis[...] ` ---> `-` at pos 0 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:50:56,307 INFO main - mod_point ModificPoint=CategoryPlot line: 2509, el: CtAssignmentImpl
+2017-03-29 10:50:56,307 INFO main - -->op: RemoveOp: `space = calculateRangeAxi[...] ` ---> `-` at pos 1 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:51:15,205 INFO main - mod_point ModificPoint=CategoryPlot line: 2510, el: CtAssignmentImpl
+2017-03-29 10:51:15,206 INFO main - -->op: RemoveOp: `space = calculateDomainAx[...] ` ---> `-` at pos 2 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:51:35,104 INFO main - mod_point ModificPoint=CategoryPlot line: 2511, el: CtReturnImpl
+2017-03-29 10:51:35,105 INFO main - -->op: RemoveOp: `return space ` ---> `-` at pos 3 of parent `{ 	org.jfree.chart.axis.A[...]`
+2017-03-29 10:51:45,263 INFO main - mod_point ModificPoint=CategoryPlot line: 2536, el: CtLocalVariableImpl
+2017-03-29 10:51:45,264 INFO main - -->op: RemoveOp: `boolean b1 = (area.getWid[...] ` ---> `-` at pos 0 of parent `{ 	boolean b1 = (area.get[...]`
+2017-03-29 10:51:55,770 INFO main - mod_point ModificPoint=CategoryPlot line: 2537, el: CtLocalVariableImpl
+2017-03-29 10:51:55,771 INFO main - -->op: RemoveOp: `boolean b2 = (area.getHei[...] ` ---> `-` at pos 1 of parent `{ 	boolean b1 = (area.get[...]`
+2017-03-29 10:52:06,415 INFO main - mod_point ModificPoint=CategoryPlot line: 2538, el: CtIfImpl
+2017-03-29 10:52:06,416 INFO main - -->op: ReplaceIfBooleanOp: `if (b1 || b2) { 	return ;[...] ` ---> `if (true) { 	return ; } ` at pos 2 of parent `{ 	boolean b1 = (area.get[...]`
+2017-03-29 10:53:18,937 INFO main - -Found Solution, child variant #139
+2017-03-29 10:53:18,940 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.axis.CategoryLabelPositions to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:19,054 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.LegendItem to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:19,265 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.text.G2TextMeasurer to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:19,286 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.axis.TickUnit to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:19,322 DEBUG spoon.support.StandardEnvironment - printing org.jfree.data.category.DefaultCategoryDataset to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:19,398 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.util.RectangleAnchor to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:19,434 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.plot.PlotRenderingInfo to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:19,474 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.block.CenterArrangement to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:19,520 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.block.LabelBlock to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:19,536 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.axis.CategoryLabelPosition to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:19,563 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.axis.AxisState to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:19,567 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.axis.NumberAxis to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:21,099 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.axis.Tick to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:21,120 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.text.TextBlock to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:21,140 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.axis.Axis to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:21,488 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.block.BlockContainer to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:21,581 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.block.RectangleConstraint to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:21,711 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.title.LegendGraphic to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:21,892 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.title.Title to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:21,931 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.JFreeChart to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:22,248 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.axis.NumberTickUnit to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:22,262 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.text.TextLine to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:22,297 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.block.BlockParams to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:22,322 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.block.LineBorder to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:22,366 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.LegendItemCollection to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:22,422 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.axis.CategoryAxis to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:22,601 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.axis.AxisSpace to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:22,611 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.block.BlockBorder to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:22,619 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.text.TextUtilities to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:22,644 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.title.LegendTitle to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:22,738 DEBUG spoon.support.StandardEnvironment - printing org.jfree.data.DefaultKeyedValues2D to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:22,765 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.renderer.category.AbstractCategoryItemRenderer to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:22,925 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.labels.StandardCategorySeriesLabelGenerator to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:22,938 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.text.TextFragment to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:22,954 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.axis.ValueAxis to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:23,323 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.block.AbstractBlock to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:23,360 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.util.RectangleEdge to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:23,380 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.axis.AxisCollection to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:23,407 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.util.Size2D to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:23,423 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.plot.CategoryPlot to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:24,714 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.util.ShapeUtilities to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:24,758 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.plot.Plot to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:25,058 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.block.FlowArrangement to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:25,085 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.title.LegendItemBlockContainer to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:25,103 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.util.RectangleInsets to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:25,131 DEBUG spoon.support.StandardEnvironment - printing org.jfree.chart.axis.TickUnits to /data/people/qx5/jkali_repair_expts/repair/Chart_26/r0/AstorMain-Chart_26/src/variant-139
+2017-03-29 10:53:26,030 INFO main - 
+----SUMMARY_EXECUTION---
+2017-03-29 10:53:26,030 INFO main - 
+Solution details
+2017-03-29 10:53:26,031 INFO main - 
+ --SOLUTIONS DESCRIPTION--
+
+ ----
+ProgramVariant 139
+ 
+time(sec)= 918
+operation: ReplaceIfBooleanOp
+location= org.jfree.chart.plot.CategoryPlot
+line= 2538
+lineSuspiciousness= 0.957
+original statement= if (b1 || b2) {
+	return ;
+} 
+fixed statement= if (true) {
+	return ;
+} 
+generation= 1
+ingredientScope= -
+validation=|true|0|3191|[]|
+2017-03-29 10:53:26,031 INFO fr.inria.main.evolution.AstorMain - Time Total(s): 1165.957

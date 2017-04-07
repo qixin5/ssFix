@@ -1,0 +1,234 @@
+2017-03-29 10:55:05,081 INFO main - command line arguments: [-jvm4testexecution  /home/qx5/jdk1.8.0_111/bin  -dependencies  /data/people/qx5/defects4j-bugs/maths/projs/Math_78_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar  -id  Math_78  -failing  org.apache.commons.math.ode.events.EventStateTest  -mode  statement-remove  -location  /data/people/qx5/defects4j-bugs/maths/projs/Math_78_buggy  -package  org.apache.commons.math  -maxtime  120  -stopfirst  true  -srcjavafolder  //src/main/java/  -srctestfolder  //src/test/java/  -binjavafolder  //target/classes/  -bintestfolder  //target/test-classes/  -out  /data/people/qx5/jkali_repair_expts/repair/Math_78/r0]
+2017-03-29 10:56:37,783 INFO main - -Executing Gzoltar classpath: /data/people/qx5/jkali_repair_expts/repair/Math_78/r0/AstorMain-Math_78//bin//default from 226 classes with test cases
+2017-03-29 10:56:37,805 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar fault localization: min susp value parameter: 0.1
+2017-03-29 10:56:44,413 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - -gz-Adding classpath: [/data/people/qx5/jkali_repair_expts/repair/Math_78/r0/AstorMain-Math_78//bin//default, /home/qx5/ssFix2/lib/myprinter.jar, /home/qx5/ssFix2/lib/evosuite-1.0.2.jar, /data/people/qx5/defects4j-bugs/maths/projs/Math_78_buggy/all0.jar, /home/qx5/ssFix2/lib/commons-lang3-3.5.jar]
+2017-03-29 10:58:32,669 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.apache.commons.math.ode.events.EventStateTest#closeEvents
+2017-03-29 10:58:32,699 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar Test Result Total:2106, fails: 1, GZoltar suspicious 16743
+2017-03-29 10:58:32,744 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar found: 71 with susp > 0.1, we consider: 71
+2017-03-29 10:58:32,754 INFO main - building model: /data/people/qx5/jkali_repair_expts/repair/Math_78/r0/AstorMain-Math_78//src//default, compliance level: 8
+2017-03-29 10:59:30,571 INFO main - 
+---- Initial suspicious size: 71
+2017-03-29 10:59:31,473 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.DummyStepInterpolator, methodName=org.apache.commons.math.ode.sampling.DummyStepInterpolator{computeInterpolatedStateAndDerivatives(DD)V 0.0, lineNumber=100, susp=0.2182178902359924]
+2017-03-29 10:59:31,581 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.events.EventState, methodName=org.apache.commons.math.ode.events.EventState{evaluateStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;)Z 0.0, lineNumber=215, susp=0.1091089451179962]
+2017-03-29 10:59:32,229 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.events.EventState, methodName=org.apache.commons.math.ode.events.EventState{reinitializeBegin(D[D)V 0.0, lineNumber=154, susp=0.10660035817780521]
+2017-03-29 10:59:32,793 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.events.EventState, methodName=org.apache.commons.math.ode.events.EventState{stepAccepted(D[D)V 0.0, lineNumber=295, susp=0.10660035817780521]
+2017-03-29 10:59:33,262 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ConvergingAlgorithmImpl, methodName=org.apache.commons.math.ConvergingAlgorithmImpl{setAbsoluteAccuracy(D)V 0.0, lineNumber=79, susp=0.10314212462587934]
+2017-03-29 10:59:33,271 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ConvergingAlgorithmImpl, methodName=org.apache.commons.math.ConvergingAlgorithmImpl{setMaximalIterationCount(I)V 0.0, lineNumber=94, susp=0.10314212462587934]
+2017-03-29 10:59:33,321 INFO main - Total suspicious from FL: 71,  63
+2017-03-29 10:59:33,321 INFO main - Total ModPoint created: 63
+2017-03-29 10:59:33,341 INFO main - Creating program variant #1, [Variant id: 1, #gens: 63, #ops: 0, parent:-]
+2017-03-29 10:59:37,028 INFO fr.inria.astor.core.setup.ConfigurationProperties - ----------------------------
+2017-03-29 10:59:37,028 INFO fr.inria.astor.core.setup.ConfigurationProperties - ---Configuration properties:---Execution values
+2017-03-29 10:59:37,029 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:packageToInstrument= org.apache.commons.math
+2017-03-29 10:59:37,029 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:flthreshold= 0.1
+2017-03-29 10:59:37,029 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:numberExecutions= 1
+2017-03-29 10:59:37,029 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuiteresultfolder= evosuite
+2017-03-29 10:59:37,029 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:ignoredTestCases= org.apache.commons.math.ode.nonstiff:org.apache.commons.math.ode2.nonstiff:org.apache.commons.lang.LocaleUtilsTest
+2017-03-29 10:59:37,029 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:skipfaultlocalization= false
+2017-03-29 10:59:37,029 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxGeneration= 200
+2017-03-29 10:59:37,030 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxsuspcandidates= 1000
+2017-03-29 10:59:37,030 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:tmax2= 960000
+2017-03-29 10:59:37,030 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:tmax1= 120000
+2017-03-29 10:59:37,030 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:workingDirectory= /data/people/qx5/jkali_repair_expts/repair/Math_78/r0
+2017-03-29 10:59:37,030 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:mode= statement-remove
+2017-03-29 10:59:37,030 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:ignoreflakyinfl= true
+2017-03-29 10:59:37,030 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:uniqueoptogen= false
+2017-03-29 10:59:37,030 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:testcasesregression= org.apache.commons.math.stat.data.LotteryTest:org.apache.commons.math.linear.FieldMatrixImplTest:org.apache.commons.math.ode.sampling.StepNormalizerTest:org.apache.commons.math.stat.descriptive.AggregateSummaryStatisticsTest:org.apache.commons.math.geometry.RotationOrderTest:org.apache.commons.math.analysis.solvers.NewtonSolverTest:org.apache.commons.math.estimation.EstimatedParameterTest:org.apache.commons.math.linear.CholeskyDecompositionImplTest:org.apache.commons.math.linear.Array2DRowRealMatrixTest:org.apache.commons.math.linear.SparseRealMatrixTest:org.apache.commons.math.util.OpenIntToFieldTest:org.apache.commons.math.stat.clustering.KMeansPlusPlusClustererTest:org.apache.commons.math.optimization.fitting.PolynomialFitterTest:org.apache.commons.math.linear.ArrayRealVectorTest:org.apache.commons.math.distribution.HypergeometricDistributionTest:org.apache.commons.math.random.RandomAdaptorTest:org.apache.commons.math.ode.FirstOrderConverterTest:org.apache.commons.math.stat.descriptive.SynchronizedSummaryStatisticsTest:org.apache.commons.math.stat.inference.TestUtilsTest:org.apache.commons.math.stat.data.LewTest:org.apache.commons.math.distribution.GammaDistributionTest:org.apache.commons.math.stat.descriptive.rank.MedianTest:org.apache.commons.math.distribution.ZipfDistributionTest:org.apache.commons.math.ode.nonstiff.DormandPrince54StepInterpolatorTest:org.apache.commons.math.stat.CertifiedDataTest:org.apache.commons.math.ode.nonstiff.HighamHall54IntegratorTest:org.apache.commons.math.complex.FrenchComplexFormatTest:org.apache.commons.math.ode.nonstiff.MidpointStepInterpolatorTest:org.apache.commons.math.analysis.polynomials.PolynomialsUtilsTest:org.apache.commons.math.DuplicateSampleAbscissaExceptionTest:org.apache.commons.math.estimation.MinpackTest:org.apache.commons.math.genetics.FixedGenerationCountTest:org.apache.commons.math.optimization.general.GaussNewtonOptimizerTest:org.apache.commons.math.fraction.BigFractionFormatTest:org.apache.commons.math.random.RandomDataTest:org.apache.commons.math.stat.descriptive.MixedListUnivariateImplTest:org.apache.commons.math.distribution.FDistributionTest:org.apache.commons.math.FunctionEvaluationExceptionTest:org.apache.commons.math.ode.sampling.NordsieckStepInterpolatorTest:org.apache.commons.math.stat.inference.TTestFactoryTest:org.apache.commons.math.stat.descriptive.moment.SkewnessTest:org.apache.commons.math.special.GammaTest:org.apache.commons.math.ode.nonstiff.EulerStepInterpolatorTest:org.apache.commons.math.analysis.integration.RombergIntegratorTest:org.apache.commons.math.ode.nonstiff.HighamHall54StepInterpolatorTest:org.apache.commons.math.analysis.integration.LegendreGaussIntegratorTest:org.apache.commons.math.stat.descriptive.SummaryStatisticsTest:org.apache.commons.math.ode.nonstiff.MidpointIntegratorTest:org.apache.commons.math.stat.descriptive.moment.FirstMomentTest:org.apache.commons.math.stat.descriptive.moment.StandardDeviationTest:org.apache.commons.math.complex.ComplexTest:org.apache.commons.math.distribution.BetaDistributionTest:org.apache.commons.math.special.BetaTest:org.apache.commons.math.special.ErfTest:org.apache.commons.math.ode.nonstiff.GillIntegratorTest:org.apache.commons.math.random.EmpiricalDistributionTest:org.apache.commons.math.stat.descriptive.MultivariateSummaryStatisticsTest:org.apache.commons.math.stat.descriptive.StatisticalSummaryValuesTest:org.apache.commons.math.stat.regression.OLSMultipleLinearRegressionTest:org.apache.commons.math.estimation.LevenbergMarquardtEstimatorTest:org.apache.commons.math.fraction.BigFractionFieldTest:org.apache.commons.math.random.AbstractRandomGeneratorTest:org.apache.commons.math.ode.nonstiff.GraggBulirschStoerStepInterpolatorTest:org.apache.commons.math.genetics.GeneticAlgorithmTestBinary:org.apache.commons.math.linear.BiDiagonalTransformerTest:org.apache.commons.math.util.DefaultTransformerTest:org.apache.commons.math.linear.LUDecompositionImplTest:org.apache.commons.math.random.ValueServerTest:org.apache.commons.math.stat.descriptive.moment.MeanTest:org.apache.commons.math.util.BigRealFieldTest:org.apache.commons.math.linear.QRDecompositionImplTest:org.apache.commons.math.analysis.interpolation.NevilleInterpolatorTest:org.apache.commons.math.stat.descriptive.moment.VarianceTest:org.apache.commons.math.genetics.OnePointCrossoverTest:org.apache.commons.math.stat.ranking.NaturalRankingTest:org.apache.commons.math.optimization.linear.SimplexSolverTest:org.apache.commons.math.stat.descriptive.moment.FourthMomentTest:org.apache.commons.math.linear.BlockRealMatrixTest:org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolatorTest:org.apache.commons.math.random.MersenneTwisterTest:org.apache.commons.math.genetics.RandomKeyTest:org.apache.commons.math.stat.descriptive.summary.ProductTest:org.apache.commons.math.fraction.FractionTest:org.apache.commons.math.util.OpenIntToDoubleHashMapTest:org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerTest:org.apache.commons.math.ode.nonstiff.DormandPrince54IntegratorTest:org.apache.commons.math.analysis.polynomials.PolynomialFunctionTest:org.apache.commons.math.genetics.ChromosomeTest:org.apache.commons.math.stat.descriptive.moment.GeometricMeanTest:org.apache.commons.math.optimization.MultiStartDifferentiableMultivariateRealOptimizerTest:org.apache.commons.math.random.CorrelatedRandomVectorGeneratorTest:org.apache.commons.math.geometry.Vector3DTest:org.apache.commons.math.stat.descriptive.rank.MinTest:org.apache.commons.math.stat.clustering.EuclideanIntegerPointTest:org.apache.commons.math.linear.FieldLUDecompositionImplTest:org.apache.commons.math.analysis.integration.TrapezoidIntegratorTest:org.apache.commons.math.stat.descriptive.moment.VectorialCovarianceTest:org.apache.commons.math.transform.FastHadamardTransformerTest:org.apache.commons.math.optimization.fitting.HarmonicFitterTest:org.apache.commons.math.stat.correlation.PearsonsCorrelationTest:org.apache.commons.math.random.GaussianRandomGeneratorTest:org.apache.commons.math.stat.descriptive.moment.ThirdMomentTest:org.apache.commons.math.fraction.BigFractionTest:org.apache.commons.math.linear.FrenchRealVectorFormatTest:org.apache.commons.math.util.ContinuedFractionTest:org.apache.commons.math.util.TransformerMapTest:org.apache.commons.math.analysis.solvers.BisectionSolverTest:org.apache.commons.math.genetics.BinaryChromosomeTest:org.apache.commons.math.linear.BlockFieldMatrixTest:org.apache.commons.math.ode.nonstiff.ClassicalRungeKuttaStepInterpolatorTest:org.apache.commons.math.linear.SingularValueDecompositionImplTest:org.apache.commons.math.distribution.TDistributionTest:org.apache.commons.math.ode.nonstiff.AdamsBashforthIntegratorTest:org.apache.commons.math.ode.nonstiff.ClassicalRungeKuttaIntegratorTest:org.apache.commons.math.linear.InvalidMatrixExceptionTest:org.apache.commons.math.distribution.BinomialDistributionTest:org.apache.commons.math.linear.EigenSolverTest:org.apache.commons.math.stat.inference.TTestTest:org.apache.commons.math.analysis.polynomials.PolynomialFunctionNewtonFormTest:org.apache.commons.math.random.UniformRandomGeneratorTest:org.apache.commons.math.stat.descriptive.rank.PercentileTest:org.apache.commons.math.ode.events.EventStateTest:org.apache.commons.math.analysis.solvers.RiddersSolverTest:org.apache.commons.math.linear.ArrayFieldVectorTest:org.apache.commons.math.ode.ContinuousOutputModelTest:org.apache.commons.math.random.UncorrelatedRandomVectorGeneratorTest:org.apache.commons.math.optimization.linear.SimplexTableauTest:org.apache.commons.math.ConvergenceExceptionTest:org.apache.commons.math.complex.ComplexFormatTest:org.apache.commons.math.util.ResizableDoubleArrayTest:org.apache.commons.math.linear.RealMatrixImplTest:org.apache.commons.math.stat.descriptive.summary.SumTest:org.apache.commons.math.genetics.ElitisticListPopulationTest:org.apache.commons.math.linear.SparseFieldVectorTest:org.apache.commons.math.stat.descriptive.summary.SumSqTest:org.apache.commons.math.linear.SparseRealVectorTest:org.apache.commons.math.analysis.interpolation.DividedDifferenceInterpolatorTest:org.apache.commons.math.linear.EigenDecompositionImplTest:org.apache.commons.math.analysis.integration.SimpsonIntegratorTest:org.apache.commons.math.analysis.interpolation.MicrosphereInterpolatorTest:org.apache.commons.math.analysis.polynomials.PolynomialSplineFunctionTest:org.apache.commons.math.genetics.GeneticAlgorithmTestPermutations:org.apache.commons.math.stat.descriptive.moment.KurtosisTest:org.apache.commons.math.transform.FastFourierTransformerTest:org.apache.commons.math.stat.descriptive.moment.VectorialMeanTest:org.apache.commons.math.distribution.NormalDistributionTest:org.apache.commons.math.distribution.PoissonDistributionTest:org.apache.commons.math.geometry.Vector3DFormatTest:org.apache.commons.math.analysis.polynomials.PolynomialFunctionLagrangeFormTest:org.apache.commons.math.genetics.TournamentSelectionTest:org.apache.commons.math.optimization.general.MinpackTest:org.apache.commons.math.stat.descriptive.SynchronizedMultivariateSummaryStatisticsTest:org.apache.commons.math.analysis.solvers.BrentSolverTest:org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegratorTest:org.apache.commons.math.stat.descriptive.AbstractUnivariateStatisticTest:org.apache.commons.math.estimation.WeightedMeasurementTest:org.apache.commons.math.stat.inference.ChiSquareTestTest:org.apache.commons.math.analysis.interpolation.LoessInterpolatorTest:org.apache.commons.math.ode.nonstiff.ThreeEighthesStepInterpolatorTest:org.apache.commons.math.linear.MatrixIndexExceptionTest:org.apache.commons.math.fraction.FractionFormatTest:org.apache.commons.math.genetics.BinaryMutationTest:org.apache.commons.math.distribution.PascalDistributionTest:org.apache.commons.math.optimization.general.NonLinearConjugateGradientOptimizerTest:org.apache.commons.math.complex.ComplexUtilsTest:org.apache.commons.math.util.MathUtilsTest:org.apache.commons.math.analysis.solvers.UnivariateRealSolverFactoryImplTest:org.apache.commons.math.genetics.FitnessCachingTest:org.apache.commons.math.optimization.direct.MultiDirectionalTest:org.apache.commons.math.linear.BigMatrixImplTest:org.apache.commons.math.stat.inference.ChiSquareFactoryTest:org.apache.commons.math.fraction.FractionFieldTest:org.apache.commons.math.stat.descriptive.InteractionTest:org.apache.commons.math.stat.correlation.CovarianceTest:org.apache.commons.math.optimization.univariate.BrentMinimizerTest:org.apache.commons.math.linear.QRSolverTest:org.apache.commons.math.linear.RealVectorFormatTest:org.apache.commons.math.analysis.solvers.LaguerreSolverTest:org.apache.commons.math.linear.CholeskySolverTest:org.apache.commons.math.distribution.WeibullDistributionTest:org.apache.commons.math.stat.StatUtilsTest:org.apache.commons.math.analysis.interpolation.SplineInterpolatorTest:org.apache.commons.math.analysis.solvers.MullerSolverTest:org.apache.commons.math.linear.TriDiagonalTransformerTest:org.apache.commons.math.distribution.ChiSquareDistributionTest:org.apache.commons.math.analysis.solvers.UnivariateRealSolverUtilsTest:org.apache.commons.math.transform.FastSineTransformerTest:org.apache.commons.math.stat.inference.OneWayAnovaTest:org.apache.commons.math.transform.FastCosineTransformerTest:org.apache.commons.math.ArgumentOutsideDomainExceptionTest:org.apache.commons.math.ode.nonstiff.DormandPrince853IntegratorTest:org.apache.commons.math.ode.nonstiff.EulerIntegratorTest:org.apache.commons.math.stat.descriptive.rank.MaxTest:org.apache.commons.math.complex.ComplexFieldTest:org.apache.commons.math.stat.descriptive.ListUnivariateImplTest:org.apache.commons.math.MaxIterationsExceededExceptionTest:org.apache.commons.math.stat.descriptive.DescriptiveStatisticsTest:org.apache.commons.math.linear.MatrixUtilsTest:org.apache.commons.math.optimization.MultiStartDifferentiableMultivariateVectorialOptimizerTest:org.apache.commons.math.optimization.direct.NelderMeadTest:org.apache.commons.math.geometry.RotationTest:org.apache.commons.math.ode.sampling.DummyStepInterpolatorTest:org.apache.commons.math.genetics.RandomKeyMutationTest:org.apache.commons.math.linear.SingularValueSolverTest:org.apache.commons.math.util.BigRealTest:org.apache.commons.math.distribution.ExponentialDistributionTest:org.apache.commons.math.stat.descriptive.SynchronizedDescriptiveStatisticsTest:org.apache.commons.math.geometry.FrenchVector3DFormatTest:org.apache.commons.math.ode.nonstiff.AdamsMoultonIntegratorTest:org.apache.commons.math.stat.regression.SimpleRegressionTest:org.apache.commons.math.optimization.MultiStartMultivariateRealOptimizerTest:org.apache.commons.math.stat.regression.GLSMultipleLinearRegressionTest:org.apache.commons.math.ode.nonstiff.ThreeEighthesIntegratorTest:org.apache.commons.math.ode.nonstiff.GillStepInterpolatorTest:org.apache.commons.math.linear.LUSolverTest:org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerTest:org.apache.commons.math.MathConfigurationExceptionTest:org.apache.commons.math.estimation.GaussNewtonEstimatorTest:org.apache.commons.math.genetics.ListPopulationTest:org.apache.commons.math.MathExceptionTest:org.apache.commons.math.distribution.CauchyDistributionTest:org.apache.commons.math.stat.correlation.SpearmansRankCorrelationTest:org.apache.commons.math.linear.SparseFieldMatrixTest:org.apache.commons.math.stat.descriptive.summary.SumLogTest:org.apache.commons.math.stat.FrequencyTest:org.apache.commons.math.stat.descriptive.moment.SecondMomentTest:
+2017-03-29 10:59:37,033 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:pathToMVNRepository= 
+2017-03-29 10:59:37,033 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:executeRegression= true
+2017-03-29 10:59:37,040 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:modificationpointnavigation= weight
+2017-03-29 10:59:37,040 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxtime= 120
+2017-03-29 10:59:37,040 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:probagenmutation= false
+2017-03-29 10:59:37,040 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:alternativecompliancelevel= 4
+2017-03-29 10:59:37,040 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:version-location= ./math-version/
+2017-03-29 10:59:37,040 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:location= /data/people/qx5/defects4j-bugs/maths/projs/Math_78_buggy
+2017-03-29 10:59:37,040 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:stopfirst= true
+2017-03-29 10:59:37,041 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:jvm4testexecution= /home/qx5/jdk1.8.0_111/bin
+2017-03-29 10:59:37,041 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:bugId= 280
+2017-03-29 10:59:37,041 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:mutationrate= 1 
+2017-03-29 10:59:37,041 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:projectIdentifier= Math_78
+2017-03-29 10:59:37,041 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evo_buggy_class= true
+2017-03-29 10:59:37,041 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evoRunOnBuggyClass= true
+2017-03-29 10:59:37,041 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:jvm4evosuitetestexecution= /home/qx5/jdk1.8.0_111/bin
+2017-03-29 10:59:37,041 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:resetoperations= false
+2017-03-29 10:59:37,041 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:seed= 0
+2017-03-29 10:59:37,041 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:testbystep= false
+2017-03-29 10:59:37,041 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:srctestfolder= //src/test/java/
+2017-03-29 10:59:37,050 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:javacompliancelevel= 8
+2017-03-29 10:59:37,050 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:bintestfolder= //target/test-classes/
+2017-03-29 10:59:37,052 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:commandTrunk= 50000
+2017-03-29 10:59:37,052 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:dependenciespath= /data/people/qx5/defects4j-bugs/maths/projs/Math_78_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar
+2017-03-29 10:59:37,052 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:multipointmodification= false
+2017-03-29 10:59:37,052 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:validation= process
+2017-03-29 10:59:37,052 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:scope= package
+2017-03-29 10:59:37,052 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuitetimeout= 120
+2017-03-29 10:59:37,052 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evoDSE= false
+2017-03-29 10:59:37,056 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:elementsToMutate= 10
+2017-03-29 10:59:37,057 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:lastJUnitVersion= ./examples/libs/junit-4.11.jar
+2017-03-29 10:59:37,057 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:failing= org.apache.commons.math.ode.events.EventStateTest
+2017-03-29 10:59:37,057 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:allpoints= false
+2017-03-29 10:59:37,057 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:resourcesfolder= /src/main/resources:/src/test/resources:
+2017-03-29 10:59:37,058 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:regressionforfaultlocalization= true
+2017-03-29 10:59:37,059 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:population= 1
+2017-03-29 10:59:37,059 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:saveall= false
+2017-03-29 10:59:37,059 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:pvariantfoldername= variant-
+2017-03-29 10:59:37,060 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:savesolution= true
+2017-03-29 10:59:37,060 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:srcjavafolder= //src/main/java/
+2017-03-29 10:59:37,060 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evo_affected_by_op= true
+2017-03-29 10:59:37,060 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:binjavafolder= //target/classes/
+2017-03-29 10:59:37,060 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:reintroduce= original-parents
+2017-03-29 10:59:37,060 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuitejar= ./lib/evosuite-master-1.0.4-SNAPSHOT.jar
+2017-03-29 10:59:37,060 INFO fr.inria.astor.core.setup.ConfigurationProperties - ----------------------------
+2017-03-29 10:59:37,062 INFO main - mod_point ModificPoint=EventState line: 214, el: CtAssignmentImpl
+2017-03-29 10:59:37,062 INFO main - -->op: RemoveOp: `root = java.lang.Double.N[...] ` ---> `-` at pos 0 of parent `{ 	root = java.lang.Doubl[...]`
+2017-03-29 10:59:42,461 INFO main - mod_point ModificPoint=EventState line: 220, el: CtAssignmentImpl
+2017-03-29 10:59:42,461 INFO main - -->op: RemoveOp: `ta = tb ` ---> `-` at pos 0 of parent `{ 	ta = tb; 	ga = gb; }`
+2017-03-29 10:59:44,597 INFO main - mod_point ModificPoint=EventState line: 221, el: CtAssignmentImpl
+2017-03-29 10:59:44,597 INFO main - -->op: RemoveOp: `ga = gb ` ---> `-` at pos 1 of parent `{ 	ta = tb; 	ga = gb; }`
+2017-03-29 10:59:46,348 INFO main - mod_point ModificPoint=BrentSolver line: 178, el: CtThrowImpl
+2017-03-29 10:59:46,348 INFO main - -->op: RemoveOp: `throw org.apache.commons.[...] ` ---> `-` at pos 0 of parent `{ 	throw org.apache.commo[...]`
+2017-03-29 10:59:48,401 INFO main - mod_point ModificPoint=BrentSolver line: 170, el: CtIfImpl
+2017-03-29 10:59:48,402 INFO main - -->op: ReplaceIfBooleanOp: `if ((java.lang.Math.abs(y[...] ` ---> `if (true) { 	setResult(mi[...]` at pos 0 of parent `{ 	if ((java.lang.Math.ab[...]`
+2017-03-29 10:59:50,355 INFO main - mod_point ModificPoint=BrentSolver line: 170, el: CtIfImpl
+2017-03-29 10:59:50,356 INFO main - -->op: ReplaceIfBooleanOp: `if ((java.lang.Math.abs(y[...] ` ---> `if (false) { 	setResult(m[...]` at pos 0 of parent `{ 	if ((java.lang.Math.ab[...]`
+2017-03-29 10:59:52,094 INFO main - mod_point ModificPoint=BrentSolver line: 170, el: CtIfImpl
+2017-03-29 10:59:52,094 INFO main - -->op: RemoveOp: `if ((java.lang.Math.abs(y[...] ` ---> `-` at pos 0 of parent `{ 	if ((java.lang.Math.ab[...]`
+2017-03-29 10:59:53,728 INFO main - mod_point ModificPoint=BrentSolver line: 173, el: CtIfImpl
+2017-03-29 10:59:53,729 INFO main - -->op: ReplaceIfBooleanOp: `if ((java.lang.Math.abs(y[...] ` ---> `if (true) { 	setResult(ma[...]` at pos 0 of parent `{ 	if ((java.lang.Math.ab[...]`
+2017-03-29 10:59:55,789 INFO main - mod_point ModificPoint=BrentSolver line: 173, el: CtIfImpl
+2017-03-29 10:59:55,790 INFO main - -->op: ReplaceIfBooleanOp: `if ((java.lang.Math.abs(y[...] ` ---> `if (false) { 	setResult(m[...]` at pos 0 of parent `{ 	if ((java.lang.Math.ab[...]`
+2017-03-29 10:59:58,358 INFO main - mod_point ModificPoint=BrentSolver line: 173, el: CtIfImpl
+2017-03-29 10:59:58,359 INFO main - -->op: RemoveOp: `if ((java.lang.Math.abs(y[...] ` ---> `-` at pos 0 of parent `{ 	if ((java.lang.Math.ab[...]`
+2017-03-29 10:59:59,964 INFO main - mod_point ModificPoint=BrentSolver line: 282, el: CtAssignmentImpl
+2017-03-29 10:59:59,965 INFO main - -->op: RemoveOp: `delta = 0.5 * dx ` ---> `-` at pos 0 of parent `{ 	delta = 0.5 * dx; 	old[...]`
+2017-03-29 11:01:03,833 INFO main - mod_point ModificPoint=BrentSolver line: 283, el: CtAssignmentImpl
+2017-03-29 11:01:03,838 INFO main - -->op: RemoveOp: `oldDelta = delta ` ---> `-` at pos 1 of parent `{ 	delta = 0.5 * dx; 	old[...]`
+2017-03-29 11:01:09,652 INFO main - mod_point ModificPoint=DummyStepInterpolator line: 99, el: CtInvocationImpl
+2017-03-29 11:01:09,653 INFO main - -->op: RemoveOp: `java.lang.System.arraycop[...] ` ---> `-` at pos 0 of parent `{ 	java.lang.System.array[...]`
+2017-03-29 11:01:12,692 INFO main - mod_point ModificPoint=BrentSolver line: 267, el: CtLocalVariableImpl
+2017-03-29 11:01:12,692 INFO main - -->op: RemoveOp: `double r1 = y0 / y2 ` ---> `-` at pos 0 of parent `{ 	double r1 = y0 / y2; 	[...]`
+2017-03-29 11:01:13,098 INFO main - mod_point ModificPoint=BrentSolver line: 268, el: CtLocalVariableImpl
+2017-03-29 11:01:13,099 INFO main - -->op: RemoveOp: `double r2 = y1 / y2 ` ---> `-` at pos 1 of parent `{ 	double r1 = y0 / y2; 	[...]`
+2017-03-29 11:01:13,434 INFO main - mod_point ModificPoint=BrentSolver line: 269, el: CtAssignmentImpl
+2017-03-29 11:01:13,434 INFO main - -->op: RemoveOp: `p = r3 * (((dx * r1) * (r[...] ` ---> `-` at pos 2 of parent `{ 	double r1 = y0 / y2; 	[...]`
+2017-03-29 11:01:13,744 INFO main - mod_point ModificPoint=BrentSolver line: 270, el: CtAssignmentImpl
+2017-03-29 11:01:13,744 INFO main - -->op: RemoveOp: `p1 = ((r1 - 1.0) * (r2 - [...] ` ---> `-` at pos 3 of parent `{ 	double r1 = y0 / y2; 	[...]`
+2017-03-29 11:01:13,975 INFO main - mod_point ModificPoint=BrentSolver line: 296, el: CtAssignmentImpl
+2017-03-29 11:01:13,975 INFO main - -->op: RemoveOp: `x1 = x1 + (0.5 * toleranc[...] ` ---> `-` at pos 0 of parent `{ 	x1 = x1 + (0.5 * toler[...]`
+2017-03-29 11:01:15,774 INFO main - mod_point ModificPoint=EventState line: 216, el: CtIfImpl
+2017-03-29 11:01:15,775 INFO main - -->op: ReplaceIfBooleanOp: `if ((java.lang.Double.isN[...] ` ---> `if (true) { 	ta = tb; 	ga[...]` at pos 7 of parent `{ 	increasing = gb >= ga;[...]`
+2017-03-29 11:01:17,994 INFO main - mod_point ModificPoint=EventState line: 216, el: CtIfImpl
+2017-03-29 11:01:17,995 INFO main - -->op: ReplaceIfBooleanOp: `if ((java.lang.Double.isN[...] ` ---> `if (false) { 	ta = tb; 	g[...]` at pos 7 of parent `{ 	increasing = gb >= ga;[...]`
+2017-03-29 11:01:20,002 INFO main - mod_point ModificPoint=EventState line: 216, el: CtIfImpl
+2017-03-29 11:01:20,002 INFO main - -->op: RemoveOp: `if ((java.lang.Double.isN[...] ` ---> `-` at pos 7 of parent `{ 	increasing = gb >= ga;[...]`
+2017-03-29 11:01:21,849 INFO main - mod_point ModificPoint=EventState line: 222, el: CtIfImpl
+2017-03-29 11:01:21,849 INFO main - -->op: ReplaceIfBooleanOp: `if ((java.lang.Double.isN[...] ` ---> `if (true) { 	Error in pri[...]` at pos 0 of parent `{ 	if ((java.lang.Double.[...]`
+2017-03-29 11:01:24,360 INFO main - mod_point ModificPoint=EventState line: 222, el: CtIfImpl
+2017-03-29 11:01:24,361 INFO main - -->op: ReplaceIfBooleanOp: `if ((java.lang.Double.isN[...] ` ---> `if (false) { 	Error in pr[...]` at pos 0 of parent `{ 	if ((java.lang.Double.[...]`
+2017-03-29 11:01:26,379 INFO main - mod_point ModificPoint=EventState line: 222, el: CtIfImpl
+2017-03-29 11:01:26,379 INFO main - -->op: RemoveOp: `if ((java.lang.Double.isN[...] ` ---> `-` at pos 0 of parent `{ 	if ((java.lang.Double.[...]`
+2017-03-29 11:01:28,357 INFO main - mod_point ModificPoint=EventState line: 224, el: CtAssignmentImpl
+2017-03-29 11:01:28,358 INFO main - -->op: RemoveOp: `pendingEventTime = root ` ---> `-` at pos 0 of parent `{ 	pendingEventTime = roo[...]`
+2017-03-29 11:01:30,364 INFO main - mod_point ModificPoint=EventState line: 225, el: CtIfImpl
+2017-03-29 11:01:30,365 INFO main - -->op: ReplaceIfBooleanOp: `if ((pendingEvent) && ((j[...] ` ---> `if (true) { 	return false[...]` at pos 1 of parent `{ 	pendingEventTime = roo[...]`
+2017-03-29 11:01:32,499 INFO main - mod_point ModificPoint=EventState line: 225, el: CtIfImpl
+2017-03-29 11:01:32,500 INFO main - -->op: ReplaceIfBooleanOp: `if ((pendingEvent) && ((j[...] ` ---> `if (false) { 	return fals[...]` at pos 1 of parent `{ 	pendingEventTime = roo[...]`
+2017-03-29 11:01:34,333 INFO main - mod_point ModificPoint=EventState line: 225, el: CtIfImpl
+2017-03-29 11:01:34,333 INFO main - -->op: RemoveOp: `if ((pendingEvent) && ((j[...] ` ---> `-` at pos 1 of parent `{ 	pendingEventTime = roo[...]`
+2017-03-29 11:01:36,028 INFO main - mod_point ModificPoint=EventState line: 234, el: CtAssignmentImpl
+2017-03-29 11:01:36,029 INFO main - -->op: RemoveOp: `pendingEvent = true ` ---> `-` at pos 2 of parent `{ 	pendingEventTime = roo[...]`
+2017-03-29 11:01:37,930 INFO main - mod_point ModificPoint=EventState line: 235, el: CtReturnImpl
+2017-03-29 11:01:37,931 INFO main - -->op: RemoveOp: `return true ` ---> `-` at pos 3 of parent `{ 	pendingEventTime = roo[...]`
+2017-03-29 11:01:39,315 INFO main - mod_point ModificPoint=EventState line: 269, el: CtReturnImpl
+2017-03-29 11:01:39,315 INFO main - -->op: RemoveOp: `return pendingEventTime ` ---> `-` at pos 0 of parent `{ 	return pendingEventTim[...]`
+2017-03-29 11:01:39,741 INFO main - mod_point ModificPoint=EventState line: 288, el: CtAssignmentImpl
+2017-03-29 11:01:39,742 INFO main - -->op: RemoveOp: `previousEventTime = t ` ---> `-` at pos 0 of parent `{ 	previousEventTime = t;[...]`
+2017-03-29 11:01:41,461 INFO main - mod_point ModificPoint=EventState line: 289, el: CtAssignmentImpl
+2017-03-29 11:01:41,461 INFO main - -->op: RemoveOp: `g0Positive = increasing ` ---> `-` at pos 1 of parent `{ 	previousEventTime = t;[...]`
+2017-03-29 11:01:44,065 INFO main - mod_point ModificPoint=EventState line: 290, el: CtAssignmentImpl
+2017-03-29 11:01:44,066 INFO main - -->op: RemoveOp: `nextAction = handler.even[...] ` ---> `-` at pos 2 of parent `{ 	previousEventTime = t;[...]`
+2017-03-29 11:01:46,609 INFO main - mod_point ModificPoint=EventState line: 197, el: CtInvocationImpl
+2017-03-29 11:01:46,609 INFO main - -->op: RemoveOp: `interpolator.setInterpola[...] ` ---> `-` at pos 0 of parent `{ 	interpolator.setInterp[...]`
+2017-03-29 11:01:48,581 INFO main - mod_point ModificPoint=EventState line: 198, el: CtReturnImpl
+2017-03-29 11:01:48,582 INFO main - -->op: RemoveOp: `return handler.g(t, inter[...] ` ---> `-` at pos 1 of parent `{ 	interpolator.setInterp[...]`
+2017-03-29 11:01:49,258 INFO main - mod_point ModificPoint=EventState line: 192, el: CtAssignmentImpl
+2017-03-29 11:01:49,262 INFO main - -->op: RemoveOp: `increasing = gb >= ga ` ---> `-` at pos 0 of parent `{ 	increasing = gb >= ga;[...]`
+2017-03-29 11:01:51,989 INFO main - mod_point ModificPoint=EventState line: 194, el: CtLocalVariableImpl
+2017-03-29 11:01:51,990 INFO main - -->op: RemoveOp: `final org.apache.commons.[...] ` ---> `-` at pos 1 of parent `{ 	increasing = gb >= ga;[...]`
+2017-03-29 11:01:52,420 INFO main - mod_point ModificPoint=EventState line: 206, el: CtLocalVariableImpl
+2017-03-29 11:01:52,421 INFO main - -->op: RemoveOp: `final org.apache.commons.[...] ` ---> `-` at pos 2 of parent `{ 	increasing = gb >= ga;[...]`
+2017-03-29 11:01:53,097 INFO main - mod_point ModificPoint=EventState line: 207, el: CtInvocationImpl
+2017-03-29 11:01:53,098 INFO main - -->op: RemoveOp: `solver.setAbsoluteAccurac[...] ` ---> `-` at pos 3 of parent `{ 	increasing = gb >= ga;[...]`
+2017-03-29 11:02:53,965 INFO main - mod_point ModificPoint=EventState line: 208, el: CtInvocationImpl
+2017-03-29 11:02:53,966 INFO main - -->op: RemoveOp: `solver.setMaximalIteratio[...] ` ---> `-` at pos 4 of parent `{ 	increasing = gb >= ga;[...]`
+2017-03-29 11:02:57,181 INFO main - mod_point ModificPoint=EventState line: 211, el: CtAssignmentImpl
+2017-03-29 11:02:57,181 INFO main - -->op: RemoveOp: `root = ta <= tb ? solver.[...] ` ---> `-` at pos 0 of parent `{ 	root = ta <= tb ? solv[...]`
+2017-03-29 11:02:57,569 INFO main - mod_point ModificPoint=EventState line: 151, el: CtAssignmentImpl
+2017-03-29 11:02:57,569 INFO main - -->op: RemoveOp: `t0 = tStart ` ---> `-` at pos 0 of parent `{ 	t0 = tStart; 	g0 = han[...]`
+2017-03-29 11:02:59,566 INFO main - mod_point ModificPoint=EventState line: 152, el: CtAssignmentImpl
+2017-03-29 11:02:59,566 INFO main - -->op: RemoveOp: `g0 = handler.g(tStart, yS[...] ` ---> `-` at pos 1 of parent `{ 	t0 = tStart; 	g0 = han[...]`
+2017-03-29 11:03:01,359 INFO main - mod_point ModificPoint=EventState line: 153, el: CtAssignmentImpl
+2017-03-29 11:03:01,359 INFO main - -->op: RemoveOp: `g0Positive = (g0) >= 0 ` ---> `-` at pos 2 of parent `{ 	t0 = tStart; 	g0 = han[...]`
+2017-03-29 11:03:03,125 INFO main - mod_point ModificPoint=EventState line: 172, el: CtAssignmentImpl
+2017-03-29 11:03:03,125 INFO main - -->op: RemoveOp: `forward = interpolator.is[...] ` ---> `-` at pos 0 of parent `{ 	forward = interpolator[...]`
+2017-03-29 11:03:05,169 INFO main - mod_point ModificPoint=EventState line: 173, el: CtLocalVariableImpl
+2017-03-29 11:03:05,169 INFO main - -->op: RemoveOp: `final double t1 = interpo[...] ` ---> `-` at pos 1 of parent `{ 	forward = interpolator[...]`
+2017-03-29 11:03:05,570 INFO main - mod_point ModificPoint=EventState line: 174, el: CtLocalVariableImpl
+2017-03-29 11:03:05,571 INFO main - -->op: RemoveOp: `final int n = java.lang.M[...] ` ---> `-` at pos 2 of parent `{ 	forward = interpolator[...]`
+2017-03-29 11:03:05,955 INFO main - mod_point ModificPoint=EventState line: 175, el: CtLocalVariableImpl
+2017-03-29 11:03:05,956 INFO main - -->op: RemoveOp: `final double h = (t1 - (t[...] ` ---> `-` at pos 3 of parent `{ 	forward = interpolator[...]`
+2017-03-29 11:03:06,459 INFO main - mod_point ModificPoint=EventState line: 177, el: CtLocalVariableImpl
+2017-03-29 11:03:06,460 INFO main - -->op: RemoveOp: `double ta = t0 ` ---> `-` at pos 4 of parent `{ 	forward = interpolator[...]`
+2017-03-29 11:03:06,990 INFO main - mod_point ModificPoint=EventState line: 178, el: CtLocalVariableImpl
+2017-03-29 11:03:06,991 INFO main - -->op: RemoveOp: `double ga = g0 ` ---> `-` at pos 5 of parent `{ 	forward = interpolator[...]`
+2017-03-29 11:03:07,393 INFO main - mod_point ModificPoint=EventState line: 179, el: CtLocalVariableImpl
+2017-03-29 11:03:07,394 INFO main - -->op: RemoveOp: `double tb = (t0) + (inter[...] ` ---> `-` at pos 6 of parent `{ 	forward = interpolator[...]`
+2017-03-29 11:03:07,962 INFO main - mod_point ModificPoint=EventState line: 180, el: CtForImpl
+2017-03-29 11:03:07,963 INFO main - -->op: RemoveOp: `for (int i = 0 ; i < n ; [...] ` ---> `-` at pos 7 of parent `{ 	forward = interpolator[...]`
+2017-03-29 11:03:08,409 INFO main - mod_point ModificPoint=EventState line: 183, el: CtOperatorAssignmentImpl
+2017-03-29 11:03:08,410 INFO main - -->op: RemoveOp: `tb += h ` ---> `-` at pos 0 of parent `{ 	tb += h; 	interpolator[...]`
+2017-03-29 11:03:09,828 INFO main - mod_point ModificPoint=EventState line: 184, el: CtInvocationImpl
+2017-03-29 11:03:09,829 INFO main - -->op: RemoveOp: `interpolator.setInterpola[...] ` ---> `-` at pos 1 of parent `{ 	tb += h; 	interpolator[...]`
+2017-03-29 11:03:11,302 INFO main - mod_point ModificPoint=EventState line: 185, el: CtLocalVariableImpl
+2017-03-29 11:03:11,303 INFO main - -->op: RemoveOp: `final double gb = handler[...] ` ---> `-` at pos 2 of parent `{ 	tb += h; 	interpolator[...]`
+2017-03-29 11:03:11,562 INFO main - mod_point ModificPoint=EventState line: 188, el: CtIfImpl
+2017-03-29 11:03:11,564 INFO main - -->op: ReplaceIfBooleanOp: `if ((g0Positive) ^ (gb >=[...] ` ---> `if (true) { 	Error in pri[...]` at pos 3 of parent `{ 	tb += h; 	interpolator[...]`
+2017-03-29 11:03:14,200 INFO main - mod_point ModificPoint=EventState line: 188, el: CtIfImpl
+2017-03-29 11:03:14,201 INFO main - -->op: ReplaceIfBooleanOp: `if ((g0Positive) ^ (gb >=[...] ` ---> `if (false) { 	Error in pr[...]` at pos 3 of parent `{ 	tb += h; 	interpolator[...]`
+2017-03-29 11:03:15,986 INFO main - mod_point ModificPoint=EventState line: 188, el: CtIfImpl
+2017-03-29 11:03:15,987 INFO main - -->op: RemoveOp: `if ((g0Positive) ^ (gb >=[...] ` ---> `-` at pos 3 of parent `{ 	tb += h; 	interpolator[...]`
+2017-03-29 11:03:16,298 INFO main - mod_point ModificPoint=EventState line: 247, el: CtAssignmentImpl
+2017-03-29 11:03:16,299 INFO main - -->op: RemoveOp: `pendingEvent = false ` ---> `-` at pos 8 of parent `{ 	forward = interpolator[...]`
+2017-03-29 11:03:18,369 INFO main - mod_point ModificPoint=EventState line: 248, el: CtAssignmentImpl
+2017-03-29 11:03:18,370 INFO main - -->op: RemoveOp: `pendingEventTime = java.l[...] ` ---> `-` at pos 9 of parent `{ 	forward = interpolator[...]`
+2017-03-29 11:03:20,605 INFO main - mod_point ModificPoint=EventState line: 249, el: CtReturnImpl
+2017-03-29 11:03:20,606 INFO main - -->op: RemoveOp: `return false ` ---> `-` at pos 10 of parent `{ 	forward = interpolator[...]`
+2017-03-29 11:03:21,033 INFO main - mod_point ModificPoint=EventState line: 283, el: CtAssignmentImpl
+2017-03-29 11:03:21,034 INFO main - -->op: RemoveOp: `t0 = t ` ---> `-` at pos 0 of parent `{ 	t0 = t; 	g0 = handler.[...]`
+2017-03-29 11:04:14,527 INFO main - -Found Solution, child variant #64
+2017-03-29 11:04:14,544 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.math.ode.sampling.DummyStepInterpolator to /data/people/qx5/jkali_repair_expts/repair/Math_78/r0/AstorMain-Math_78/src/variant-64
+2017-03-29 11:04:14,633 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.math.ConvergingAlgorithmImpl to /data/people/qx5/jkali_repair_expts/repair/Math_78/r0/AstorMain-Math_78/src/variant-64
+2017-03-29 11:04:14,670 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.math.ode.sampling.AbstractStepInterpolator to /data/people/qx5/jkali_repair_expts/repair/Math_78/r0/AstorMain-Math_78/src/variant-64
+2017-03-29 11:04:14,765 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.math.ode.events.EventState to /data/people/qx5/jkali_repair_expts/repair/Math_78/r0/AstorMain-Math_78/src/variant-64
+2017-03-29 11:04:14,833 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.math.analysis.solvers.BrentSolver to /data/people/qx5/jkali_repair_expts/repair/Math_78/r0/AstorMain-Math_78/src/variant-64
+2017-03-29 11:04:15,466 INFO main - 
+----SUMMARY_EXECUTION---
+2017-03-29 11:04:15,466 INFO main - 
+Solution details
+2017-03-29 11:04:15,466 INFO main - 
+ --SOLUTIONS DESCRIPTION--
+
+ ----
+ProgramVariant 64
+ 
+time(sec)= 223
+operation: RemoveOp
+location= org.apache.commons.math.ode.events.EventState
+line= 283
+lineSuspiciousness= 0.107
+original statement= t0 = t
+fixed statement= t0 = t
+generation= 1
+ingredientScope= -
+validation=|true|0|1998|[]|
+2017-03-29 11:04:15,466 INFO fr.inria.main.evolution.AstorMain - Time Total(s): 550.319

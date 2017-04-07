@@ -1,0 +1,124 @@
+2017-03-29 19:18:36,021 INFO main - command line arguments: [-jvm4testexecution  /home/qx5/jdk1.8.0_111/bin  -dependencies  /data/people/qx5/defects4j-bugs/maths/projs/Math_95_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar  -id  Math_95  -failing  org.apache.commons.math.distribution.FDistributionTest  -location  /data/people/qx5/defects4j-bugs/maths/projs/Math_95_buggy  -package  org.apache.commons.math  -maxtime  120  -stopfirst  true  -srcjavafolder  //src/java/  -srctestfolder  //src/test/  -binjavafolder  //target/classes/  -bintestfolder  //target/test-classes/  -out  /data/people/qx5/jgenprog_repair_expts/repair/Math_95/r0]
+2017-03-29 19:19:27,295 INFO main - -Executing Gzoltar classpath: /data/people/qx5/jgenprog_repair_expts/repair/Math_95/r0/AstorMain-Math_95//bin//default from 156 classes with test cases
+2017-03-29 19:19:27,312 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar fault localization: min susp value parameter: 0.1
+2017-03-29 19:19:51,457 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - -gz-Adding classpath: [/data/people/qx5/jgenprog_repair_expts/repair/Math_95/r0/AstorMain-Math_95//bin//default, /home/qx5/ssFix2/lib/myprinter.jar, /home/qx5/ssFix2/lib/evosuite-1.0.2.jar, /data/people/qx5/defects4j-bugs/maths/projs/Math_95_buggy/all0.jar, /home/qx5/ssFix2/lib/commons-lang3-3.5.jar]
+2017-03-29 19:26:03,611 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.apache.commons.math.optimization.MultiDirectionalTest#testCostExceptions
+2017-03-29 19:26:03,612 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.apache.commons.math.optimization.MultiDirectionalTest#testRosenbrock
+2017-03-29 19:26:03,613 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.apache.commons.math.optimization.MultiDirectionalTest#testPowell
+2017-03-29 19:26:03,865 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.apache.commons.math.distribution.FDistributionTest#testSmallDegreesOfFreedom
+2017-03-29 19:26:03,884 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar Test Result Total:1300, fails: 4, GZoltar suspicious 9185
+2017-03-29 19:26:04,259 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar found: 32 with susp > 0.1, we consider: 32
+2017-03-29 19:26:04,330 INFO main - building model: /data/people/qx5/jgenprog_repair_expts/repair/Math_95/r0/AstorMain-Math_95//src//default, compliance level: 8
+2017-03-29 19:28:07,067 INFO main - 
+---- Initial suspicious size: 32
+2017-03-29 19:28:09,288 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.distribution.FDistributionImpl, methodName=org.apache.commons.math.distribution.FDistributionImpl{setNumeratorDegreesOfFreedom(D)V 0.0, lineNumber=160, susp=0.12909944487358055]
+2017-03-29 19:28:09,293 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.distribution.FDistributionImpl, methodName=org.apache.commons.math.distribution.FDistributionImpl{setDenominatorDegreesOfFreedom(D)V 0.0, lineNumber=182, susp=0.12909944487358055]
+2017-03-29 19:28:09,995 INFO main - Total suspicious from FL: 32,  28
+2017-03-29 19:28:09,995 INFO main - Total ModPoint created: 28
+2017-03-29 19:28:09,995 INFO main - Creating program variant #1, [Variant id: 1, #gens: 28, #ops: 0, parent:-]
+2017-03-29 19:28:10,985 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.distribution.FDistributionImpl, methodName=org.apache.commons.math.distribution.FDistributionImpl{setNumeratorDegreesOfFreedom(D)V 0.0, lineNumber=160, susp=0.12909944487358055]
+2017-03-29 19:28:11,128 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.distribution.FDistributionImpl, methodName=org.apache.commons.math.distribution.FDistributionImpl{setDenominatorDegreesOfFreedom(D)V 0.0, lineNumber=182, susp=0.12909944487358055]
+2017-03-29 19:28:11,634 INFO main - Total suspicious from FL: 32,  28
+2017-03-29 19:28:11,634 INFO main - Total ModPoint created: 28
+2017-03-29 19:28:11,634 INFO main - Creating program variant #2, [Variant id: 2, #gens: 28, #ops: 0, parent:-]
+2017-03-29 19:28:12,665 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.distribution.FDistributionImpl, methodName=org.apache.commons.math.distribution.FDistributionImpl{setNumeratorDegreesOfFreedom(D)V 0.0, lineNumber=160, susp=0.12909944487358055]
+2017-03-29 19:28:12,754 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.distribution.FDistributionImpl, methodName=org.apache.commons.math.distribution.FDistributionImpl{setDenominatorDegreesOfFreedom(D)V 0.0, lineNumber=182, susp=0.12909944487358055]
+2017-03-29 19:28:13,030 INFO main - Total suspicious from FL: 32,  28
+2017-03-29 19:28:13,030 INFO main - Total ModPoint created: 28
+2017-03-29 19:28:13,032 INFO main - Creating program variant #3, [Variant id: 3, #gens: 28, #ops: 0, parent:-]
+2017-03-29 19:31:15,688 INFO fr.inria.astor.core.setup.ConfigurationProperties - ----------------------------
+2017-03-29 19:31:15,688 INFO fr.inria.astor.core.setup.ConfigurationProperties - ---Configuration properties:---Execution values
+2017-03-29 19:31:15,689 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:packageToInstrument= org.apache.commons.math
+2017-03-29 19:31:15,689 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:flthreshold= 0.1
+2017-03-29 19:31:15,689 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:numberExecutions= 1
+2017-03-29 19:31:15,689 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuiteresultfolder= evosuite
+2017-03-29 19:31:15,689 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:ignoredTestCases= org.apache.commons.math.ode.nonstiff:org.apache.commons.math.ode2.nonstiff:org.apache.commons.lang.LocaleUtilsTest:org.apache.commons.math.optimization.MultiDirectionalTest:org.apache.commons.math.optimization.MultiDirectionalTest:org.apache.commons.math.optimization.MultiDirectionalTest
+2017-03-29 19:31:15,689 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:skipfaultlocalization= false
+2017-03-29 19:31:15,690 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxGeneration= 200
+2017-03-29 19:31:15,690 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxsuspcandidates= 1000
+2017-03-29 19:31:15,690 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:tmax2= 960000
+2017-03-29 19:31:15,690 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:tmax1= 120000
+2017-03-29 19:31:15,690 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:workingDirectory= /data/people/qx5/jgenprog_repair_expts/repair/Math_95/r0
+2017-03-29 19:31:15,690 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:mode= statement
+2017-03-29 19:31:15,690 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:ignoreflakyinfl= true
+2017-03-29 19:31:15,691 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:uniqueoptogen= false
+2017-03-29 19:31:15,691 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:testcasesregression= org.apache.commons.math.stat.data.LotteryTest:org.apache.commons.math.ode.sampling.StepNormalizerTest:org.apache.commons.math.ode.ContinuousOutputModelTest:org.apache.commons.math.geometry.RotationOrderTest:org.apache.commons.math.random.UncorrelatedRandomVectorGeneratorTest:org.apache.commons.math.estimation.EstimatedParameterTest:org.apache.commons.math.ConvergenceExceptionTest:org.apache.commons.math.optimization.MultiDirectionalTest:org.apache.commons.math.complex.ComplexFormatTest:org.apache.commons.math.util.ResizableDoubleArrayTest:org.apache.commons.math.linear.RealMatrixImplTest:org.apache.commons.math.stat.descriptive.summary.SumTest:org.apache.commons.math.analysis.PolynomialFunctionNewtonFormTest:org.apache.commons.math.stat.descriptive.summary.SumSqTest:org.apache.commons.math.distribution.HypergeometricDistributionTest:org.apache.commons.math.random.RandomAdaptorTest:org.apache.commons.math.ode.FirstOrderConverterTest:org.apache.commons.math.stat.descriptive.SynchronizedSummaryStatisticsTest:org.apache.commons.math.stat.inference.TestUtilsTest:org.apache.commons.math.stat.data.LewTest:org.apache.commons.math.distribution.GammaDistributionTest:org.apache.commons.math.stat.descriptive.rank.MedianTest:org.apache.commons.math.stat.descriptive.moment.KurtosisTest:org.apache.commons.math.ode.nonstiff.DormandPrince54StepInterpolatorTest:org.apache.commons.math.stat.CertifiedDataTest:org.apache.commons.math.ode.nonstiff.HighamHall54IntegratorTest:org.apache.commons.math.complex.FrenchComplexFormatTest:org.apache.commons.math.analysis.BrentSolverTest:org.apache.commons.math.transform.FastFourierTransformerTest:org.apache.commons.math.analysis.BisectionSolverTest:org.apache.commons.math.stat.descriptive.moment.VectorialMeanTest:org.apache.commons.math.ode.nonstiff.MidpointStepInterpolatorTest:org.apache.commons.math.distribution.NormalDistributionTest:org.apache.commons.math.distribution.PoissonDistributionTest:org.apache.commons.math.geometry.Vector3DFormatTest:org.apache.commons.math.analysis.NewtonSolverTest:org.apache.commons.math.DuplicateSampleAbscissaExceptionTest:org.apache.commons.math.estimation.MinpackTest:org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegratorTest:org.apache.commons.math.random.RandomDataTest:org.apache.commons.math.stat.descriptive.AbstractUnivariateStatisticTest:org.apache.commons.math.stat.descriptive.MixedListUnivariateImplTest:org.apache.commons.math.distribution.FDistributionTest:org.apache.commons.math.analysis.UnivariateRealSolverUtilsTest:org.apache.commons.math.FunctionEvaluationExceptionTest:org.apache.commons.math.estimation.WeightedMeasurementTest:org.apache.commons.math.stat.inference.ChiSquareTestTest:org.apache.commons.math.stat.inference.TTestFactoryTest:org.apache.commons.math.stat.descriptive.moment.SkewnessTest:org.apache.commons.math.special.GammaTest:org.apache.commons.math.ode.nonstiff.EulerStepInterpolatorTest:org.apache.commons.math.ode.nonstiff.HighamHall54StepInterpolatorTest:org.apache.commons.math.ode.nonstiff.ThreeEighthesStepInterpolatorTest:org.apache.commons.math.stat.descriptive.SummaryStatisticsTest:org.apache.commons.math.ode.nonstiff.MidpointIntegratorTest:org.apache.commons.math.stat.descriptive.moment.FirstMomentTest:org.apache.commons.math.linear.MatrixIndexExceptionTest:org.apache.commons.math.stat.descriptive.moment.StandardDeviationTest:org.apache.commons.math.complex.ComplexTest:org.apache.commons.math.distribution.BetaDistributionTest:org.apache.commons.math.fraction.FractionFormatTest:org.apache.commons.math.distribution.PascalDistributionTest:org.apache.commons.math.special.BetaTest:org.apache.commons.math.special.ErfTest:org.apache.commons.math.analysis.UnivariateRealSolverFactoryImplTest:org.apache.commons.math.ode.nonstiff.GillIntegratorTest:org.apache.commons.math.random.EmpiricalDistributionTest:org.apache.commons.math.stat.descriptive.MultivariateSummaryStatisticsTest:org.apache.commons.math.complex.ComplexUtilsTest:org.apache.commons.math.util.MathUtilsTest:org.apache.commons.math.stat.descriptive.StatisticalSummaryValuesTest:org.apache.commons.math.stat.regression.OLSMultipleLinearRegressionTest:org.apache.commons.math.estimation.LevenbergMarquardtEstimatorTest:org.apache.commons.math.linear.BigMatrixImplTest:org.apache.commons.math.stat.inference.ChiSquareFactoryTest:org.apache.commons.math.random.AbstractRandomGeneratorTest:org.apache.commons.math.stat.descriptive.InteractionTest:org.apache.commons.math.ode.nonstiff.GraggBulirschStoerStepInterpolatorTest:org.apache.commons.math.linear.BiDiagonalTransformerTest:org.apache.commons.math.util.DefaultTransformerTest:org.apache.commons.math.linear.LUDecompositionImplTest:org.apache.commons.math.linear.RealVectorFormatTest:org.apache.commons.math.random.ValueServerTest:org.apache.commons.math.analysis.DividedDifferenceInterpolatorTest:org.apache.commons.math.stat.descriptive.moment.MeanTest:org.apache.commons.math.linear.QRDecompositionImplTest:org.apache.commons.math.stat.descriptive.moment.VarianceTest:org.apache.commons.math.distribution.WeibullDistributionTest:org.apache.commons.math.analysis.RombergIntegratorTest:org.apache.commons.math.stat.StatUtilsTest:org.apache.commons.math.stat.descriptive.moment.FourthMomentTest:org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolatorTest:org.apache.commons.math.distribution.ChiSquareDistributionTest:org.apache.commons.math.transform.FastSineTransformerTest:org.apache.commons.math.stat.inference.OneWayAnovaTest:org.apache.commons.math.stat.descriptive.summary.ProductTest:org.apache.commons.math.analysis.NevilleInterpolatorTest:org.apache.commons.math.fraction.FractionTest:org.apache.commons.math.transform.FastCosineTransformerTest:org.apache.commons.math.ArgumentOutsideDomainExceptionTest:org.apache.commons.math.ode.nonstiff.DormandPrince853IntegratorTest:org.apache.commons.math.ode.nonstiff.EulerIntegratorTest:org.apache.commons.math.linear.RealVectorImplTest:org.apache.commons.math.stat.descriptive.rank.MaxTest:org.apache.commons.math.optimization.NelderMeadTest:org.apache.commons.math.ode.nonstiff.DormandPrince54IntegratorTest:org.apache.commons.math.stat.descriptive.ListUnivariateImplTest:org.apache.commons.math.analysis.PolynomialSplineFunctionTest:org.apache.commons.math.MaxIterationsExceededExceptionTest:org.apache.commons.math.stat.descriptive.DescriptiveStatisticsTest:org.apache.commons.math.linear.MatrixUtilsTest:org.apache.commons.math.geometry.RotationTest:org.apache.commons.math.stat.descriptive.moment.GeometricMeanTest:org.apache.commons.math.analysis.LaguerreSolverTest:org.apache.commons.math.random.CorrelatedRandomVectorGeneratorTest:org.apache.commons.math.geometry.Vector3DTest:org.apache.commons.math.ode.sampling.DummyStepInterpolatorTest:org.apache.commons.math.stat.descriptive.rank.MinTest:org.apache.commons.math.analysis.PolynomialFunctionLagrangeFormTest:org.apache.commons.math.stat.descriptive.moment.VectorialCovarianceTest:org.apache.commons.math.distribution.ExponentialDistributionTest:org.apache.commons.math.analysis.MullerSolverTest:org.apache.commons.math.stat.descriptive.SynchronizedDescriptiveStatisticsTest:org.apache.commons.math.geometry.FrenchVector3DFormatTest:org.apache.commons.math.analysis.SimpsonIntegratorTest:org.apache.commons.math.analysis.TrapezoidIntegratorTest:org.apache.commons.math.random.GaussianRandomGeneratorTest:org.apache.commons.math.stat.descriptive.moment.ThirdMomentTest:org.apache.commons.math.ode.nonstiff.AdamsMoultonIntegratorTest:org.apache.commons.math.stat.regression.SimpleRegressionTest:org.apache.commons.math.stat.regression.GLSMultipleLinearRegressionTest:org.apache.commons.math.linear.FrenchRealVectorFormatTest:org.apache.commons.math.ode.nonstiff.ThreeEighthesIntegratorTest:org.apache.commons.math.ode.nonstiff.GillStepInterpolatorTest:org.apache.commons.math.util.ContinuedFractionTest:org.apache.commons.math.util.TransformerMapTest:org.apache.commons.math.MathConfigurationExceptionTest:org.apache.commons.math.estimation.GaussNewtonEstimatorTest:org.apache.commons.math.analysis.RiddersSolverTest:org.apache.commons.math.MathExceptionTest:org.apache.commons.math.distribution.CauchyDistributionTest:org.apache.commons.math.analysis.PolynomialFunctionTest:org.apache.commons.math.analysis.SplineInterpolatorTest:org.apache.commons.math.ode.nonstiff.ClassicalRungeKuttaStepInterpolatorTest:org.apache.commons.math.distribution.TDistributionTest:org.apache.commons.math.ode.nonstiff.AdamsBashforthIntegratorTest:org.apache.commons.math.ode.nonstiff.ClassicalRungeKuttaIntegratorTest:org.apache.commons.math.stat.descriptive.summary.SumLogTest:org.apache.commons.math.stat.FrequencyTest:org.apache.commons.math.linear.InvalidMatrixExceptionTest:org.apache.commons.math.stat.descriptive.moment.SecondMomentTest:org.apache.commons.math.distribution.BinomialDistributionTest:org.apache.commons.math.stat.inference.TTestTest:org.apache.commons.math.random.UniformRandomGeneratorTest:org.apache.commons.math.stat.descriptive.rank.PercentileTest:
+2017-03-29 19:31:15,691 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:pathToMVNRepository= 
+2017-03-29 19:31:15,691 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:executeRegression= true
+2017-03-29 19:31:15,692 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:modificationpointnavigation= weight
+2017-03-29 19:31:15,692 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxtime= 120
+2017-03-29 19:31:15,692 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:probagenmutation= false
+2017-03-29 19:31:15,692 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:alternativecompliancelevel= 4
+2017-03-29 19:31:15,692 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:version-location= ./math-version/
+2017-03-29 19:31:15,692 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:location= /data/people/qx5/defects4j-bugs/maths/projs/Math_95_buggy
+2017-03-29 19:31:15,692 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:stopfirst= true
+2017-03-29 19:31:15,693 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:jvm4testexecution= /home/qx5/jdk1.8.0_111/bin
+2017-03-29 19:31:15,693 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:bugId= 280
+2017-03-29 19:31:15,693 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:mutationrate= 1 
+2017-03-29 19:31:15,693 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:projectIdentifier= Math_95
+2017-03-29 19:31:15,693 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evo_buggy_class= true
+2017-03-29 19:31:15,693 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evoRunOnBuggyClass= true
+2017-03-29 19:31:15,693 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:jvm4evosuitetestexecution= /home/qx5/jdk1.8.0_111/bin
+2017-03-29 19:31:15,693 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:resetoperations= false
+2017-03-29 19:31:15,694 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:seed= 0
+2017-03-29 19:31:15,694 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:testbystep= false
+2017-03-29 19:31:15,694 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:srctestfolder= //src/test/
+2017-03-29 19:31:15,694 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:javacompliancelevel= 8
+2017-03-29 19:31:15,694 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:bintestfolder= //target/test-classes/
+2017-03-29 19:31:15,718 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:commandTrunk= 50000
+2017-03-29 19:31:15,719 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:dependenciespath= /data/people/qx5/defects4j-bugs/maths/projs/Math_95_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar
+2017-03-29 19:31:15,722 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:multipointmodification= false
+2017-03-29 19:31:15,722 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:validation= process
+2017-03-29 19:31:15,722 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:scope= package
+2017-03-29 19:31:15,722 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuitetimeout= 120
+2017-03-29 19:31:15,722 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evoDSE= false
+2017-03-29 19:31:15,722 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:elementsToMutate= 10
+2017-03-29 19:31:15,722 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:lastJUnitVersion= ./examples/libs/junit-4.11.jar
+2017-03-29 19:31:15,722 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:failing= org.apache.commons.math.distribution.FDistributionTest
+2017-03-29 19:31:15,722 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:allpoints= false
+2017-03-29 19:31:15,723 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:resourcesfolder= /src/main/resources:/src/test/resources:
+2017-03-29 19:31:15,723 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:regressionforfaultlocalization= true
+2017-03-29 19:31:15,723 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:population= 3
+2017-03-29 19:31:15,723 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:saveall= false
+2017-03-29 19:31:15,723 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:pvariantfoldername= variant-
+2017-03-29 19:31:15,723 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:savesolution= true
+2017-03-29 19:31:15,723 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:srcjavafolder= //src/java/
+2017-03-29 19:31:15,723 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evo_affected_by_op= true
+2017-03-29 19:31:15,724 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:binjavafolder= //target/classes/
+2017-03-29 19:31:15,724 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:reintroduce= original-parents
+2017-03-29 19:31:15,724 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuitejar= ./lib/evosuite-master-1.0.4-SNAPSHOT.jar
+2017-03-29 19:31:15,724 INFO fr.inria.astor.core.setup.ConfigurationProperties - ----------------------------
+2017-03-29 19:31:15,724 INFO main - 
+----Starting Solution Search
+2017-03-29 19:36:00,477 INFO main - The Process that runs JUnit test cases had problems: process hasn't exited
+2017-03-29 19:40:16,977 INFO main - The Process that runs JUnit test cases had problems: process hasn't exited
+2017-03-29 19:50:59,112 INFO main - The Process that runs JUnit test cases had problems: process hasn't exited
+2017-03-29 20:09:40,163 INFO main - The Process that runs JUnit test cases had problems: process hasn't exited
+2017-03-29 20:18:29,856 INFO main - The Process that runs JUnit test cases had problems: process hasn't exited
+2017-03-29 20:20:40,469 INFO main - The Process that runs JUnit test cases had problems: process hasn't exited
+2017-03-29 20:34:39,591 INFO main - -Found Solution, child variant #256
+2017-03-29 20:34:39,649 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.math.distribution.AbstractContinuousDistribution to /data/people/qx5/jgenprog_repair_expts/repair/Math_95/r0/AstorMain-Math_95/src/variant-256
+2017-03-29 20:34:39,768 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.math.analysis.UnivariateRealSolverUtils to /data/people/qx5/jgenprog_repair_expts/repair/Math_95/r0/AstorMain-Math_95/src/variant-256
+2017-03-29 20:34:39,777 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.math.distribution.FDistributionImpl to /data/people/qx5/jgenprog_repair_expts/repair/Math_95/r0/AstorMain-Math_95/src/variant-256
+2017-03-29 20:34:41,602 INFO main - Time Repair Loop (s): 3805.877
+2017-03-29 20:34:41,602 INFO main - 
+----SUMMARY_EXECUTION---
+2017-03-29 20:34:41,602 INFO main - 
+Solution details
+2017-03-29 20:34:41,602 INFO main - 
+ --SOLUTIONS DESCRIPTION--
+
+ ----
+ProgramVariant 256
+ 
+time(sec)= 3805
+operation: ReplaceOp
+location= org.apache.commons.math.distribution.FDistributionImpl
+line= 144
+lineSuspiciousness= 0.258
+original statement= return (getDenominatorDegreesOfFreedom()) / ((getDenominatorDegreesOfFreedom()) - 2.0)
+fixed statement= return 0
+generation= 64
+ingredientScope= PACKAGE
+validation=|true|0|1188|[]|
+2017-03-29 20:34:41,603 INFO fr.inria.main.evolution.AstorMain - Time Total(s): 4565.398

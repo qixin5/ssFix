@@ -1,0 +1,216 @@
+2017-03-29 11:24:40,844 INFO main - command line arguments: [-jvm4testexecution  /home/qx5/jdk1.8.0_111/bin  -dependencies  /data/people/qx5/defects4j-bugs/maths/projs/Math_82_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar  -id  Math_82  -failing  org.apache.commons.math.optimization.linear.SimplexSolverTest  -mode  statement-remove  -location  /data/people/qx5/defects4j-bugs/maths/projs/Math_82_buggy  -package  org.apache.commons.math  -maxtime  120  -stopfirst  true  -srcjavafolder  //src/main/java/  -srctestfolder  //src/test/java/  -binjavafolder  //target/classes/  -bintestfolder  //target/test-classes/  -out  /data/people/qx5/jkali_repair_expts/repair/Math_82/r0]
+2017-03-29 11:25:59,313 INFO main - -Executing Gzoltar classpath: /data/people/qx5/jkali_repair_expts/repair/Math_82/r0/AstorMain-Math_82//bin//default from 224 classes with test cases
+2017-03-29 11:25:59,337 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar fault localization: min susp value parameter: 0.1
+2017-03-29 11:26:05,486 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - -gz-Adding classpath: [/data/people/qx5/defects4j-bugs/maths/projs/Math_82_buggy/all0.jar, /home/qx5/ssFix2/lib/myprinter.jar, /home/qx5/ssFix2/lib/evosuite-1.0.2.jar, /home/qx5/ssFix2/lib/commons-lang3-3.5.jar, /data/people/qx5/jkali_repair_expts/repair/Math_82/r0/AstorMain-Math_82//bin//default]
+2017-03-29 11:27:13,403 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.apache.commons.math.optimization.linear.SimplexSolverTest#testMath288
+2017-03-29 11:27:13,417 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar Test Result Total:2056, fails: 1, GZoltar suspicious 16287
+2017-03-29 11:27:13,464 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar found: 153 with susp > 0.1, we consider: 153
+2017-03-29 11:27:13,473 INFO main - building model: /data/people/qx5/jkali_repair_expts/repair/Math_82/r0/AstorMain-Math_82//src//default, compliance level: 8
+2017-03-29 11:28:14,378 INFO main - 
+---- Initial suspicious size: 153
+2017-03-29 11:28:15,802 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.optimization.linear.AbstractLinearOptimizer, methodName=org.apache.commons.math.optimization.linear.AbstractLinearOptimizer{setMaxIterations(I)V 0.0, lineNumber=68, susp=0.2672612419124244]
+2017-03-29 11:28:15,812 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.optimization.linear.AbstractLinearOptimizer, methodName=org.apache.commons.math.optimization.linear.AbstractLinearOptimizer{incrementIterationsCounter()V 0.0, lineNumber=89, susp=0.2672612419124244]
+2017-03-29 11:28:16,140 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.optimization.linear.SimplexSolver, methodName=org.apache.commons.math.optimization.linear.SimplexSolver{doIteration(Lorg/apache/commons/math/optimization/linear/SimplexTableau;)V 0.0, lineNumber=121, susp=0.2672612419124244]
+2017-03-29 11:28:16,216 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.optimization.linear.SimplexTableau, methodName=org.apache.commons.math.optimization.linear.SimplexTableau{divideRow(ID)V 0.0, lineNumber=373, susp=0.2672612419124244]
+2017-03-29 11:28:17,741 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.optimization.linear.SimplexTableau, methodName=org.apache.commons.math.optimization.linear.SimplexTableau{subtractRow(IID)V 0.0, lineNumber=391, susp=0.24253562503633297]
+2017-03-29 11:28:18,170 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.optimization.linear.SimplexTableau, methodName=org.apache.commons.math.optimization.linear.SimplexTableau{getNormalizedConstraints()Ljava/util/List; 0.0, lineNumber=201, susp=0.23570226039551587]
+2017-03-29 11:28:18,268 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.optimization.linear.SimplexTableau, methodName=org.apache.commons.math.optimization.linear.SimplexTableau{getConstraintTypeCounts(Lorg/apache/commons/math/optimization/linear/Relationship;)I 0.0, lineNumber=239, susp=0.23570226039551587]
+2017-03-29 11:28:18,296 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.optimization.linear.SimplexTableau, methodName=org.apache.commons.math.optimization.linear.SimplexTableau{initialize()V 0.0, lineNumber=252, susp=0.23570226039551587]
+2017-03-29 11:28:18,328 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.optimization.linear.SimplexTableau, methodName=org.apache.commons.math.optimization.linear.SimplexTableau{copyArray([D[DI)V 0.0, lineNumber=332, susp=0.23570226039551587]
+2017-03-29 11:28:18,475 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.linear.ArrayRealVector, methodName=org.apache.commons.math.linear.ArrayRealVector{checkVectorDimensions(I)V 0.0, lineNumber=1292, susp=0.15811388300841897]
+2017-03-29 11:28:18,524 INFO main - Total suspicious from FL: 153,  143
+2017-03-29 11:28:18,524 INFO main - Total ModPoint created: 143
+2017-03-29 11:28:18,524 INFO main - Creating program variant #1, [Variant id: 1, #gens: 143, #ops: 0, parent:-]
+2017-03-29 11:28:27,179 INFO fr.inria.astor.core.setup.ConfigurationProperties - ----------------------------
+2017-03-29 11:28:27,179 INFO fr.inria.astor.core.setup.ConfigurationProperties - ---Configuration properties:---Execution values
+2017-03-29 11:28:27,179 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:packageToInstrument= org.apache.commons.math
+2017-03-29 11:28:27,180 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:flthreshold= 0.1
+2017-03-29 11:28:27,180 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:numberExecutions= 1
+2017-03-29 11:28:27,180 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuiteresultfolder= evosuite
+2017-03-29 11:28:27,180 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:ignoredTestCases= org.apache.commons.math.ode.nonstiff:org.apache.commons.math.ode2.nonstiff:org.apache.commons.lang.LocaleUtilsTest
+2017-03-29 11:28:27,180 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:skipfaultlocalization= false
+2017-03-29 11:28:27,180 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxGeneration= 200
+2017-03-29 11:28:27,181 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxsuspcandidates= 1000
+2017-03-29 11:28:27,181 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:tmax2= 960000
+2017-03-29 11:28:27,181 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:tmax1= 120000
+2017-03-29 11:28:27,181 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:workingDirectory= /data/people/qx5/jkali_repair_expts/repair/Math_82/r0
+2017-03-29 11:28:27,182 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:mode= statement-remove
+2017-03-29 11:28:27,182 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:ignoreflakyinfl= true
+2017-03-29 11:28:27,182 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:uniqueoptogen= false
+2017-03-29 11:28:27,182 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:testcasesregression= org.apache.commons.math.stat.data.LotteryTest:org.apache.commons.math.linear.FieldMatrixImplTest:org.apache.commons.math.ode.sampling.StepNormalizerTest:org.apache.commons.math.stat.descriptive.AggregateSummaryStatisticsTest:org.apache.commons.math.geometry.RotationOrderTest:org.apache.commons.math.analysis.solvers.NewtonSolverTest:org.apache.commons.math.estimation.EstimatedParameterTest:org.apache.commons.math.linear.CholeskyDecompositionImplTest:org.apache.commons.math.linear.Array2DRowRealMatrixTest:org.apache.commons.math.linear.SparseRealMatrixTest:org.apache.commons.math.util.OpenIntToFieldTest:org.apache.commons.math.stat.clustering.KMeansPlusPlusClustererTest:org.apache.commons.math.optimization.fitting.PolynomialFitterTest:org.apache.commons.math.linear.ArrayRealVectorTest:org.apache.commons.math.distribution.HypergeometricDistributionTest:org.apache.commons.math.random.RandomAdaptorTest:org.apache.commons.math.ode.FirstOrderConverterTest:org.apache.commons.math.stat.descriptive.SynchronizedSummaryStatisticsTest:org.apache.commons.math.stat.inference.TestUtilsTest:org.apache.commons.math.stat.data.LewTest:org.apache.commons.math.distribution.GammaDistributionTest:org.apache.commons.math.stat.descriptive.rank.MedianTest:org.apache.commons.math.distribution.ZipfDistributionTest:org.apache.commons.math.ode.nonstiff.DormandPrince54StepInterpolatorTest:org.apache.commons.math.stat.CertifiedDataTest:org.apache.commons.math.ode.nonstiff.HighamHall54IntegratorTest:org.apache.commons.math.complex.FrenchComplexFormatTest:org.apache.commons.math.ode.nonstiff.MidpointStepInterpolatorTest:org.apache.commons.math.analysis.polynomials.PolynomialsUtilsTest:org.apache.commons.math.DuplicateSampleAbscissaExceptionTest:org.apache.commons.math.estimation.MinpackTest:org.apache.commons.math.genetics.FixedGenerationCountTest:org.apache.commons.math.optimization.general.GaussNewtonOptimizerTest:org.apache.commons.math.fraction.BigFractionFormatTest:org.apache.commons.math.random.RandomDataTest:org.apache.commons.math.stat.descriptive.MixedListUnivariateImplTest:org.apache.commons.math.distribution.FDistributionTest:org.apache.commons.math.FunctionEvaluationExceptionTest:org.apache.commons.math.ode.sampling.NordsieckStepInterpolatorTest:org.apache.commons.math.stat.inference.TTestFactoryTest:org.apache.commons.math.stat.descriptive.moment.SkewnessTest:org.apache.commons.math.special.GammaTest:org.apache.commons.math.ode.nonstiff.EulerStepInterpolatorTest:org.apache.commons.math.analysis.integration.RombergIntegratorTest:org.apache.commons.math.ode.nonstiff.HighamHall54StepInterpolatorTest:org.apache.commons.math.analysis.integration.LegendreGaussIntegratorTest:org.apache.commons.math.stat.descriptive.SummaryStatisticsTest:org.apache.commons.math.ode.nonstiff.MidpointIntegratorTest:org.apache.commons.math.stat.descriptive.moment.FirstMomentTest:org.apache.commons.math.stat.descriptive.moment.StandardDeviationTest:org.apache.commons.math.complex.ComplexTest:org.apache.commons.math.distribution.BetaDistributionTest:org.apache.commons.math.special.BetaTest:org.apache.commons.math.special.ErfTest:org.apache.commons.math.ode.nonstiff.GillIntegratorTest:org.apache.commons.math.random.EmpiricalDistributionTest:org.apache.commons.math.stat.descriptive.MultivariateSummaryStatisticsTest:org.apache.commons.math.stat.descriptive.StatisticalSummaryValuesTest:org.apache.commons.math.stat.regression.OLSMultipleLinearRegressionTest:org.apache.commons.math.estimation.LevenbergMarquardtEstimatorTest:org.apache.commons.math.fraction.BigFractionFieldTest:org.apache.commons.math.random.AbstractRandomGeneratorTest:org.apache.commons.math.ode.nonstiff.GraggBulirschStoerStepInterpolatorTest:org.apache.commons.math.genetics.GeneticAlgorithmTestBinary:org.apache.commons.math.linear.BiDiagonalTransformerTest:org.apache.commons.math.util.DefaultTransformerTest:org.apache.commons.math.linear.LUDecompositionImplTest:org.apache.commons.math.random.ValueServerTest:org.apache.commons.math.stat.descriptive.moment.MeanTest:org.apache.commons.math.util.BigRealFieldTest:org.apache.commons.math.linear.QRDecompositionImplTest:org.apache.commons.math.analysis.interpolation.NevilleInterpolatorTest:org.apache.commons.math.stat.descriptive.moment.VarianceTest:org.apache.commons.math.genetics.OnePointCrossoverTest:org.apache.commons.math.stat.ranking.NaturalRankingTest:org.apache.commons.math.optimization.linear.SimplexSolverTest:org.apache.commons.math.stat.descriptive.moment.FourthMomentTest:org.apache.commons.math.linear.BlockRealMatrixTest:org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolatorTest:org.apache.commons.math.random.MersenneTwisterTest:org.apache.commons.math.genetics.RandomKeyTest:org.apache.commons.math.stat.descriptive.summary.ProductTest:org.apache.commons.math.fraction.FractionTest:org.apache.commons.math.util.OpenIntToDoubleHashMapTest:org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerTest:org.apache.commons.math.ode.nonstiff.DormandPrince54IntegratorTest:org.apache.commons.math.analysis.polynomials.PolynomialFunctionTest:org.apache.commons.math.genetics.ChromosomeTest:org.apache.commons.math.stat.descriptive.moment.GeometricMeanTest:org.apache.commons.math.optimization.MultiStartDifferentiableMultivariateRealOptimizerTest:org.apache.commons.math.random.CorrelatedRandomVectorGeneratorTest:org.apache.commons.math.geometry.Vector3DTest:org.apache.commons.math.stat.descriptive.rank.MinTest:org.apache.commons.math.stat.clustering.EuclideanIntegerPointTest:org.apache.commons.math.linear.FieldLUDecompositionImplTest:org.apache.commons.math.analysis.integration.TrapezoidIntegratorTest:org.apache.commons.math.stat.descriptive.moment.VectorialCovarianceTest:org.apache.commons.math.transform.FastHadamardTransformerTest:org.apache.commons.math.optimization.fitting.HarmonicFitterTest:org.apache.commons.math.stat.correlation.PearsonsCorrelationTest:org.apache.commons.math.random.GaussianRandomGeneratorTest:org.apache.commons.math.stat.descriptive.moment.ThirdMomentTest:org.apache.commons.math.fraction.BigFractionTest:org.apache.commons.math.linear.FrenchRealVectorFormatTest:org.apache.commons.math.util.ContinuedFractionTest:org.apache.commons.math.util.TransformerMapTest:org.apache.commons.math.analysis.solvers.BisectionSolverTest:org.apache.commons.math.genetics.BinaryChromosomeTest:org.apache.commons.math.linear.BlockFieldMatrixTest:org.apache.commons.math.ode.nonstiff.ClassicalRungeKuttaStepInterpolatorTest:org.apache.commons.math.linear.SingularValueDecompositionImplTest:org.apache.commons.math.distribution.TDistributionTest:org.apache.commons.math.ode.nonstiff.AdamsBashforthIntegratorTest:org.apache.commons.math.ode.nonstiff.ClassicalRungeKuttaIntegratorTest:org.apache.commons.math.linear.InvalidMatrixExceptionTest:org.apache.commons.math.distribution.BinomialDistributionTest:org.apache.commons.math.linear.EigenSolverTest:org.apache.commons.math.stat.inference.TTestTest:org.apache.commons.math.analysis.polynomials.PolynomialFunctionNewtonFormTest:org.apache.commons.math.random.UniformRandomGeneratorTest:org.apache.commons.math.stat.descriptive.rank.PercentileTest:org.apache.commons.math.analysis.solvers.RiddersSolverTest:org.apache.commons.math.linear.ArrayFieldVectorTest:org.apache.commons.math.ode.ContinuousOutputModelTest:org.apache.commons.math.random.UncorrelatedRandomVectorGeneratorTest:org.apache.commons.math.optimization.linear.SimplexTableauTest:org.apache.commons.math.ConvergenceExceptionTest:org.apache.commons.math.complex.ComplexFormatTest:org.apache.commons.math.util.ResizableDoubleArrayTest:org.apache.commons.math.linear.RealMatrixImplTest:org.apache.commons.math.stat.descriptive.summary.SumTest:org.apache.commons.math.genetics.ElitisticListPopulationTest:org.apache.commons.math.linear.SparseFieldVectorTest:org.apache.commons.math.stat.descriptive.summary.SumSqTest:org.apache.commons.math.linear.SparseRealVectorTest:org.apache.commons.math.analysis.interpolation.DividedDifferenceInterpolatorTest:org.apache.commons.math.linear.EigenDecompositionImplTest:org.apache.commons.math.analysis.integration.SimpsonIntegratorTest:org.apache.commons.math.analysis.polynomials.PolynomialSplineFunctionTest:org.apache.commons.math.genetics.GeneticAlgorithmTestPermutations:org.apache.commons.math.stat.descriptive.moment.KurtosisTest:org.apache.commons.math.transform.FastFourierTransformerTest:org.apache.commons.math.stat.descriptive.moment.VectorialMeanTest:org.apache.commons.math.distribution.NormalDistributionTest:org.apache.commons.math.distribution.PoissonDistributionTest:org.apache.commons.math.geometry.Vector3DFormatTest:org.apache.commons.math.analysis.polynomials.PolynomialFunctionLagrangeFormTest:org.apache.commons.math.genetics.TournamentSelectionTest:org.apache.commons.math.optimization.general.MinpackTest:org.apache.commons.math.stat.descriptive.SynchronizedMultivariateSummaryStatisticsTest:org.apache.commons.math.analysis.solvers.BrentSolverTest:org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegratorTest:org.apache.commons.math.stat.descriptive.AbstractUnivariateStatisticTest:org.apache.commons.math.estimation.WeightedMeasurementTest:org.apache.commons.math.stat.inference.ChiSquareTestTest:org.apache.commons.math.analysis.interpolation.LoessInterpolatorTest:org.apache.commons.math.ode.nonstiff.ThreeEighthesStepInterpolatorTest:org.apache.commons.math.linear.MatrixIndexExceptionTest:org.apache.commons.math.fraction.FractionFormatTest:org.apache.commons.math.genetics.BinaryMutationTest:org.apache.commons.math.distribution.PascalDistributionTest:org.apache.commons.math.optimization.general.NonLinearConjugateGradientOptimizerTest:org.apache.commons.math.complex.ComplexUtilsTest:org.apache.commons.math.util.MathUtilsTest:org.apache.commons.math.analysis.solvers.UnivariateRealSolverFactoryImplTest:org.apache.commons.math.genetics.FitnessCachingTest:org.apache.commons.math.optimization.direct.MultiDirectionalTest:org.apache.commons.math.linear.BigMatrixImplTest:org.apache.commons.math.stat.inference.ChiSquareFactoryTest:org.apache.commons.math.fraction.FractionFieldTest:org.apache.commons.math.stat.descriptive.InteractionTest:org.apache.commons.math.stat.correlation.CovarianceTest:org.apache.commons.math.optimization.univariate.BrentMinimizerTest:org.apache.commons.math.linear.QRSolverTest:org.apache.commons.math.linear.RealVectorFormatTest:org.apache.commons.math.analysis.solvers.LaguerreSolverTest:org.apache.commons.math.linear.CholeskySolverTest:org.apache.commons.math.distribution.WeibullDistributionTest:org.apache.commons.math.stat.StatUtilsTest:org.apache.commons.math.analysis.interpolation.SplineInterpolatorTest:org.apache.commons.math.analysis.solvers.MullerSolverTest:org.apache.commons.math.linear.TriDiagonalTransformerTest:org.apache.commons.math.distribution.ChiSquareDistributionTest:org.apache.commons.math.analysis.solvers.UnivariateRealSolverUtilsTest:org.apache.commons.math.transform.FastSineTransformerTest:org.apache.commons.math.stat.inference.OneWayAnovaTest:org.apache.commons.math.transform.FastCosineTransformerTest:org.apache.commons.math.ArgumentOutsideDomainExceptionTest:org.apache.commons.math.ode.nonstiff.DormandPrince853IntegratorTest:org.apache.commons.math.ode.nonstiff.EulerIntegratorTest:org.apache.commons.math.stat.descriptive.rank.MaxTest:org.apache.commons.math.complex.ComplexFieldTest:org.apache.commons.math.stat.descriptive.ListUnivariateImplTest:org.apache.commons.math.MaxIterationsExceededExceptionTest:org.apache.commons.math.stat.descriptive.DescriptiveStatisticsTest:org.apache.commons.math.linear.MatrixUtilsTest:org.apache.commons.math.optimization.MultiStartDifferentiableMultivariateVectorialOptimizerTest:org.apache.commons.math.optimization.direct.NelderMeadTest:org.apache.commons.math.geometry.RotationTest:org.apache.commons.math.ode.sampling.DummyStepInterpolatorTest:org.apache.commons.math.genetics.RandomKeyMutationTest:org.apache.commons.math.linear.SingularValueSolverTest:org.apache.commons.math.util.BigRealTest:org.apache.commons.math.distribution.ExponentialDistributionTest:org.apache.commons.math.stat.descriptive.SynchronizedDescriptiveStatisticsTest:org.apache.commons.math.geometry.FrenchVector3DFormatTest:org.apache.commons.math.ode.nonstiff.AdamsMoultonIntegratorTest:org.apache.commons.math.stat.regression.SimpleRegressionTest:org.apache.commons.math.optimization.MultiStartMultivariateRealOptimizerTest:org.apache.commons.math.stat.regression.GLSMultipleLinearRegressionTest:org.apache.commons.math.ode.nonstiff.ThreeEighthesIntegratorTest:org.apache.commons.math.ode.nonstiff.GillStepInterpolatorTest:org.apache.commons.math.linear.LUSolverTest:org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerTest:org.apache.commons.math.MathConfigurationExceptionTest:org.apache.commons.math.estimation.GaussNewtonEstimatorTest:org.apache.commons.math.genetics.ListPopulationTest:org.apache.commons.math.MathExceptionTest:org.apache.commons.math.distribution.CauchyDistributionTest:org.apache.commons.math.stat.correlation.SpearmansRankCorrelationTest:org.apache.commons.math.linear.SparseFieldMatrixTest:org.apache.commons.math.stat.descriptive.summary.SumLogTest:org.apache.commons.math.stat.FrequencyTest:org.apache.commons.math.stat.descriptive.moment.SecondMomentTest:
+2017-03-29 11:28:27,183 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:pathToMVNRepository= 
+2017-03-29 11:28:27,183 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:executeRegression= true
+2017-03-29 11:28:27,183 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:modificationpointnavigation= weight
+2017-03-29 11:28:27,184 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxtime= 120
+2017-03-29 11:28:27,184 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:probagenmutation= false
+2017-03-29 11:28:27,184 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:alternativecompliancelevel= 4
+2017-03-29 11:28:27,184 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:version-location= ./math-version/
+2017-03-29 11:28:27,184 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:location= /data/people/qx5/defects4j-bugs/maths/projs/Math_82_buggy
+2017-03-29 11:28:27,184 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:stopfirst= true
+2017-03-29 11:28:27,184 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:jvm4testexecution= /home/qx5/jdk1.8.0_111/bin
+2017-03-29 11:28:27,184 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:bugId= 280
+2017-03-29 11:28:27,184 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:mutationrate= 1 
+2017-03-29 11:28:27,185 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:projectIdentifier= Math_82
+2017-03-29 11:28:27,185 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evo_buggy_class= true
+2017-03-29 11:28:27,185 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evoRunOnBuggyClass= true
+2017-03-29 11:28:27,185 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:jvm4evosuitetestexecution= /home/qx5/jdk1.8.0_111/bin
+2017-03-29 11:28:27,185 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:resetoperations= false
+2017-03-29 11:28:27,185 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:seed= 0
+2017-03-29 11:28:27,185 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:testbystep= false
+2017-03-29 11:28:27,185 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:srctestfolder= //src/test/java/
+2017-03-29 11:28:27,185 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:javacompliancelevel= 8
+2017-03-29 11:28:27,186 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:bintestfolder= //target/test-classes/
+2017-03-29 11:28:27,186 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:commandTrunk= 50000
+2017-03-29 11:28:27,186 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:dependenciespath= /data/people/qx5/defects4j-bugs/maths/projs/Math_82_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar
+2017-03-29 11:28:27,186 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:multipointmodification= false
+2017-03-29 11:28:27,186 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:validation= process
+2017-03-29 11:28:27,186 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:scope= package
+2017-03-29 11:28:27,186 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuitetimeout= 120
+2017-03-29 11:28:27,186 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evoDSE= false
+2017-03-29 11:28:27,186 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:elementsToMutate= 10
+2017-03-29 11:28:27,187 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:lastJUnitVersion= ./examples/libs/junit-4.11.jar
+2017-03-29 11:28:27,187 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:failing= org.apache.commons.math.optimization.linear.SimplexSolverTest
+2017-03-29 11:28:27,187 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:allpoints= false
+2017-03-29 11:28:27,187 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:resourcesfolder= /src/main/resources:/src/test/resources:
+2017-03-29 11:28:27,187 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:regressionforfaultlocalization= true
+2017-03-29 11:28:27,187 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:population= 1
+2017-03-29 11:28:27,187 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:saveall= false
+2017-03-29 11:28:27,187 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:pvariantfoldername= variant-
+2017-03-29 11:28:27,187 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:savesolution= true
+2017-03-29 11:28:27,187 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:srcjavafolder= //src/main/java/
+2017-03-29 11:28:27,188 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evo_affected_by_op= true
+2017-03-29 11:28:27,188 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:binjavafolder= //target/classes/
+2017-03-29 11:28:27,188 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:reintroduce= original-parents
+2017-03-29 11:28:27,188 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuitejar= ./lib/evosuite-master-1.0.4-SNAPSHOT.jar
+2017-03-29 11:28:27,188 INFO fr.inria.astor.core.setup.ConfigurationProperties - ----------------------------
+2017-03-29 11:28:27,190 INFO main - mod_point ModificPoint=SimplexSolver line: 168, el: CtReturnImpl
+2017-03-29 11:28:27,191 INFO main - -->op: RemoveOp: `return  ` ---> `-` at pos 0 of parent `{ 	return ; }`
+2017-03-29 11:28:32,460 INFO main - mod_point ModificPoint=SimplexTableau line: 308, el: CtReturnImpl
+2017-03-29 11:28:32,460 INFO main - -->op: RemoveOp: `return  ` ---> `-` at pos 0 of parent `{ 	return ; }`
+2017-03-29 11:28:36,015 INFO main - mod_point ModificPoint=SimplexSolver line: 151, el: CtReturnImpl
+2017-03-29 11:28:36,015 INFO main - -->op: RemoveOp: `return false ` ---> `-` at pos 0 of parent `{ 	return false; }`
+2017-03-29 11:28:41,179 INFO main - mod_point ModificPoint=SimplexSolver line: 190, el: CtInvocationImpl
+2017-03-29 11:28:41,180 INFO main - -->op: RemoveOp: `doIteration(tableau) ` ---> `-` at pos 0 of parent `{ 	doIteration(tableau); [...]`
+2017-03-29 11:30:43,770 INFO main - The Process that runs JUnit test cases had problems: process hasn't exited
+2017-03-29 11:30:43,770 INFO main - mod_point ModificPoint=SimplexTableau line: 297, el: CtReturnImpl
+2017-03-29 11:30:43,771 INFO main - -->op: RemoveOp: `return null ` ---> `-` at pos 0 of parent `{ 	return null; }`
+2017-03-29 11:30:50,386 INFO main - mod_point ModificPoint=SimplexSolver line: 154, el: CtReturnImpl
+2017-03-29 11:30:50,386 INFO main - -->op: RemoveOp: `return true ` ---> `-` at pos 2 of parent `{ 	if ((tableau.getNumArt[...]`
+2017-03-29 11:30:53,207 INFO main - mod_point ModificPoint=SimplexSolver line: 192, el: CtReturnImpl
+2017-03-29 11:30:53,209 INFO main - -->op: RemoveOp: `return tableau.getSolutio[...] ` ---> `-` at pos 4 of parent `{ 	final org.apache.commo[...]`
+2017-03-29 11:30:55,755 INFO main - mod_point ModificPoint=SimplexTableau line: 282, el: CtReturnImpl
+2017-03-29 11:30:55,755 INFO main - -->op: RemoveOp: `return getBasicRow(col, f[...] ` ---> `-` at pos 0 of parent `{ 	return getBasicRow(col[...]`
+2017-03-29 11:30:57,924 INFO main - mod_point ModificPoint=SimplexTableau line: 340, el: CtLocalVariableImpl
+2017-03-29 11:30:57,925 INFO main - -->op: RemoveOp: `double[] coefficients = n[...] ` ---> `-` at pos 0 of parent `{ 	double[] coefficients [...]`
+2017-03-29 11:30:59,877 INFO main - mod_point ModificPoint=SimplexTableau line: 341, el: CtLocalVariableImpl
+2017-03-29 11:30:59,877 INFO main - -->op: RemoveOp: `java.lang.Integer negativ[...] ` ---> `-` at pos 1 of parent `{ 	double[] coefficients [...]`
+2017-03-29 11:31:02,069 INFO main - mod_point ModificPoint=SimplexTableau line: 342, el: CtLocalVariableImpl
+2017-03-29 11:31:02,070 INFO main - -->op: RemoveOp: `double mostNegative = neg[...] ` ---> `-` at pos 2 of parent `{ 	double[] coefficients [...]`
+2017-03-29 11:31:04,277 INFO main - mod_point ModificPoint=SimplexTableau line: 343, el: CtLocalVariableImpl
+2017-03-29 11:31:04,278 INFO main - -->op: RemoveOp: `java.util.Set<java.lang.I[...] ` ---> `-` at pos 3 of parent `{ 	double[] coefficients [...]`
+2017-03-29 11:31:06,026 INFO main - mod_point ModificPoint=SimplexTableau line: 344, el: CtForImpl
+2017-03-29 11:31:06,035 INFO main - -->op: RemoveOp: `for (int i = 0 ; i < (coe[...] ` ---> `-` at pos 4 of parent `{ 	double[] coefficients [...]`
+2017-03-29 11:31:09,414 INFO main - mod_point ModificPoint=SimplexTableau line: 345, el: CtLocalVariableImpl
+2017-03-29 11:31:09,414 INFO main - -->op: RemoveOp: `java.lang.Integer basicRo[...] ` ---> `-` at pos 0 of parent `{ 	java.lang.Integer basi[...]`
+2017-03-29 11:31:11,022 INFO main - mod_point ModificPoint=SimplexTableau line: 346, el: CtIfImpl
+2017-03-29 11:31:11,022 INFO main - -->op: ReplaceIfBooleanOp: `if (basicRows.contains(ba[...] ` ---> `if (true) { 	coefficients[...]` at pos 1 of parent `{ 	java.lang.Integer basi[...]`
+2017-03-29 11:31:15,264 INFO main - mod_point ModificPoint=SimplexTableau line: 346, el: CtIfImpl
+2017-03-29 11:31:15,265 INFO main - -->op: ReplaceIfBooleanOp: `if (basicRows.contains(ba[...] ` ---> `if (false) { 	coefficient[...]` at pos 1 of parent `{ 	java.lang.Integer basi[...]`
+2017-03-29 11:31:19,790 INFO main - mod_point ModificPoint=SimplexTableau line: 346, el: CtIfImpl
+2017-03-29 11:31:19,791 INFO main - -->op: RemoveOp: `if (basicRows.contains(ba[...] ` ---> `-` at pos 1 of parent `{ 	java.lang.Integer basi[...]`
+2017-03-29 11:31:23,919 INFO main - mod_point ModificPoint=SimplexTableau line: 351, el: CtInvocationImpl
+2017-03-29 11:31:23,919 INFO main - -->op: RemoveOp: `basicRows.add(basicRow) ` ---> `-` at pos 0 of parent `{ 	basicRows.add(basicRow[...]`
+2017-03-29 11:31:27,212 INFO main - mod_point ModificPoint=SimplexTableau line: 352, el: CtAssignmentImpl
+2017-03-29 11:31:27,212 INFO main - -->op: RemoveOp: `coefficients[i] = (basicR[...] ` ---> `-` at pos 1 of parent `{ 	basicRows.add(basicRow[...]`
+2017-03-29 11:31:30,908 INFO main - mod_point ModificPoint=SimplexTableau line: 357, el: CtReturnImpl
+2017-03-29 11:31:30,908 INFO main - -->op: RemoveOp: `return new org.apache.com[...] ` ---> `-` at pos 5 of parent `{ 	double[] coefficients [...]`
+2017-03-29 11:31:33,254 INFO main - mod_point ModificPoint=SimplexTableau line: 458, el: CtReturnImpl
+2017-03-29 11:31:33,255 INFO main - -->op: RemoveOp: `return (getNumObjectiveFu[...] ` ---> `-` at pos 0 of parent `{ 	return (getNumObjectiv[...]`
+2017-03-29 11:31:36,629 INFO main - mod_point ModificPoint=SimplexTableau line: 481, el: CtReturnImpl
+2017-03-29 11:31:36,645 INFO main - -->op: RemoveOp: `return restrictToNonNegat[...] ` ---> `-` at pos 0 of parent `{ 	return restrictToNonNe[...]`
+2017-03-29 11:31:38,985 INFO main - mod_point ModificPoint=LinearObjectiveFunction line: 92, el: CtReturnImpl
+2017-03-29 11:31:38,985 INFO main - -->op: RemoveOp: `return (coefficients.dotP[...] ` ---> `-` at pos 0 of parent `{ 	return (coefficients.d[...]`
+2017-03-29 11:31:41,192 INFO main - mod_point ModificPoint=SimplexSolver line: 146, el: CtIfImpl
+2017-03-29 11:31:41,193 INFO main - -->op: ReplaceIfBooleanOp: `if ((tableau.getNumArtifi[...] ` ---> `if (true) { 	return false[...]` at pos 0 of parent `{ 	if ((tableau.getNumArt[...]`
+2017-03-29 11:31:46,918 INFO main - mod_point ModificPoint=SimplexSolver line: 146, el: CtIfImpl
+2017-03-29 11:31:46,918 INFO main - -->op: ReplaceIfBooleanOp: `if ((tableau.getNumArtifi[...] ` ---> `if (false) { 	return fals[...]` at pos 0 of parent `{ 	if ((tableau.getNumArt[...]`
+2017-03-29 11:31:52,536 INFO main - mod_point ModificPoint=SimplexSolver line: 146, el: CtIfImpl
+2017-03-29 11:31:52,537 INFO main - -->op: RemoveOp: `if ((tableau.getNumArtifi[...] ` ---> `-` at pos 0 of parent `{ 	if ((tableau.getNumArt[...]`
+2017-03-29 11:31:57,024 INFO main - mod_point ModificPoint=SimplexSolver line: 149, el: CtForImpl
+2017-03-29 11:31:57,025 INFO main - -->op: RemoveOp: `for (int i = tableau.getN[...] ` ---> `-` at pos 1 of parent `{ 	if ((tableau.getNumArt[...]`
+2017-03-29 11:32:00,593 INFO main - mod_point ModificPoint=SimplexSolver line: 150, el: CtIfImpl
+2017-03-29 11:32:00,594 INFO main - -->op: ReplaceIfBooleanOp: `if ((org.apache.commons.m[...] ` ---> `if (true) { 	return false[...]` at pos 0 of parent `{ 	if ((org.apache.common[...]`
+2017-03-29 11:32:03,834 INFO main - mod_point ModificPoint=SimplexSolver line: 150, el: CtIfImpl
+2017-03-29 11:32:03,835 INFO main - -->op: ReplaceIfBooleanOp: `if ((org.apache.commons.m[...] ` ---> `if (false) { 	return fals[...]` at pos 0 of parent `{ 	if ((org.apache.common[...]`
+2017-03-29 11:32:07,380 INFO main - mod_point ModificPoint=SimplexSolver line: 150, el: CtIfImpl
+2017-03-29 11:32:07,380 INFO main - -->op: RemoveOp: `if ((org.apache.commons.m[...] ` ---> `-` at pos 0 of parent `{ 	if ((org.apache.common[...]`
+2017-03-29 11:32:10,019 INFO main - mod_point ModificPoint=SimplexSolver line: 188, el: CtInvocationImpl
+2017-03-29 11:32:10,020 INFO main - -->op: RemoveOp: `tableau.discardArtificial[...] ` ---> `-` at pos 2 of parent `{ 	final org.apache.commo[...]`
+2017-03-29 11:32:11,892 INFO main - mod_point ModificPoint=SimplexSolver line: 189, el: CtWhileImpl
+2017-03-29 11:32:11,892 INFO main - -->op: RemoveOp: `while (!(isOptimal(tablea[...] ` ---> `-` at pos 3 of parent `{ 	final org.apache.commo[...]`
+2017-03-29 11:32:13,297 INFO main - mod_point ModificPoint=SimplexTableau line: 170, el: CtAssignmentImpl
+2017-03-29 11:32:13,298 INFO main - -->op: RemoveOp: `matrix[row][((getSlackVar[...] ` ---> `-` at pos 0 of parent `{ 	matrix[row][((getSlack[...]`
+2017-03-29 11:32:15,751 INFO main - mod_point ModificPoint=AbstractLinearOptimizer line: 67, el: CtAssignmentImpl
+2017-03-29 11:32:15,751 INFO main - -->op: RemoveOp: `org.apache.commons.math.o[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.commons.mat[...]`
+2017-03-29 11:32:18,497 INFO main - mod_point ModificPoint=AbstractLinearOptimizer line: 86, el: CtIfImpl
+2017-03-29 11:32:18,497 INFO main - -->op: ReplaceIfBooleanOp: `if ((++(iterations)) > (m[...] ` ---> `if (true) { 	throw new or[...]` at pos 0 of parent `{ 	if ((++(iterations)) >[...]`
+2017-03-29 11:32:21,659 INFO main - mod_point ModificPoint=AbstractLinearOptimizer line: 86, el: CtIfImpl
+2017-03-29 11:32:21,659 INFO main - -->op: ReplaceIfBooleanOp: `if ((++(iterations)) > (m[...] ` ---> `if (false) { 	throw new o[...]` at pos 0 of parent `{ 	if ((++(iterations)) >[...]`
+2017-03-29 11:32:24,395 INFO main - mod_point ModificPoint=AbstractLinearOptimizer line: 86, el: CtIfImpl
+2017-03-29 11:32:24,395 INFO main - -->op: RemoveOp: `if ((++(iterations)) > (m[...] ` ---> `-` at pos 0 of parent `{ 	if ((++(iterations)) >[...]`
+2017-03-29 11:32:27,325 INFO main - mod_point ModificPoint=AbstractLinearOptimizer line: 98, el: CtAssignmentImpl
+2017-03-29 11:32:27,326 INFO main - -->op: RemoveOp: `org.apache.commons.math.o[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.commons.mat[...]`
+2017-03-29 11:32:31,073 INFO main - mod_point ModificPoint=AbstractLinearOptimizer line: 99, el: CtAssignmentImpl
+2017-03-29 11:32:31,073 INFO main - -->op: RemoveOp: `org.apache.commons.math.o[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.commons.mat[...]`
+2017-03-29 11:32:35,833 INFO main - mod_point ModificPoint=AbstractLinearOptimizer line: 100, el: CtAssignmentImpl
+2017-03-29 11:32:35,833 INFO main - -->op: RemoveOp: `org.apache.commons.math.o[...] ` ---> `-` at pos 2 of parent `{ 	org.apache.commons.mat[...]`
+2017-03-29 11:32:41,335 INFO main - mod_point ModificPoint=AbstractLinearOptimizer line: 101, el: CtAssignmentImpl
+2017-03-29 11:32:41,335 INFO main - -->op: RemoveOp: `org.apache.commons.math.o[...] ` ---> `-` at pos 3 of parent `{ 	org.apache.commons.mat[...]`
+2017-03-29 11:32:46,156 INFO main - mod_point ModificPoint=AbstractLinearOptimizer line: 103, el: CtAssignmentImpl
+2017-03-29 11:32:46,156 INFO main - -->op: RemoveOp: `iterations = 0 ` ---> `-` at pos 4 of parent `{ 	org.apache.commons.mat[...]`
+2017-03-29 11:32:50,705 INFO main - mod_point ModificPoint=AbstractLinearOptimizer line: 106, el: CtReturnImpl
+2017-03-29 11:32:50,706 INFO main - -->op: RemoveOp: `return doOptimize() ` ---> `-` at pos 5 of parent `{ 	org.apache.commons.mat[...]`
+2017-03-29 11:32:53,302 INFO main - mod_point ModificPoint=SimplexSolver line: 59, el: CtLocalVariableImpl
+2017-03-29 11:32:53,302 INFO main - -->op: RemoveOp: `double minValue = 0 ` ---> `-` at pos 0 of parent `{ 	double minValue = 0; 	[...]`
+2017-03-29 11:32:55,305 INFO main - mod_point ModificPoint=SimplexSolver line: 60, el: CtLocalVariableImpl
+2017-03-29 11:32:55,305 INFO main - -->op: RemoveOp: `java.lang.Integer minPos [...] ` ---> `-` at pos 1 of parent `{ 	double minValue = 0; 	[...]`
+2017-03-29 11:32:57,214 INFO main - mod_point ModificPoint=SimplexSolver line: 61, el: CtForImpl
+2017-03-29 11:32:57,214 INFO main - -->op: RemoveOp: `for (int i = tableau.getN[...] ` ---> `-` at pos 2 of parent `{ 	double minValue = 0; 	[...]`
+2017-03-29 11:33:01,021 INFO main - mod_point ModificPoint=SimplexSolver line: 62, el: CtIfImpl
+2017-03-29 11:33:01,022 INFO main - -->op: ReplaceIfBooleanOp: `if ((org.apache.commons.m[...] ` ---> `if (true) { 	minValue = t[...]` at pos 0 of parent `{ 	if ((org.apache.common[...]`
+2017-03-29 11:33:04,893 INFO main - mod_point ModificPoint=SimplexSolver line: 62, el: CtIfImpl
+2017-03-29 11:33:04,893 INFO main - -->op: ReplaceIfBooleanOp: `if ((org.apache.commons.m[...] ` ---> `if (false) { 	minValue = [...]` at pos 0 of parent `{ 	if ((org.apache.common[...]`
+2017-03-29 11:33:07,538 INFO main - mod_point ModificPoint=SimplexSolver line: 62, el: CtIfImpl
+2017-03-29 11:33:07,538 INFO main - -->op: RemoveOp: `if ((org.apache.commons.m[...] ` ---> `-` at pos 0 of parent `{ 	if ((org.apache.common[...]`
+2017-03-29 11:33:10,147 INFO main - mod_point ModificPoint=SimplexSolver line: 63, el: CtAssignmentImpl
+2017-03-29 11:33:10,147 INFO main - -->op: RemoveOp: `minValue = tableau.getEnt[...] ` ---> `-` at pos 0 of parent `{ 	minValue = tableau.get[...]`
+2017-03-29 11:33:46,879 INFO main - -Found Solution, child variant #51
+2017-03-29 11:33:46,892 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.math.linear.ArrayRealVector to /data/people/qx5/jkali_repair_expts/repair/Math_82/r0/AstorMain-Math_82/src/variant-51
+2017-03-29 11:33:47,233 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.math.optimization.RealPointValuePair to /data/people/qx5/jkali_repair_expts/repair/Math_82/r0/AstorMain-Math_82/src/variant-51
+2017-03-29 11:33:47,275 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.math.optimization.linear.LinearObjectiveFunction to /data/people/qx5/jkali_repair_expts/repair/Math_82/r0/AstorMain-Math_82/src/variant-51
+2017-03-29 11:33:47,287 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.math.optimization.linear.SimplexTableau to /data/people/qx5/jkali_repair_expts/repair/Math_82/r0/AstorMain-Math_82/src/variant-51
+2017-03-29 11:33:47,324 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.math.util.MathUtils to /data/people/qx5/jkali_repair_expts/repair/Math_82/r0/AstorMain-Math_82/src/variant-51
+2017-03-29 11:33:47,487 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.math.optimization.linear.AbstractLinearOptimizer to /data/people/qx5/jkali_repair_expts/repair/Math_82/r0/AstorMain-Math_82/src/variant-51
+2017-03-29 11:33:47,511 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.math.optimization.linear.LinearConstraint to /data/people/qx5/jkali_repair_expts/repair/Math_82/r0/AstorMain-Math_82/src/variant-51
+2017-03-29 11:33:47,527 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.math.optimization.linear.SimplexSolver to /data/people/qx5/jkali_repair_expts/repair/Math_82/r0/AstorMain-Math_82/src/variant-51
+2017-03-29 11:33:47,869 INFO main - 
+----SUMMARY_EXECUTION---
+2017-03-29 11:33:47,869 INFO main - 
+Solution details
+2017-03-29 11:33:47,870 INFO main - 
+ --SOLUTIONS DESCRIPTION--
+
+ ----
+ProgramVariant 51
+ 
+time(sec)= 282
+operation: RemoveOp
+location= org.apache.commons.math.optimization.linear.SimplexSolver
+line= 63
+lineSuspiciousness= 0.267
+original statement= minValue = tableau.getEntry(0, i)
+fixed statement= minValue = tableau.getEntry(0, i)
+generation= 1
+ingredientScope= -
+validation=|true|0|1948|[]|
+2017-03-29 11:33:47,870 INFO fr.inria.main.evolution.AstorMain - Time Total(s): 546.974

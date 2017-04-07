@@ -1,0 +1,20 @@
+#!/bin/bash
+
+for i in {5,13,15,26}
+do
+    cp -r ~/data/jkali_repair_expts/log/Chart_${i} ./plausible
+done
+
+for i in {7,22,27,39}
+do
+    cp -r ~/data/jkali_repair_expts/log/Lang_${i} ./plausible
+done
+
+for i in {40,49,50,78,80,81,82,84,85}
+do
+    cp -r ~/data/jkali_repair_expts/log/Math_${i} ./plausible
+done
+
+cp -r ~/data/jkali_repair_expts/log/Closure_85 ./plausible
+
+cp -r ~/data/jkali_repair_expts/log/Math_50 ./valid

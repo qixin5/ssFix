@@ -1,0 +1,148 @@
+2017-03-29 12:44:52,236 INFO main - command line arguments: [-jvm4testexecution  /home/qx5/jdk1.8.0_111/bin  -dependencies  /data/people/qx5/defects4j-bugs/langs/projs/Lang_7_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar  -id  Lang_7  -failing  org.apache.commons.lang3.math.NumberUtilsTest  -mode  statement-remove  -location  /data/people/qx5/defects4j-bugs/langs/projs/Lang_7_buggy  -package  org.apache.commons.lang3  -maxtime  120  -stopfirst  true  -srcjavafolder  //src/main/java/  -srctestfolder  //src/test/java/  -binjavafolder  //target/classes/  -bintestfolder  //target/tests/  -out  /data/people/qx5/jkali_repair_expts/repair/Lang_7/r0]
+2017-03-29 12:45:26,111 INFO main - -Executing Gzoltar classpath: /data/people/qx5/jkali_repair_expts/repair/Lang_7/r0/AstorMain-Lang_7//bin//default from 113 classes with test cases
+2017-03-29 12:45:26,133 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar fault localization: min susp value parameter: 0.1
+2017-03-29 12:45:32,395 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - -gz-Adding classpath: [/data/people/qx5/jkali_repair_expts/repair/Lang_7/r0/AstorMain-Lang_7//bin//default, /data/people/qx5/defects4j-bugs/langs/projs/Lang_7_buggy/all0.jar, /home/qx5/ssFix2/lib/myprinter.jar, /home/qx5/ssFix2/lib/evosuite-1.0.2.jar, /home/qx5/ssFix2/lib/commons-lang3-3.5.jar]
+2017-03-29 12:47:21,356 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.apache.commons.lang3.time.FastDateFormat_ParserTest#testParseZone
+2017-03-29 12:47:21,391 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.apache.commons.lang3.time.FastDateParserTest#testParseZone
+2017-03-29 12:47:21,401 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.apache.commons.lang3.math.NumberUtilsTest#testCreateNumber
+2017-03-29 12:47:21,430 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar Test Result Total:2261, fails: 3, GZoltar suspicious 10125
+2017-03-29 12:47:21,627 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar found: 198 with susp > 0.1, we consider: 198
+2017-03-29 12:47:21,649 INFO main - building model: /data/people/qx5/jkali_repair_expts/repair/Lang_7/r0/AstorMain-Lang_7//src//default, compliance level: 8
+2017-03-29 12:48:07,349 INFO main - 
+---- Initial suspicious size: 198
+2017-03-29 12:48:08,508 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.lang3.math.NumberUtils, methodName=org.apache.commons.lang3.math.NumberUtils{createNumber(Ljava/lang/String;)Ljava/lang/Number; 0.0, lineNumber=534, susp=0.5773502691896258]
+2017-03-29 12:48:08,511 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.lang3.math.NumberUtils, methodName=org.apache.commons.lang3.math.NumberUtils{createNumber(Ljava/lang/String;)Ljava/lang/Number; 0.0, lineNumber=545, susp=0.5773502691896258]
+2017-03-29 12:48:08,522 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.lang3.math.NumberUtils, methodName=org.apache.commons.lang3.math.NumberUtils{createNumber(Ljava/lang/String;)Ljava/lang/Number; 0.0, lineNumber=588, susp=0.5773502691896258]
+2017-03-29 12:48:09,926 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.lang3.time.FastDateParser$TimeZoneStrategy, methodName=org.apache.commons.lang3.time.FastDateParser$TimeZoneStrategy{setCalendar(Lorg/apache/commons/lang3/time/FastDateParser;Ljava/util/Calendar;Ljava/lang/String;)V 0.0, lineNumber=730, susp=0.2519763153394848]
+2017-03-29 12:48:10,648 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.lang3.time.FastDateParser$NumberStrategy, methodName=org.apache.commons.lang3.time.FastDateParser$NumberStrategy{setCalendar(Lorg/apache/commons/lang3/time/FastDateParser;Ljava/util/Calendar;Ljava/lang/String;)V 0.0, lineNumber=642, susp=0.17609018126512477]
+2017-03-29 12:48:10,811 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.lang3.time.FastDateParser, methodName=org.apache.commons.lang3.time.FastDateParser{parse(Ljava/lang/String;Ljava/text/ParsePosition;)Ljava/util/Date; 0.0, lineNumber=284, susp=0.17609018126512477]
+2017-03-29 12:48:14,789 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.lang3.time.FastDateParser, methodName=org.apache.commons.lang3.time.FastDateParser{init()V 0.0, lineNumber=136, susp=0.13608276348795434]
+2017-03-29 12:48:15,041 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.lang3.time.FastDateParser, methodName=org.apache.commons.lang3.time.FastDateParser{init()V 0.0, lineNumber=146, susp=0.13608276348795434]
+2017-03-29 12:48:15,730 INFO main - Total suspicious from FL: 198,  165
+2017-03-29 12:48:15,731 INFO main - Total ModPoint created: 165
+2017-03-29 12:48:15,731 INFO main - Creating program variant #1, [Variant id: 1, #gens: 165, #ops: 0, parent:-]
+2017-03-29 12:48:18,569 INFO fr.inria.astor.core.setup.ConfigurationProperties - ----------------------------
+2017-03-29 12:48:18,570 INFO fr.inria.astor.core.setup.ConfigurationProperties - ---Configuration properties:---Execution values
+2017-03-29 12:48:18,570 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:packageToInstrument= org.apache.commons.lang3
+2017-03-29 12:48:18,571 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:flthreshold= 0.1
+2017-03-29 12:48:18,571 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:numberExecutions= 1
+2017-03-29 12:48:18,571 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuiteresultfolder= evosuite
+2017-03-29 12:48:18,571 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:ignoredTestCases= org.apache.commons.math.ode.nonstiff:org.apache.commons.math.ode2.nonstiff:org.apache.commons.lang.LocaleUtilsTest:org.apache.commons.lang3.time.FastDateFormat_ParserTest:org.apache.commons.lang3.time.FastDateParserTest
+2017-03-29 12:48:18,571 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:skipfaultlocalization= false
+2017-03-29 12:48:18,571 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxGeneration= 200
+2017-03-29 12:48:18,571 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxsuspcandidates= 1000
+2017-03-29 12:48:18,571 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:tmax2= 960000
+2017-03-29 12:48:18,572 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:tmax1= 120000
+2017-03-29 12:48:18,572 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:workingDirectory= /data/people/qx5/jkali_repair_expts/repair/Lang_7/r0
+2017-03-29 12:48:18,572 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:mode= statement-remove
+2017-03-29 12:48:18,572 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:ignoreflakyinfl= true
+2017-03-29 12:48:18,572 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:uniqueoptogen= false
+2017-03-29 12:48:18,572 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:testcasesregression= org.apache.commons.lang3.ConversionTest:org.apache.commons.lang3.RandomStringUtilsTest:org.apache.commons.lang3.text.WordUtilsTest:org.apache.commons.lang3.StringUtilsTrimEmptyTest:org.apache.commons.lang3.tuple.ImmutablePairTest:org.apache.commons.lang3.time.DurationFormatUtilsTest:org.apache.commons.lang3.time.FastDateFormat_ParserTest:org.apache.commons.lang3.StringUtilsTest:org.apache.commons.lang3.builder.ShortPrefixToStringStyleTest:org.apache.commons.lang3.text.StrTokenizerTest:org.apache.commons.lang3.BitFieldTest:org.apache.commons.lang3.time.DateUtilsRoundingTest:org.apache.commons.lang3.builder.DefaultToStringStyleTest:org.apache.commons.lang3.ArrayUtilsTest:org.apache.commons.lang3.text.translate.EntityArraysTest:org.apache.commons.lang3.CharUtilsTest:org.apache.commons.lang3.concurrent.LazyInitializerTest:org.apache.commons.lang3.tuple.ImmutableTripleTest:org.apache.commons.lang3.text.StrBuilderTest:org.apache.commons.lang3.CharSetTest:org.apache.commons.lang3.time.FastDateFormatTest:org.apache.commons.lang3.concurrent.MultiBackgroundInitializerTest:org.apache.commons.lang3.exception.ContextedExceptionTest:org.apache.commons.lang3.time.DateUtilsFragmentTest:org.apache.commons.lang3.builder.StandardToStringStyleTest:org.apache.commons.lang3.CharSequenceUtilsTest:org.apache.commons.lang3.reflect.ConstructorUtilsTest:org.apache.commons.lang3.time.FastDateParserTest:org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest:org.apache.commons.lang3.CharRangeTest:org.apache.commons.lang3.concurrent.ConstantInitializerTest:org.apache.commons.lang3.event.EventUtilsTest:org.apache.commons.lang3.reflect.FieldUtilsTest:org.apache.commons.lang3.text.ExtendedMessageFormatTest:org.apache.commons.lang3.builder.MultiLineToStringStyleTest:org.apache.commons.lang3.mutable.MutableShortTest:org.apache.commons.lang3.ArrayUtilsAddTest:org.apache.commons.lang3.builder.HashCodeBuilderAndEqualsBuilderTest:org.apache.commons.lang3.concurrent.ConcurrentUtilsTest:org.apache.commons.lang3.builder.SimpleToStringStyleTest:org.apache.commons.lang3.BooleanUtilsTest:org.apache.commons.lang3.text.StrSubstitutorTest:org.apache.commons.lang3.CharEncodingTest:org.apache.commons.lang3.CharSetUtilsTest:org.apache.commons.lang3.tuple.MutablePairTest:org.apache.commons.lang3.concurrent.AtomicInitializerTest:org.apache.commons.lang3.StringEscapeUtilsTest:org.apache.commons.lang3.tuple.MutableTripleTest:org.apache.commons.lang3.concurrent.CallableBackgroundInitializerTest:org.apache.commons.lang3.tuple.PairTest:org.apache.commons.lang3.HashSetvBitSetTest:org.apache.commons.lang3.concurrent.BasicThreadFactoryTest:org.apache.commons.lang3.text.translate.NumericEntityEscaperTest:org.apache.commons.lang3.text.translate.OctalUnescaperTest:org.apache.commons.lang3.mutable.MutableObjectTest:org.apache.commons.lang3.builder.NoFieldNamesToStringStyleTest:org.apache.commons.lang3.mutable.MutableFloatTest:org.apache.commons.lang3.EnumUtilsTest:org.apache.commons.lang3.event.EventListenerSupportTest:org.apache.commons.lang3.ObjectUtilsTest:org.apache.commons.lang3.math.NumberUtilsTest:org.apache.commons.lang3.builder.HashCodeBuilderTest:org.apache.commons.lang3.ClassUtilsTest:org.apache.commons.lang3.StringUtilsSubstringTest:org.apache.commons.lang3.SystemUtilsTest:org.apache.commons.lang3.builder.ToStringBuilderTest:org.apache.commons.lang3.time.FastDateFormat_PrinterTest:org.apache.commons.lang3.reflect.MethodUtilsTest:org.apache.commons.lang3.mutable.MutableLongTest:org.apache.commons.lang3.concurrent.AtomicSafeInitializerTest:org.apache.commons.lang3.text.translate.LookupTranslatorTest:org.apache.commons.lang3.text.CompositeFormatTest:org.apache.commons.lang3.mutable.MutableBooleanTest:org.apache.commons.lang3.text.StrBuilderAppendInsertTest:org.apache.commons.lang3.exception.DefaultExceptionContextTest:org.apache.commons.lang3.exception.ExceptionUtilsTest:org.apache.commons.lang3.ArrayUtilsRemoveTest:org.apache.commons.lang3.time.StopWatchTest:org.apache.commons.lang3.AnnotationUtilsTest:org.apache.commons.lang3.builder.CompareToBuilderTest:org.apache.commons.lang3.StringUtilsEqualsIndexOfTest:org.apache.commons.lang3.builder.ReflectionToStringBuilderExcludeTest:org.apache.commons.lang3.text.translate.NumericEntityUnescaperTest:org.apache.commons.lang3.text.FormattableUtilsTest:org.apache.commons.lang3.reflect.TypeUtilsTest:org.apache.commons.lang3.math.IEEE754rUtilsTest:org.apache.commons.lang3.SerializationUtilsTest:org.apache.commons.lang3.builder.EqualsBuilderTest:org.apache.commons.lang3.ValidateTest:org.apache.commons.lang3.text.StrLookupTest:org.apache.commons.lang3.time.DateFormatUtilsTest:org.apache.commons.lang3.text.translate.UnicodeEscaperTest:org.apache.commons.lang3.mutable.MutableIntTest:org.apache.commons.lang3.LocaleUtilsTest:org.apache.commons.lang3.text.translate.UnicodeUnescaperTest:org.apache.commons.lang3.text.StrMatcherTest:org.apache.commons.lang3.JavaVersionTest:org.apache.commons.lang3.concurrent.BackgroundInitializerTest:org.apache.commons.lang3.mutable.MutableDoubleTest:org.apache.commons.lang3.StringUtilsStartsEndsWithTest:org.apache.commons.lang3.exception.ContextedRuntimeExceptionTest:org.apache.commons.lang3.math.FractionTest:org.apache.commons.lang3.time.DateUtilsTest:org.apache.commons.lang3.time.FastDatePrinterTest:org.apache.commons.lang3.tuple.TripleTest:org.apache.commons.lang3.concurrent.TimedSemaphoreTest:org.apache.commons.lang3.StringUtilsIsTest:org.apache.commons.lang3.RangeTest:org.apache.commons.lang3.builder.ToStringStyleConcurrencyTest:org.apache.commons.lang3.builder.ToStringStyleTest:org.apache.commons.lang3.mutable.MutableByteTest:
+2017-03-29 12:48:18,573 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:pathToMVNRepository= 
+2017-03-29 12:48:18,573 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:executeRegression= true
+2017-03-29 12:48:18,573 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:modificationpointnavigation= weight
+2017-03-29 12:48:18,573 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxtime= 120
+2017-03-29 12:48:18,573 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:probagenmutation= false
+2017-03-29 12:48:18,573 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:alternativecompliancelevel= 4
+2017-03-29 12:48:18,573 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:version-location= ./math-version/
+2017-03-29 12:48:18,573 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:location= /data/people/qx5/defects4j-bugs/langs/projs/Lang_7_buggy
+2017-03-29 12:48:18,590 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:stopfirst= true
+2017-03-29 12:48:18,590 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:jvm4testexecution= /home/qx5/jdk1.8.0_111/bin
+2017-03-29 12:48:18,590 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:bugId= 280
+2017-03-29 12:48:18,591 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:mutationrate= 1 
+2017-03-29 12:48:18,591 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:projectIdentifier= Lang_7
+2017-03-29 12:48:18,591 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evo_buggy_class= true
+2017-03-29 12:48:18,591 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evoRunOnBuggyClass= true
+2017-03-29 12:48:18,591 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:jvm4evosuitetestexecution= /home/qx5/jdk1.8.0_111/bin
+2017-03-29 12:48:18,591 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:resetoperations= false
+2017-03-29 12:48:18,594 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:seed= 0
+2017-03-29 12:48:18,594 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:testbystep= false
+2017-03-29 12:48:18,606 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:srctestfolder= //src/test/java/
+2017-03-29 12:48:18,606 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:javacompliancelevel= 8
+2017-03-29 12:48:18,606 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:bintestfolder= //target/tests/
+2017-03-29 12:48:18,606 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:commandTrunk= 50000
+2017-03-29 12:48:18,606 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:dependenciespath= /data/people/qx5/defects4j-bugs/langs/projs/Lang_7_buggy/all0.jar:/home/qx5/ssFix2/lib/commons-lang3-3.5.jar:/home/qx5/ssFix2/lib/myprinter.jar:/home/qx5/ssFix2/lib/evosuite-1.0.2.jar
+2017-03-29 12:48:18,606 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:multipointmodification= false
+2017-03-29 12:48:18,610 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:validation= process
+2017-03-29 12:48:18,618 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:scope= package
+2017-03-29 12:48:18,618 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuitetimeout= 120
+2017-03-29 12:48:18,620 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evoDSE= false
+2017-03-29 12:48:18,620 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:elementsToMutate= 10
+2017-03-29 12:48:18,620 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:lastJUnitVersion= ./examples/libs/junit-4.11.jar
+2017-03-29 12:48:18,620 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:failing= org.apache.commons.lang3.math.NumberUtilsTest
+2017-03-29 12:48:18,621 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:allpoints= false
+2017-03-29 12:48:18,621 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:resourcesfolder= /src/main/resources:/src/test/resources:
+2017-03-29 12:48:18,621 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:regressionforfaultlocalization= true
+2017-03-29 12:48:18,621 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:population= 1
+2017-03-29 12:48:18,621 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:saveall= false
+2017-03-29 12:48:18,621 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:pvariantfoldername= variant-
+2017-03-29 12:48:18,621 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:savesolution= true
+2017-03-29 12:48:18,621 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:srcjavafolder= //src/main/java/
+2017-03-29 12:48:18,621 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evo_affected_by_op= true
+2017-03-29 12:48:18,621 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:binjavafolder= //target/classes/
+2017-03-29 12:48:18,621 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:reintroduce= original-parents
+2017-03-29 12:48:18,625 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuitejar= ./lib/evosuite-master-1.0.4-SNAPSHOT.jar
+2017-03-29 12:48:18,625 INFO fr.inria.astor.core.setup.ConfigurationProperties - ----------------------------
+2017-03-29 12:48:18,626 INFO main - mod_point ModificPoint=FastDateParser line: 724, el: CtAssignmentImpl
+2017-03-29 12:48:18,627 INFO main - -->op: RemoveOp: `tz = tzNames.get(value) ` ---> `-` at pos 0 of parent `{ 	tz = tzNames.get(value[...]`
+2017-03-29 12:48:29,880 INFO main - mod_point ModificPoint=FastDateParser line: 725, el: CtIfImpl
+2017-03-29 12:48:29,906 INFO main - -->op: ReplaceIfBooleanOp: `if (tz == null) { 	throw [...] ` ---> `if (true) { 	throw new ja[...]` at pos 1 of parent `{ 	tz = tzNames.get(value[...]`
+2017-03-29 12:48:38,034 INFO main - mod_point ModificPoint=FastDateParser line: 725, el: CtIfImpl
+2017-03-29 12:48:38,035 INFO main - -->op: ReplaceIfBooleanOp: `if (tz == null) { 	throw [...] ` ---> `if (false) { 	throw new j[...]` at pos 1 of parent `{ 	tz = tzNames.get(value[...]`
+2017-03-29 12:48:45,895 INFO main - mod_point ModificPoint=FastDateParser line: 725, el: CtIfImpl
+2017-03-29 12:48:45,895 INFO main - -->op: RemoveOp: `if (tz == null) { 	throw [...] ` ---> `-` at pos 1 of parent `{ 	tz = tzNames.get(value[...]`
+2017-03-29 12:48:52,823 INFO main - mod_point ModificPoint=FastDateParser line: 720, el: CtIfImpl
+2017-03-29 12:48:52,823 INFO main - -->op: ReplaceIfBooleanOp: `if (value.startsWith("GMT[...] ` ---> `if (true) { 	tz = java.ut[...]` at pos 0 of parent `{ 	if (value.startsWith("[...]`
+2017-03-29 12:48:59,686 INFO main - mod_point ModificPoint=FastDateParser line: 720, el: CtIfImpl
+2017-03-29 12:48:59,687 INFO main - -->op: ReplaceIfBooleanOp: `if (value.startsWith("GMT[...] ` ---> `if (false) { 	tz = java.u[...]` at pos 0 of parent `{ 	if (value.startsWith("[...]`
+2017-03-29 12:49:08,219 INFO main - mod_point ModificPoint=FastDateParser line: 720, el: CtIfImpl
+2017-03-29 12:49:08,220 INFO main - -->op: RemoveOp: `if (value.startsWith("GMT[...] ` ---> `-` at pos 0 of parent `{ 	if (value.startsWith("[...]`
+2017-03-29 12:49:12,483 INFO main - mod_point ModificPoint=FastDateParser line: 721, el: CtAssignmentImpl
+2017-03-29 12:49:12,483 INFO main - -->op: RemoveOp: `tz = java.util.TimeZone.g[...] ` ---> `-` at pos 0 of parent `{ 	tz = java.util.TimeZon[...]`
+2017-03-29 12:49:16,707 INFO main - mod_point ModificPoint=NumberUtils line: 462, el: CtUnaryOperatorImpl
+2017-03-29 12:49:16,707 INFO main - -->op: RemoveOp: `hexDigits-- ` ---> `-` at pos 0 of parent `{ 	hexDigits--; }`
+2017-03-29 12:49:24,406 INFO main - mod_point ModificPoint=NumberUtils line: 490, el: CtThrowImpl
+2017-03-29 12:49:24,406 INFO main - -->op: RemoveOp: `throw new java.lang.Numbe[...] ` ---> `-` at pos 0 of parent `{ 	throw new java.lang.Nu[...]`
+2017-03-29 12:49:30,733 INFO main - mod_point ModificPoint=NumberUtils line: 518, el: CtReturnImpl
+2017-03-29 12:49:30,733 INFO main - -->op: RemoveOp: `return org.apache.commons[...] ` ---> `-` at pos 1 of parent `{ 	try { 		return org.apa[...]`
+2017-03-29 12:49:38,334 INFO main - mod_point ModificPoint=NumberUtils line: 591, el: CtIfImpl
+2017-03-29 12:49:38,335 INFO main - -->op: ReplaceIfBooleanOp: `if (!((d.isInfinite()) ||[...] ` ---> `if (true) { 	return d; } ` at pos 1 of parent `{ 	java.lang.Double d = o[...]`
+2017-03-29 12:49:46,568 INFO main - mod_point ModificPoint=NumberUtils line: 591, el: CtIfImpl
+2017-03-29 12:49:46,568 INFO main - -->op: ReplaceIfBooleanOp: `if (!((d.isInfinite()) ||[...] ` ---> `if (false) { 	return d; }[...]` at pos 1 of parent `{ 	java.lang.Double d = o[...]`
+2017-03-29 12:49:53,217 INFO main - mod_point ModificPoint=NumberUtils line: 591, el: CtIfImpl
+2017-03-29 12:49:53,217 INFO main - -->op: RemoveOp: `if (!((d.isInfinite()) ||[...] ` ---> `-` at pos 1 of parent `{ 	java.lang.Double d = o[...]`
+2017-03-29 12:49:59,403 INFO main - mod_point ModificPoint=NumberUtils line: 592, el: CtReturnImpl
+2017-03-29 12:49:59,404 INFO main - -->op: RemoveOp: `return d ` ---> `-` at pos 0 of parent `{ 	return d; }`
+2017-03-29 12:50:05,298 INFO main - mod_point ModificPoint=NumberUtils line: 447, el: CtReturnImpl
+2017-03-29 12:50:05,298 INFO main - -->op: RemoveOp: `return null ` ---> `-` at pos 0 of parent `{ 	return null; }`
+2017-03-29 12:50:13,571 INFO main - mod_point ModificPoint=NumberUtils line: 457, el: CtReturnImpl
+2017-03-29 12:50:13,572 INFO main - -->op: RemoveOp: `return null ` ---> `-` at pos 0 of parent `{ 	return null; }`
+2017-03-29 12:51:22,727 INFO main - -Found Solution, child variant #18
+2017-03-29 12:51:22,764 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.lang3.time.FastDatePrinter to /data/people/qx5/jkali_repair_expts/repair/Lang_7/r0/AstorMain-Lang_7/src/variant-18
+2017-03-29 12:51:23,426 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.lang3.SystemUtils to /data/people/qx5/jkali_repair_expts/repair/Lang_7/r0/AstorMain-Lang_7/src/variant-18
+2017-03-29 12:51:23,535 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.lang3.math.NumberUtils to /data/people/qx5/jkali_repair_expts/repair/Lang_7/r0/AstorMain-Lang_7/src/variant-18
+2017-03-29 12:51:23,754 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.lang3.JavaVersion to /data/people/qx5/jkali_repair_expts/repair/Lang_7/r0/AstorMain-Lang_7/src/variant-18
+2017-03-29 12:51:23,817 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.lang3.time.FastDateParser to /data/people/qx5/jkali_repair_expts/repair/Lang_7/r0/AstorMain-Lang_7/src/variant-18
+2017-03-29 12:51:24,002 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.lang3.StringUtils to /data/people/qx5/jkali_repair_expts/repair/Lang_7/r0/AstorMain-Lang_7/src/variant-18
+2017-03-29 12:51:25,154 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.lang3.time.FastDateFormat to /data/people/qx5/jkali_repair_expts/repair/Lang_7/r0/AstorMain-Lang_7/src/variant-18
+2017-03-29 12:51:25,593 INFO main - 
+----SUMMARY_EXECUTION---
+2017-03-29 12:51:25,594 INFO main - 
+Solution details
+2017-03-29 12:51:25,594 INFO main - 
+ --SOLUTIONS DESCRIPTION--
+
+ ----
+ProgramVariant 18
+ 
+time(sec)= 114
+operation: RemoveOp
+location= org.apache.commons.lang3.math.NumberUtils
+line= 457
+lineSuspiciousness= 0.408
+original statement= return null
+fixed statement= return null
+generation= 1
+ingredientScope= -
+validation=|true|0|2203|[]|
+2017-03-29 12:51:25,594 INFO fr.inria.main.evolution.AstorMain - Time Total(s): 393.305

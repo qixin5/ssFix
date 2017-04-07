@@ -1,0 +1,22 @@
+#!/bin/bash
+
+for i in {5,12,13}
+do
+    cp -r ~/data/jgenprog_repair_expts/log/Chart_${i} ./plausible
+done
+
+for i in {7,22,39}
+do
+    cp -r ~/data/jgenprog_repair_expts/log/Lang_${i} ./plausible
+done
+
+for i in {8,49,50,53,60,70,73,74,78,80,81,85,95}
+do
+    cp -r ~/data/jgenprog_repair_expts/log/Math_${i} ./plausible
+done
+
+for i in {50,53,70}
+do
+    cp -r ~/data/jgenprog_repair_expts/log/Math_${i} ./valid
+done
+
