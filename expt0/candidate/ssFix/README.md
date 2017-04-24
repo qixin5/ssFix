@@ -10,6 +10,7 @@ the similarity score.
 For example, the information of the candidate used for repairing the bug `Lang_21`
 can be found in `./plausible/Lang_21`:
 > file:///gpfs/data/people/qx5/merobase_split_100/87/srcs/5349.java,slc:344,2;slc:345,2;slc:346,2,7.225489
+
 where `file:///gpfs/data/people/qx5/merobase_split_100/87/srcs/5349.java` is the
 candidate file path, `slc:344,2;slc:345,2;slc:346,2` is the chunk location in the
 candidate file, and `7.225489` is the similarity score.
