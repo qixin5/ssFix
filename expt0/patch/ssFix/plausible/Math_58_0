@@ -1,4 +1,4 @@
-*** /data/people/qx5/repair_expts/Math_58/patches/f0/c97/p0/Gaussian.java	Sun Mar 12 22:42:50 2017
+*** /data/people/qx5/repair_expts_1/Math_58/patches/f0/c130/p0/Gaussian.java	Sat Apr 22 09:25:20 2017
 --- /data/people/qx5/defects4j-bugs/maths/projs/Math_58_buggy/src/main/java/org/apache/commons/math/analysis/function/Gaussian.java	Tue Oct 13 15:01:38 2015
 ***************
 *** 179,185 ****

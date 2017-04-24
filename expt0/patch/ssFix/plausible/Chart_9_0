@@ -1,4 +1,4 @@
-*** /data/people/qx5/repair_expts/Chart_9/patches/f7/c3/p6/TimeSeries.java	Sun Mar 12 16:22:45 2017
+*** /data/people/qx5/repair_expts_1/Chart_9/patches/f7/c35/p6/TimeSeries.java	Sat Apr 22 00:03:14 2017
 --- /data/people/qx5/defects4j-bugs/charts/projs/Chart_9_buggy/source/org/jfree/data/time/TimeSeries.java	Tue Oct 13 16:42:46 2015
 ***************
 *** 936,942 ****

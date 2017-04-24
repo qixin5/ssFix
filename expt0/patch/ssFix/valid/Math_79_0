@@ -1,4 +1,4 @@
-*** /data/people/qx5/repair_expts/Math_79/patches/f22/c0/p1/MathUtils.java	Sun Mar 12 22:17:51 2017
+*** /data/people/qx5/repair_expts_1/Math_79/patches/f22/c3/p1/MathUtils.java	Sat Apr 22 10:15:18 2017
 --- /data/people/qx5/defects4j-bugs/maths/projs/Math_79_buggy/src/main/java/org/apache/commons/math/util/MathUtils.java	Tue Sep 20 15:21:47 2016
 ***************
 *** 1623,1630 ****

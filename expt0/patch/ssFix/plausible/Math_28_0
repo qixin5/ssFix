@@ -1,4 +1,4 @@
-*** /data/people/qx5/repair_expts/Math_28/patches/f11/c0/p4/SimplexSolver.java	Mon Mar 13 08:40:13 2017
+*** /data/people/qx5/repair_expts_1/Math_28/patches/f11/c8/p4/SimplexSolver.java	Sat Apr 22 20:32:01 2017
 --- /data/people/qx5/defects4j-bugs/maths/projs/Math_28_buggy/src/main/java/org/apache/commons/math3/optimization/linear/SimplexSolver.java	Mon Feb 20 16:57:42 2017
 ***************
 *** 137,142 ****

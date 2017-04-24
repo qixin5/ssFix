@@ -1,4 +1,4 @@
-*** /data/people/qx5/repair_expts/Chart_20/patches/f4/c9/p3/ValueMarker.java	Sun Mar 12 16:30:43 2017
+*** /data/people/qx5/repair_expts_1/Chart_20/patches/f4/c70/p3/ValueMarker.java	Sat Apr 22 02:58:57 2017
 --- /data/people/qx5/defects4j-bugs/charts/projs/Chart_20_buggy/src/org/jfree/chart/plot/ValueMarker.java	Sun Jul  3 19:02:51 2016
 ***************
 *** 92,98 ****

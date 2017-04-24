@@ -1,4 +1,4 @@
-*** /data/people/qx5/repair_expts/Math_33/patches/f2/c25/p0/SimplexTableau.java	Sun Mar 12 19:04:22 2017
+*** /data/people/qx5/repair_expts_1/Math_33/patches/f2/c49/p0/SimplexTableau.java	Sat Apr 22 07:59:56 2017
 --- /data/people/qx5/defects4j-bugs/maths/projs/Math_33_buggy/src/main/java/org/apache/commons/math3/optimization/linear/SimplexTableau.java	Sun Mar  5 09:55:40 2017
 ***************
 *** 335,341 ****

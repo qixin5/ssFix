@@ -1,4 +1,4 @@
-*** /data/people/qx5/repair_expts/Math_70/patches/f2/c6/p0/BisectionSolver.java	Mon Mar 13 01:03:56 2017
+*** /data/people/qx5/repair_expts_1/Math_70/patches/f2/c17/p0/BisectionSolver.java	Sun Apr 23 14:16:18 2017
 --- /data/people/qx5/defects4j-bugs/maths/projs/Math_70_buggy/src/main/java/org/apache/commons/math/analysis/solvers/BisectionSolver.java	Tue Oct 13 15:03:48 2015
 ***************
 *** 69,75 ****

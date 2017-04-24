@@ -1,4 +1,4 @@
-*** /data/people/qx5/repair_expts/Chart_1/patches/f26/c0/p2/AbstractCategoryItemRenderer.java	Sun Mar 12 11:35:53 2017
+*** /data/people/qx5/repair_expts_1/Chart_1/patches/f26/c4/p2/AbstractCategoryItemRenderer.java	Fri Apr 21 18:25:11 2017
 --- /data/people/qx5/defects4j-bugs/charts/projs/Chart_1_buggy/source/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java	Sun Dec  4 09:40:50 2016
 ***************
 *** 1795,1800 ****

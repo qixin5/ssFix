@@ -1,4 +1,4 @@
-*** /data/people/qx5/repair_expts/Lang_39/patches/f0/c0/p8/StringUtils.java	Sun Mar 12 13:29:54 2017
+*** /data/people/qx5/repair_expts_1/Lang_39/patches/f0/c18/p8/StringUtils.java	Fri Apr 21 20:22:35 2017
 --- /data/people/qx5/defects4j-bugs/langs/projs/Lang_39_buggy/src/java/org/apache/commons/lang3/StringUtils.java	Sat Apr  2 13:48:25 2016
 ***************
 *** 3671,3676 ****

@@ -1,4 +1,4 @@
-*** /data/people/qx5/repair_expts/Math_57/patches/f1/c19/p0/KMeansPlusPlusClusterer.java	Sun Mar 12 22:38:45 2017
+*** /data/people/qx5/repair_expts_1/Math_57/patches/f1/c61/p0/KMeansPlusPlusClusterer.java	Sat Apr 22 09:19:09 2017
 --- /data/people/qx5/defects4j-bugs/maths/projs/Math_57_buggy/src/main/java/org/apache/commons/math/stat/clustering/KMeansPlusPlusClusterer.java	Mon Nov 30 21:03:45 2015
 ***************
 *** 170,176 ****

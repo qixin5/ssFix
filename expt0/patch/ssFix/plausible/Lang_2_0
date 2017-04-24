@@ -1,0 +1,19 @@
+*** /data/people/qx5/repair_expts_1/Lang_2/patches/f0/c0/p1/FieldUtils.java	Fri Apr 21 23:17:54 2017
+--- /data/people/qx5/defects4j-bugs/langs/projs/Lang_2_buggy/src/main/java/org/apache/commons/lang3/reflect/FieldUtils.java	Wed Nov 18 16:24:43 2015
+***************
+*** 210,216 ****
+       */
+      public static List<Field> getAllFieldsList(Class<?> cls) {
+          if (cls == null) {
+!             throw new IllegalArgumentException("UID cannot be null");
+          }
+          List<Field> allFields = new ArrayList<Field>();
+          Class<?> currentClass = cls;
+--- 210,216 ----
+       */
+      public static List<Field> getAllFieldsList(Class<?> cls) {
+          if (cls == null) {
+!             throw new IllegalArgumentException("The class must not be null");
+          }
+          List<Field> allFields = new ArrayList<Field>();
+          Class<?> currentClass = cls;

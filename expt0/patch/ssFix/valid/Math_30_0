@@ -1,4 +1,4 @@
-*** /data/people/qx5/repair_expts/Math_30/patches/f14/c109/p2/MannWhitneyUTest.java	Sun Mar 12 17:52:03 2017
+*** /data/people/qx5/repair_expts_1/Math_30/patches/f15/c51/p0/MannWhitneyUTest.java	Sat Apr 22 04:53:23 2017
 --- /data/people/qx5/defects4j-bugs/maths/projs/Math_30_buggy/src/main/java/org/apache/commons/math3/stat/inference/MannWhitneyUTest.java	Sat May 21 15:55:40 2016
 ***************
 *** 174,180 ****

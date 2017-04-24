@@ -1,4 +1,4 @@
-*** /data/people/qx5/repair_expts/Math_85/patches/f2/c12/p0/UnivariateRealSolverUtils.java	Mon Mar 13 02:14:09 2017
+*** /data/people/qx5/repair_expts_1/Math_85/patches/f2/c12/p0/UnivariateRealSolverUtils.java	Sat Apr 22 14:55:39 2017
 --- /data/people/qx5/defects4j-bugs/maths/projs/Math_85_buggy/src/java/org/apache/commons/math/analysis/solvers/UnivariateRealSolverUtils.java	Tue Oct 13 15:09:31 2015
 ***************
 *** 196,201 ****

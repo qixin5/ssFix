@@ -1,4 +1,4 @@
-*** /data/people/qx5/repair_expts/Math_59/patches/f1/c3/p0/FastMath.java	Tue Mar 28 10:10:52 2017
+*** /data/people/qx5/repair_expts_1/Math_59/patches/f1/c5/p0/FastMath.java	Sat Apr 22 09:35:53 2017
 --- /data/people/qx5/defects4j-bugs/maths/projs/Math_59_buggy/src/main/java/org/apache/commons/math/util/FastMath.java	Fri Aug  5 17:13:43 2016
 ***************
 *** 904,910 ****

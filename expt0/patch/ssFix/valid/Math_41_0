@@ -1,4 +1,4 @@
-*** /data/people/qx5/repair_expts/Math_41/patches/f10/c33/p6/Variance.java	Mon Mar 27 14:16:19 2017
+*** /data/people/qx5/repair_expts_1/Math_41/patches/f10/c83/p6/Variance.java	Sat Apr 22 04:19:10 2017
 --- /data/people/qx5/defects4j-bugs/maths/projs/Math_41_buggy/src/main/java/org/apache/commons/math/stat/descriptive/moment/Variance.java	Tue Oct 13 14:57:15 2015
 ***************
 *** 517,523 ****

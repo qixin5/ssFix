@@ -1,4 +1,4 @@
-*** /data/people/qx5/repair_expts/Chart_13/patches/f0/c58/p6/Range.java	Sun Mar 12 10:34:01 2017
+*** /data/people/qx5/repair_expts_1/Chart_13/patches/f0/c135/p6/Range.java	Fri Apr 21 17:17:15 2017
 --- /data/people/qx5/defects4j-bugs/charts/projs/Chart_13_buggy/source/org/jfree/data/Range.java	Tue Oct 13 14:39:12 2015
 ***************
 *** 84,89 ****

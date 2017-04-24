@@ -1,0 +1,19 @@
+*** /data/people/qx5/repair_expts_1/Math_60/patches/f20/c50/p0/ContinuedFraction.java	Sat Apr 22 10:28:06 2017
+--- /data/people/qx5/defects4j-bugs/maths/projs/Math_60_buggy/src/main/java/org/apache/commons/math/util/ContinuedFraction.java	Mon Feb 20 17:07:19 2017
+***************
+*** 160,166 ****
+                      lastScaleFactor = scaleFactor;
+                      scaleFactor *= scale;
+                      if (a != 0.0 && a > b) {
+!                         p2 = b;
+                          q2 = q1 / lastScaleFactor + (b / scaleFactor * q0);
+                      } else if (b != 0) {
+                          p2 = (a / scaleFactor * p1) + p0 / lastScaleFactor;
+--- 160,166 ----
+                      lastScaleFactor = scaleFactor;
+                      scaleFactor *= scale;
+                      if (a != 0.0 && a > b) {
+!                         p2 = p1 / lastScaleFactor + (b / scaleFactor * p0);
+                          q2 = q1 / lastScaleFactor + (b / scaleFactor * q0);
+                      } else if (b != 0) {
+                          p2 = (a / scaleFactor * p1) + p0 / lastScaleFactor;

@@ -1,4 +1,4 @@
-*** /data/people/qx5/repair_expts/Lang_6/patches/f0/c13/p0/CharSequenceTranslator.java	Sun Mar 12 18:44:50 2017
+*** /data/people/qx5/repair_expts_1/Lang_6/patches/f0/c49/p0/CharSequenceTranslator.java	Sat Apr 22 03:44:49 2017
 --- /data/people/qx5/defects4j-bugs/langs/projs/Lang_6_buggy/src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java	Sun Mar  5 09:51:19 2017
 ***************
 *** 92,98 ****

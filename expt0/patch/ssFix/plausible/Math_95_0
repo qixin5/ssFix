@@ -1,4 +1,4 @@
-*** /data/people/qx5/repair_expts/Math_95/patches/f7/c0/p0/FDistributionImpl.java	Mon Mar 13 02:07:21 2017
+*** /data/people/qx5/repair_expts_1/Math_95/patches/f7/c2/p0/FDistributionImpl.java	Sat Apr 22 16:43:46 2017
 --- /data/people/qx5/defects4j-bugs/maths/projs/Math_95_buggy/src/java/org/apache/commons/math/distribution/FDistributionImpl.java	Tue Oct 13 15:11:34 2015
 ***************
 *** 141,147 ****

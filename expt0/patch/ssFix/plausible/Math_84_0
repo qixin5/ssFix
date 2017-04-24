@@ -1,4 +1,4 @@
-*** /data/people/qx5/repair_expts/Math_84/patches/f1/c18/p5/MultiDirectional.java	Mon Mar 13 02:09:45 2017
+*** /data/people/qx5/repair_expts_1/Math_84/patches/f1/c29/p5/MultiDirectional.java	Sat Apr 22 14:49:58 2017
 --- /data/people/qx5/defects4j-bugs/maths/projs/Math_84_buggy/src/main/java/org/apache/commons/math/optimization/direct/MultiDirectional.java	Tue Oct 13 15:08:47 2015
 ***************
 *** 91,97 ****

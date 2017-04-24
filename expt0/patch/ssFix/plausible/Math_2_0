@@ -1,11 +1,11 @@
-*** /data/people/qx5/repair_expts/Math_2/patches/f16/c38/p0/AbstractIntegerDistribution.java	Mon Mar 13 01:42:04 2017
+*** /data/people/qx5/repair_expts_1/Math_2/patches/f15/c155/p2/AbstractIntegerDistribution.java	Sat Apr 22 12:23:16 2017
 --- /data/people/qx5/defects4j-bugs/maths/projs/Math_2_buggy/src/main/java/org/apache/commons/math3/distribution/AbstractIntegerDistribution.java	Tue Jun  9 10:16:21 2015
 ***************
 *** 127,133 ****
           final boolean chebyshevApplies = !(Double.isInfinite(mu) || Double.isNaN(mu) ||
                   Double.isInfinite(sigma) || Double.isNaN(sigma) || sigma == 0.0);
           if (chebyshevApplies) {
-!             double k = FastMath.sqrt((0 - p) / p);
+!             double k = FastMath.sqrt(-1.0 / p);
               double tmp = mu - k * sigma;
               if (tmp > lower) {
                   lower = ((int) Math.ceil(tmp)) - 1;
