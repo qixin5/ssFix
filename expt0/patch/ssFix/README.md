@@ -1,7 +1,7 @@
 # Patch
 
 **Chart 1 (Valid)**
-> The faulty program works incorrect both when `dataset` is and is not `null`. The patched program by developer works correct both when `dataset` is and is not `null`. The generated patch deletes the faulty if-statement. Now it works fine when `dataset` is not `null`, but still works incorrectly when `dataset` is `null`. Since the patched program makes the test suite pass and does not introduce regressions, we consider the patch as **valid** .
+> The faulty program works incorrectly both when `dataset` is and is not `null`. The patched program by developer works correctly both when `dataset` is and is not `null`. The generated patch deletes the body of the faulty if-statement (which essentially deletes the faulty if-statement). Now it works fine when `dataset` is not `null`, but still works incorrectly when `dataset` is `null`. Since the patched program makes the test suite pass and does not introduce regressions, we consider the patch as **valid**.
 
 **Chart 20 (Correct)**
 > The generated patch is both syntactically and semantically identical to the developer patch.
