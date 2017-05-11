@@ -60,5 +60,25 @@
 **Math 80 (Correct)**
 > The generated patch is syntactically transformable from (and is thus syntactically identical to) the developer patch. The patch is also semantically identical to the developer patch.
 
+&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;
 
+**Chart 13 (Defective)**
+> The generated patch simply deletes an exception-throwing statement `throw new IllegalArgumentException(msg);`.
 
+**Lang 39 (Defective)**
+> The generated patch simply deletes the for-statement which counts the replacement text elements that are larger than their corresponding text being replaced (according to the code comment associated with the statement).
+
+**Lang 51 (Defective)**
+> The generated patch changes the faulty if-condition from `if (ch == 'y')` to `if (ch == 'y' || ch == 't')`. This is not a valid/correct fix. Given an input `str="tes"`, the defective, patched program would return `true` but should return `false`.
+
+**Lang 27 (Defective)**
+> The generated patch changes the if-statement from `if (expPos>-1){mant = str.substring(0, expPos);} else {mant = str;}` to `if (expPos>-1){mant = str.substring(0, str.length()-1);} else {mant = str;}`. In the context of the program, this is equivalent to changing the original if-statement to `mant = str;` with the if-check removed.
+
+**Math 8 (Defective)**
+> The generated patch simply removes the statement `out[i] = sample();` which updates the array `out` to be returned.
+
+**Math 85 (Defective)**
+> The generated patch simply removes the exception-throwing statement `throw new ConvergenceException(...);`
+
+**Time 4 (Defective)**
+> The generated patch changes the single return statement `return 1;` of the method named `getMinimumValue` to `return 20;`. According to the javadoc of the method, the method is expected to return 1.
