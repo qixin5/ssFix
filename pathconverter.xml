@@ -1,0 +1,26 @@
+<!-- Provided as Arguments
+     1. testbuilddir
+     2. outputdir (this should be the root output directory for a specific bug)
+     3. outputfname
+-->
+
+<project name="Path Converter" basedir=".">
+
+  <target name="write_tsuitefile">
+    <fileset id="testsuite_classes"
+	     dir="${testbuilddir}">
+      <include name="**/*.class"/>
+    </fileset>
+    
+    <pathconvert dirsep="."
+		 pathsep=";"
+		 property="testsuite_class_names"
+		 refid="testsuite_classes">
+      <map from="${testbuilddir}/" to=""/>
+      <map from=".class" to=""/>
+    </pathconvert>
+    <echo file="${outputdir}/${outputfname}">
+      ${testsuite_class_names}
+    </echo>
+  </target>
+</project>

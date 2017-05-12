@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#export PATH=/home/qx5/jdk1.8.0_111/bin:$PATH
+
+proj_dir=./ #To be CUSTOMIZED (in its absolute path)
+
+java -Xms1024m -Xmx8192m -cp :${proj_dir}/build:${proj_dir}/lib/fauloc/* fauloc.FaultLocalization $*
+
+java -Xms1024m -Xmx8192m -cp :${proj_dir}/build:${proj_dir}/lib/* repair.Main $*

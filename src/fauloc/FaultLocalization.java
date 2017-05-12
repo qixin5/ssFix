@@ -1,0 +1,308 @@
+package fauloc;
+
+import util.*;
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Set;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Comparator;
+import java.util.Collections;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.cli.Options;
+import org.apache.commons.cli.Option;
+import org.apache.commons.cli.CommandLineParser;
+import org.apache.commons.cli.DefaultParser;
+import org.apache.commons.cli.CommandLine;
+import org.apache.commons.cli.ParseException;
+import com.gzoltar.core.GZoltar;
+import com.gzoltar.core.components.Statement;
+import com.gzoltar.core.instr.testing.TestResult;
+
+
+
+public class FaultLocalization
+{
+    private static Options options;
+
+    static {
+	options = new Options();
+	options.addOption("bugid", true, "Bug ID");
+	options.addOption("dependjpath", true, "The Dependency Jar Path");
+	options.addOption("projdpath", true, "Faulty Project's Directory Path");
+	options.addOption("projsrcdpath", true, "Faulty Project's Source Directory Path");
+	options.addOption("projbuilddpath", true, "Faulty Project's Build Directory Path (where the binaries for the source files are saved)");
+	options.addOption("projtestbuilddpath", true, "Faulty Project's Test Build Directory Path (where the binaries for the test source files are saved)");
+	options.addOption("tsuitefpath", true, "The File Containing the Class Names of All the Test Cases (Separated by Semi-colon)");
+	options.addOption("tpackage", true, "The Name of the Package used for Fault Localization. Multiple package names should be connected by colons.");
+	options.addOption("failedtestcases", true, "The Full Class Name of the Failed Test Cases (if more than one exist, put them together connected by colons)");
+	options.addOption("outputdpath", true, "Output Directory");
+	options.addOption("cockerdpath", true, "Cocker Directory Path");
+	options.addOption("ssfixdpath", true, "ssFix Directory Path"); 
+	options.addOption("maxfaultylines", true, "The Maximum Number of Faulty Lines to be Looked at for Repair");
+	options.addOption("maxcandidates", true, "The Maximum Number of Candidate Chunks to be Looked at for Repair");
+	options.addOption("analysismethod", true, "The Cocker Search Method");
+	options.addOption("faulocfpath", true, "The Path of the Fault Localization Result File");
+	options.addOption("faulocaddstacktrace", false, "Use the Stack Trace Information for Fault Localization?");
+	options.addOption("usesearchcache", false, "Use Cached Search Result?");
+
+	options.addOption("useextendedcodebase", false, "Use Extended Code Database (including Manually Retrieved Projects from GitHub)?");
+	options.addOption("runparallel", false, "Run in parallel?");
+	options.addOption("deletefailedpatches", false, "Delete Failed Patches?");
+    }
+    
+    
+    public static void main(String[] args) {
+
+	CommandLineParser clparser = new DefaultParser();
+	CommandLine cmd_line = null;
+	try { cmd_line = clparser.parse(options, args); }
+	catch (ParseException exp) {
+	    System.err.println("CommandLine Parsing Failed: " + exp);
+	}
+	if (cmd_line == null) { return; }
+
+	String bugid=null, projdpath=null, dependjpath=null, tsuitefpath=null, tpackage=null, outputdpath=null, ssfixdpath=null, projtestbuilddpath=null;
+	boolean addstacktrace = false;
+	
+	if (cmd_line.hasOption("bugid")) {
+	    String value = cmd_line.getOptionValue("bugid");
+	    System.out.println("Bug ID: " + value);
+	    bugid = value;
+	}
+	else {
+	    System.out.println("Bug ID Not Available.");
+	    return;
+	}
+
+	if (cmd_line.hasOption("projdpath")) {
+	    String value = cmd_line.getOptionValue("projdpath");
+	    System.out.println("Project Directory Path: " + value);
+	    projdpath = value;
+	}
+	else {
+	    System.out.println("Project Directory Path Not Available.");
+	    return;
+	}
+	
+	if (cmd_line.hasOption("dependjpath")) {
+	    String value = cmd_line.getOptionValue("dependjpath");
+	    System.out.println("Dependency Jar File Path: " + value);
+	    dependjpath = value;
+	}
+	else {
+	    System.out.println("Dependency Jar File Path Not Available.");
+	    return;
+	}
+
+	if (cmd_line.hasOption("ssfixdpath")) {
+	    ssfixdpath = cmd_line.getOptionValue("ssfixdpath");
+	    System.out.println("ssFix Directory Path: " + ssfixdpath);
+	}
+	else {
+	    System.out.println("ssFix Directory Path is Not Available.");
+	    return;
+	}
+	
+	if (cmd_line.hasOption("projtestbuilddpath")) {
+	    projtestbuilddpath = cmd_line.getOptionValue("projtestbuilddpath");
+	    System.out.println("Project Test Build Directory Path: " + projtestbuilddpath);
+	}
+	else {
+	    System.out.println("Project Test Build Directory Path is Not Available.");
+	    return;
+	}
+	
+	if (cmd_line.hasOption("faulocaddstacktrace")) {
+	    System.out.println("Add Stack Trace: True");
+	    addstacktrace = true;
+	}
+	else {
+	    System.out.println("Add Stack Trace: False");
+	    addstacktrace = false;
+	}
+	
+	if (cmd_line.hasOption("outputdpath")) {
+	    String value = cmd_line.getOptionValue("outputdpath");
+	    System.out.println("Output Directory: " + value);
+	    outputdpath = value;
+	}
+	else {
+	    System.out.println("Output Directory Path Not Available.");
+	    return;
+	}
+
+	File projdir = new File(projdpath);
+	if (!projdir.exists()) {
+	    System.out.println("Project Directory Not Exist: " + projdpath);
+	    return;
+	}
+	File dependjf = new File(dependjpath);
+	if (!dependjf.exists()) {
+	    System.out.println("Dependency Jar File Not Exist: " + dependjpath);
+	    return;
+	}
+	File outputf = new File(outputdpath+"/"+bugid+"/gzoltar_fauloc");
+	if (outputf.exists()) {
+	    System.out.println("GZoltar Result File is Available.");
+	    return;
+	}
+	File outputd0 = new File(outputdpath+"/"+bugid);
+	if (!outputd0.exists()) { outputd0.mkdirs(); }
+
+	if (cmd_line.hasOption("tsuitefpath")) {
+	    tsuitefpath = cmd_line.getOptionValue("tsuitefpath");
+	    System.out.println("Test Suite File Path: " + tsuitefpath);
+	}
+	else {
+	    //Generate a test suite file including all the test classes in the binary test directory
+	    tsuitefpath = outputdpath+"/"+bugid+"/testsuite_classes";
+	    File tsuite_f = new File(tsuitefpath);
+	    if (!tsuite_f.exists()) {
+		String[] path_convert_cmds = new String[]{
+		    "ant", "-f", "pathconverter.xml",
+		    "-Dtestbuilddir="+projtestbuilddpath,
+		    "-Doutputdir="+(outputdpath+"/"+bugid),
+		    "-Doutputfname=testsuite_classes",
+		    "write_tsuitefile"
+		};
+		File ssfixdir = new File(ssfixdpath);
+		CommandExecutor.execute(path_convert_cmds, ssfixdir);
+	    }
+	    System.out.println("Test Suite File Path: " + tsuitefpath);
+	}
+
+	List<String> tpackage_list = new ArrayList<String>();
+	if (cmd_line.hasOption("tpackage")) {
+	    tpackage = cmd_line.getOptionValue("tpackage");
+	    String[] tpackage_splits = tpackage.split(":");
+	    for (String tpackage0 : tpackage_splits) {
+		tpackage_list.add(tpackage0);
+	    }
+	}
+	else {
+	    //We add the names of directories directly under the project's test build directory 
+	    //E.g., you have the directory named "org", then "org" is used as the package name
+	    File ptbd = new File(projtestbuilddpath);
+	    File[] ptbd_files = ptbd.listFiles();
+	    for (File ptbd_file : ptbd_files) {
+		if (ptbd_file.isDirectory()) {
+		    tpackage_list.add(ptbd_file.getName());
+		}
+	    }
+	}
+	System.out.print("Target Package(s): ");
+	for (String tpackage0 : tpackage_list) {
+	    System.out.print(tpackage0+" ");
+	}
+	System.out.println();
+
+	
+
+	long start_time = System.currentTimeMillis();
+	FaultLocalization fl = new FaultLocalization();
+	List<String> rslt_list = fl.searchGZoltar(bugid, projdpath, dependjpath, tsuitefpath, tpackage_list, addstacktrace);
+	StringBuilder sb = new StringBuilder();
+	for (String rslt_line : rslt_list) { sb.append(rslt_line); sb.append("\n"); }
+	try { FileUtils.writeStringToFile(outputf, sb.toString().trim()); }
+	catch (Throwable t) { System.err.println(t); t.printStackTrace(); }
+	long end_time = System.currentTimeMillis();
+	System.out.println("Fauloc execution time: " + (end_time - start_time));
+    }
+
+    public List<String> searchGZoltar(String bug_id, String projdpath, String dependjfpath, String tsuitefpath, List<String> tpackage_list, boolean addstacktrace) {
+	List<String> rslt_list = new ArrayList<String>();
+	double threshold = 0;
+	ArrayList<String> classpaths = new ArrayList<String>();
+	classpaths.add(dependjfpath);
+	
+	GZoltar gz = null;
+	try { gz = new GZoltar(new File(projdpath).getAbsolutePath()); }
+	catch (Throwable t) { System.err.println(t); t.printStackTrace(); }
+	if (gz == null) { return rslt_list; }
+	gz.setClassPaths(classpaths);
+
+	//Add instr package
+	for (String tpackage : tpackage_list) {
+	    gz.addPackageToInstrument(tpackage);
+	}
+
+	//Add test-suite classes
+	File testsuite_classes_f = new File(tsuitefpath);
+	List<String> testsuite_classes = getTestSuiteClasses(testsuite_classes_f);
+	for (String testsuite_class : testsuite_classes) {
+	    //System.out.println(testsuite_class);
+	    gz.addTestToExecute(testsuite_class);
+	    gz.addClassNotToInstrument(testsuite_class);
+	}
+
+	gz.run();
+
+	int[] sum = new int[2];
+	List<TestResult> test_rslts = gz.getTestResults();
+	for (TestResult tr : test_rslts) {
+	    sum[0]++;
+	    sum[1] += tr.wasSuccessful() ? 0 : 1;
+	    if(!tr.wasSuccessful()){
+		if (addstacktrace) {
+		    rslt_list.add("Test failed: "+tr.getName());
+		    rslt_list.add(tr.getTrace());
+		}
+		else {
+		    System.out.println("Test failed: "+tr.getName());
+		    System.out.println(tr.getTrace());
+		}
+	    }
+	}
+	System.out.println("Gzoltar Test Result Total:"+sum[0]+", fails: "+sum[1] + ", GZoltar suspicious "+gz.getSuspiciousStatements().size());
+
+	List<Statement> stmt_list = new ArrayList<Statement>();
+	List<Statement> gz_susp_stmt_list = gz.getSuspiciousStatements();
+	for (Statement s : gz_susp_stmt_list) {
+	    String compName = s.getMethod().getParent().getLabel();
+	    double susp = s.getSuspiciousness();
+	    if (susp > threshold) { stmt_list.add(s); }
+	}
+
+	Collections.sort(stmt_list, new StmtComparator());
+
+	for (Statement s : stmt_list) {
+	    String rslt_s = "Suspicious line:" + s.getMethod().getParent().getLabel() + "," + s.getLineNumber() + "," + s.getSuspiciousness();
+	    rslt_list.add(rslt_s);
+	}
+	
+	return rslt_list;
+    }
+
+    private List<String> getTestSuiteClasses(File f) {
+	List<String> testsuite_classes = new ArrayList<String>();
+	if (!f.exists() || !f.canRead()) { return testsuite_classes; }
+	String ftext = null;
+	try { ftext = FileUtils.readFileToString(f, (String)null).trim(); }
+	catch (Throwable t) { System.err.println(t); t.printStackTrace(); }
+	if (ftext == null) { return testsuite_classes; }
+	
+	String[] class_items = ftext.split(";");
+	for (String class_item : class_items) {
+	    if (class_item.endsWith(".class")) {
+		String class_item0 = class_item.substring(0, class_item.lastIndexOf(".class"));
+		testsuite_classes.add(class_item0);
+	    }
+	    else {
+		testsuite_classes.add(class_item);
+	    }
+	}
+	return testsuite_classes;
+    }
+    
+    public class StmtComparator implements Comparator<Statement>{
+	@Override
+	public int compare(Statement s1, Statement s2) {
+	    if(s1 == null || s2 == null ){ return 0; }
+	    return Double.compare(s2.getSuspiciousness(),s1.getSuspiciousness());
+	}
+    }
+}
