@@ -16,27 +16,27 @@ Run `ant compile` to compile all the source files.
 
 + In the script file `run`, change the value of `proj_dir` to the *absolute* path of your ssFix directory (if you haven't done so).
 
-+ Run the script file `run` with at least the following 9 arguments:
- * `-bugid`: the program id
- * `-dependjpath`: the dependency jar path of the faulty program (you should create a single jar file of the compiled faulty program including the test files and all dependencies)
- * `-projdpath`: the path of the faulty program's directory
- * `-projsrcdpath`: the path of the faulty program's source directory (this is where all the source files are located)
- * `-projbuilddpath`: the path of the faulty program's source-binary directory (this is where all the binaries of the source files are located)
- * `-projtestbuilddpath`: the path of the faulty program's test-binary directory (this is where all the binaries of the test source files are located)
- * `-outputdpath`: the output directory
- * `-ssfixdpath`: the directory of ssFix
++ Run the script file `run` with at least the following 8 arguments (if possible, use *absolute* paths):
+  * `-bugid`: the program id
+  * `-dependjpath`: the dependency jar path of the faulty program (you should create a single jar file of the compiled faulty program including the test files and all dependencies)
+  * `-projdpath`: the path of the faulty program's directory
+  * `-projsrcdpath`: the path of the faulty program's source directory (this is where all the source files are located)
+  * `-projbuilddpath`: the path of the faulty program's source-binary directory (this is where all the binaries of the source files are located)
+  * `-projtestbuilddpath`: the path of the faulty program's test-binary directory (this is where all the binaries of the test source files are located)
+  * `-outputdpath`: the output directory
+  * `-ssfixdpath`: the directory of ssFix
 
 The following arguments are optional:
- * `-tsuitefpath`: the file containing the class names of all test cases, separated by semi-colons. If not used, ssFix will scan the test directory and create a file including all the test class names. A patched program produced by ssFix needs to pass all the test cases included in all the test classes. (NOTE: Currently, ssFix only yields a patched program if it can pass all the test cases. Please make sure the failed test cases are only bug-related. We strongly encourage a user to provide this file.)
- * `-tpackage`: the names of suspicious packages where a fault is likely to be located. (If there are more than one name, connect them by colons.) If not used, ssFix will consider all packages to be suspicious.
- * `-failedtestcase`: you may provide the full class names of the failed test cases. If more than one exist, put them together connected by colons. If not used, ssFix will test the faulty program against all the test cases to figure out the failed ones.
- * `-maxfaultylines`: the maximum number of the top suspicious faulty statements to be considered for repair. Default is 30.
- * `-maxcandidates`: the maximum number of the top retrieved candidate chunks to be used for repair. Default is 100.
- * `-faulocfpath`: the path of the fault localization result file. If provided, ssFix will directly use the result in the file. Otherwise, ssFix will perform fault localization to create a result file.
- * `-faulocaddstacktrace` (no argument): should ssFix use the stack trace information for fault localization?
- * `-usesearchcache (no argument)`: should ssFix use the cached search file (generated earlier) to obtain candidates?
- * `-runparallel (no argument)`: should ssFix run in parallel for patch validations?
- * `-deletefailedpatches (no argument)`: should ssFix delete failed patches?
+  * `-tsuitefpath`: the file containing the class names of all test cases, separated by semi-colons. If not used, ssFix will scan the test directory and create a file including all the test class names. A patched program produced by ssFix needs to pass all the test cases included in all the test classes. (NOTE: Currently, ssFix only yields a patched program if it can pass all the test cases. Please make sure the failed test cases are only bug-related. We strongly encourage a user to provide this file.)
+  * `-tpackage`: the names of suspicious packages where a fault is likely to be located. (If there are more than one name, connect them by colons.) If not used, ssFix will consider all packages to be suspicious.
+  * `-failedtestcase`: you may provide the full class names of the failed test cases. If more than one exist, put them together connected by colons. If not used, ssFix will test the faulty program against all the test cases to figure out the failed ones.
+  * `-maxfaultylines`: the maximum number of the top suspicious faulty statements to be considered for repair. Default is 30.
+  * `-maxcandidates`: the maximum number of the top retrieved candidate chunks to be used for repair. Default is 100.
+  * `-faulocfpath`: the path of the fault localization result file. If provided, ssFix will directly use the result in the file. Otherwise, ssFix will perform fault localization to create a result file.
+  * `-faulocaddstacktrace` (no argument): should ssFix use the stack trace information for fault localization?
+  * `-usesearchcache (no argument)`: should ssFix use the cached search file (generated earlier) to obtain candidates?
+  * `-runparallel (no argument)`: should ssFix run in parallel for patch validations?
+  * `-deletefailedpatches (no argument)`: should ssFix delete failed patches?
 
 Note that ssFix will print the running information to screen. You can re-direct the information to a file, then you will get a log file.
 
