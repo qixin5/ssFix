@@ -1,4 +1,4 @@
-package repair;
+package edu.brown.cs.ssfix.repair;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,8 +18,8 @@ import org.eclipse.jdt.core.dom.MethodDeclaration;
 import org.eclipse.jdt.core.dom.PackageDeclaration;
 import org.eclipse.jdt.core.dom.SingleVariableDeclaration;
 import org.eclipse.jdt.core.dom.ASTNode;
-import search.*;
-import util.*;
+import edu.brown.cs.ssfix.search.*;
+import edu.brown.cs.ssfix.util.*;
 
 
 public class SearchInvoker
@@ -72,14 +72,14 @@ public class SearchInvoker
 	    return cchunk_lines;
 	}
 
-	//Return if filtering
+	//Return if no filtering
 	if (!filter) { return Arrays.asList(search_rslt0.split("\n")); }
 	
 	//Filter the results
 	System.out.println("Cocker Result Filtering ...");
 	int max_lines_to_filter = 1000;
 	int curr_line_count = 0;
-	String[] binfo = getClassNameAndMethodSignature(bfpath, search_loc);
+	String[] binfo = getClassNameAndMethodSignature(bfpath, search_loc, 0, anal_method);
 	if (binfo[0].startsWith("org.apache.commons.lang3")) {
 	    binfo[0] = binfo[0].replace("org.apache.commons.lang3","org.apache.commons.lang");
 	}
@@ -95,10 +95,10 @@ public class SearchInvoker
 		if ((i0==-1) || (i1==-1) || (i0+1==i1)) { continue; }
 		String cfpath = search_rslt0_line.substring(7, i0);
 		File cf = new File(cfpath);
-		if (!cf.exists()) { continue; }
+		//if (!cf.exists()) { continue; }
 		if (AVOID_CHEAT_FIX) {
 		    String cloc = search_rslt0_line.substring(i0+1, i1);
-		    String[] cinfo = getClassNameAndMethodSignature(cfpath, cloc);
+		    String[] cinfo = getClassNameAndMethodSignature(cfpath, cloc, 1, anal_method);
 		    String cinfo0 = cinfo[0];
 		    if (cinfo0.startsWith("org.apache.commons.lang3")) {
 			cinfo0 = cinfo0.replace("org.apache.commons.lang3","org.apache.commons.lang");
@@ -116,7 +116,7 @@ public class SearchInvoker
 		if (curr_line_count >= 1000) { break; }
 	    }
 	}
-	String search_rslt0_filtered = SearchFilter.filter(search_rslt0_lines, null, max_lines_to_filter);
+	String search_rslt0_filtered = SearchFilter.filter(search_rslt0_lines, null, max_lines_to_filter, anal_method);
 	if (search_rslt0_filtered == null) {
 	    System.err.println("No cocker result available after filtering.");
 	    return cchunk_lines;
@@ -154,13 +154,24 @@ public class SearchInvoker
 	}
     }
 
-    /* All the located nodes should be from only ONE method. */
-    private String[] getClassNameAndMethodSignature(String fpath, String loc) {
+    /* All the located nodes should be from only ONE method.
+       flag 0: bchunk
+       flag 1: cchunk */
+    private String[] getClassNameAndMethodSignature(String fpath, String loc, int flag, String analmethod) {
 	String cname = "";
 	String msig = "";
-	File f = new File(fpath);
-	CompilationUnit cu = (CompilationUnit) ASTNodeLoader.getASTNode(f);
-	List<ASTNode> found_nodes = ASTNodeFinder.find(cu, loc);
+	List<ASTNode> found_nodes = null;
+        CompilationUnit cu = null;
+	if (flag == 0) {
+	    cu = (CompilationUnit) ASTNodeLoader.getASTNode(new File(fpath));
+	    found_nodes = ASTNodeFinder.find(cu, loc);
+	}
+	else {
+	    String cfctnt = CandidateLoader.getFileContent(fpath, analmethod);
+            cu = (CompilationUnit) ASTNodeLoader.getResolvedASTNode(fpath, cfctnt);
+            found_nodes = ASTNodeFinder.find(cu, loc);
+	}
+
 	if (found_nodes!=null && !found_nodes.isEmpty()) {
 	    ASTNode tnode = found_nodes.get(0);
 	    AbstractTypeDeclaration atd = null;

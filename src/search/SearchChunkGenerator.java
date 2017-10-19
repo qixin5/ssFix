@@ -1,4 +1,4 @@
-package search;
+package edu.brown.cs.ssfix.search;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -10,7 +10,7 @@ import org.eclipse.jdt.core.dom.Statement;
 import org.eclipse.jdt.core.dom.Block;
 import org.eclipse.jdt.core.dom.StructuralPropertyDescriptor;
 import org.eclipse.jdt.core.dom.MethodDeclaration;
-import util.*;
+import edu.brown.cs.ssfix.util.*;
 
 
 

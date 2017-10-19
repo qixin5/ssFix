@@ -1,4 +1,4 @@
-package patchgen;
+package edu.brown.cs.ssfix.patchgen;
 
 import org.eclipse.jdt.core.dom.*;
 import org.eclipse.jdt.core.dom.rewrite.ASTRewrite;

@@ -1,4 +1,4 @@
-package patchgen;
+package edu.brown.cs.ssfix.patchgen;
 
 public class Patch
 {

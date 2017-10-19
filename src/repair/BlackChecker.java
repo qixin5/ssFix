@@ -1,4 +1,4 @@
-package repair;
+package edu.brown.cs.ssfix.repair;
 
 import java.util.List;
 import java.util.ArrayList;

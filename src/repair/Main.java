@@ -1,6 +1,6 @@
-package repair;
+package edu.brown.cs.ssfix.repair;
 
-import util.*;
+import edu.brown.cs.ssfix.util.*;
 import java.io.File;
 import java.util.List;
 import java.util.ArrayList;
@@ -37,13 +37,14 @@ public class Main
 	options.addOption("ssfixdpath", true, "ssFix Directory Path"); 
 	options.addOption("maxfaultylines", true, "The Maximum Number of Faulty Lines to be Looked at for Repair");
 	options.addOption("maxcandidates", true, "The Maximum Number of Candidate Chunks to be Looked at for Repair");
+	options.addOption("parallelgranularity", true, "The Number of Patches to be Validated Simultaneously");
 	options.addOption("analysismethod", true, "The Cocker Search Method");
 	options.addOption("faulocfpath", true, "The Path of the Fault Localization Result File");
 	options.addOption("faulocaddstacktrace", false, "Use the Stack Trace Information for Fault Localization?");
 	options.addOption("usesearchcache", false, "Use Cached Search Result?");
 
 	options.addOption("useextendedcodebase", false, "Use Extended Code Database (including Manually Retrieved Projects from GitHub)?");
-	options.addOption("runparallel", false, "Run in parallel?");
+	//options.addOption("runparallel", false, "Run in parallel?");	
 	options.addOption("deletefailedpatches", false, "Delete Failed Patches?");
     }
 
@@ -181,6 +182,15 @@ public class Main
 	    System.out.println("The Maximum Number of Candidates to be Used for Repair: " + Global.maxcandidates);
 	}
 
+	if (cmd_line.hasOption("parallelgranularity")) {
+	    String value = cmd_line.getOptionValue("parallelgranularity");
+	    System.out.println("The Number of Patches to be Validated Simultaneously: " + value);
+	    Global.parallelgranularity = Integer.parseInt(value);
+	}
+	else {
+	    System.out.println("The Number of Patches to be Validated Simultaneously: " + Global.parallelgranularity);
+	}
+
 	if (cmd_line.hasOption("analysismethod")) {
 	    String value = cmd_line.getOptionValue("analysismethod");
 	    System.out.println("Cocker Analysis Method: " + value);
@@ -216,6 +226,7 @@ public class Main
 	    System.out.println("Use the Extended Code Database? " + Global.useextendedcodebase);
 	}
 	
+	/*
 	if (cmd_line.hasOption("runparallel")) {
 	    System.out.println("Run the Repair in Parallel " + true);
 	    Global.runparallel = true;
@@ -223,6 +234,7 @@ public class Main
 	else {
 	    System.out.println("Run the Repair in Parallel " + Global.runparallel);
 	}
+	*/
 
 	if (cmd_line.hasOption("deletefailedpatches")) {
 	    System.out.println("Delete Failed Patches " + true);

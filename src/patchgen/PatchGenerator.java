@@ -1,4 +1,4 @@
-package patchgen;
+package edu.brown.cs.ssfix.patchgen;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -27,15 +27,16 @@ public class PatchGenerator
     private String proj_dpath;
     private String proj_testbuild_dpath;
     private String dependjpath;
+    private String tsuite_fpath;
     private String failed_testcases; //Separated by ":"
     private boolean delete_failed_patch;
     private PatchGenerator0 pgen0;
     private PatchValidator pval;
     private Set<String> tested_pset;
-    
-    
+    private int parallel_granularity;
+
     public static Map<String, String> failed_class_map;
-    private final int PARALLEL_GRANULARITY = 8;
+
     private final int MAX_PATCHES_TO_BE_VALIDATED = 50;
 
     static {
@@ -152,16 +153,20 @@ public class PatchGenerator
 	//======================
     }
 
-    public PatchGenerator(String bug_id, String ssfix_dpath, String proj_dpath, String proj_testbuild_dpath, String dependjpath, String failed_testcases, boolean delete_failed_patch) {
+    public PatchGenerator(String bug_id, String ssfix_dpath, String proj_dpath, String proj_testbuild_dpath, String dependjpath, String tsuitefpath, String failed_testcases, boolean delete_failed_patch, int parallelgranularity) {
 	this.bug_id = bug_id;
 	this.ssfix_dpath = ssfix_dpath;
 	this.proj_dpath = proj_dpath;
 	this.proj_testbuild_dpath = proj_testbuild_dpath;
 	this.dependjpath = dependjpath;
+	this.tsuite_fpath = tsuitefpath;
 	this.failed_testcases = failed_testcases;
 	this.delete_failed_patch = delete_failed_patch;
+	this.parallel_granularity = parallelgranularity;
+	if (parallel_granularity <= 0) { parallel_granularity = 1; }
+	else if (parallel_granularity >= 1024) { parallel_granularity = 1024; }
 	pgen0 = new PatchGenerator0();
-	pval = new PatchValidator(bug_id, proj_testbuild_dpath, dependjpath, ssfix_dpath);
+	pval = new PatchValidator(bug_id, proj_testbuild_dpath, dependjpath, tsuite_fpath, ssfix_dpath);
 	tested_pset = new HashSet<String>();
     }
 
@@ -182,9 +187,7 @@ public class PatchGenerator
 	String bfpath = bchunk.getFilePath();
 	File bf = new File(bfpath);
 	String bfname = bf.getName();
-	String bfctnt = null;
-	try { bfctnt = FileUtils.readFileToString(bf, (String)null); }
-	catch (Throwable t) { System.err.println(t); t.printStackTrace(); }
+	String bfctnt = bchunk.getFileContent();
 	if (bfctnt == null) { return new Patch(null, false); }
 
 	int tested_num = 0;
@@ -243,7 +246,13 @@ public class PatchGenerator
 	System.err.println("Generated "+validated_num+" Patches to be Validated.");
 	
 	//Third, validate each patch.
-	Patch rslt_patch0 = validatePatches1(patch_text_list, fix_dpath, bfpath, bfname);
+	Patch rslt_patch0 = null;
+	if (parallel_granularity == 1) {
+	    rslt_patch0 = validatePatches0(patch_text_list, fix_dpath, bfpath, bfname);
+	}
+	else { 
+	    rslt_patch0 = validatePatches1(patch_text_list, fix_dpath, bfpath, bfname); 
+	}
 	if (rslt_patch0.isCorrect()) {
 	    return rslt_patch0;
 	}
@@ -257,6 +266,7 @@ public class PatchGenerator
 	return rslt_patch;
     }
 
+    /* Validate patches in sequential order */
     private Patch validatePatches0(List<String> patch_text_list, String fix_dpath, String bfpath, String bfname) {
 
 	int tested_num = 0;
@@ -268,7 +278,7 @@ public class PatchGenerator
 	    File patch_d = new File(patch_dpath);
 	    if (!patch_d.exists()) { patch_d.mkdirs(); }
 	    Patch patch = pval.validate(patch_text_list.get(i), patch_fpath, patch_dpath, failed_testcases);
-	    if (patch.isCorrect()) {
+	    if (patch != null && patch.isCorrect()) {
 		patch.setTestedNum(tested_num);
 		return patch;
 	    }
@@ -285,9 +295,10 @@ public class PatchGenerator
 	return new Patch(null, false, tested_num);
     }
 
+    /* Validate patches with parallelism */
     private Patch validatePatches1(List<String> patch_text_list, String fix_dpath, String bfpath, String bfname) {
 
-	int para_gran = PARALLEL_GRANULARITY;
+	int para_gran = parallel_granularity;
 
 	//Init validate runners
 	int patch_text_list_size = patch_text_list.size();
@@ -322,7 +333,7 @@ public class PatchGenerator
 
     private Patch validatePatches1Helper(List<String> patch_text_list, int start, int end, String fix_dpath, String bfpath, String bfname) {
 
-	ExecutorService exe_service = Executors.newFixedThreadPool(PARALLEL_GRANULARITY);
+	ExecutorService exe_service = Executors.newFixedThreadPool(parallel_granularity);
 	List<Callable<Patch>> call_list = new ArrayList<Callable<Patch>>();
 	for (int i=start; i<end; i++) {
 	    String patch_dpath = fix_dpath+"/p"+i;

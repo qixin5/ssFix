@@ -1,11 +1,11 @@
-package util;
+package edu.brown.cs.ssfix.util;
 
-import org.eclipse.jdt.core.dom.ASTNode;
-import org.eclipse.jdt.core.dom.CompilationUnit;
-import org.eclipse.jdt.core.dom.StructuralPropertyDescriptor;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
+import org.eclipse.jdt.core.dom.ASTNode;
+import org.eclipse.jdt.core.dom.CompilationUnit;
+import org.eclipse.jdt.core.dom.StructuralPropertyDescriptor;
 
 
 public class ASTNodeTracker

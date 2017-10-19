@@ -1,4 +1,4 @@
-package patchgen;
+package edu.brown.cs.ssfix.patchgen;
 
 import java.io.File;
 import java.io.IOException;
@@ -10,12 +10,12 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
-import rename.Renamer;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.rewrite.ASTRewrite;
 import org.apache.commons.io.FileUtils;
-import util.*;
+import rename.Renamer;
+import edu.brown.cs.ssfix.util.*;
 
 
 public class PatchGenerator0
@@ -52,17 +52,13 @@ public class PatchGenerator0
 	    rcfctnts = new ArrayList<String>();
 	}
 	else {
-	    rcfctnts = renamer.rename(bchunk.getFilePath(), bchunk.getLoc(), cchunk.getFilePath(), cchunk.getLoc(), print_renaming);
+	    rcfctnts = renamer.rename(bchunk.getFilePath(), bchunk.getLoc(), bchunk.getFileContent(), cchunk.getFilePath(), cchunk.getLoc(), cchunk.getFileContent(), print_renaming);
 	}
 	
 	if (rcfctnts.isEmpty()) { //Add the candidate file's content
-	    File cf = new File(cchunk.getFilePath());
-	    String cfctnt = null;
-	    try { cfctnt = FileUtils.readFileToString(cf, (String) null); }
-	    catch (Throwable t) { System.err.println(t); t.printStackTrace(); }
+	    String cfctnt = cchunk.getFileContent();
 	    if (cfctnt != null) { rcfctnts.add(cfctnt); }
 	}
-
 
 	//Produce patches for the bug
 	List<Modification> patch_rws = new ArrayList<Modification>();
@@ -93,7 +89,7 @@ public class PatchGenerator0
 		}
 	    }
 
-	    CandidateChunk rcchunk = new CandidateChunk(cfpath, rcloc, rcnode_list);
+	    CandidateChunk rcchunk = new CandidateChunk(cfpath, rcloc, rcnode_list, rcfctnt); //rcloc is intentionally set as null
 	    List<Modification> patch_rws0 = pgen1.generatePatches(bchunk, rcchunk, print_ccmatching, print_patches);
 	    for (Modification patch_rw0 : patch_rws0) {
 		patch_rws.add(patch_rw0);

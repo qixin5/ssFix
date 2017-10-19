@@ -1,15 +1,15 @@
-package search;
+package edu.brown.cs.ssfix.search;
 
-import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Set;
 import java.util.HashSet;
+import org.apache.commons.io.FileUtils;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.CompilationUnit;
-import util.*;
+import edu.brown.cs.ssfix.util.*;
 
 
 public class SearchFilter
@@ -19,6 +19,7 @@ public class SearchFilter
 	String fpath = args[0];
 	String floc = args[1];
 	String rfpath = args[2];
+	String analmethod = "k5pprbstmsm"; //CHECK THIS...
 
 	//Get the buggy code
 	File f = new File(fpath);
@@ -34,35 +35,35 @@ public class SearchFilter
 
 	//Get the filtered result
 	File rf = new File(rfpath);
-	String filtered_rslt_str = filter(rf, reg_code);
+	String filtered_rslt_str = filter(rf, reg_code, analmethod);
 	System.out.println(filtered_rslt_str);
 	
     }
 
-    public static String filter(File rslt_f) {
-	return filter(rslt_f, null, 1000);
+    public static String filter(File rslt_f, String analmethod) {
+	return filter(rslt_f, null, 1000, analmethod);
     }
 
-    public static String filter(File rslt_f, int max_size) {
-	return filter(rslt_f, null, max_size);
+    public static String filter(File rslt_f, int max_size, String analmethod) {
+	return filter(rslt_f, null, max_size, analmethod);
     }
-    public static String filter(File rslt_f, String bug_reg_code) {
-	return filter(rslt_f, bug_reg_code, 1000);
+    public static String filter(File rslt_f, String bug_reg_code, String analmethod) {
+	return filter(rslt_f, bug_reg_code, 1000, analmethod);
     }
 
-    public static String filter(File rslt_f, String bug_reg_code, int max_size) {
+    public static String filter(File rslt_f, String bug_reg_code, int max_size, String analmethod) {
 	List<String> rslt_lines = null;
 	try { rslt_lines = FileUtils.readLines(rslt_f, (String) null); }
 	catch (Throwable t) { System.err.println(t); t.printStackTrace(); }
 	if (rslt_lines == null) { return ""; }
-	return filter(rslt_lines, bug_reg_code, max_size);
+	return filter(rslt_lines, bug_reg_code, max_size, analmethod);
     }
 
-    public static String filter(List<String> rslt_lines, String bug_reg_code) {
-	return filter(rslt_lines, bug_reg_code, 1000);
+    public static String filter(List<String> rslt_lines, String bug_reg_code, String analmethod) {
+	return filter(rslt_lines, bug_reg_code, 1000, analmethod);
     }
     
-    public static String filter(List<String> rslt_lines, String bug_reg_code, int max_size) {
+    public static String filter(List<String> rslt_lines, String bug_reg_code, int max_size, String analmethod) {
 	StringBuilder sb = new StringBuilder();
 	int rslt_lines_size = rslt_lines.size();
 	if (rslt_lines_size == 0) { return ""; }
@@ -83,7 +84,7 @@ public class SearchFilter
 		    i2 += 1;
 		}
 		else {
-		    String filtered_rslt_str = filter(rslt_lines, i1, i2, bug_reg_code);
+		    String filtered_rslt_str = filter(rslt_lines, i1, i2, bug_reg_code, analmethod);
 		    if (!filtered_rslt_str.equals("")) {
 			sb.append(filtered_rslt_str);
 			sb.append("\n");
@@ -93,7 +94,7 @@ public class SearchFilter
 		}
 	    }
 	}
-	String filtered_rslt_str = filter(rslt_lines, i1, i2, bug_reg_code);
+	String filtered_rslt_str = filter(rslt_lines, i1, i2, bug_reg_code, analmethod);
 	if (!filtered_rslt_str.equals("")) {
 	    sb.append(filtered_rslt_str);
 	    sb.append("\n");
@@ -102,7 +103,7 @@ public class SearchFilter
 	return sb.toString();
     }
 
-    private static String filter(List<String> rslt_lines, int i1, int i2, String bug_reg_code) {
+    private static String filter(List<String> rslt_lines, int i1, int i2, String bug_reg_code, String analmethod) {
 	StringBuilder sb = new StringBuilder();
 	Set<String> reg_code_set = new HashSet<String>();
 	if ((i1 == 0) && (bug_reg_code != null)) {
@@ -113,8 +114,8 @@ public class SearchFilter
 	//============	
 	for (int i=i1; i<=i2; i++) {
 	    String rslt_line = rslt_lines.get(i);
-	    List<ASTNode> nodes = extractNodes(rslt_line);
-	    if (nodes.isEmpty()) { continue; }
+	    List<ASTNode> nodes = extractNodes(rslt_line, analmethod);
+	    if (nodes==null || nodes.isEmpty()) { continue; }
 
 	    String reg_code = null;
 	    for (ASTNode node : nodes) {
@@ -149,7 +150,8 @@ public class SearchFilter
 	return sb.toString().trim();
     }
 
-    private static List<ASTNode> extractNodes(String rslt_line) {
+    /* Used only for candidate node extraction */
+    private static List<ASTNode> extractNodes(String rslt_line, String analmethod) {
 	int i1 = rslt_line.indexOf(",");
 	int i2 = rslt_line.lastIndexOf(",");
 	String fpath = rslt_line.substring(0, i1);
@@ -161,10 +163,12 @@ public class SearchFilter
 	//	return new ArrayList<ASTNode>();
 	//    }
 	//}
-	File f = new File(fpath);
-	if (!f.exists() || !f.canRead()) { return new ArrayList<ASTNode>(); }
-	ASTNode root_node = ASTNodeLoader.getASTNode(f);
-	if (root_node == null) { return new ArrayList<ASTNode>(); }
-	else { return ASTNodeFinder.find((CompilationUnit) root_node, loc); }
+
+	//File f = new File(fpath);
+	//if (!f.exists() || !f.canRead()) { return new ArrayList<ASTNode>(); }
+	//ASTNode root_node = ASTNodeLoader.getASTNode(f);
+	//if (root_node == null) { return new ArrayList<ASTNode>(); }
+	//else { return ASTNodeFinder.find((CompilationUnit) root_node, loc); }
+	return CandidateLoader.getNodes(fpath, loc, analmethod);
     }
 }

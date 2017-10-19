@@ -1,4 +1,4 @@
-package search;
+package edu.brown.cs.ssfix.search;
 
 import org.apache.commons.io.FileUtils;
 import java.io.*;
@@ -11,7 +11,7 @@ import java.util.Comparator;
 import java.util.Map;
 import java.util.HashMap;
 import org.eclipse.jdt.core.dom.*;
-import util.*;
+import edu.brown.cs.ssfix.util.*;
 
 public class SearchMerger
 {

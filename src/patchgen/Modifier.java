@@ -1,4 +1,4 @@
-package patchgen;
+package edu.brown.cs.ssfix.patchgen;
 
 import edu.brown.cs.ivy.jcomp.*;
 import java.util.List;

@@ -1,4 +1,4 @@
-package repair;
+package edu.brown.cs.ssfix.repair;
 
 import java.io.File;
 import java.io.IOException;
@@ -9,6 +9,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.Arrays;
+import java.util.regex.Pattern;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.MethodDeclaration;
@@ -17,11 +18,9 @@ import org.eclipse.jdt.core.dom.AbstractTypeDeclaration;
 import org.eclipse.jdt.core.dom.PackageDeclaration;
 import org.eclipse.jdt.core.dom.SingleVariableDeclaration;
 import org.apache.commons.io.FileUtils;
-import search.*;
-import patchgen.*;
-import util.*;
-import java.util.regex.Pattern;
-
+import edu.brown.cs.ssfix.search.*;
+import edu.brown.cs.ssfix.patchgen.*;
+import edu.brown.cs.ssfix.util.*;
 
 public class Repair0
 {
@@ -34,8 +33,10 @@ public class Repair0
     private String proj_dpath;
     private String proj_testbuild_dpath;
     private String dependjpath;
+    private String tsuite_fpath;
     private String failed_testcases;
     private int max_candidate_num;
+    private int parallel_granularity;
     private boolean use_search_cache;
     private boolean write_search_rslt;
     private boolean localproj_merobase_only;
@@ -43,16 +44,18 @@ public class Repair0
     private Pattern localproj_merobase_pathptn;
     private SearchInvoker search_invoker;
     
-    public Repair0(String bugid, String ssfixdpath, String cockerdpath, String projdpath, String projtestbuilddpath, String dependjpath, String failedtestcases, String analysismethod, int max_candidates, boolean usesearchcache, boolean useextendedcodebase, boolean deletefailedpatches) {
+    public Repair0(String bugid, String ssfixdpath, String cockerdpath, String projdpath, String projtestbuilddpath, String dependjpath, String tsuitefpath, String failedtestcases, String analysismethod, int max_candidates, int paragran, boolean usesearchcache, boolean useextendedcodebase, boolean deletefailedpatches) {
 	bug_id = bugid;
 	ssfix_dpath = ssfixdpath;
 	cocker_dpath = cockerdpath;
 	proj_dpath = projdpath;
 	proj_testbuild_dpath = projtestbuilddpath;
 	this.dependjpath = dependjpath;
+	tsuite_fpath = tsuitefpath;
 	failed_testcases = failedtestcases;
 	anal_method = analysismethod;
 	max_candidate_num = max_candidates;
+	parallel_granularity = paragran;
 	use_search_cache = usesearchcache;
 	localproj_merobase_only = !useextendedcodebase;
 	write_search_rslt = true;
@@ -77,12 +80,14 @@ public class Repair0
     private Patch repair0(String bfpath, String bstmt_loc, String fix_dpath) {
 	//Load the buggy node
 	File bf = new File(bfpath);
-	CompilationUnit bcu = (CompilationUnit) ASTNodeLoader.getASTNode(bf);
+	String bfctnt = null;
+	try { bfctnt = FileUtils.readFileToString(bf, (String) null); }
+	catch (IOException e) { System.err.println(e); e.printStackTrace(); }
+	CompilationUnit bcu = (CompilationUnit) ASTNodeLoader.getResolvedASTNode(bfpath, bfctnt);
 	List<ASTNode> bnode_list = ASTNodeFinder.find(bcu, bstmt_loc);
 	if (bnode_list.isEmpty() || bnode_list.get(0) == null) {
 	    System.err.println("Cannot find the suspicious statement from "+bfpath+","+bstmt_loc);
-	    return new Patch(null, false);
-	}
+	    return new Patch(null, false); }
 	ASTNode bnode = bnode_list.get(0);
 	
 	//Generate the local context search loc
@@ -115,17 +120,21 @@ public class Repair0
 	
 	//Repair using each candidate
 	int cchunk_num = cchunk_lines.size();
-	PatchGenerator pgen = new PatchGenerator(bug_id, ssfix_dpath, proj_dpath, proj_testbuild_dpath, dependjpath, failed_testcases, delete_failed_patches);
-	String bloc = getChunkLoc(bfpath, search_loc);
+	PatchGenerator pgen = new PatchGenerator(bug_id, ssfix_dpath, proj_dpath, proj_testbuild_dpath, dependjpath, tsuite_fpath, failed_testcases, delete_failed_patches, parallel_granularity);
+	String bloc = getChunkLoc(bfpath, bfctnt, search_loc);
 	if (bloc == null || "".equals(bloc)) {
 	    System.err.println("Cannot get the correct chunk loc from " + search_loc);
 	    return new Patch(null, false);
 	}
 	else {
-	    System.out.println("Buggy Chunk Loc: " + bloc);
-	    System.out.println();
+	    System.out.println("Buggy Chunk Loc: " + bloc); 
+	    System.out.println(); 
 	}
-	BuggyChunk bchunk = new BuggyChunk(bfpath, bloc);
+	List<ASTNode> bnodes = ASTNodeFinder.find(bcu, bloc);
+	if (bnodes == null || bnodes.isEmpty()) {
+	    return new Patch(null, false); //invalid target
+	} 
+	BuggyChunk bchunk = new BuggyChunk(bfpath, bloc, bnodes, bfctnt);
 	int bchunk_length = bchunk.getLengthInLines();
 	int max_cchunk_length = bchunk_length * MAX_CHUNK_SIZE_FACTOR;
 
@@ -169,12 +178,18 @@ public class Repair0
 		continue;
 	    }
 	    
-	    File cf = new File(cfpath);
-	    if (!cf.exists() || !cf.canRead()) {
-		System.out.println("Cannot read file: " + cfpath);
+	    //File cf = new File(cfpath);
+	    //if (!cf.exists() || !cf.canRead()) {
+	    //System.out.println("Cannot read file: " + cfpath);
+	    //continue;
+	    //}
+	    String cfctnt = CandidateLoader.getFileContent(cfpath, anal_method);
+	    if (cfctnt == null || "".equals(cfctnt)) {
+		System.out.println("Cannot get the candidate file content from: " + cfpath);
 		continue;
 	    }
-	    cloc = getChunkLoc0(cfpath, cloc); //Remove the method wrapper
+	    CompilationUnit ccu = (CompilationUnit) ASTNodeLoader.getResolvedASTNode(cfpath, cfctnt);
+	    cloc = getChunkLoc0(ccu, cloc);//Remove the method wrapper
 	    if (cloc == null || "".equals(cloc)) {
 		System.out.println("Empty chunk, skip.");
 		continue;
@@ -183,7 +198,11 @@ public class Repair0
 	    //Repair bchunk using cchunk
 	    System.out.println("Cloc: " + cloc);
 	    cchunk_count += 1;
-	    CandidateChunk cchunk = new CandidateChunk(cfpath, cloc);
+	    List<ASTNode> cnodes = ASTNodeFinder.find(ccu, cloc);
+	    if (cnodes == null || cnodes.isEmpty()) {
+		continue; //invalid candidate
+	    }
+	    CandidateChunk cchunk = new CandidateChunk(cfpath, cloc, cnodes, cfctnt);
 	    int cchunk_length = cchunk.getLengthInLines();
 	    if (cchunk_length <= 0 || cchunk_length >= max_cchunk_length) {
 		System.out.println("Empty or too large chunk, skip.");
@@ -223,12 +242,14 @@ public class Repair0
     private Patch repair1(String bfpath, String bstmt_loc, String fix_dpath) {
 	//Load the buggy node
 	File bf = new File(bfpath);
-	CompilationUnit bcu = (CompilationUnit) ASTNodeLoader.getASTNode(bf);
+	String bfctnt = null;
+        try { bfctnt = FileUtils.readFileToString(bf, (String) null); }
+        catch (IOException e) { System.err.println(e); e.printStackTrace(); }
+	CompilationUnit bcu = (CompilationUnit) ASTNodeLoader.getResolvedASTNode(bfpath, bfctnt);
 	List<ASTNode> bnode_list = ASTNodeFinder.find(bcu, bstmt_loc);
 	if (bnode_list.isEmpty() || bnode_list.get(0) == null) {
 	    System.err.println("Cannot find the suspicious statement from "+bfpath+","+bstmt_loc);
-	    return new Patch(null, false);
-	}
+	    return new Patch(null, false); }
 	ASTNode bnode = bnode_list.get(0);
 	String[] binfo = getClassNameAndMethodSignature(bnode);
 	
@@ -237,7 +258,7 @@ public class Repair0
 	String search_loc = ssgen.getLocalContextSearchLoc(bnode, bstmt_loc);
 
 	String cocker_rslt_fpath = fix_dpath+"/cocker_rslt";
-	List<String> cchunk_lines = search_invoker.invoke(bfpath, search_loc, ssfix_dpath, anal_method, cocker_rslt_fpath, false); //no filtering
+	List<String> cchunk_lines = search_invoker.invoke(bfpath, search_loc, ssfix_dpath, anal_method, cocker_rslt_fpath, false); //no filtering is performed
 	if (cchunk_lines==null || cchunk_lines.isEmpty()) {
 	    System.err.println("No cocker result available.");
 	    return new Patch(null, false);
@@ -245,8 +266,8 @@ public class Repair0
 	
 	//Repair using each candidate
 	int cchunk_num = cchunk_lines.size();
-	PatchGenerator pgen = new PatchGenerator(bug_id, ssfix_dpath, proj_dpath, proj_testbuild_dpath, dependjpath, failed_testcases, delete_failed_patches);
-	String bloc = getChunkLoc(bfpath, search_loc);
+	PatchGenerator pgen = new PatchGenerator(bug_id, ssfix_dpath, proj_dpath, proj_testbuild_dpath, dependjpath, tsuite_fpath, failed_testcases, delete_failed_patches, parallel_granularity);
+	String bloc = getChunkLoc(bfpath, bfctnt, search_loc);
 	if (bloc == null || "".equals(bloc)) {
 	    System.err.println("Cannot get the correct chunk loc from " + search_loc);
 	    return new Patch(null, false);
@@ -255,7 +276,11 @@ public class Repair0
 	    System.out.println("Buggy Chunk Loc: " + bloc);
 	    System.out.println();
 	}
-	BuggyChunk bchunk = new BuggyChunk(bfpath, bloc);
+	List<ASTNode> bnodes = ASTNodeFinder.find(bcu, bloc);
+	if (bnodes == null || bnodes.isEmpty()) {
+            return new Patch(null, false); //invalid target
+	}
+	BuggyChunk bchunk = new BuggyChunk(bfpath, bloc, bnodes, bfctnt);
 	int bchunk_length = bchunk.getLengthInLines();
 	int max_cchunk_length = bchunk_length * MAX_CHUNK_SIZE_FACTOR;
 
@@ -300,17 +325,28 @@ public class Repair0
 		continue;
 	    }
 	    
-	    File cf = new File(cfpath);
-	    if (!cf.exists() || !cf.canRead()) {
-		System.out.println("Cannot read file: " + cfpath);
-		continue;
-	    }
+	    //File cf = new File(cfpath);
+	    //if (!cf.exists() || !cf.canRead()) {
+	    //System.out.println("Cannot read file: " + cfpath);
+	    //continue;
+	    //}
 
+	    String cfctnt = CandidateLoader.getFileContent(cfpath, anal_method);
+            if (cfctnt == null || "".equals(cfctnt)) {
+                System.out.println("Cannot get the candidate file content from: " + cfpath);
+                continue;
+            }
+	    CompilationUnit ccu = (CompilationUnit) ASTNodeLoader.getResolvedASTNode(cfpath, cfctnt);
+            //cloc = getChunkLoc0(ccu, cloc);//Remove the method wrapper
 	    if (cloc == null || "".equals(cloc)) {
 		System.out.println("Empty chunk, skip.");
 		continue;
 	    }
-	    CandidateChunk cchunk = new CandidateChunk(cfpath, cloc);
+	    List<ASTNode> cnodes = ASTNodeFinder.find(ccu, cloc);
+            if (cnodes == null || cnodes.isEmpty()) {
+		continue; //invalid candidate
+	    }                                    
+	    CandidateChunk cchunk = new CandidateChunk(cfpath, cloc, cnodes, cfctnt);
 	    List<ASTNode> cchunk_nodes = cchunk.getNodeList();
 	    if (cchunk_nodes==null || cchunk_nodes.isEmpty()) {
 		System.out.println("Empty chunk, skip.");
@@ -383,7 +419,7 @@ public class Repair0
 
     
     /* Remove the nested locs; Use "slc" consistently. */
-    private String getChunkLoc(String bfpath, String search_loc) {
+    private String getChunkLoc(String bfpath, String bfctnt, String search_loc) {
 	String rslt = null;
 	String[] sublocs = search_loc.split(";");
 	for (String subloc : sublocs) {
@@ -397,13 +433,19 @@ public class Repair0
 	}
 	if (rslt == null) { return rslt; }
 	else {
-	    return getChunkLoc0(bfpath, rslt); //Could be null (method's no-body).
+	    CompilationUnit bcu = (CompilationUnit) ASTNodeLoader.getResolvedASTNode(bfpath, bfctnt);
+	    return getChunkLoc0(bcu, rslt); //Could be null (method's no-body)
 	}
     }
 
-    /* If loc corresponds to a method, get the loc for body stmts. */
-    private String getChunkLoc0(String fpath, String loc) {
-	CompilationUnit cu = (CompilationUnit) ASTNodeLoader.getASTNode(new File(fpath));
+    /*
+    private String getChunkLoc0(String fpath, String loc, String fctnt) {
+	CompilationUnit cu = (CompilationUnit) ASTNodeLoader.getResolvedASTNode(fpath, fctnt);	
+	return getChunkLoc0(cu, loc);
+    }
+    */
+
+    private String getChunkLoc0(CompilationUnit cu, String loc) {
 	List<ASTNode> found_nodes = ASTNodeFinder.find(cu, loc);
 	if (found_nodes.size()==1) {
 	    ASTNode found_node = found_nodes.get(0);
@@ -425,6 +467,46 @@ public class Repair0
 	}
 	return loc;
     }
+
+    /* If loc corresponds to a method, get the loc for body stmts. 
+     flag 0: bchunk
+     flag 1: cchunk */
+    /*
+    private String getChunkLoc0(String fpath, String loc, int flag, String analmethod) {
+	List<ASTNode> found_nodes = null;
+	CompilationUnit cu = null;
+	if (flag == 0) {
+	    cu = (CompilationUnit) ASTNodeLoader.getASTNode(new File(fpath));
+	    found_nodes = ASTNodeFinder.find(cu, loc);
+	}
+	else {
+	    String cfctnt = CandidateLoader.getFileContent(fpath, analmethod);
+	    cu = (CompilationUnit) ASTNodeLoader.getResolvedASTNode(fpath, cfctnt);
+	    found_nodes = ASTNodeFinder.find(cu, loc);
+	}
+
+	if (found_nodes.size()==1) {
+	    ASTNode found_node = found_nodes.get(0);
+	    if (found_node instanceof MethodDeclaration) {
+		MethodDeclaration md = (MethodDeclaration) found_node;
+		Block md_body = md.getBody();
+		if (md_body == null) { return null; } //no-body
+		List stmt_obj_list = md.getBody().statements();
+		String new_loc = null;
+		for (Object stmt_obj : stmt_obj_list) {
+		    ASTNode stmt = (ASTNode) stmt_obj;
+		    int pos = stmt.getStartPosition();
+		    String new_subloc = "slc:"+cu.getLineNumber(pos)+","+cu.getColumnNumber(pos);
+		    if (new_loc == null) { new_loc = new_subloc; }
+		    else { new_loc += ";" + new_subloc; }
+		}
+		return new_loc;
+	    }
+	}
+
+	return loc;
+    }
+    */
 
     private String[] getClassNameAndMethodSignature(ASTNode tnode) {
 	String cname = "";

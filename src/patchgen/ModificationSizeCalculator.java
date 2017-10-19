@@ -1,9 +1,9 @@
-package patchgen;
+package edu.brown.cs.ssfix.patchgen;
 
 import java.util.List;
 import org.eclipse.jdt.core.dom.ASTNode;
-import util.*;
 import org.apache.lucene.search.spell.LevensteinDistance;
+import edu.brown.cs.ssfix.util.*;
 
 
 public class ModificationSizeCalculator

@@ -1,11 +1,9 @@
-package patchgen;
+package edu.brown.cs.ssfix.patchgen;
 
-import org.eclipse.jdt.core.dom.*;
 import java.util.List;
-
+import org.eclipse.jdt.core.dom.*;
 
 public class Normalizer {
-
 
     public static ASTNode normalize(ASTNode node) {
 
@@ -13,7 +11,6 @@ public class Normalizer {
 	node.accept(visitor);
 	return node;
     }
-
 
     private static class AddBlockVisitor extends ASTVisitor
     {

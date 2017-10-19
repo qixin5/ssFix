@@ -1,4 +1,4 @@
-package search;
+package edu.brown.cs.ssfix.search;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 

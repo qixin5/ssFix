@@ -1,4 +1,4 @@
-package repair;
+package edu.brown.cs.ssfix.repair;
 
 import java.io.File;
 import java.io.IOException;
@@ -8,9 +8,9 @@ import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.Statement;
 import org.apache.commons.io.FileUtils;
-import patchgen.Patch;
-import util.*;
-import fauloc.FaultLocalization;
+import edu.brown.cs.ssfix.patchgen.Patch;
+import edu.brown.cs.ssfix.util.*;
+import edu.brown.cs.ssfix.fauloc.FaultLocalization;
 
 
 public class Repair
@@ -18,6 +18,7 @@ public class Repair
     public void repair(String bug_id, String projdpath, String projsrcdpath, String outputdpath) {
 	int max_faulty_lines = Global.maxfaultylines;
 	int max_candidates = Global.maxcandidates;
+	int parallel_granularity = Global.parallelgranularity;
 	String tsuite_fpath = Global.tsuitefpath; //Shouldn't be null at this point
 	String fauloc_fpath = Global.faulocfpath; //fauloc_fpath is null if fauloc file was not provided by user
 	String anal_method = Global.analysismethod;
@@ -82,7 +83,7 @@ public class Repair
 	}
 	
 	System.err.println("Looking at each located faulty line ...");
-	Repair0 repair0 = new Repair0(bug_id, ssfix_dpath, cocker_dpath, proj_dpath, proj_testbuild_dpath, dependjpath, failed_testcases, anal_method, max_candidates, use_search_cache, use_extended_codebase, delete_failed_patches);
+	Repair0 repair0 = new Repair0(bug_id, ssfix_dpath, cocker_dpath, proj_dpath, proj_testbuild_dpath, dependjpath, tsuite_fpath, failed_testcases, anal_method, max_candidates, parallel_granularity, use_search_cache, use_extended_codebase, delete_failed_patches);
 	String fix_dpath0 = outputdpath+"/"+bug_id+"/patches";
 	File fix_dir0 = new File(fix_dpath0);
 	if (!fix_dir0.exists()) { fix_dir0.mkdirs(); }

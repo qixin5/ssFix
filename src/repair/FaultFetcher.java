@@ -1,4 +1,4 @@
-package repair;
+package edu.brown.cs.ssfix.repair;
 
 import java.io.File;
 import java.util.List;
@@ -7,7 +7,7 @@ import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Statement;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.apache.commons.io.FileUtils;
-import util.*;
+import edu.brown.cs.ssfix.util.*;
 
 
 public class FaultFetcher

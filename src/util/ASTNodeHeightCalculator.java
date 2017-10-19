@@ -1,10 +1,10 @@
-package util;
+package edu.brown.cs.ssfix.util;
 
-import org.eclipse.jdt.core.dom.*;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Set;
 import java.util.HashSet;
+import org.eclipse.jdt.core.dom.*;
 
 
 public class ASTNodeHeightCalculator

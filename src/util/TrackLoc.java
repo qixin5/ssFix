@@ -1,4 +1,4 @@
-package util;
+package edu.brown.cs.ssfix.util;
 
 import org.eclipse.jdt.core.dom.StructuralPropertyDescriptor;
 

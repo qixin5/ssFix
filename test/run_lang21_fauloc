@@ -1,0 +1,9 @@
+#!/bin/bash
+
+ssfixdir=$PWD/..
+l21dir=$PWD/Lang_21_buggy
+rsltdir=$PWD/rslt
+
+${ssfixdir}/run_fauloc -bugid l21 -dependjpath ${l21dir}/all0.jar -projdpath ${l21dir} -projsrcdpath ${l21dir}/src/main/java -projbuilddpath ${l21dir}/target/classes -projtestbuilddpath ${l21dir}/target/test-classes -outputdpath ${rsltdir} -ssfixdpath ${ssfixdir} -tsuitefpath ${l21dir}/testsuite_classes -tpackage org.apache.commons.lang3 -faulocaddstacktrace &> lang21_fauloc_log
+
+#/Users/qi/Research/ssFix/run_fauloc -bugid l21 -dependjpath /Users/qi/Research/Lang_21_buggy/all0.jar -projdpath /Users/qi/Research/Lang_21_buggy -projsrcdpath /Users/qi/Research/Lang_21_buggy/src/main/java -projbuilddpath /Users/qi/Research/Lang_21_buggy/target/classes -projtestbuilddpath /Users/qi/Research/Lang_21_buggy/target/test-classes -outputdpath /Users/qi/Research/ssfix_repair_rslt/lang_21 -ssfixdpath /Users/qi/Research/ssFix -tsuitefpath /Users/qi/Research/Lang_21_buggy/testsuite_classes -tpackage org.apache.commons.lang3 -faulocaddstacktrace &> lang21_fauloc_log

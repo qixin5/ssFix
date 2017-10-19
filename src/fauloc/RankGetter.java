@@ -1,4 +1,4 @@
-package fauloc;
+package edu.brown.cs.ssfix.fauloc;
 
 import java.io.File;
 import java.io.IOException;

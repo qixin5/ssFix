@@ -1,4 +1,4 @@
-package util;
+package edu.brown.cs.ssfix.util;
 
 import java.io.File;
 

@@ -1,9 +1,8 @@
 #!/bin/bash
 
-#export PATH=/home/qx5/jdk1.8.0_111/bin:$PATH
+#TO DO: for the next line, replace XXX with the ABSOLUTE path of your ssFix directory, then remove the leading # symbol.
+#proj_dir=XXX 
 
-proj_dir=./ #To be CUSTOMIZED (in its absolute path)
+java -Xms1024m -Xmx8192m -cp :${proj_dir}/build:${proj_dir}/lib/fauloc/* edu.brown.cs.ssfix.fauloc.FaultLocalization $*
 
-java -Xms1024m -Xmx8192m -cp :${proj_dir}/build:${proj_dir}/lib/fauloc/* fauloc.FaultLocalization $*
-
-java -Xms1024m -Xmx8192m -cp :${proj_dir}/build:${proj_dir}/lib/* repair.Main $*
+java -Xms1024m -Xmx8192m -cp :${proj_dir}/build:${proj_dir}/lib/* edu.brown.cs.ssfix.repair.Main $*

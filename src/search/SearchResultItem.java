@@ -1,4 +1,4 @@
-package search;
+package edu.brown.cs.ssfix.search;
 
 public class SearchResultItem
 {

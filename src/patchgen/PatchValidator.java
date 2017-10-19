@@ -1,5 +1,7 @@
-package patchgen;
+package edu.brown.cs.ssfix.patchgen;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Set;
@@ -8,12 +10,11 @@ import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.rewrite.ASTRewrite;
 import org.apache.commons.io.FileUtils;
-import java.io.File;
-import java.io.IOException;
 import org.eclipse.text.edits.TextEdit;
 import org.eclipse.jface.text.Document;
 import org.eclipse.jface.text.IDocument;
-import util.*;
+import edu.brown.cs.ssfix.repair.Global;
+import edu.brown.cs.ssfix.util.*;
 
 
 public class PatchValidator
@@ -24,17 +25,19 @@ public class PatchValidator
     //private String proj_dpath;
     private String proj_testbuild_dpath;
     private String dependjpath;
+    private String tsuite_fpath;
     private String ssfix_dpath;
     private String output_bugid_dpath;
     private String exec_dpath;
 
-    public PatchValidator(String bug_id, String proj_testbuild_dpath, String dependjpath, String ssfix_dpath) {
+    public PatchValidator(String bug_id, String proj_testbuild_dpath, String dependjpath, String tsuitefpath, String ssfix_dpath) {
 	this.bug_id = bug_id;
 	//this.proj_dpath = proj_dpath;
 	this.proj_testbuild_dpath = proj_testbuild_dpath;
 	this.dependjpath = dependjpath;
+	this.tsuite_fpath = tsuitefpath;
 	this.ssfix_dpath = ssfix_dpath;
-	String outputdpath = repair.Global.outputdpath;
+	String outputdpath = Global.outputdpath;
 	this.output_bugid_dpath = outputdpath+"/"+bug_id;	
 	this.exec_dpath = outputdpath;
     }
@@ -110,7 +113,8 @@ public class PatchValidator
 	}
 
 	//File testsuite_f = new File(proj_dpath+"/testsuite_classes");
-	File testsuite_f = new File(output_bugid_dpath+"/testsuite_classes");
+	//File testsuite_f = new File(output_bugid_dpath+"/testsuite_classes");
+	File testsuite_f = new File(tsuite_fpath);
 	String test_case_paths = getTestCasePathsString(testsuite_f);
 	if (test_case_paths == null) { return new Patch(patch_fpath, false); }
 

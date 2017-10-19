@@ -1,4 +1,4 @@
-package patchgen;
+package edu.brown.cs.ssfix.patchgen;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -7,7 +7,6 @@ import org.eclipse.jdt.core.dom.rewrite.ASTRewrite;
 import org.eclipse.jdt.core.dom.rewrite.ListRewrite;
 import org.eclipse.text.edits.*;
 import org.eclipse.jface.text.*;
-
 
 class Replacer
 {

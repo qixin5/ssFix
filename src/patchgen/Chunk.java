@@ -1,34 +1,39 @@
-package patchgen;
+package edu.brown.cs.ssfix.patchgen;
 
+import java.io.File;
 import java.util.List;
 import java.util.ArrayList;
-import util.*;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.MethodDeclaration;
-import java.io.File;
+import edu.brown.cs.ssfix.util.*;
 
 public class Chunk
 {
     String fpath;
     String loc;
     List<ASTNode> node_list;
+    String fctnt;
     boolean is_normalized;
 
+    /*
     public Chunk(String fpath, String loc) {
 	this.fpath = fpath;
 	this.loc = loc;
 	this.node_list = loadNodes();
 	this.is_normalized = false;
     }
+    */
 
-    public Chunk(String fpath, String loc, List<ASTNode> node_list) {
+    public Chunk(String fpath, String loc, List<ASTNode> node_list, String fctnt) {
 	this.fpath = fpath;
 	this.loc = loc;
 	this.node_list = node_list;
+	this.fctnt = fctnt;
 	this.is_normalized = false;
     }
-    
+
+    /*
     private List<ASTNode> loadNodes() {
 	CompilationUnit cu = null;
 	try {
@@ -40,12 +45,15 @@ public class Chunk
 	if (cu == null) { return new ArrayList<ASTNode>(); }
 	else { return ASTNodeFinder.find(cu, loc); }
     }
+    */
 
     public String getFilePath() { return fpath; }
 
     public String getLoc() { return loc; }
 
     public List<ASTNode> getNodeList() { return node_list; }
+
+    public String getFileContent() { return fctnt; }
 
     public int getLengthInLines() {
 	if (node_list==null || node_list.isEmpty()) { return 0; }

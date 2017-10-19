@@ -1,6 +1,6 @@
-package fauloc;
+package edu.brown.cs.ssfix.fauloc;
 
-import util.*;
+import edu.brown.cs.ssfix.util.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -21,7 +21,6 @@ import org.apache.commons.cli.ParseException;
 import com.gzoltar.core.GZoltar;
 import com.gzoltar.core.components.Statement;
 import com.gzoltar.core.instr.testing.TestResult;
-
 
 
 public class FaultLocalization

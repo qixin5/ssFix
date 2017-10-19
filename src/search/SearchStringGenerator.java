@@ -1,4 +1,4 @@
-package search;
+package edu.brown.cs.ssfix.search;
 
 import java.io.File;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.MethodDeclaration;
-import util.*;
+import edu.brown.cs.ssfix.util.*;
 
 
 public class SearchStringGenerator

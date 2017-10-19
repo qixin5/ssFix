@@ -1,8 +1,7 @@
-package util;
+package edu.brown.cs.ssfix.util;
 
 import org.eclipse.jdt.core.dom.*;
 import ptns.*;
-
 
 /*
   Generate regularized strings for almost all types of AST nodes

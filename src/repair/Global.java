@@ -1,4 +1,4 @@
-package repair;
+package edu.brown.cs.ssfix.repair;
 
 public class Global
 {
@@ -15,6 +15,7 @@ public class Global
     public static String cockerdpath;
     public static int maxfaultylines;
     public static int maxcandidates;
+    public static int parallelgranularity;
     public static String analysismethod;
     public static String faulocfpath;
     public static boolean usesearchcache;
@@ -36,6 +37,7 @@ public class Global
 	cockerdpath = null;
 	maxfaultylines = 30;
 	maxcandidates = 100;
+	parallelgranularity = 1;
 	analysismethod = "k5pprbstmsm";
 	faulocfpath = null;
 	usesearchcache = false;
