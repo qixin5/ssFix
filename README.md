@@ -19,53 +19,38 @@ Under your ssFix directory, simply run ```ant compile```
 1. In the script file `run` (the file is under your ssFix directory), change the value of `proj_dir` to the **absolute path** of your **ssFix directory** (if you haven't done so).
 
 2. Run the script file `run` with at least the following 8 arguments (use **absolute paths** wherever possible):
-  * `-bugid`
-  ...The program id
-  * `-dependjpath` 
-  ...The path of the dependency jar file of the faulty program (you should create a **single** jar file for the compiled faulty program to be repaired including the test files and all the dependencies)
-  * `-projdpath` 
-  ...The path of the faulty program's directory
-  * `-projsrcdpath`
-  ...The path of the faulty program's source directory (this is where all the source files are located)
-  * `-projbuilddpath`
-  ...The path of the faulty program's source-binary directory (this is where all the binaries of the source files are located)
-  * `-projtestbuilddpath`
-  ...The path of the faulty program's test-source-binary directory (this is where all the binaries of the test source files are located)
-  * `-outputdpath`
-  ...The output directory (to store the generated patches)
-  * `-ssfixdpath`
-  ...The directory of ssFix
+  * `-bugid`: The program id
+  * `-dependjpath`: The path of the dependency jar file of the faulty program (you should create a **single** jar file for the compiled faulty program to be repaired including the test files and all the dependencies)
+  * `-projdpath`: The path of the faulty program's directory
+  * `-projsrcdpath`: The path of the faulty program's source directory (this is where all the source files are located)
+  * `-projbuilddpath`: The path of the faulty program's source-binary directory (this is where all the binaries of the source files are located)
+  * `-projtestbuilddpath`: The path of the faulty program's test-source-binary directory (this is where all the binaries of the test source files are located)
+  * `-outputdpath`: The output directory (to store the generated patches)
+  * `-ssfixdpath`: The directory of ssFix
 
 The following arguments are optional:
-  * `-tsuitefpath`
-  ...The file containing the **full class names of all test cases**, separated by semi-colons. If not used, ssFix will simply scan the test directory and create a file including all the test classes. A patched program produced by ssFix needs to pass all the test cases from all the test classes. 
-  ...**NOTE**: We strongly encourage you to provide this file. But if you refuse to do so (which means you want to use all the test cases from the test directory you provided), then you need to make sure that a correct program can pass all the test cases. (ssFix does not report any patched program that failed any test case.)
-  * `-tpackage`
-  ...The names of the packages where a fault is likely to be located. If there are more than one name, connect them by colons. If this argument is not provided, ssFix will consider all the program packages to be suspicious.
-  * `-failedtestcase`
-  ...The full class names of all failed test cases. If more than one exist, put them together connected by colons. If this argument is not provided, ssFix will test the faulty program against the test suite to figure out the failed ones.
-  * `-maxfaultylines`
-  ...The maximum number of suspicious statements (ranked) to be considered for repair. Default is 30.
-  * `-maxcandidates`
-  ...The maximum number of the top-retrieved, non-redundant candidate chunks to be used for repair. Default is 100. 
-  * `-parallelgranularity`
-  ...The maximum number of patches that will be tested simultaneously. Default is 1.
-  ...At the implementation level, we called `Executors.newFixedThreadPool(parallelgranularity)` to create an `ExecutorService` object for patch testing. For our experiments, we set this argument as 8.
-  * `-faulocfpath`
-  ...The path of the result file yielded by fault localization. If provided, ssFix will simply use the current fault localization result available from the file. Otherwise, ssFix will do fault localization (mainly to call GZoltar).
-  * `-faulocaddstacktrace` (NO ARGUMENT)
-  ...If given, ssFix will use the stack trace information (if available) for fault localization
-  * `-usesearchcache` (NO ARGUMENT)
-  ...If given, ssFix will use the cached code search file (if available) to obtain candidates
-  * `-deletefailedpatches` (NO ARGUMENT) 
-  ...If given, ssFix will delete failed patches
+  * `-tsuitefpath`: The file containing the full class names of all test cases, separated by semi-colons. If not used, ssFix will simply scan the test directory and create a file including all the test classes. A patched program produced by ssFix needs to pass all the test cases from all the test classes. **NOTE**: We strongly encourage you to provide this file. But if you refuse to do so (which means you want to use all the test cases from the test directory you provided), then you need to make sure that a correct program can pass all the test cases. (ssFix does not report any patched program that failed any test case.)
+  * `-tpackage`: The names of the packages where a fault is likely to be located. If there are more than one name, connect them by colons. If this argument is not provided, ssFix will consider all the program packages to be suspicious.
+  * `-failedtestcase`: The full class names of all failed test cases. If more than one exist, put them together connected by colons. If this argument is not provided, ssFix will test the faulty program against the test suite to figure out the failed ones.
+  * `-maxfaultylines`: The maximum number of suspicious statements (ranked) to be considered for repair. Default is 30.
+  * `-maxcandidates`: The maximum number of the top-retrieved, non-redundant candidate chunks to be used for repair. Default is 100. 
+  * `-parallelgranularity`: The maximum number of patches that will be tested simultaneously. Default is 1. At the implementation level, we called `Executors.newFixedThreadPool(parallelgranularity)` to create an `ExecutorService` object for patch testing. For our experiments, we set this argument as 8.
+  * `-faulocfpath`: The path of the result file yielded by fault localization. If provided, ssFix will simply use the current fault localization result available from the file. Otherwise, ssFix will do fault localization (mainly to call GZoltar).
+  * `-faulocaddstacktrace` (NO ARGUMENT): If given, ssFix will use the stack trace information (if available) for fault localization
+  * `-usesearchcache` (NO ARGUMENT): If given, ssFix will use the cached code search file (if available) to obtain candidates
+  * `-deletefailedpatches` (NO ARGUMENT): If given, ssFix will delete failed patches
 
 Note that ssFix prints the running information to screen (but saves the generated patches to the output directory you provide). You can re-direct the running information to a file, then you will get a log file.
 
 Below is a script I used:
-```#!/bin/bash
-
-/Users/qi/ssFix/run -bugid l21 -dependjpath /Users/qi/Lang_21_buggy/all0.jar -projdpath /Users/qi/Lang_21_buggy -projsrcdpath /Users/qi/Lang_21_buggy/src/main/java -projbuilddpath /Users/qi/Lang_21_buggy/target/classes -projtestbuilddpath /Users/qi/Lang_21_buggy/target/test-classes -outputdpath /Users/qi/ssFix/test/rslt -ssfixdpath /Users/qi/ssFix -tsuitefpath /Users/qi/Lang_21_buggy/testsuite_classes -faulocaddstacktrace -parallelgranularity 8 &> lang21_log
+```
+/Users/qi/ssFix/run -bugid l21 -dependjpath /Users/qi/Lang_21_buggy/all0.jar 
+-projdpath /Users/qi/Lang_21_buggy -projsrcdpath /Users/qi/Lang_21_buggy/src/main/java
+-projbuilddpath /Users/qi/Lang_21_buggy/target/classes
+-projtestbuilddpath /Users/qi/Lang_21_buggy/target/test-classes 
+-outputdpath /Users/qi/ssFix/test/rslt -ssfixdpath /Users/qi/ssFix 
+-tsuitefpath /Users/qi/Lang_21_buggy/testsuite_classes -faulocaddstacktrace
+-parallelgranularity 8 &> lang21_log
 ```
 
 ## Output
@@ -100,8 +85,8 @@ simple code search test:
 If you find that the result file `lang21_codesearch_rslt` contains lots of lines
 starting with `file:///gpfs/data/people/qx5`, it means the code search works.
 
-If the test fails, please contact us via email qx5@cs.brown.edu. We will try 
-figuring out what the problem is.
+If the test fails, please contact me via qx5@cs.brown.edu. I will try figuring
+out what the problem is.
 
 
 ## Testing if Fault Localization Works
@@ -144,3 +129,7 @@ We provide an example for you to test ssFix. Please do the following for testing
 ```
 If you find that the log file `lang21_log` contains a line that starts with
 "Found Plausible Patch at", it means the test was successful.
+
+## Any Questions?
+
+Please contact Qi Xin via qx5@cs.brown.edu.
