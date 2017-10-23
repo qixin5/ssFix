@@ -43,13 +43,14 @@ public class FaultLocalization
 	options.addOption("ssfixdpath", true, "ssFix Directory Path"); 
 	options.addOption("maxfaultylines", true, "The Maximum Number of Faulty Lines to be Looked at for Repair");
 	options.addOption("maxcandidates", true, "The Maximum Number of Candidate Chunks to be Looked at for Repair");
+	options.addOption("parallelgranularity", true, "The Number of Patches to be Validated Simultaneously");
 	options.addOption("analysismethod", true, "The Cocker Search Method");
 	options.addOption("faulocfpath", true, "The Path of the Fault Localization Result File");
 	options.addOption("faulocaddstacktrace", false, "Use the Stack Trace Information for Fault Localization?");
 	options.addOption("usesearchcache", false, "Use Cached Search Result?");
 
 	options.addOption("useextendedcodebase", false, "Use Extended Code Database (including Manually Retrieved Projects from GitHub)?");
-	options.addOption("runparallel", false, "Run in parallel?");
+	//options.addOption("runparallel", false, "Run in parallel?");
 	options.addOption("deletefailedpatches", false, "Delete Failed Patches?");
     }
     
