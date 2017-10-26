@@ -3,7 +3,7 @@
 ssFix is an automated program repair technique that leverages existing code fragments from a large code repository that are syntax-related to the bug context to produce patches for bug repair.
 
 If you use ssFix, please cite our paper:
-``
+```
 @inproceedings{xin2017leveraging,
   title={Leveraging syntax-related code for automated program repair},
   author={Xin, Qi and Reiss, Steven P},
@@ -12,7 +12,7 @@ If you use ssFix, please cite our paper:
   year={2017},
   organization={IEEE}
 }
-``
+```
 
 ## Running Requirements
 
