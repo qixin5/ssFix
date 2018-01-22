@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ ! -d $HOME/.ivy ]
+then
+    cd lib
+    java -cp ivy.jar edu.brown.cs.ivy.exec.IvySetup -local
+    cd ..
+fi
+
+ant compile
+
+
+
