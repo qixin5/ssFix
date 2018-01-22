@@ -6,7 +6,7 @@ If you use ssFix, please cite our paper:
 ```
 @inproceedings{xin2017leveraging,
   title={Leveraging syntax-related code for automated program repair},
-  author={Xin, Qi and Reiss, Steven P},
+  author={Xin, Qi and Reiss, Steven P.},
   booktitle={Proceedings of the 32nd IEEE/ACM International Conference on Automated Software Engineering (ASE)},
   pages={660--670},
   year={2017},
@@ -24,13 +24,13 @@ Note that ssFix was tested on a Debian system: Debian 4.9.30 x86_64 GNU/Linux. T
 
 ## How to Build ssFix
 
-Under your ssFix directory, simply run ```ant compile```
+Under your ssFix directory, simply run ```./compile```
 
 ## How to Run ssFix
 
-1. In the script file `run` (the file is under your ssFix directory), change the value of `proj_dir` to the **absolute path** of your **ssFix directory** (if you haven't done so).
+1. In the script file `run` (the file is under your ssFix directory), uncomment the line that starts with `#proj_dir` (by removing `#`), change the value of `proj_dir` to the **absolute** path of your ssFix directory (if you haven't done so).
 
-2. Run the script file `run` with at least the following 8 arguments (use **absolute paths** wherever possible):
+2. Run the script file `run` with at least the following 8 arguments (use **absolute** paths wherever possible):
   * `-bugid`: The program id
   * `-dependjpath`: The path of the dependency jar file of the faulty program (you should create a **single** jar file for the compiled faulty program to be repaired including the test files and all the dependencies)
   * `-projdpath`: The path of the faulty program's directory
@@ -109,11 +109,12 @@ a mac. Before you actually run ssFix, please do the following for a simple fault
 localization test:
 ```
 1. Build ssFix (if you haven't done so).
-2. cd to the test directory under your ssFix directory.
-3. Untar the compressed project `Lang_21_buggy.tar.gz` by running
+2. Set `proj_dir` as the absolute path of your ssFix directory in `run_fauloc` (under your ssFix directory).
+3. cd to the test directory under your ssFix directory.
+4. Untar the compressed project `Lang_21_buggy.tar.gz` by running
 `tar zxf Lang_21_buggy.tar.gz` (if you haven't done so).
-4. Run `./run_lang21_fauloc`.
-5. Check the result file `lang21_fauloc_log` under the current directory.
+5. Run `./run_lang21_fauloc`.
+6. Check the result file `lang21_fauloc_log` under the current directory.
 ```
 If you find that the log file `lang21_fauloc_log` contains a line similar as
 `Gzoltar Test Result Total:1827, fails: 1, GZoltar suspicious 8696`, it means
