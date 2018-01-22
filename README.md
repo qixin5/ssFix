@@ -123,7 +123,8 @@ the fault localization works.
 We basically have no control over GZoltar. If you encounter any errors,
 you may consider reporting the errors to the GZoltar developers (mail@gzoltar.com).
 To reproduce our experimental results, you may use our fault localization
-result files available at `expt0/fauloc/rslt` under your ssFix directory.
+result files available at `expt0/fauloc/rslt` under your ssFix directory (
+need to untar `expt0/fauloc.tar.gz` first).
 You can then run ssFix for a bug passing the path of the corresponding fault 
 localization result file as an argument for `-faulocfpath`.
 
