@@ -28,7 +28,7 @@ Under your ssFix directory, simply run ```./compile```
 
 ## How to Run ssFix
 
-1. In the script file `run` (the file is under your ssFix directory), uncomment the line that starts with `#proj_dir` (by removing `#`), change the value of `proj_dir` to the **absolute** path of your ssFix directory (if you haven't done so).
+1. In the script file `run` (the file is under your ssFix directory), uncomment the line that starts with `#proj_dir` (by removing `#`), change the value of `proj_dir` to the **absolute** path of your ssFix directory (if you haven't done so). **NOTE**: You might want to change the memory usage in `run` (by changing the values for `-Xms` and `-Xmx`).
 
 2. Run the script file `run` with at least the following 8 arguments (use **absolute** paths wherever possible):
   * `-bugid`: The program id
