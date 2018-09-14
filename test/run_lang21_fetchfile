@@ -1,0 +1,6 @@
+#!/bin/bash
+
+ssfix_lib_dir=$PWD/../lib
+l21dir=$PWD/Lang_21_buggy
+
+java -cp :${ssfix_lib_dir}/* edu.brown.cs.cocker.application.ApplicationChunkQuery -a k5pprbstmsm -n fred4 -host bdognom.cs.brown.edu -cf /gpfs/data/people/qx5/merobase_split_100/10/srcs/21877.java &> lang21_fetchfile_rslt
