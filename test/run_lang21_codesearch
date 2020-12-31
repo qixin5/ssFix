@@ -3,4 +3,4 @@
 ssfix_lib_dir=$PWD/../lib
 l21dir=$PWD/Lang_21_buggy
 
-java -cp :${ssfix_lib_dir}/* edu.brown.cs.cocker.application.ApplicationChunkQuery -a k5pprbstmsm -n fred4 -data "bslc:259,8" -s even_weighted -host bdognom.cs.brown.edu ${l21dir}/src/main/java/org/apache/commons/lang3/time/DateUtils.java &> lang21_codesearch_rslt
+java -cp :${ssfix_lib_dir}/* edu.brown.cs.cocker.application.ApplicationChunkQuery -a ssfix -data "slc:4,1" ./Lang_21_buggy/HelloWorld.java &> lang21_codesearch_rslt

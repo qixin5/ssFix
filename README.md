@@ -20,11 +20,21 @@ If you use ssFix, please cite our paper:
 + JDK 1.8
 + Apache Ant
 
-Note that ssFix was tested on a Debian system: Debian 4.9.30 x86_64 GNU/Linux. The tested Apache Ant version was Apache Ant(TM) version 1.9.9.
+Note that ssFix was tested on a Debian system: Debian 4.9.30 x86_64 GNU/Linux. The tested Apache Ant version was Apache Ant(TM) version 1.9.9. More recently, it was tested on a system running Ubuntu-18.04 with Apache Ant(TM) version 1.10.5 installed.
 
 ## How to Build ssFix
 
-Under your ssFix directory, simply run ```./compile```
+1. Install cocker and index your code database
+
+Please refer to https://github.com/qixin5/cocker
+
+2. Copy cocker.jar
+
+In your cocker directory, run ```./makejar.sh``` to produce `cocker.jar`, then copy `cocker.jar` to XXX/ssFix/lib (use your own path to replace XXX)
+
+3. Build ssFix
+
+In your ssFix directory, run ```./compile```
 
 ## How to Run ssFix
 
@@ -82,11 +92,11 @@ To find the patch reported by ssFix, please look at the repair log file (from th
 
 ## Testing if Code Search Works
 
-The ssFix code you run on your machine will connect to our server to do code search
-to obtain the results. To make sure our server works for you (sometimes it is down
-for whatever reasons), before you actually run ssFix, please do the following for a 
-simple code search test:
+The ssFix code you run on your machine will connect to Cocker for code search
+and obtain search results. To make sure that Cocker works for you,
+before you actually run ssFix, please do the following for a simple code search test:
 ```
+0. Make sure you've indexed your code database using Cocker and you've started Cocker. If you don't know how to do these, refer to https://github.com/qixin5/cocker.
 1. Build ssFix (if you haven't done so).
 2. cd to the test directory under your ssFix directory.
 3. Untar the compressed project `Lang_21_buggy.tar.gz` by running 
@@ -94,17 +104,24 @@ simple code search test:
 4. Run `./run_lang21_codesearch`.
 5. Check the result file `lang21_codesearch_rslt` under the current directory.
 ```
-If you find that the result file `lang21_codesearch_rslt` contains lots of lines
-starting with `file:///gpfs/data/people/qx5`, it means the code search works.
-
-If the test fails, please contact me via qx5@cs.brown.edu. I will try figuring
-out what the problem is.
-
+In `lang21_codesearch_rslt`, you should be able to see something similar to the following.
+```
+file:///home/qxin6/mycodedatabase/testgen/FlexTestGen.java,slc:83,5,0.25485426
+file:///home/qxin6/mycodedatabase/testgen/MakeTestGen.java,slc:227,10,0.22162989
+file:///home/qxin6/mycodedatabase/testgen/SedTestGen.java,slc:110,10,0.21562001
+file:///home/qxin6/mycodedatabase/testgen/Schedule2TestGen.java,slc:57,5;slc:58,5,0.2129162
+file:///home/qxin6/mycodedatabase/testgen/FlexTestGen.java,slc:90,2,0.2129162
+file:///home/qxin6/mycodedatabase/testgen/ScheduleTestGen.java,slc:57,5;slc:58,5,0.2129162
+file:///home/qxin6/mycodedatabase/testgen/SedTestGen.java,slc:95,3,0.2129162
+file:///home/qxin6/mycodedatabase/testgen/SedTestGen.java,slc:120,2,0.2129162
+file:///home/qxin6/mycodedatabase/testgen/MakeTestGen.java,slc:233,2,0.2129162
+file:///home/qxin6/mycodedatabase/testgen/GzipTestGen.java,slc:96,5,0.2129162
+```
 
 ## Testing if Fault Localization Works
 
 The major part of ssFix's fault localization is done by GZoltar (version 0.1.1).
-I tested it (GZoltar) fine on a Debian system, but I had problems testing it on 
+I tested it (GZoltar) fine on Debian and Ubuntu systems, but I had problems testing it on
 a mac. Before you actually run ssFix, please do the following for a simple fault
 localization test:
 ```
@@ -120,7 +137,7 @@ If you find that the log file `lang21_fauloc_log` contains a line similar as
 `Gzoltar Test Result Total:1827, fails: 1, GZoltar suspicious 8696`, it means
 the fault localization works.
 
-We basically have no control over GZoltar. If you encounter any errors,
+We have no control over GZoltar. If you encounter any errors,
 you may consider reporting the errors to the GZoltar developers (mail@gzoltar.com).
 To reproduce our experimental results, you may use our fault localization
 result files available at `expt0/fauloc/rslt` under your ssFix directory
@@ -131,19 +148,21 @@ localization result file as an argument for `-faulocfpath`.
 
 ## Running Example
 
-We provide an example for you to test ssFix. Please do the following for testing.
+We provide an example for you to test ssFix. Please do the following.
 ```
-1. Build ssFix (if you haven't done so).
-2. cd to the test directory under your ssFix directory.
-3. Untar the compressed project `Lang_21_buggy.tar.gz` by running
+0. Copy expt0/candidate/ssFix/plausible/Lang_21.java to your code database.
+1. Use Cocker to index the file (refer to section "Index new files" in https://github.com/qixin5/cocker).
+2. Build ssFix (if you haven't done so).
+3. cd to the test directory under your ssFix directory.
+4. Untar the compressed project `Lang_21_buggy.tar.gz` by running
 `tar zxf Lang_21_buggy.tar.gz` (if you haven't done so).
-4. Test if ssFix's code search works using the instructions shown earlier.
-5. Run `./run_lang21`.
-6. Wait for ssFix to finish, and check the log file `lang21_log`.
+5. Test if ssFix's code search works using the instructions shown earlier.
+6. Run `./run_lang21`.
+7. Wait for ssFix to finish, and check the log file `lang21_log`.
 ```
 If you find that the log file `lang21_log` contains a line that starts with
 "Found Plausible Patch at", it means the test was successful.
 
 ## Any Questions?
 
-Please contact Qi Xin via qx5@cs.brown.edu.
+Please contact Qi Xin via qxin6@gatech.edu.

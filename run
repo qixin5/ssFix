@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #TO DO: for the next line, replace XXX with the ABSOLUTE path of your ssFix directory, then remove the leading # symbol.
-#proj_dir=XXX 
+#proj_dir=XXX
 
 java -Xms1024m -Xmx8192m -cp :${proj_dir}/build:${proj_dir}/lib/fauloc/* edu.brown.cs.ssfix.fauloc.FaultLocalization $*
 

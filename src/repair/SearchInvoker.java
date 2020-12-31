@@ -28,19 +28,32 @@ public class SearchInvoker
     
     public List<String> invoke(String bfpath, String search_loc, String ssfix_dpath, String anal_method, String cocker_rslt_fpath, boolean filter) {
 	List<String> cchunk_lines = new ArrayList<String>();
+
 	//Invoke cocker
 	List<String> cocker_arg_list = new ArrayList<String>();
+
+	//Communicate with the remote server (temporarily closed)
+	//cocker_arg_list.add("-a");
+	//cocker_arg_list.add(anal_method);
+	//cocker_arg_list.add("-n");
+	//cocker_arg_list.add("fred4");
+	//cocker_arg_list.add("-data");
+	//cocker_arg_list.add(search_loc);
+	//cocker_arg_list.add("-s");
+	//cocker_arg_list.add("even_weighted");
+	//cocker_arg_list.add("-host");
+	//cocker_arg_list.add("bdognom.cs.brown.edu");
+	//cocker_arg_list.add(bfpath);
+
+	//Communicate with the local server
 	cocker_arg_list.add("-a");
-	cocker_arg_list.add(anal_method);
-	cocker_arg_list.add("-n");
-	cocker_arg_list.add("fred4");
+	cocker_arg_list.add("SSFIX");
 	cocker_arg_list.add("-data");
 	cocker_arg_list.add(search_loc);
 	cocker_arg_list.add("-s");
 	cocker_arg_list.add("even_weighted");
-	cocker_arg_list.add("-host");
-	cocker_arg_list.add("bdognom.cs.brown.edu");
 	cocker_arg_list.add(bfpath);
+
 	String[] cocker_args = cocker_arg_list.toArray(new String[0]);
 	
 	System.out.println("*** Cocker Search Arguments ***");

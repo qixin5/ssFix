@@ -81,7 +81,7 @@ public class Repair0
 	//Load the buggy node
 	File bf = new File(bfpath);
 	String bfctnt = null;
-	try { bfctnt = FileUtils.readFileToString(bf, (String) null); }
+	try { bfctnt = FileUtils.readFileToString(bf); }
 	catch (IOException e) { System.err.println(e); e.printStackTrace(); }
 	CompilationUnit bcu = (CompilationUnit) ASTNodeLoader.getResolvedASTNode(bfpath, bfctnt);
 	List<ASTNode> bnode_list = ASTNodeFinder.find(bcu, bstmt_loc);
@@ -156,21 +156,6 @@ public class Repair0
 	    String cloc = cchunk_line.substring(i0+1, i1);
 	    if (cfpath.startsWith("file://")) { cfpath = cfpath.substring(7); }
 
-	    if (localproj_merobase_only) {
-		if (cfpath.endsWith("closure_14_fix.java") ||
-		    cfpath.endsWith("math_33_local_fix.java") ||
-		    cfpath.endsWith("math_53_local_fix.java") ||
-		    cfpath.endsWith("math_59_local_fix.java") ||
-		    cfpath.endsWith("math_70_local_fix.java")) {
-		    //These are allowed to be used
-		}
-		
-		//Ignore non-local, non-merobase candidates
-		else if (!localproj_merobase_pathptn.matcher(cfpath).matches()) {
-		    System.out.println("Non-local, Non-merobase. Skip.");
-		    continue;
-		}
-	    }	    
 
 	    //Is the candidate forbidden?
 	    if (BlackChecker.isBlack(bug_id, cfpath, cloc)) {
@@ -183,7 +168,11 @@ public class Repair0
 	    //System.out.println("Cannot read file: " + cfpath);
 	    //continue;
 	    //}
-	    String cfctnt = CandidateLoader.getFileContent(cfpath, anal_method);
+
+	    //String cfctnt = CandidateLoader.getFileContent(cfpath, anal_method);
+	    String cfctnt = null;
+	    try { cfctnt = FileUtils.readFileToString(new File(cfpath)); }
+	    catch (Throwable t) { System.err.println(t); t.printStackTrace(); }
 	    if (cfctnt == null || "".equals(cfctnt)) {
 		System.out.println("Cannot get the candidate file content from: " + cfpath);
 		continue;
@@ -243,7 +232,7 @@ public class Repair0
 	//Load the buggy node
 	File bf = new File(bfpath);
 	String bfctnt = null;
-        try { bfctnt = FileUtils.readFileToString(bf, (String) null); }
+        try { bfctnt = FileUtils.readFileToString(bf); }
         catch (IOException e) { System.err.println(e); e.printStackTrace(); }
 	CompilationUnit bcu = (CompilationUnit) ASTNodeLoader.getResolvedASTNode(bfpath, bfctnt);
 	List<ASTNode> bnode_list = ASTNodeFinder.find(bcu, bstmt_loc);
@@ -303,22 +292,6 @@ public class Repair0
 	    String cloc = cchunk_line.substring(i0+1, i1);
 	    if (cfpath.startsWith("file://")) { cfpath = cfpath.substring(7); }
 
-	    if (localproj_merobase_only) {
-		if (cfpath.endsWith("closure_14_fix.java") ||
-		    cfpath.endsWith("math_33_local_fix.java") ||
-		    cfpath.endsWith("math_53_local_fix.java") ||
-		    cfpath.endsWith("math_59_local_fix.java") ||
-		    cfpath.endsWith("math_70_local_fix.java")) {
-		    //These are allowed to be used
-		}
-		
-		//Ignore non-local, non-merobase candidates
-		else if (!localproj_merobase_pathptn.matcher(cfpath).matches()) {
-		    System.out.println("Non-local, Non-merobase. Skip.");
-		    continue;
-		}
-	    }
-
 	    //Is the candidate forbidden?
 	    if (BlackChecker.isBlack(bug_id, cfpath, cloc)) {
 		System.out.println("Forbidden. Skip.");
@@ -331,7 +304,10 @@ public class Repair0
 	    //continue;
 	    //}
 
-	    String cfctnt = CandidateLoader.getFileContent(cfpath, anal_method);
+	    //String cfctnt = CandidateLoader.getFileContent(cfpath, anal_method);
+	    String cfctnt = null;
+	    try { cfctnt = FileUtils.readFileToString(new File(cfpath)); }
+	    catch (Throwable t) { System.err.println(t); t.printStackTrace(); }
             if (cfctnt == null || "".equals(cfctnt)) {
                 System.out.println("Cannot get the candidate file content from: " + cfpath);
                 continue;
